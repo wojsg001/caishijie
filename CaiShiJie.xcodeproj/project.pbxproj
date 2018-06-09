@@ -5782,7 +5782,7 @@
 				TargetAttributes = {
 					CE9948591C29165800EE67B1 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = XX26FEVJ9H;
+						DevelopmentTeam = XQ593N44T5;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -6987,7 +6987,7 @@
 				CODE_SIGN_ENTITLEMENTS = CaiShiJie/CaiShiJie.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XX26FEVJ9H;
+				DEVELOPMENT_TEAM = XQ593N44T5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6999,7 +6999,7 @@
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/UMSocialSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/mac/Documents/old/CaiShiJie/CaiShiJie/Classes/Other/Prefix.pch;
+				GCC_PREFIX_HEADER = /Users/mac/Documents/github/caishijie/CaiShiJie/Classes/Other/Prefix.pch;
 				INFOPLIST_FILE = CaiShiJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -7014,7 +7014,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = www.18csj.com.CaiShiJie;
+				PRODUCT_BUNDLE_IDENTIFIER = TunJin.com.RunGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -7030,7 +7030,7 @@
 				CODE_SIGN_ENTITLEMENTS = CaiShiJie/CaiShiJie.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XX26FEVJ9H;
+				DEVELOPMENT_TEAM = XQ593N44T5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7042,7 +7042,7 @@
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/UMSocialSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/mac/Documents/old/CaiShiJie/CaiShiJie/Classes/Other/Prefix.pch;
+				GCC_PREFIX_HEADER = /Users/mac/Documents/github/caishijie/CaiShiJie/Classes/Other/Prefix.pch;
 				INFOPLIST_FILE = CaiShiJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -7057,7 +7057,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = www.18csj.com.CaiShiJie;
+				PRODUCT_BUNDLE_IDENTIFIER = TunJin.com.RunGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";

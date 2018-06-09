@@ -24,18 +24,14 @@
 #define kScroll_imgURL @"http://common.csjimg.com" // 滚动图地址
 #define kVideo_imgURL  @"http://img.csjvod.com"    // 视频图片地址
 
-#define HOST     @"http://192.168.6.110:8081"  // 服务器地址
-#define imHost   @"192.168.6.110:8082"         // web服务器地址
-#define MQTTHost @"192.168.6.110"
-
 //#if DEBUG  // 调试状态
 //    #define HOST     @"http://192.168.6.110:8081"  // 服务器地址
 //    #define imHost   @"192.168.6.110:8082"         // web服务器地址
 //    #define MQTTHost @"192.168.6.110"
 //#else      // 发布状态
-//    #define HOST     @"http://www.18csj.com" // 服务器地址
-//    #define imHost   @"im.csjapi.com"        // web服务器地址
-//    #define MQTTHost @"mqtt.18csj.com"
+    #define HOST     @"http://www.18csj.com" // 服务器地址
+    #define imHost   @"im.csjapi.com"        // web服务器地址
+    #define MQTTHost @"mqtt.18csj.com"
 //#endif
 
 #define KNotificationLoadOpinion          @"loadOpinion"
