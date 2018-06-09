@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SJselfSelectedDefaultController">
+            <connections>
+                <outlet property="margin" destination="Jar-ED-xk5" id="v8w-go-Pje"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stock_bag_img" translatesAutoresizingMaskIntoConstraints="NO" id="pu4-8c-C4Z">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="143" id="Yvy-6X-nDl"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUd-Gj-1aq">
+                    <rect key="frame" x="48" y="263" width="125" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="R4H-wo-Pun"/>
+                        <constraint firstAttribute="width" constant="125" id="XTa-Dx-dK7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="注册" backgroundImage="stock_icon">
+                        <color key="titleColor" red="0.94509803920000002" green="0.30196078430000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="zhuceBtn:" destination="-1" eventType="touchUpInside" id="ZHt-Os-yYT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S56-Iu-bu0">
+                    <rect key="frame" x="202" y="263" width="125" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="125" id="Bvk-Dv-JSE"/>
+                        <constraint firstAttribute="height" constant="38" id="Fc8-O1-nGt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="登录" backgroundImage="stock_icon">
+                        <color key="titleColor" red="0.94509803920000002" green="0.30196078430000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="xhr-0x-hX3"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ph7-Zc-CdE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_default_photo" translatesAutoresizingMaskIntoConstraints="NO" id="dCK-iG-t6w">
+                            <rect key="frame" x="160" y="30" width="55" height="55"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户头像" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jh-iI-kD4">
+                            <rect key="frame" x="157" y="92" width="60" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="dCK-iG-t6w" firstAttribute="centerX" secondItem="ph7-Zc-CdE" secondAttribute="centerX" id="1fV-Hb-IPD"/>
+                        <constraint firstItem="dCK-iG-t6w" firstAttribute="top" secondItem="ph7-Zc-CdE" secondAttribute="top" constant="30" id="QDt-JD-9XL"/>
+                        <constraint firstItem="4Jh-iI-kD4" firstAttribute="top" secondItem="dCK-iG-t6w" secondAttribute="bottom" constant="7" id="RQe-qQ-BR0"/>
+                        <constraint firstItem="4Jh-iI-kD4" firstAttribute="centerX" secondItem="ph7-Zc-CdE" secondAttribute="centerX" id="h5A-xs-cF1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="pu4-8c-C4Z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1P3-LR-XcA"/>
+                <constraint firstItem="ph7-Zc-CdE" firstAttribute="bottom" secondItem="pu4-8c-C4Z" secondAttribute="bottom" id="FTj-BJ-psg"/>
+                <constraint firstItem="S56-Iu-bu0" firstAttribute="top" secondItem="PUd-Gj-1aq" secondAttribute="top" id="Ffj-e6-lzk"/>
+                <constraint firstItem="PUd-Gj-1aq" firstAttribute="top" secondItem="ph7-Zc-CdE" secondAttribute="bottom" constant="120" id="Jar-ED-xk5"/>
+                <constraint firstAttribute="trailing" secondItem="ph7-Zc-CdE" secondAttribute="trailing" id="Os0-xf-bd7"/>
+                <constraint firstItem="ph7-Zc-CdE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XLq-np-NFx"/>
+                <constraint firstItem="PUd-Gj-1aq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-77" id="dNP-VZ-fbh"/>
+                <constraint firstItem="S56-Iu-bu0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="77" id="p3a-vS-EsS"/>
+                <constraint firstItem="pu4-8c-C4Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rmg-Ax-9ce"/>
+                <constraint firstAttribute="trailing" secondItem="pu4-8c-C4Z" secondAttribute="trailing" id="w6l-jU-jrf"/>
+                <constraint firstItem="ph7-Zc-CdE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wZG-MZ-l8F"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="326.5" y="322.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mine_default_photo" width="55" height="55"/>
+        <image name="stock_bag_img" width="375" height="143"/>
+        <image name="stock_icon" width="125" height="38"/>
+    </resources>
+</document>

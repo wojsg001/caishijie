@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="WoA-5K-axF" customClass="SJUserReferenceDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="550" height="256"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neican_teacher_photo" translatesAutoresizingMaskIntoConstraints="NO" id="2lf-na-jar">
+                    <rect key="frame" x="10" y="10" width="49" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="95A-G5-eeF"/>
+                        <constraint firstAttribute="height" constant="49" id="jn7-4o-YKr"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刘长江" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgA-j2-MV5">
+                    <rect key="frame" x="70" y="15" width="48" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80人订阅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9V0-Uk-zh3">
+                    <rect key="frame" x="480" y="15" width="60" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务期：03-20至04-30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glu-fC-vsh">
+                    <rect key="frame" x="70" y="42" width="470" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购买时间：03-22 09:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ2-I6-P0A">
+                    <rect key="frame" x="70" y="74" width="153" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2J-d1-aBF">
+                    <rect key="frame" x="9" y="73" width="50" height="22"/>
+                    <state key="normal" image="neican_icon"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwe-IV-LOT">
+                    <rect key="frame" x="0.0" y="105" width="550" height="1"/>
+                    <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ABV-XN-iso"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥408" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKN-Ys-oQW">
+                    <rect key="frame" x="495" y="73" width="45" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.85098039219999999" green="0.26274509800000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="wgA-j2-MV5" firstAttribute="top" secondItem="WoA-5K-axF" secondAttribute="top" constant="15" id="3NW-XH-SRm"/>
+                <constraint firstItem="2lf-na-jar" firstAttribute="top" secondItem="WoA-5K-axF" secondAttribute="top" constant="10" id="8v2-np-MNO"/>
+                <constraint firstItem="qwe-IV-LOT" firstAttribute="leading" secondItem="WoA-5K-axF" secondAttribute="leading" id="9el-Mg-zYC"/>
+                <constraint firstItem="uJ2-I6-P0A" firstAttribute="top" secondItem="glu-fC-vsh" secondAttribute="bottom" constant="15" id="E6p-P4-uOU"/>
+                <constraint firstItem="qwe-IV-LOT" firstAttribute="top" secondItem="uJ2-I6-P0A" secondAttribute="bottom" constant="14" id="I70-VQ-wHW"/>
+                <constraint firstItem="U2J-d1-aBF" firstAttribute="centerX" secondItem="2lf-na-jar" secondAttribute="centerX" id="KR8-VC-NhZ"/>
+                <constraint firstItem="2lf-na-jar" firstAttribute="leading" secondItem="WoA-5K-axF" secondAttribute="leading" constant="10" id="X8N-1U-rtm"/>
+                <constraint firstItem="9V0-Uk-zh3" firstAttribute="top" secondItem="WoA-5K-axF" secondAttribute="top" constant="15" id="XhC-Dw-905"/>
+                <constraint firstItem="glu-fC-vsh" firstAttribute="leading" secondItem="2lf-na-jar" secondAttribute="trailing" constant="11" id="Ymc-zj-qJ3"/>
+                <constraint firstItem="U2J-d1-aBF" firstAttribute="top" secondItem="2lf-na-jar" secondAttribute="bottom" constant="14" id="daz-Is-D21"/>
+                <constraint firstAttribute="trailing" secondItem="oKN-Ys-oQW" secondAttribute="trailing" constant="10" id="ejO-t1-4Yr"/>
+                <constraint firstAttribute="trailing" secondItem="qwe-IV-LOT" secondAttribute="trailing" id="kPN-mC-kpf"/>
+                <constraint firstItem="glu-fC-vsh" firstAttribute="bottom" secondItem="2lf-na-jar" secondAttribute="bottom" id="lPg-tf-HCL"/>
+                <constraint firstItem="oKN-Ys-oQW" firstAttribute="top" secondItem="glu-fC-vsh" secondAttribute="bottom" constant="14" id="nAl-Yo-ODC"/>
+                <constraint firstAttribute="trailing" secondItem="9V0-Uk-zh3" secondAttribute="trailing" constant="10" id="phq-oS-TKn"/>
+                <constraint firstAttribute="trailing" secondItem="glu-fC-vsh" secondAttribute="trailing" constant="10" id="qRL-uG-3UR"/>
+                <constraint firstItem="uJ2-I6-P0A" firstAttribute="leading" secondItem="glu-fC-vsh" secondAttribute="leading" id="tW5-6p-JmW"/>
+                <constraint firstItem="wgA-j2-MV5" firstAttribute="leading" secondItem="2lf-na-jar" secondAttribute="trailing" constant="11" id="wUG-zx-oMg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="head_imgView" destination="2lf-na-jar" id="f81-xI-YgK"/>
+                <outlet property="nickNameLabel" destination="wgA-j2-MV5" id="mP1-fQ-o77"/>
+                <outlet property="payCountLabel" destination="9V0-Uk-zh3" id="Ohh-1x-FKf"/>
+                <outlet property="payTimeLabel" destination="uJ2-I6-P0A" id="xbr-nC-V33"/>
+                <outlet property="priceLabel" destination="oKN-Ys-oQW" id="Uat-OO-Fx3"/>
+                <outlet property="serviceDateLabel" destination="glu-fC-vsh" id="hHF-s5-oDQ"/>
+                <outlet property="statusBtn" destination="U2J-d1-aBF" id="DJQ-9o-ek4"/>
+            </connections>
+            <point key="canvasLocation" x="653" y="95"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="neican_icon" width="50" height="20"/>
+        <image name="neican_teacher_photo" width="49" height="49"/>
+    </resources>
+</document>

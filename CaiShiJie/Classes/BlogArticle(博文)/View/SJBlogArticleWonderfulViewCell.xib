@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SJBlogArticleWonderfulViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="353" height="180"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="article_zhuanti_n" translatesAutoresizingMaskIntoConstraints="NO" id="yx7-gw-WMn">
+                        <rect key="frame" x="0.0" y="0.0" width="353" height="180"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="yx7-gw-WMn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3qp-lB-N2c"/>
+                <constraint firstAttribute="bottom" secondItem="yx7-gw-WMn" secondAttribute="bottom" id="Dwv-7p-Ai1"/>
+                <constraint firstAttribute="trailing" secondItem="yx7-gw-WMn" secondAttribute="trailing" id="OoS-iF-Ct6"/>
+                <constraint firstItem="yx7-gw-WMn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fDY-ZS-TZa"/>
+            </constraints>
+            <size key="customSize" width="353" height="180"/>
+            <connections>
+                <outlet property="bgImgView" destination="yx7-gw-WMn" id="nCZ-DI-tg0"/>
+            </connections>
+            <point key="canvasLocation" x="288.5" y="280"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="article_zhuanti_n" width="330" height="146"/>
+    </resources>
+</document>

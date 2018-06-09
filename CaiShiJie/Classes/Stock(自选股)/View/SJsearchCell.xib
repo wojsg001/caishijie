@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SJsearchCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exw-9U-EBj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000067" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7k-SY-Qt6">
+                                <rect key="frame" x="10" y="13" width="55" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="商业指数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTp-oJ-x0T">
+                                <rect key="frame" x="113" y="13" width="157" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qj-h2-X48">
+                                <rect key="frame" x="280" y="11" width="30" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="sqI-t6-zZ9"/>
+                                </constraints>
+                                <state key="normal" image="stock_add_icon_n"/>
+                                <connections>
+                                    <action selector="Btncilck:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FMu-tu-Ln0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hTp-oJ-x0T" firstAttribute="centerY" secondItem="exw-9U-EBj" secondAttribute="centerY" id="6ww-TB-SPJ"/>
+                            <constraint firstItem="7qj-h2-X48" firstAttribute="leading" secondItem="hTp-oJ-x0T" secondAttribute="trailing" constant="10" id="Pkp-IZ-QKE"/>
+                            <constraint firstItem="hTp-oJ-x0T" firstAttribute="leading" secondItem="R7k-SY-Qt6" secondAttribute="trailing" constant="48" id="S40-qi-XqR"/>
+                            <constraint firstItem="R7k-SY-Qt6" firstAttribute="centerY" secondItem="exw-9U-EBj" secondAttribute="centerY" id="VL1-1j-yeI"/>
+                            <constraint firstAttribute="trailing" secondItem="7qj-h2-X48" secondAttribute="trailing" constant="10" id="hgV-cx-few"/>
+                            <constraint firstItem="7qj-h2-X48" firstAttribute="centerY" secondItem="exw-9U-EBj" secondAttribute="centerY" id="tFg-6D-EOH"/>
+                            <constraint firstItem="R7k-SY-Qt6" firstAttribute="leading" secondItem="exw-9U-EBj" secondAttribute="leading" constant="10" id="x76-Vn-xxB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="exw-9U-EBj" secondAttribute="trailing" constant="-8" id="J24-ZL-9YP"/>
+                    <constraint firstItem="exw-9U-EBj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="dDT-IU-YHO"/>
+                    <constraint firstItem="exw-9U-EBj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="hXY-KO-BjQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="exw-9U-EBj" secondAttribute="bottom" constant="-8" id="q8V-6U-HfU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btn" destination="7qj-h2-X48" id="RdN-bp-JjV"/>
+                <outlet property="name" destination="hTp-oJ-x0T" id="2eE-83-XOR"/>
+                <outlet property="number" destination="R7k-SY-Qt6" id="7W1-KN-sUf"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="stock_add_icon_n" width="22" height="22"/>
+    </resources>
+</document>

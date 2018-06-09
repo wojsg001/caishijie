@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Z2r-WH-XuM" customClass="SJInteractionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vlj-b1-DdO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="613"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jin-QS-xHy">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqf-Ye-JmQ">
+                            <rect key="frame" x="8" y="8" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="BnS-Ka-OZd"/>
+                                <constraint firstAttribute="height" constant="28" id="Xj0-6d-Mfz"/>
+                            </constraints>
+                            <state key="normal" image="icon_biaoqing"/>
+                            <connections>
+                                <action selector="sendImageBtnPressed:" destination="Z2r-WH-XuM" eventType="touchUpInside" id="Myw-Ky-zev"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGb-bQ-OMu">
+                            <rect key="frame" x="44" y="8" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="SuJ-vU-VhC"/>
+                                <constraint firstAttribute="width" constant="28" id="hPg-zv-a1Y"/>
+                            </constraints>
+                            <state key="normal" image="icon_biaoqing_icon"/>
+                            <connections>
+                                <action selector="sendFaceImageBtnPressed:" destination="Z2r-WH-XuM" eventType="touchUpInside" id="sec-Mz-6zm"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrp-nM-oou">
+                            <rect key="frame" x="317" y="4" width="50" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="CGB-wu-WH9"/>
+                                <constraint firstAttribute="height" constant="35" id="TTL-V4-uBj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="发送" backgroundImage="btn_broadcast_n">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="sendBtnPressed:" destination="Z2r-WH-XuM" eventType="touchUpInside" id="t9j-HJ-Mae"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="互动起来吧......" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y2g-uP-tUw">
+                            <rect key="frame" x="80" y="7" width="229" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="y2g-uP-tUw" firstAttribute="leading" secondItem="WGb-bQ-OMu" secondAttribute="trailing" constant="8" id="38e-Vs-iOo"/>
+                        <constraint firstAttribute="bottom" secondItem="y2g-uP-tUw" secondAttribute="bottom" constant="7" id="Hhw-Zu-9jM"/>
+                        <constraint firstAttribute="bottom" secondItem="iqf-Ye-JmQ" secondAttribute="bottom" constant="8" id="Jnw-KI-Koy"/>
+                        <constraint firstAttribute="trailing" secondItem="zrp-nM-oou" secondAttribute="trailing" constant="8" id="Nhb-ov-RoO"/>
+                        <constraint firstAttribute="height" constant="44" id="QZK-5D-JZI"/>
+                        <constraint firstItem="zrp-nM-oou" firstAttribute="leading" secondItem="y2g-uP-tUw" secondAttribute="trailing" constant="8" id="RkX-g0-NGA"/>
+                        <constraint firstAttribute="bottom" secondItem="zrp-nM-oou" secondAttribute="bottom" constant="5" id="Wm3-Ol-FW2"/>
+                        <constraint firstAttribute="bottom" secondItem="WGb-bQ-OMu" secondAttribute="bottom" constant="8" id="Xfa-dm-ESZ"/>
+                        <constraint firstItem="iqf-Ye-JmQ" firstAttribute="leading" secondItem="Jin-QS-xHy" secondAttribute="leading" constant="8" id="eih-ek-m8j"/>
+                        <constraint firstItem="WGb-bQ-OMu" firstAttribute="leading" secondItem="iqf-Ye-JmQ" secondAttribute="trailing" constant="8" id="kRu-D3-3xw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vlj-b1-DdO" secondAttribute="trailing" id="5I5-Pk-MD1"/>
+                <constraint firstAttribute="bottom" secondItem="Jin-QS-xHy" secondAttribute="bottom" id="7P5-Er-ojb"/>
+                <constraint firstItem="Jin-QS-xHy" firstAttribute="top" secondItem="Vlj-b1-DdO" secondAttribute="bottom" constant="10" id="8ji-eb-i4h"/>
+                <constraint firstItem="Jin-QS-xHy" firstAttribute="leading" secondItem="Z2r-WH-XuM" secondAttribute="leading" id="CVO-8Y-VOv"/>
+                <constraint firstItem="Vlj-b1-DdO" firstAttribute="leading" secondItem="Z2r-WH-XuM" secondAttribute="leading" id="ZxP-74-7sG"/>
+                <constraint firstItem="Vlj-b1-DdO" firstAttribute="top" secondItem="Z2r-WH-XuM" secondAttribute="top" id="jmz-jn-FyD"/>
+                <constraint firstAttribute="trailing" secondItem="Jin-QS-xHy" secondAttribute="trailing" id="seq-dd-DiR"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="bottomView" destination="Jin-QS-xHy" id="kC1-n2-nXq"/>
+                <outlet property="faceBtn" destination="WGb-bQ-OMu" id="uIz-qW-gxU"/>
+                <outlet property="moreBtn" destination="iqf-Ye-JmQ" id="TKM-KA-Zf5"/>
+                <outlet property="sendBtn" destination="zrp-nM-oou" id="V1b-gA-HvZ"/>
+                <outlet property="tableView" destination="Vlj-b1-DdO" id="y1n-gp-kAD"/>
+                <outlet property="textField" destination="y2g-uP-tUw" id="eqH-BH-cpQ"/>
+            </connections>
+            <point key="canvasLocation" x="230.5" y="223.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_broadcast_n" width="50" height="35"/>
+        <image name="icon_biaoqing" width="28" height="28"/>
+        <image name="icon_biaoqing_icon" width="28" height="28"/>
+    </resources>
+</document>

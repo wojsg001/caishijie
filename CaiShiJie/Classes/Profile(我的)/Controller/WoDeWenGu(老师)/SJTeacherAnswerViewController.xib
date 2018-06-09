@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SJTeacherAnswerViewController">
+            <connections>
+                <outlet property="noDataView" destination="Jy6-nm-xuB" id="oNL-vb-8QL"/>
+                <outlet property="tableView" destination="zii-SJ-cpp" id="ub4-BJ-qoR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zii-SJ-cpp">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jy6-nm-xuB">
+                    <rect key="frame" x="0.0" y="135" width="375" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_wengu_zanwu" translatesAutoresizingMaskIntoConstraints="NO" id="RkC-eF-0kQ">
+                            <rect key="frame" x="152" y="0.0" width="71" height="63"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="71" id="T1W-s0-LjV"/>
+                                <constraint firstAttribute="height" constant="63" id="r3j-0y-Lob"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无问股" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0Q-hh-sEI">
+                            <rect key="frame" x="155" y="87" width="64" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投资有风险，炒股需谨慎！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="or8-Ny-kdT">
+                            <rect key="frame" x="103" y="128" width="168" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.56078431370000004" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="j0Q-hh-sEI" firstAttribute="top" secondItem="RkC-eF-0kQ" secondAttribute="bottom" constant="24" id="623-Y2-Vyn"/>
+                        <constraint firstItem="j0Q-hh-sEI" firstAttribute="centerX" secondItem="Jy6-nm-xuB" secondAttribute="centerX" id="HIO-mK-uef"/>
+                        <constraint firstItem="or8-Ny-kdT" firstAttribute="top" secondItem="j0Q-hh-sEI" secondAttribute="bottom" constant="21" id="SdL-wp-3ze"/>
+                        <constraint firstItem="or8-Ny-kdT" firstAttribute="centerX" secondItem="Jy6-nm-xuB" secondAttribute="centerX" id="Vya-1X-rLc"/>
+                        <constraint firstItem="RkC-eF-0kQ" firstAttribute="top" secondItem="Jy6-nm-xuB" secondAttribute="top" id="j9N-eb-yML"/>
+                        <constraint firstItem="RkC-eF-0kQ" firstAttribute="centerX" secondItem="Jy6-nm-xuB" secondAttribute="centerX" id="kr0-Uw-isa"/>
+                        <constraint firstAttribute="height" constant="200" id="xxl-bl-2Je"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Jy6-nm-xuB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6dl-Ac-UGz"/>
+                <constraint firstAttribute="bottom" secondItem="zii-SJ-cpp" secondAttribute="bottom" id="EL5-Tl-gNd"/>
+                <constraint firstItem="zii-SJ-cpp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TLc-iO-yKF"/>
+                <constraint firstAttribute="trailing" secondItem="zii-SJ-cpp" secondAttribute="trailing" id="VLY-cK-kJc"/>
+                <constraint firstItem="Jy6-nm-xuB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="135" id="VbM-WB-tV2"/>
+                <constraint firstAttribute="trailing" secondItem="Jy6-nm-xuB" secondAttribute="trailing" id="ZbL-Oy-YFK"/>
+                <constraint firstItem="zii-SJ-cpp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Zdl-AM-5lM"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="329.5" y="266.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_wengu_zanwu" width="71" height="63"/>
+    </resources>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SJTeacherQuestionViewController">
+            <connections>
+                <outlet property="noDataView" destination="SGV-lM-9Bt" id="0vQ-5Y-e2L"/>
+                <outlet property="tableView" destination="Uxn-lm-6ST" id="Gfp-UK-jjD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uxn-lm-6ST">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-lM-9Bt">
+                    <rect key="frame" x="0.0" y="135" width="375" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_wengu_zanwu" translatesAutoresizingMaskIntoConstraints="NO" id="rJ3-0g-fn0">
+                            <rect key="frame" x="152" y="0.0" width="71" height="63"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="71" id="anq-tK-9ug"/>
+                                <constraint firstAttribute="height" constant="63" id="iQs-3c-M3d"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投资有风险，炒股需谨慎！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2M-Tv-hll">
+                            <rect key="frame" x="103" y="128" width="168" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.56078431370000004" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无问股" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMg-jh-3wu">
+                            <rect key="frame" x="155" y="87" width="64" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="wMg-jh-3wu" firstAttribute="top" secondItem="rJ3-0g-fn0" secondAttribute="bottom" constant="24" id="F0e-N3-Sks"/>
+                        <constraint firstItem="rJ3-0g-fn0" firstAttribute="centerX" secondItem="SGV-lM-9Bt" secondAttribute="centerX" id="F3g-LK-wS8"/>
+                        <constraint firstItem="wMg-jh-3wu" firstAttribute="centerX" secondItem="SGV-lM-9Bt" secondAttribute="centerX" id="V7M-N3-V4M"/>
+                        <constraint firstItem="a2M-Tv-hll" firstAttribute="centerX" secondItem="SGV-lM-9Bt" secondAttribute="centerX" id="e5j-op-697"/>
+                        <constraint firstItem="a2M-Tv-hll" firstAttribute="top" secondItem="wMg-jh-3wu" secondAttribute="bottom" constant="21" id="gVw-zl-Xfx"/>
+                        <constraint firstItem="rJ3-0g-fn0" firstAttribute="top" secondItem="SGV-lM-9Bt" secondAttribute="top" id="jXO-ZO-uRN"/>
+                        <constraint firstAttribute="height" constant="200" id="rHv-nN-9dy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SGV-lM-9Bt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="135" id="54w-8S-Asq"/>
+                <constraint firstAttribute="bottom" secondItem="Uxn-lm-6ST" secondAttribute="bottom" id="8vp-Xo-wfb"/>
+                <constraint firstItem="Uxn-lm-6ST" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H3d-1E-cLA"/>
+                <constraint firstAttribute="trailing" secondItem="Uxn-lm-6ST" secondAttribute="trailing" id="ZUb-AR-qFd"/>
+                <constraint firstItem="SGV-lM-9Bt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c95-sd-oQO"/>
+                <constraint firstItem="Uxn-lm-6ST" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="k1B-Z8-R59"/>
+                <constraint firstAttribute="trailing" secondItem="SGV-lM-9Bt" secondAttribute="trailing" id="oTs-y2-gdY"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="147.5" y="291.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_wengu_zanwu" width="71" height="63"/>
+    </resources>
+</document>

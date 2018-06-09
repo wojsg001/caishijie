@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="134" id="KGk-i7-Jjw" customClass="SJBlogArticlePublicCell">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="134"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="457" height="133"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtR-vJ-FQ8">
+                        <rect key="frame" x="0.0" y="0.0" width="457" height="8"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="Hgr-XL-AK3"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPa-pf-vty">
+                        <rect key="frame" x="0.0" y="8" width="457" height="1"/>
+                        <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="YhP-fN-Z0t"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOO-vi-yod">
+                        <rect key="frame" x="0.0" y="132" width="457" height="1"/>
+                        <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ccx-tU-HXS"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="国务院常务会议部署促进通用航空业发展" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaF-ll-kYD">
+                        <rect key="frame" x="10" y="21" width="372" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="国务院常务会议部署促进通用航空业发展国务院常务会议部署促进通用航空业发展" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l37-mn-HaF">
+                        <rect key="frame" x="10" y="49" width="372" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-05-06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lH-0Q-odw">
+                        <rect key="frame" x="10" y="107" width="70" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM0-lK-n7e">
+                        <rect key="frame" x="95" y="104" width="12" height="22"/>
+                        <state key="normal" image="article_zan"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iik-9F-Zoe">
+                        <rect key="frame" x="113" y="108" width="14" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="article_pto" translatesAutoresizingMaskIntoConstraints="NO" id="21Q-Ge-9o0">
+                        <rect key="frame" x="392" y="19" width="55" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="5hf-VM-L45"/>
+                            <constraint firstAttribute="width" constant="55" id="SAa-sm-WiI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="散户哨兵" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1s-6z-SW0">
+                        <rect key="frame" x="394" y="84" width="52" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mPa-pf-vty" firstAttribute="top" secondItem="gtR-vJ-FQ8" secondAttribute="bottom" id="1fM-ql-q5z"/>
+                    <constraint firstItem="7lH-0Q-odw" firstAttribute="leading" secondItem="l37-mn-HaF" secondAttribute="leading" id="3xN-Rt-YdD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mPa-pf-vty" secondAttribute="trailing" constant="-8" id="5V2-bF-12G"/>
+                    <constraint firstItem="l37-mn-HaF" firstAttribute="top" secondItem="qaF-ll-kYD" secondAttribute="bottom" constant="10" id="7Iu-Uf-lUq"/>
+                    <constraint firstItem="gtR-vJ-FQ8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="7w1-fV-GbK"/>
+                    <constraint firstItem="n1s-6z-SW0" firstAttribute="top" secondItem="21Q-Ge-9o0" secondAttribute="bottom" constant="10" id="83J-sZ-wAA"/>
+                    <constraint firstItem="JOO-vi-yod" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="8JQ-fk-e9Q"/>
+                    <constraint firstItem="gtR-vJ-FQ8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="A29-dj-Lej"/>
+                    <constraint firstItem="l37-mn-HaF" firstAttribute="leading" secondItem="qaF-ll-kYD" secondAttribute="leading" id="C0b-jo-c8d"/>
+                    <constraint firstItem="21Q-Ge-9o0" firstAttribute="leading" secondItem="qaF-ll-kYD" secondAttribute="trailing" constant="10" id="FDV-35-pYP"/>
+                    <constraint firstItem="21Q-Ge-9o0" firstAttribute="top" secondItem="mPa-pf-vty" secondAttribute="bottom" constant="10" id="FfP-Ie-5eP"/>
+                    <constraint firstItem="lM0-lK-n7e" firstAttribute="leading" secondItem="7lH-0Q-odw" secondAttribute="trailing" constant="15" id="Gjb-LA-ZeA"/>
+                    <constraint firstItem="n1s-6z-SW0" firstAttribute="centerX" secondItem="21Q-Ge-9o0" secondAttribute="centerX" id="KLM-9j-08R"/>
+                    <constraint firstItem="JOO-vi-yod" firstAttribute="top" secondItem="7lH-0Q-odw" secondAttribute="bottom" constant="10" id="KuM-2e-pc7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="21Q-Ge-9o0" secondAttribute="trailing" constant="2" id="R24-cD-9do"/>
+                    <constraint firstItem="lM0-lK-n7e" firstAttribute="centerY" secondItem="7lH-0Q-odw" secondAttribute="centerY" id="RRa-bS-5eV"/>
+                    <constraint firstItem="Iik-9F-Zoe" firstAttribute="centerY" secondItem="lM0-lK-n7e" secondAttribute="centerY" id="Ru6-tf-xEV"/>
+                    <constraint firstItem="qaF-ll-kYD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="TGx-Qu-EP5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gtR-vJ-FQ8" secondAttribute="trailing" constant="-8" id="XLR-is-x0p"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="JOO-vi-yod" secondAttribute="trailing" constant="-8" id="aZ2-tO-WDd"/>
+                    <constraint firstItem="21Q-Ge-9o0" firstAttribute="leading" secondItem="l37-mn-HaF" secondAttribute="trailing" constant="10" id="bd2-NW-x9r"/>
+                    <constraint firstItem="mPa-pf-vty" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="dGU-iy-A6k"/>
+                    <constraint firstItem="Iik-9F-Zoe" firstAttribute="leading" secondItem="lM0-lK-n7e" secondAttribute="trailing" constant="6" id="efM-N9-CKs"/>
+                    <constraint firstItem="qaF-ll-kYD" firstAttribute="top" secondItem="mPa-pf-vty" secondAttribute="bottom" constant="12" id="ppf-ee-ovw"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="JOO-vi-yod" secondAttribute="bottom" constant="-8" id="qdV-6X-Gwh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomLineHeight" destination="ccx-tU-HXS" id="m45-PG-wFW"/>
+                <outlet property="headImgView" destination="21Q-Ge-9o0" id="oRS-zi-Vll"/>
+                <outlet property="nicknameLabel" destination="n1s-6z-SW0" id="14W-xW-dma"/>
+                <outlet property="praiseLabel" destination="Iik-9F-Zoe" id="SUA-2k-R9p"/>
+                <outlet property="summaryLabel" destination="l37-mn-HaF" id="L4q-uO-FFK"/>
+                <outlet property="timeLabel" destination="7lH-0Q-odw" id="Bj6-2v-OFo"/>
+                <outlet property="titleLabel" destination="qaF-ll-kYD" id="EVY-HE-Ym6"/>
+                <outlet property="topLineHeight" destination="YhP-fN-Z0t" id="Sw9-aJ-tCH"/>
+            </connections>
+            <point key="canvasLocation" x="225.5" y="263"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="article_pto" width="55" height="55"/>
+        <image name="article_zan" width="12" height="13"/>
+    </resources>
+</document>

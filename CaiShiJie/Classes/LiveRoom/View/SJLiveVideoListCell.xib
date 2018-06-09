@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="153" id="KGk-i7-Jjw" customClass="SJLiveVideoListCell">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="153"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="331" height="152"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57b-Qs-W3Z">
+                        <rect key="frame" x="0.0" y="0.0" width="331" height="152"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_img" translatesAutoresizingMaskIntoConstraints="NO" id="Y5K-5X-zv0">
+                                <rect key="frame" x="10" y="43" width="75" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="23g-1g-y0r"/>
+                                    <constraint firstAttribute="width" constant="75" id="x2Z-MD-7gb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="财富密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nh-ky-z6Q">
+                                <rect key="frame" x="96" y="43" width="225" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间: 08:55-09:00(工作日)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7b-kc-W8K">
+                                <rect key="frame" x="96" y="67" width="225" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主持: 李向前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gin-eM-gel">
+                                <rect key="frame" x="96" y="90" width="225" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_todaylive_icon3" translatesAutoresizingMaskIntoConstraints="NO" id="KXp-7k-Woz">
+                                <rect key="frame" x="35" y="58" width="25" height="25"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="回放" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcf-JP-u5t">
+                                <rect key="frame" x="37" y="90" width="20" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C7b-kc-W8K" firstAttribute="top" secondItem="8Nh-ky-z6Q" secondAttribute="bottom" constant="6" id="5BQ-Dr-igo"/>
+                            <constraint firstItem="zcf-JP-u5t" firstAttribute="top" secondItem="KXp-7k-Woz" secondAttribute="bottom" constant="7" id="INi-KH-4bE"/>
+                            <constraint firstItem="Gin-eM-gel" firstAttribute="top" secondItem="C7b-kc-W8K" secondAttribute="bottom" constant="6" id="MYc-of-YfD"/>
+                            <constraint firstItem="Gin-eM-gel" firstAttribute="trailing" secondItem="C7b-kc-W8K" secondAttribute="trailing" id="OKB-9o-6Xs"/>
+                            <constraint firstItem="KXp-7k-Woz" firstAttribute="centerX" secondItem="Y5K-5X-zv0" secondAttribute="centerX" id="POP-yf-vx2"/>
+                            <constraint firstAttribute="trailing" secondItem="8Nh-ky-z6Q" secondAttribute="trailing" constant="10" id="Qh2-aa-mTz"/>
+                            <constraint firstItem="Y5K-5X-zv0" firstAttribute="centerY" secondItem="57b-Qs-W3Z" secondAttribute="centerY" id="Qjk-Mb-Wwn"/>
+                            <constraint firstItem="zcf-JP-u5t" firstAttribute="centerX" secondItem="KXp-7k-Woz" secondAttribute="centerX" id="SlG-qx-UVb"/>
+                            <constraint firstItem="8Nh-ky-z6Q" firstAttribute="top" secondItem="Y5K-5X-zv0" secondAttribute="top" id="Sqm-Ou-LVz"/>
+                            <constraint firstItem="C7b-kc-W8K" firstAttribute="trailing" secondItem="8Nh-ky-z6Q" secondAttribute="trailing" id="VI7-jp-Nk2"/>
+                            <constraint firstItem="Gin-eM-gel" firstAttribute="leading" secondItem="C7b-kc-W8K" secondAttribute="leading" id="Y3A-Mq-zcw"/>
+                            <constraint firstItem="C7b-kc-W8K" firstAttribute="leading" secondItem="8Nh-ky-z6Q" secondAttribute="leading" id="k6N-XE-BOR"/>
+                            <constraint firstItem="KXp-7k-Woz" firstAttribute="top" secondItem="Y5K-5X-zv0" secondAttribute="top" constant="15" id="mGj-ky-MhZ"/>
+                            <constraint firstItem="Y5K-5X-zv0" firstAttribute="leading" secondItem="57b-Qs-W3Z" secondAttribute="leading" constant="10" id="vam-Jc-vxk"/>
+                            <constraint firstItem="8Nh-ky-z6Q" firstAttribute="leading" secondItem="Y5K-5X-zv0" secondAttribute="trailing" constant="11" id="zLR-ib-FBY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="57b-Qs-W3Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="GFh-io-4Lk"/>
+                    <constraint firstItem="57b-Qs-W3Z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="YaP-fl-crd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="57b-Qs-W3Z" secondAttribute="trailing" constant="-8" id="msp-Wx-yhE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="57b-Qs-W3Z" secondAttribute="bottom" constant="-8" id="rh8-cA-cQh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="authorLabel" destination="Gin-eM-gel" id="tXQ-9i-R5F"/>
+                <outlet property="statusIcon" destination="KXp-7k-Woz" id="OFa-ag-hRq"/>
+                <outlet property="statusLabel" destination="zcf-JP-u5t" id="IAf-3g-F4k"/>
+                <outlet property="timeLabel" destination="C7b-kc-W8K" id="8II-3X-B2z"/>
+                <outlet property="titleLabel" destination="8Nh-ky-z6Q" id="OOx-6o-lYr"/>
+            </connections>
+            <point key="canvasLocation" x="263.5" y="224.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="live_img" width="75" height="65"/>
+        <image name="new_todaylive_icon3" width="25" height="25"/>
+    </resources>
+</document>

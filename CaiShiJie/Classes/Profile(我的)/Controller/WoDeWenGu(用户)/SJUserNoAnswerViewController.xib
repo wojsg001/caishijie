@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SJUserNoAnswerViewController">
+            <connections>
+                <outlet property="noDataView" destination="dQn-lG-M8y" id="tVa-6p-gh0"/>
+                <outlet property="tableView" destination="6Tt-Rw-Qaf" id="eZO-hS-amE"/>
+                <outlet property="view" destination="SpI-x8-z4b" id="TRs-mK-rxC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="SpI-x8-z4b">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Tt-Rw-Qaf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQn-lG-M8y">
+                    <rect key="frame" x="0.0" y="135" width="375" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_wengu_zanwu" translatesAutoresizingMaskIntoConstraints="NO" id="spa-q0-gIr">
+                            <rect key="frame" x="152" y="0.0" width="71" height="63"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="71" id="NbZ-Qj-zBF"/>
+                                <constraint firstAttribute="height" constant="63" id="h4Y-qi-sbF"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无问股" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPA-dU-Yrg">
+                            <rect key="frame" x="155" y="87" width="64" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投资有风险，炒股需谨慎！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5M0-XI-C3k">
+                            <rect key="frame" x="103" y="128" width="168" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.56078431370000004" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="5M0-XI-C3k" firstAttribute="top" secondItem="YPA-dU-Yrg" secondAttribute="bottom" constant="21" id="2uP-aa-nal"/>
+                        <constraint firstItem="5M0-XI-C3k" firstAttribute="centerX" secondItem="dQn-lG-M8y" secondAttribute="centerX" id="GeS-YJ-qux"/>
+                        <constraint firstItem="YPA-dU-Yrg" firstAttribute="top" secondItem="spa-q0-gIr" secondAttribute="bottom" constant="24" id="IE5-nR-XUI"/>
+                        <constraint firstItem="spa-q0-gIr" firstAttribute="top" secondItem="dQn-lG-M8y" secondAttribute="top" id="T7w-xZ-vuj"/>
+                        <constraint firstItem="YPA-dU-Yrg" firstAttribute="centerX" secondItem="dQn-lG-M8y" secondAttribute="centerX" id="frf-rX-pfc"/>
+                        <constraint firstItem="spa-q0-gIr" firstAttribute="centerX" secondItem="dQn-lG-M8y" secondAttribute="centerX" id="mAY-in-Man"/>
+                        <constraint firstAttribute="height" constant="200" id="qMs-zF-v6f"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6Tt-Rw-Qaf" firstAttribute="top" secondItem="SpI-x8-z4b" secondAttribute="top" id="0tm-nL-afD"/>
+                <constraint firstAttribute="trailing" secondItem="6Tt-Rw-Qaf" secondAttribute="trailing" id="1us-5X-t6c"/>
+                <constraint firstAttribute="trailing" secondItem="dQn-lG-M8y" secondAttribute="trailing" id="8Xv-FF-Ij2"/>
+                <constraint firstItem="dQn-lG-M8y" firstAttribute="top" secondItem="SpI-x8-z4b" secondAttribute="top" constant="135" id="lN7-60-3P7"/>
+                <constraint firstItem="dQn-lG-M8y" firstAttribute="leading" secondItem="SpI-x8-z4b" secondAttribute="leading" id="suD-By-p5Y"/>
+                <constraint firstAttribute="bottom" secondItem="6Tt-Rw-Qaf" secondAttribute="bottom" id="tqf-IA-IMn"/>
+                <constraint firstItem="6Tt-Rw-Qaf" firstAttribute="leading" secondItem="SpI-x8-z4b" secondAttribute="leading" id="xC7-ff-Wzw"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="327.5" y="345.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_wengu_zanwu" width="71" height="63"/>
+    </resources>
+</document>

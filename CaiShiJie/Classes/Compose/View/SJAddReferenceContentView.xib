@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SJAddReferenceContentView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ln-RH-G9K">
+                    <rect key="frame" x="10" y="10" width="63" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="1ln-RH-G9K" secondAttribute="height" multiplier="1:1" id="7IA-6b-rLX"/>
+                    </constraints>
+                    <state key="normal" image="neican_icon-1"/>
+                    <connections>
+                        <action selector="ClickAddImageButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="tyu-l2-K7V"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="10i-Wu-bKF">
+                    <rect key="frame" x="83" y="10" width="63" height="63"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cnT-Hf-ZCZ">
+                    <rect key="frame" x="156" y="10" width="63" height="63"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gx4-y1-9bB">
+                    <rect key="frame" x="229" y="10" width="63" height="63"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZh-GC-vwf">
+                    <rect key="frame" x="302" y="10" width="63" height="63"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="10i-Wu-bKF" firstAttribute="width" secondItem="1ln-RH-G9K" secondAttribute="width" id="AjV-h0-Tew"/>
+                <constraint firstItem="10i-Wu-bKF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="C2X-8U-HRK"/>
+                <constraint firstItem="gx4-y1-9bB" firstAttribute="leading" secondItem="cnT-Hf-ZCZ" secondAttribute="trailing" constant="10" id="Cc0-Th-Ek0"/>
+                <constraint firstItem="10i-Wu-bKF" firstAttribute="height" secondItem="1ln-RH-G9K" secondAttribute="height" id="FfJ-aA-9dy"/>
+                <constraint firstItem="10i-Wu-bKF" firstAttribute="leading" secondItem="1ln-RH-G9K" secondAttribute="trailing" constant="10" id="Iar-JD-sJO"/>
+                <constraint firstItem="PZh-GC-vwf" firstAttribute="width" secondItem="1ln-RH-G9K" secondAttribute="width" id="JQu-L3-d82"/>
+                <constraint firstItem="1ln-RH-G9K" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="MJq-Bo-wGW"/>
+                <constraint firstItem="PZh-GC-vwf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Mjs-y6-a05"/>
+                <constraint firstItem="1ln-RH-G9K" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="PNC-7g-YUJ"/>
+                <constraint firstItem="cnT-Hf-ZCZ" firstAttribute="leading" secondItem="10i-Wu-bKF" secondAttribute="trailing" constant="10" id="SuP-oE-yHx"/>
+                <constraint firstAttribute="trailing" secondItem="PZh-GC-vwf" secondAttribute="trailing" constant="10" id="aQd-rb-abC"/>
+                <constraint firstItem="cnT-Hf-ZCZ" firstAttribute="height" secondItem="1ln-RH-G9K" secondAttribute="height" id="adY-4j-JXG"/>
+                <constraint firstItem="cnT-Hf-ZCZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="bAG-HK-skC"/>
+                <constraint firstItem="cnT-Hf-ZCZ" firstAttribute="width" secondItem="1ln-RH-G9K" secondAttribute="width" id="be7-Up-hQK"/>
+                <constraint firstItem="PZh-GC-vwf" firstAttribute="height" secondItem="1ln-RH-G9K" secondAttribute="height" id="n5E-4c-1kq"/>
+                <constraint firstItem="PZh-GC-vwf" firstAttribute="leading" secondItem="gx4-y1-9bB" secondAttribute="trailing" constant="10" id="oKe-9a-FON"/>
+                <constraint firstItem="gx4-y1-9bB" firstAttribute="width" secondItem="1ln-RH-G9K" secondAttribute="width" id="pTN-3S-jic"/>
+                <constraint firstItem="gx4-y1-9bB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="pYw-Vo-m5z"/>
+                <constraint firstItem="gx4-y1-9bB" firstAttribute="height" secondItem="1ln-RH-G9K" secondAttribute="height" id="zzv-Cw-LWZ"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="addImageButton" destination="1ln-RH-G9K" id="93H-lb-Ile"/>
+                <outlet property="imgView0" destination="10i-Wu-bKF" id="KC5-i9-O4v"/>
+                <outlet property="imgView1" destination="cnT-Hf-ZCZ" id="o3x-9V-wAe"/>
+                <outlet property="imgView2" destination="gx4-y1-9bB" id="9ov-al-uqn"/>
+                <outlet property="imgView3" destination="PZh-GC-vwf" id="FM0-WR-P1l"/>
+            </connections>
+            <point key="canvasLocation" x="277.5" y="100.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="neican_icon-1" width="60" height="60"/>
+    </resources>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="D7p-bC-f86" customClass="SJBombBox">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="151"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmb-PW-I5v">
+                    <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="lD6-fr-Pf3"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_icon" translatesAutoresizingMaskIntoConstraints="NO" id="pfm-ry-Icd">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="21" id="Ziv-c8-d4P"/>
+                        <constraint firstAttribute="height" constant="23" id="dJC-XN-eUf"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abe-GC-wFL">
+                    <state key="normal" title="文本模式">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="ClickBox:" destination="D7p-bC-f86" eventType="touchUpInside" id="cXp-ZA-Fra"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_icon" translatesAutoresizingMaskIntoConstraints="NO" id="A4y-zb-Jzl">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="CvP-cq-SKi"/>
+                        <constraint firstAttribute="width" constant="22" id="dkN-ed-VHl"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHJ-tg-Npj">
+                    <state key="normal" title="视频模式">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="ClickBox:" destination="D7p-bC-f86" eventType="touchUpInside" id="4Ph-oE-aq2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="abe-GC-wFL" secondAttribute="trailing" constant="10" id="09N-xv-4BA"/>
+                <constraint firstItem="Wmb-PW-I5v" firstAttribute="leading" secondItem="D7p-bC-f86" secondAttribute="leading" constant="10" id="23m-1v-ZPu"/>
+                <constraint firstItem="abe-GC-wFL" firstAttribute="leading" secondItem="pfm-ry-Icd" secondAttribute="trailing" constant="9" id="8PJ-bi-82R"/>
+                <constraint firstAttribute="trailing" secondItem="Wmb-PW-I5v" secondAttribute="trailing" constant="10" id="CEq-OP-Ik7"/>
+                <constraint firstItem="pfm-ry-Icd" firstAttribute="leading" secondItem="D7p-bC-f86" secondAttribute="leading" constant="10" id="DNn-xY-WeQ"/>
+                <constraint firstItem="A4y-zb-Jzl" firstAttribute="leading" secondItem="D7p-bC-f86" secondAttribute="leading" constant="10" id="J2p-T6-viR"/>
+                <constraint firstItem="abe-GC-wFL" firstAttribute="centerY" secondItem="pfm-ry-Icd" secondAttribute="centerY" id="MCx-RP-aUP"/>
+                <constraint firstAttribute="trailing" secondItem="bHJ-tg-Npj" secondAttribute="trailing" constant="10" id="Pud-B4-fDJ"/>
+                <constraint firstItem="bHJ-tg-Npj" firstAttribute="leading" secondItem="A4y-zb-Jzl" secondAttribute="trailing" constant="8" id="UIN-NI-zim"/>
+                <constraint firstItem="pfm-ry-Icd" firstAttribute="top" secondItem="Wmb-PW-I5v" secondAttribute="bottom" constant="10" id="Wvq-Be-PqK"/>
+                <constraint firstItem="Wmb-PW-I5v" firstAttribute="top" secondItem="A4y-zb-Jzl" secondAttribute="bottom" constant="10" id="a1r-W2-wSD"/>
+                <constraint firstItem="A4y-zb-Jzl" firstAttribute="top" secondItem="D7p-bC-f86" secondAttribute="top" constant="15" id="gVG-n2-Rxv"/>
+                <constraint firstItem="bHJ-tg-Npj" firstAttribute="centerY" secondItem="A4y-zb-Jzl" secondAttribute="centerY" id="kJi-J3-Hrd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="257.5" y="364.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="live_icon" width="22" height="21"/>
+        <image name="text_icon" width="21" height="23"/>
+    </resources>
+</document>

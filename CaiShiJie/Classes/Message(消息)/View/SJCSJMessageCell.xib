@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="128" id="KGk-i7-Jjw" customClass="SJCSJMessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mem-Xr-8BK">
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1o-Kv-7ut">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09-19 下午14:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVM-5r-aCS">
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="SVM-5r-aCS" firstAttribute="centerX" secondItem="v1o-Kv-7ut" secondAttribute="centerX" id="2SL-Ti-c1R"/>
+                                    <constraint firstItem="SVM-5r-aCS" firstAttribute="centerY" secondItem="v1o-Kv-7ut" secondAttribute="centerY" id="UxV-UX-Wp8"/>
+                                    <constraint firstAttribute="height" constant="40" id="qFA-Oh-dYZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xv8-Ng-0fH">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【热了庆祝】财视界与恒泰证券正式达成合作" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDh-Yf-4Rn">
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oDh-Yf-4Rn" secondAttribute="bottom" constant="12.5" id="1tg-na-zPs"/>
+                                    <constraint firstItem="oDh-Yf-4Rn" firstAttribute="top" secondItem="Xv8-Ng-0fH" secondAttribute="top" constant="12.5" id="31i-1s-exv"/>
+                                    <constraint firstItem="oDh-Yf-4Rn" firstAttribute="leading" secondItem="Xv8-Ng-0fH" secondAttribute="leading" constant="10" id="8gv-dq-Arf"/>
+                                    <constraint firstAttribute="trailing" secondItem="oDh-Yf-4Rn" secondAttribute="trailing" constant="10" id="sar-bq-6uX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="v1o-Kv-7ut" secondAttribute="trailing" id="BwK-DW-Xhb"/>
+                            <constraint firstItem="v1o-Kv-7ut" firstAttribute="top" secondItem="mem-Xr-8BK" secondAttribute="top" id="EgR-jr-tix"/>
+                            <constraint firstItem="v1o-Kv-7ut" firstAttribute="leading" secondItem="mem-Xr-8BK" secondAttribute="leading" id="Eih-Cv-SnE"/>
+                            <constraint firstAttribute="bottom" secondItem="Xv8-Ng-0fH" secondAttribute="bottom" id="PLB-XX-WTY"/>
+                            <constraint firstAttribute="trailing" secondItem="Xv8-Ng-0fH" secondAttribute="trailing" constant="10" id="a8v-ql-zz4"/>
+                            <constraint firstItem="Xv8-Ng-0fH" firstAttribute="top" secondItem="v1o-Kv-7ut" secondAttribute="bottom" id="aXs-uz-36e"/>
+                            <constraint firstItem="Xv8-Ng-0fH" firstAttribute="leading" secondItem="mem-Xr-8BK" secondAttribute="leading" constant="10" id="vX1-dW-Z4J"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mem-Xr-8BK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="DzU-D9-oF5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mem-Xr-8BK" secondAttribute="trailing" constant="-8" id="gtn-H4-i2m"/>
+                    <constraint firstItem="mem-Xr-8BK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="h1S-af-3HK"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mem-Xr-8BK" secondAttribute="bottom" constant="-8" id="lUj-z3-fAJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="timeLabel" destination="SVM-5r-aCS" id="IzI-2v-axg"/>
+                <outlet property="titleBackgroundView" destination="Xv8-Ng-0fH" id="8In-ys-Mui"/>
+                <outlet property="titleLabel" destination="oDh-Yf-4Rn" id="dsj-x5-Yal"/>
+            </connections>
+            <point key="canvasLocation" x="-14" y="396"/>
+        </tableViewCell>
+    </objects>
+</document>

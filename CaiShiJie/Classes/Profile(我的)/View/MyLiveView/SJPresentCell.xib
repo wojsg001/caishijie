@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SJPresentCell">
+            <rect key="frame" x="0.0" y="0.0" width="113" height="216"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="113" height="216"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-Ls-wuI">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="BdE-Ls-wuI" secondAttribute="height" multiplier="1:1" id="g9t-VX-lgw"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="live_gift_border_n"/>
+                        <state key="highlighted" backgroundImage="live_gift_border_h"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="杨帆万里" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4A6-7P-deu">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥30金币" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcc-m1-UyY">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.95294117647058818" green="0.30196078431372547" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_gift_img_n" translatesAutoresizingMaskIntoConstraints="NO" id="YmS-3c-aGX"/>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hcc-m1-UyY" firstAttribute="top" secondItem="4A6-7P-deu" secondAttribute="bottom" constant="6" id="5Dq-Zg-Zrt"/>
+                <constraint firstItem="YmS-3c-aGX" firstAttribute="trailing" secondItem="BdE-Ls-wuI" secondAttribute="trailing" constant="-2" id="7kB-ew-MNu"/>
+                <constraint firstItem="4A6-7P-deu" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="CLE-GH-czV"/>
+                <constraint firstItem="YmS-3c-aGX" firstAttribute="bottom" secondItem="BdE-Ls-wuI" secondAttribute="bottom" constant="-2" id="NAD-7z-PzP"/>
+                <constraint firstItem="YmS-3c-aGX" firstAttribute="leading" secondItem="BdE-Ls-wuI" secondAttribute="leading" constant="2" id="Tiy-gE-wYg"/>
+                <constraint firstItem="BdE-Ls-wuI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="bRj-ym-Ofj"/>
+                <constraint firstItem="BdE-Ls-wuI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="eOm-Vh-5Gn"/>
+                <constraint firstItem="hcc-m1-UyY" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="hm1-EY-7mm"/>
+                <constraint firstItem="4A6-7P-deu" firstAttribute="top" secondItem="BdE-Ls-wuI" secondAttribute="bottom" constant="6" id="jCZ-o5-6am"/>
+                <constraint firstItem="YmS-3c-aGX" firstAttribute="top" secondItem="BdE-Ls-wuI" secondAttribute="top" constant="2" id="od9-b0-R95"/>
+                <constraint firstAttribute="trailing" secondItem="BdE-Ls-wuI" secondAttribute="trailing" constant="5" id="oej-ff-CiX"/>
+            </constraints>
+            <size key="customSize" width="113" height="216"/>
+            <connections>
+                <outlet property="btn" destination="BdE-Ls-wuI" id="Llu-Y5-QEw"/>
+                <outlet property="imgView" destination="YmS-3c-aGX" id="Kz6-fF-l97"/>
+                <outlet property="nameLabel" destination="4A6-7P-deu" id="rHl-LF-D1A"/>
+                <outlet property="priceLabel" destination="hcc-m1-UyY" id="n19-MC-aIV"/>
+            </connections>
+            <point key="canvasLocation" x="-26.5" y="250"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="live_gift_border_h" width="70" height="70"/>
+        <image name="live_gift_border_n" width="70" height="70"/>
+        <image name="live_gift_img_n" width="70" height="70"/>
+    </resources>
+</document>

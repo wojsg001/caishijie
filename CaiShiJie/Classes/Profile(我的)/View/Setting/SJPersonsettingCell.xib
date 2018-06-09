@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="KGk-i7-Jjw" customClass="SJPersonsettingCell">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRu-wC-ktv">
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="65"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-pE-NGG">
+                                <rect key="frame" x="10" y="23" width="306" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="icon_next" translatesAutoresizingMaskIntoConstraints="NO" id="K7X-e9-LWh">
+                                <rect key="frame" x="354" y="26" width="7" height="13"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="男" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eub-L5-6da">
+                                <rect key="frame" x="326" y="23" width="16" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eub-L5-6da" firstAttribute="leading" secondItem="nAp-pE-NGG" secondAttribute="trailing" constant="10" id="2jP-xV-tOS"/>
+                            <constraint firstItem="eub-L5-6da" firstAttribute="centerY" secondItem="K7X-e9-LWh" secondAttribute="centerY" id="PHS-Qe-Tex"/>
+                            <constraint firstItem="K7X-e9-LWh" firstAttribute="centerY" secondItem="cRu-wC-ktv" secondAttribute="centerY" id="TRp-ix-xYS"/>
+                            <constraint firstAttribute="trailing" secondItem="K7X-e9-LWh" secondAttribute="trailing" constant="15" id="icd-sn-Qs0"/>
+                            <constraint firstItem="K7X-e9-LWh" firstAttribute="leading" secondItem="eub-L5-6da" secondAttribute="trailing" constant="12" id="jJs-Hc-36K"/>
+                            <constraint firstItem="nAp-pE-NGG" firstAttribute="centerY" secondItem="cRu-wC-ktv" secondAttribute="centerY" id="kli-xP-Hyz"/>
+                            <constraint firstItem="nAp-pE-NGG" firstAttribute="leading" secondItem="cRu-wC-ktv" secondAttribute="leading" constant="10" id="xLo-TT-1Od"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="cRu-wC-ktv" secondAttribute="bottom" constant="-8" id="28r-Es-Rnv"/>
+                    <constraint firstItem="cRu-wC-ktv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="4X7-bF-skT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cRu-wC-ktv" secondAttribute="trailing" constant="-8" id="Jc9-bf-BFr"/>
+                    <constraint firstItem="cRu-wC-ktv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="eqc-Q5-abs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="content" destination="eub-L5-6da" id="8be-Gj-p0Z"/>
+                <outlet property="image" destination="K7X-e9-LWh" id="JXB-Wi-2dw"/>
+                <outlet property="title" destination="nAp-pE-NGG" id="2oh-QI-fnz"/>
+            </connections>
+            <point key="canvasLocation" x="236" y="131"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_next" width="7" height="13"/>
+    </resources>
+</document>

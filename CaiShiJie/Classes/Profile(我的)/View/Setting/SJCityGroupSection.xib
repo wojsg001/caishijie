@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="SJCityGroupSection">
+            <rect key="frame" x="0.0" y="0.0" width="387" height="188"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OG5-FP-gci">
+                    <rect key="frame" x="0.0" y="0.0" width="387" height="44"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GF2-Ng-bvc">
+                            <rect key="frame" x="10" y="43" width="367" height="1"/>
+                            <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="OSn-uz-1fT"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNX-Hl-WM4">
+                            <rect key="frame" x="10" y="12" width="32" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcB-eI-YlI">
+                            <rect key="frame" x="0.0" y="0.0" width="387" height="43"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="23" maxY="0.0"/>
+                            <state key="normal" image="article_icon2_n"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="GF2-Ng-bvc" firstAttribute="top" secondItem="OcB-eI-YlI" secondAttribute="bottom" id="88s-I3-NF3"/>
+                        <constraint firstItem="VNX-Hl-WM4" firstAttribute="leading" secondItem="OG5-FP-gci" secondAttribute="leading" constant="10" id="Ae7-EC-j1E"/>
+                        <constraint firstItem="OcB-eI-YlI" firstAttribute="leading" secondItem="OG5-FP-gci" secondAttribute="leading" id="CVE-jk-t1t"/>
+                        <constraint firstAttribute="trailing" secondItem="GF2-Ng-bvc" secondAttribute="trailing" constant="10" id="HxO-CI-qD1"/>
+                        <constraint firstItem="GF2-Ng-bvc" firstAttribute="leading" secondItem="OG5-FP-gci" secondAttribute="leading" constant="10" id="QmG-8L-1lS"/>
+                        <constraint firstAttribute="height" constant="44" id="Tii-8F-C6V"/>
+                        <constraint firstAttribute="trailing" secondItem="OcB-eI-YlI" secondAttribute="trailing" id="bZK-pF-rca"/>
+                        <constraint firstItem="VNX-Hl-WM4" firstAttribute="centerY" secondItem="OG5-FP-gci" secondAttribute="centerY" id="cuN-fh-oUy"/>
+                        <constraint firstItem="OcB-eI-YlI" firstAttribute="top" secondItem="OG5-FP-gci" secondAttribute="top" id="hDW-KX-gX2"/>
+                        <constraint firstAttribute="bottom" secondItem="GF2-Ng-bvc" secondAttribute="bottom" id="jaU-Fh-pkX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="OG5-FP-gci" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="1Ka-hV-h8B"/>
+                <constraint firstItem="OG5-FP-gci" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="BPY-vv-3Bs"/>
+                <constraint firstAttribute="trailing" secondItem="OG5-FP-gci" secondAttribute="trailing" id="awe-Lk-YwU"/>
+            </constraints>
+            <connections>
+                <outlet property="sectionBtn" destination="OcB-eI-YlI" id="zf1-5G-Z1e"/>
+                <outlet property="sectionTitle" destination="VNX-Hl-WM4" id="vUZ-oH-G2U"/>
+            </connections>
+            <point key="canvasLocation" x="290.5" y="242"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="article_icon2_n" width="17" height="10"/>
+    </resources>
+</document>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Phone Video List View Controller-->
+        <scene sceneID="arx-6i-EBU">
+            <objects>
+                <viewController storyboardIdentifier="PhoneVideoListVC" automaticallyAdjustsScrollViewInsets="NO" id="cFx-zJ-cOh" customClass="SJPhoneVideoListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FaX-ce-jaQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="odc-n2-abY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dtM-Jg-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="394-Oj-Ixm">
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bEH-pa-flA">
+                                    <size key="itemSize" width="165" height="241"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SJPhoneVideoListCell" id="liX-Ku-wk0" customClass="SJPhoneVideoListCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="199"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="199"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_list_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-mm-VkS">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="JcJ-mm-VkS" secondAttribute="height" multiplier="1:1" id="DSX-Kp-hAE"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="满江红" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAj-8U-m9F">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4720人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMQ-9J-Bn9">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tf-mZ-mrE">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <inset key="contentEdgeInsets" minX="10" minY="3" maxX="10" maxY="3"/>
+                                                    <state key="normal" title="全天好歌不断" backgroundImage="live_bagimage">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_room_icon2" translatesAutoresizingMaskIntoConstraints="NO" id="ltX-rh-7Lz"/>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdJ-rD-CEQ">
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="sqM-YP-z7t"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <state key="normal" title="直播">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="GdJ-rD-CEQ" firstAttribute="top" secondItem="liX-Ku-wk0" secondAttribute="top" constant="5" id="4gt-j7-vrg"/>
+                                            <constraint firstItem="SMQ-9J-Bn9" firstAttribute="top" secondItem="JcJ-mm-VkS" secondAttribute="bottom" constant="6" id="7GE-Ib-0uC"/>
+                                            <constraint firstItem="JcJ-mm-VkS" firstAttribute="top" secondItem="liX-Ku-wk0" secondAttribute="top" id="7IF-vk-gog"/>
+                                            <constraint firstAttribute="trailing" secondItem="SMQ-9J-Bn9" secondAttribute="trailing" constant="10" id="Cvh-pe-QuJ"/>
+                                            <constraint firstItem="GdJ-rD-CEQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Tf-mZ-mrE" secondAttribute="trailing" constant="10" id="Fkk-wC-5Ou"/>
+                                            <constraint firstItem="5Tf-mZ-mrE" firstAttribute="leading" secondItem="liX-Ku-wk0" secondAttribute="leading" id="JvP-eq-Ken"/>
+                                            <constraint firstAttribute="trailing" secondItem="JcJ-mm-VkS" secondAttribute="trailing" id="Oqc-gz-CHh"/>
+                                            <constraint firstAttribute="trailing" secondItem="GdJ-rD-CEQ" secondAttribute="trailing" constant="5" id="SNz-3a-JaM"/>
+                                            <constraint firstItem="kAj-8U-m9F" firstAttribute="top" secondItem="JcJ-mm-VkS" secondAttribute="bottom" constant="5" id="ZH4-XI-dLK"/>
+                                            <constraint firstItem="JcJ-mm-VkS" firstAttribute="leading" secondItem="liX-Ku-wk0" secondAttribute="leading" id="cMU-WK-3gL"/>
+                                            <constraint firstItem="ltX-rh-7Lz" firstAttribute="centerY" secondItem="JcJ-mm-VkS" secondAttribute="centerY" id="f7u-Iv-IeG"/>
+                                            <constraint firstItem="kAj-8U-m9F" firstAttribute="leading" secondItem="liX-Ku-wk0" secondAttribute="leading" constant="10" id="fhE-v6-GG8"/>
+                                            <constraint firstItem="ltX-rh-7Lz" firstAttribute="centerX" secondItem="JcJ-mm-VkS" secondAttribute="centerX" id="kqi-VW-05a"/>
+                                            <constraint firstItem="5Tf-mZ-mrE" firstAttribute="top" secondItem="liX-Ku-wk0" secondAttribute="top" id="nfw-5Y-c1k"/>
+                                        </constraints>
+                                        <size key="customSize" width="165" height="199"/>
+                                        <connections>
+                                            <outlet property="countLabel" destination="SMQ-9J-Bn9" id="8z6-gZ-kJ6"/>
+                                            <outlet property="liveStatus" destination="GdJ-rD-CEQ" id="C4p-e1-gTt"/>
+                                            <outlet property="liveType" destination="ltX-rh-7Lz" id="sOb-wf-9fO"/>
+                                            <outlet property="nicknameLabel" destination="kAj-8U-m9F" id="XS0-fZ-hWf"/>
+                                            <outlet property="titleButton" destination="5Tf-mZ-mrE" id="kt2-DN-70h"/>
+                                            <outlet property="voverImageView" destination="JcJ-mm-VkS" id="rmi-cK-r8H"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="cFx-zJ-cOh" id="Zqi-89-qyt"/>
+                                    <outlet property="delegate" destination="cFx-zJ-cOh" id="WBk-Hb-3bb"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="odc-n2-abY" firstAttribute="top" secondItem="394-Oj-Ixm" secondAttribute="bottom" id="5wk-LH-xZm"/>
+                            <constraint firstItem="394-Oj-Ixm" firstAttribute="top" secondItem="dtM-Jg-2t3" secondAttribute="top" id="GMr-Vu-tTb"/>
+                            <constraint firstAttribute="trailing" secondItem="394-Oj-Ixm" secondAttribute="trailing" id="eKt-sJ-Qlw"/>
+                            <constraint firstItem="394-Oj-Ixm" firstAttribute="leading" secondItem="dtM-Jg-2t3" secondAttribute="leading" id="rSO-oV-DZp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="394-Oj-Ixm" id="rJg-Vl-BUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnb-EU-ayb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-86" y="99"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="live_bagimage" width="68" height="15"/>
+        <image name="live_list_placeholder" width="186" height="170"/>
+        <image name="live_room_icon2" width="27" height="27"/>
+    </resources>
+</document>

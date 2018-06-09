@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SJBookDetailFootView">
+            <connections>
+                <outlet property="allPageLabel" destination="iCr-8z-ET4" id="u2W-Y7-Gmp"/>
+                <outlet property="beforePageBtn" destination="n2K-ec-fwK" id="kJa-iE-olF"/>
+                <outlet property="currentPageLabel" destination="2UI-dP-f30" id="6KE-5j-IKU"/>
+                <outlet property="firstPageBtn" destination="oDq-ps-tbF" id="eh9-8t-dhn"/>
+                <outlet property="innerView" destination="iN0-l3-epB" id="uoE-RN-3is"/>
+                <outlet property="lastPageBtn" destination="dGL-DV-oQq" id="5vj-Vg-xeQ"/>
+                <outlet property="nextPageBtn" destination="KAD-yp-HNL" id="Ls9-mu-dhD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="527" height="99"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HfJ-Cf-nWg">
+                    <rect key="frame" x="0.0" y="0.0" width="527" height="99"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWl-vi-dP1">
+                            <rect key="frame" x="214" y="0.0" width="100" height="99"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第1页" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UI-dP-f30">
+                                    <rect key="frame" x="11" y="41" width="37" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTz-4G-cV6">
+                                    <rect key="frame" x="48" y="41" width="5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共10页" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCr-8z-ET4">
+                                    <rect key="frame" x="53" y="41" width="46" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="yTz-4G-cV6" firstAttribute="leading" secondItem="2UI-dP-f30" secondAttribute="trailing" id="84I-qe-KiR"/>
+                                <constraint firstItem="iCr-8z-ET4" firstAttribute="leading" secondItem="yTz-4G-cV6" secondAttribute="trailing" id="9Vm-Vm-WGb"/>
+                                <constraint firstAttribute="width" constant="100" id="B1i-0O-Gmr"/>
+                                <constraint firstItem="iCr-8z-ET4" firstAttribute="centerY" secondItem="yTz-4G-cV6" secondAttribute="centerY" id="WjI-0p-bkw"/>
+                                <constraint firstItem="2UI-dP-f30" firstAttribute="centerY" secondItem="yTz-4G-cV6" secondAttribute="centerY" id="cfx-oI-MLV"/>
+                                <constraint firstItem="yTz-4G-cV6" firstAttribute="centerX" secondItem="AWl-vi-dP1" secondAttribute="centerX" id="lwW-k6-oQ3"/>
+                                <constraint firstItem="yTz-4G-cV6" firstAttribute="centerY" secondItem="AWl-vi-dP1" secondAttribute="centerY" id="yfl-CC-TNS"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDq-ps-tbF">
+                            <rect key="frame" x="10" y="39" width="92" height="22"/>
+                            <state key="normal" image="page_icon1_n"/>
+                            <connections>
+                                <action selector="firstPageBtnClick:" destination="-1" eventType="touchUpInside" id="Dub-sb-FAn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAD-yp-HNL">
+                            <rect key="frame" x="324" y="39" width="92" height="22"/>
+                            <state key="normal" image="page_icon3_h"/>
+                            <connections>
+                                <action selector="nextPageBtnClick:" destination="-1" eventType="touchUpInside" id="KaK-Fi-kVZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2K-ec-fwK">
+                            <rect key="frame" x="112" y="39" width="92" height="22"/>
+                            <state key="normal" image="page_icon2_n"/>
+                            <connections>
+                                <action selector="beforePageBtnClick:" destination="-1" eventType="touchUpInside" id="Y7I-UY-8B3"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGL-DV-oQq">
+                            <rect key="frame" x="426" y="39" width="91" height="22"/>
+                            <state key="normal" image="page_icon4_h"/>
+                            <connections>
+                                <action selector="lastPageBtnClick:" destination="-1" eventType="touchUpInside" id="IBk-Na-vP7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="AWl-vi-dP1" secondAttribute="bottom" id="3Qr-do-0pF"/>
+                        <constraint firstItem="dGL-DV-oQq" firstAttribute="width" secondItem="KAD-yp-HNL" secondAttribute="width" id="8GT-lF-jpe"/>
+                        <constraint firstItem="dGL-DV-oQq" firstAttribute="centerY" secondItem="HfJ-Cf-nWg" secondAttribute="centerY" id="9Ja-0J-HyI"/>
+                        <constraint firstItem="oDq-ps-tbF" firstAttribute="leading" secondItem="HfJ-Cf-nWg" secondAttribute="leading" constant="10" id="GTu-Vk-IqK"/>
+                        <constraint firstAttribute="trailing" secondItem="dGL-DV-oQq" secondAttribute="trailing" constant="10" id="JRB-Kh-QmP"/>
+                        <constraint firstItem="AWl-vi-dP1" firstAttribute="centerX" secondItem="HfJ-Cf-nWg" secondAttribute="centerX" id="MZj-f8-rpY"/>
+                        <constraint firstItem="KAD-yp-HNL" firstAttribute="leading" secondItem="AWl-vi-dP1" secondAttribute="trailing" constant="10" id="UIw-bh-GYz"/>
+                        <constraint firstItem="oDq-ps-tbF" firstAttribute="centerY" secondItem="HfJ-Cf-nWg" secondAttribute="centerY" id="Ygi-Ti-Vg7"/>
+                        <constraint firstItem="n2K-ec-fwK" firstAttribute="centerY" secondItem="HfJ-Cf-nWg" secondAttribute="centerY" id="YtW-JU-91C"/>
+                        <constraint firstItem="AWl-vi-dP1" firstAttribute="leading" secondItem="n2K-ec-fwK" secondAttribute="trailing" constant="10" id="cjY-Cm-R4H"/>
+                        <constraint firstItem="KAD-yp-HNL" firstAttribute="centerY" secondItem="HfJ-Cf-nWg" secondAttribute="centerY" id="irl-1G-4ff"/>
+                        <constraint firstItem="n2K-ec-fwK" firstAttribute="leading" secondItem="oDq-ps-tbF" secondAttribute="trailing" constant="10" id="iso-gr-fwB"/>
+                        <constraint firstItem="dGL-DV-oQq" firstAttribute="leading" secondItem="KAD-yp-HNL" secondAttribute="trailing" constant="10" id="nJi-xf-qf4"/>
+                        <constraint firstItem="AWl-vi-dP1" firstAttribute="top" secondItem="HfJ-Cf-nWg" secondAttribute="top" id="qe5-1a-zzM"/>
+                        <constraint firstItem="n2K-ec-fwK" firstAttribute="width" secondItem="oDq-ps-tbF" secondAttribute="width" id="qhd-zK-nQj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HfJ-Cf-nWg" secondAttribute="bottom" id="NaT-oU-ReG"/>
+                <constraint firstItem="HfJ-Cf-nWg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eeS-83-44v"/>
+                <constraint firstAttribute="trailing" secondItem="HfJ-Cf-nWg" secondAttribute="trailing" id="fLz-es-b5G"/>
+                <constraint firstItem="HfJ-Cf-nWg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uuw-aA-7T7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="518.5" y="118.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="page_icon1_n" width="10" height="14"/>
+        <image name="page_icon2_n" width="8" height="16"/>
+        <image name="page_icon3_h" width="8" height="16"/>
+        <image name="page_icon4_h" width="10" height="14"/>
+    </resources>
+</document>

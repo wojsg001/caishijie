@@ -1,0 +1,117 @@
+PODS:
+  - ARChromeActivity (1.0.5)
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - HappyDNS (0.3.10)
+  - HexColors (2.3.0)
+  - KINWebBrowser (1.3.2):
+    - ARChromeActivity (= 1.0.5)
+    - TUSafariActivity (= 1.0.4)
+  - MJPhotoBrowser (1.0.2):
+    - SDWebImage
+    - SVProgressHUD
+    - YLGIFImage
+  - MQTTClient (0.8.5):
+    - MQTTClient/Core (= 0.8.5)
+  - MQTTClient/Core (0.8.5):
+    - MQTTClient/Manager
+    - MQTTClient/Min
+  - MQTTClient/Manager (0.8.5):
+    - MQTTClient/Min
+  - MQTTClient/Min (0.8.5)
+  - MQTTClient/Websocket (0.8.5):
+    - MQTTClient/Min
+    - SocketRocket
+  - pili-ffmpeg (3.1.0)
+  - pili-librtmp (1.0.5)
+  - PLMediaStreamingKit (2.1.4):
+    - HappyDNS (~> 0.3.0)
+    - pili-librtmp (= 1.0.5)
+    - PLMediaStreamingKit/Common (= 2.1.4)
+    - PLMediaStreamingKit/PLCameraStreamingKit (= 2.1.4)
+    - PLMediaStreamingKit/PLMediaStreamingKit (= 2.1.4)
+    - PLMediaStreamingKit/PLRTCStreamingKit (= 2.1.4)
+    - PLMediaStreamingKit/PLStreamingKit (= 2.1.4)
+    - QNNetDiag
+  - PLMediaStreamingKit/Common (2.1.4):
+    - HappyDNS (~> 0.3.0)
+    - pili-librtmp (= 1.0.5)
+    - QNNetDiag
+  - PLMediaStreamingKit/PLCameraStreamingKit (2.1.4):
+    - HappyDNS (~> 0.3.0)
+    - pili-librtmp (= 1.0.5)
+    - QNNetDiag
+  - PLMediaStreamingKit/PLMediaStreamingKit (2.1.4):
+    - HappyDNS (~> 0.3.0)
+    - pili-librtmp (= 1.0.5)
+    - QNNetDiag
+  - PLMediaStreamingKit/PLRTCStreamingKit (2.1.4):
+    - HappyDNS (~> 0.3.0)
+    - pili-librtmp (= 1.0.5)
+    - QNNetDiag
+  - PLMediaStreamingKit/PLStreamingKit (2.1.4):
+    - HappyDNS (~> 0.3.0)
+    - pili-librtmp (= 1.0.5)
+    - QNNetDiag
+  - PLPlayerKit (2.3.0):
+    - HappyDNS (~> 0.3.10)
+    - pili-ffmpeg (~> 3.1.0)
+    - pili-librtmp (~> 1.0.5)
+  - QNNetDiag (0.0.3)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SocketRocket (0.5.1)
+  - SVProgressHUD (2.0.3)
+  - TSMessagesNW (0.9.15):
+    - HexColors (~> 2.3.0)
+  - TUSafariActivity (1.0.4)
+  - YLGIFImage (0.11)
+
+DEPENDENCIES:
+  - BlocksKit (~> 2.2.5)
+  - KINWebBrowser (~> 1.3.2)
+  - MJPhotoBrowser (~> 1.0.2)
+  - MQTTClient
+  - MQTTClient/Websocket
+  - PLMediaStreamingKit
+  - PLPlayerKit
+  - SocketRocket
+  - TSMessagesNW (~> 0.9.15)
+
+SPEC CHECKSUMS:
+  ARChromeActivity: 821c7849b566f49583987468733a896fee35aa4d
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
+  HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
+  KINWebBrowser: 27aa857a2aa39063ed102cca781d130b679d205f
+  MJPhotoBrowser: b98b04d0e3b6a999feb44df68adec413af446809
+  MQTTClient: fca939bcd74aa70af2d8ee35f3e44f258f4e9888
+  pili-ffmpeg: b76de7e6b730723497d79508be8e8efdcba31a69
+  pili-librtmp: 65a6e10f7c314bd1f407ba24bd074c57cba79d0c
+  PLMediaStreamingKit: 99104d3ed7f037d8e73064d0e11621764ae5c7e4
+  PLPlayerKit: 1473253ee2d7863d8a78dbb3b965161245c51ad5
+  QNNetDiag: 90727185d3cdd4f62f92b7f9b7d586451cf745d1
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  TSMessagesNW: a1e7b4b77d54aee4a0492adda948746252ef1f2d
+  TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
+  YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
+
+PODFILE CHECKSUM: 1dc7fb1ab09cb037bdec6f87ea40b91ed047be9a
+
+COCOAPODS: 1.1.1

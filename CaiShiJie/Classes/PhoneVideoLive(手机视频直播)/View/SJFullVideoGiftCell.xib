@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SJFullVideoGiftCell">
+            <rect key="frame" x="0.0" y="0.0" width="139" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="139" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_gift_img_n" translatesAutoresizingMaskIntoConstraints="NO" id="s1C-at-hWe">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="jSy-Qr-n0q"/>
+                            <constraint firstAttribute="height" constant="70" id="uKh-fQ-xSD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLj-hg-q2H">
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pj-6Q-tc6">
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.96862745098039216" green="0.39215686274509803" blue="0.031372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select_icon" translatesAutoresizingMaskIntoConstraints="NO" id="S4O-QZ-OVb"/>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="S4O-QZ-OVb" firstAttribute="top" secondItem="s1C-at-hWe" secondAttribute="top" constant="5" id="AfZ-VF-M1v"/>
+                <constraint firstItem="fLj-hg-q2H" firstAttribute="centerX" secondItem="s1C-at-hWe" secondAttribute="centerX" id="Fns-Qb-qrf"/>
+                <constraint firstItem="3pj-6Q-tc6" firstAttribute="centerX" secondItem="s1C-at-hWe" secondAttribute="centerX" id="H7l-zb-YSM"/>
+                <constraint firstItem="s1C-at-hWe" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="N8r-vg-6JE"/>
+                <constraint firstItem="fLj-hg-q2H" firstAttribute="top" secondItem="s1C-at-hWe" secondAttribute="bottom" id="Q5D-tS-7gQ"/>
+                <constraint firstItem="s1C-at-hWe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gnq-cu-6y5"/>
+                <constraint firstItem="3pj-6Q-tc6" firstAttribute="top" secondItem="fLj-hg-q2H" secondAttribute="bottom" constant="6" id="sMl-Bd-Io3"/>
+                <constraint firstItem="S4O-QZ-OVb" firstAttribute="trailing" secondItem="s1C-at-hWe" secondAttribute="trailing" constant="5" id="vFG-M5-HQh"/>
+            </constraints>
+            <size key="customSize" width="139" height="120"/>
+            <connections>
+                <outlet property="giftIcon" destination="s1C-at-hWe" id="2ZR-AA-dLS"/>
+                <outlet property="giftNameLabel" destination="fLj-hg-q2H" id="Px2-OX-WQH"/>
+                <outlet property="giftPriceLabel" destination="3pj-6Q-tc6" id="iGE-ji-0bO"/>
+                <outlet property="selectIcon" destination="S4O-QZ-OVb" id="LyO-jM-Uoi"/>
+            </connections>
+            <point key="canvasLocation" x="173.5" y="153"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="live_gift_img_n" width="70" height="70"/>
+        <image name="select_icon" width="13" height="13"/>
+    </resources>
+</document>

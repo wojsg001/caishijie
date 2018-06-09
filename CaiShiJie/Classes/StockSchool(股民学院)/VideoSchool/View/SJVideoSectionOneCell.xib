@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="63" id="KGk-i7-Jjw" customClass="SJVideoSectionOneCell">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="62"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9J3-qQ-bAh">
+                        <rect key="frame" x="0.0" y="0.0" width="342" height="62"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciT-nV-8Xx">
+                                <rect key="frame" x="10" y="23" width="16" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="Htd-Yb-YIi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="live_about_icon" translatesAutoresizingMaskIntoConstraints="NO" id="QN2-ux-cOs">
+                                <rect key="frame" x="36" y="25" width="13" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="13" id="8D7-Ma-19r"/>
+                                    <constraint firstAttribute="height" constant="12" id="Sfb-Nw-rM5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="控制仓位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgy-kC-APJ">
+                                <rect key="frame" x="59" y="22" width="178" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00-00 00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1a7-DX-Itg">
+                                <rect key="frame" x="247" y="22" width="85" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="ReI-Qw-CBd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QN2-ux-cOs" firstAttribute="centerY" secondItem="9J3-qQ-bAh" secondAttribute="centerY" id="4Ym-PC-dnP"/>
+                            <constraint firstItem="ciT-nV-8Xx" firstAttribute="centerY" secondItem="9J3-qQ-bAh" secondAttribute="centerY" id="DlJ-P6-Ikt"/>
+                            <constraint firstAttribute="trailing" secondItem="1a7-DX-Itg" secondAttribute="trailing" constant="10" id="LSo-LE-QD2"/>
+                            <constraint firstItem="QN2-ux-cOs" firstAttribute="leading" secondItem="ciT-nV-8Xx" secondAttribute="trailing" constant="10" id="h2d-Rk-ofN"/>
+                            <constraint firstItem="ciT-nV-8Xx" firstAttribute="leading" secondItem="9J3-qQ-bAh" secondAttribute="leading" constant="10" id="lBU-YZ-etq"/>
+                            <constraint firstItem="1a7-DX-Itg" firstAttribute="leading" secondItem="pgy-kC-APJ" secondAttribute="trailing" constant="10" id="vC1-2s-6WK"/>
+                            <constraint firstItem="pgy-kC-APJ" firstAttribute="centerY" secondItem="9J3-qQ-bAh" secondAttribute="centerY" id="wXz-aP-xTF"/>
+                            <constraint firstItem="pgy-kC-APJ" firstAttribute="leading" secondItem="QN2-ux-cOs" secondAttribute="trailing" constant="10" id="x6P-JE-cfH"/>
+                            <constraint firstItem="1a7-DX-Itg" firstAttribute="centerY" secondItem="9J3-qQ-bAh" secondAttribute="centerY" id="y4k-Bi-gDQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9J3-qQ-bAh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Uqb-Yl-vha"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9J3-qQ-bAh" secondAttribute="trailing" constant="-8" id="W33-Bo-3wd"/>
+                    <constraint firstItem="9J3-qQ-bAh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="aRc-ND-Prk"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9J3-qQ-bAh" secondAttribute="bottom" constant="-8" id="xMI-Ys-6xC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="sortLabel" destination="ciT-nV-8Xx" id="exB-mU-8Ba"/>
+                <outlet property="stateIcon" destination="QN2-ux-cOs" id="CJk-qR-4Cx"/>
+                <outlet property="timeLabel" destination="1a7-DX-Itg" id="UZJ-P9-Y17"/>
+                <outlet property="titleLabel" destination="pgy-kC-APJ" id="m47-Mw-G5v"/>
+            </connections>
+            <point key="canvasLocation" x="343" y="276.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="live_about_icon" width="13" height="12"/>
+    </resources>
+</document>

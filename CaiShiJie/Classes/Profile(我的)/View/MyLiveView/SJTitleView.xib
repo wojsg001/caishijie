@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SJTitleView">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="212"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEF-5K-g4C">
+                    <rect key="frame" x="154" y="12" width="64" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pho_mytg" translatesAutoresizingMaskIntoConstraints="NO" id="rOe-ei-cne">
+                    <rect key="frame" x="116" y="7" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="NDc-5N-rhM"/>
+                        <constraint firstAttribute="height" constant="30" id="qU2-mw-eSu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPD-ul-tRN">
+                    <rect key="frame" x="226" y="15" width="33" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CPD-ul-tRN" firstAttribute="leading" secondItem="nEF-5K-g4C" secondAttribute="trailing" constant="8" id="H6r-b7-bLZ"/>
+                <constraint firstItem="rOe-ei-cne" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="N87-l1-bMa"/>
+                <constraint firstItem="nEF-5K-g4C" firstAttribute="leading" secondItem="rOe-ei-cne" secondAttribute="trailing" constant="8" id="UvH-kx-tkf"/>
+                <constraint firstItem="CPD-ul-tRN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="Y4N-KD-hSb"/>
+                <constraint firstItem="nEF-5K-g4C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="sP4-5C-4ey"/>
+                <constraint firstItem="nEF-5K-g4C" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wqn-kc-IjZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="head_imgView" destination="rOe-ei-cne" id="wfd-yG-Xqa"/>
+                <outlet property="nameLabel" destination="nEF-5K-g4C" id="Auv-TX-WFw"/>
+                <outlet property="stateLabel" destination="CPD-ul-tRN" id="LR7-3Y-bn3"/>
+            </connections>
+            <point key="canvasLocation" x="301" y="62"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pho_mytg" width="44" height="44"/>
+    </resources>
+</document>

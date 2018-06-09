@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SJSpeechRecognizerView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYE-cn-UXh">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="73V-2k-wDd"/>
+                        <constraint firstAttribute="width" constant="80" id="Zu8-XM-8CP"/>
+                    </constraints>
+                    <state key="normal" image="yuyin_n"/>
+                    <connections>
+                        <action selector="startOrEndBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="wwc-e5-YHo"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6P-GF-SdB">
+                    <color key="backgroundColor" red="0.73725490196078436" green="0.73725490196078436" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Jd0-e8-dcn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="b6P-GF-SdB" secondAttribute="trailing" id="2QL-WD-EzS"/>
+                <constraint firstItem="b6P-GF-SdB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eRK-Wq-BMO"/>
+                <constraint firstItem="GYE-cn-UXh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jDI-PK-0OM"/>
+                <constraint firstItem="b6P-GF-SdB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xUU-wj-vah"/>
+                <constraint firstItem="GYE-cn-UXh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yu2-Ai-eL2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lineHeight" destination="Jd0-e8-dcn" id="7uX-nl-qPt"/>
+                <outlet property="startOrEndBtn" destination="GYE-cn-UXh" id="ngr-Bm-QhE"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="39"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="yuyin_n" width="34" height="49"/>
+    </resources>
+</document>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SJTeacherReferenceDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="272"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neican_img" translatesAutoresizingMaskIntoConstraints="NO" id="HaE-04-qTe">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="190" id="qvJ-uH-amc"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格：¥108" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrM-EZ-i3K">
+                    <rect key="frame" x="150" y="101" width="75" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.63529411759999999" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ig2-fb-vZB">
+                    <rect key="frame" x="0.0" y="190" width="375" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内参内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIW-6t-7bW">
+                            <rect key="frame" x="10" y="10" width="64" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSY-1V-ujg">
+                            <rect key="frame" x="290" y="7" width="75" height="25"/>
+                            <state key="normal" image="neican_btn1-1"/>
+                            <connections>
+                                <action selector="ClickAddReferenceBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="fpy-5v-Coh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="oSY-1V-ujg" secondAttribute="trailing" constant="10" id="4dE-im-GCk"/>
+                        <constraint firstItem="oSY-1V-ujg" firstAttribute="centerY" secondItem="Ig2-fb-vZB" secondAttribute="centerY" id="MEh-KD-Jww"/>
+                        <constraint firstItem="GIW-6t-7bW" firstAttribute="leading" secondItem="Ig2-fb-vZB" secondAttribute="leading" constant="10" id="Snw-Oj-SC0"/>
+                        <constraint firstItem="GIW-6t-7bW" firstAttribute="centerY" secondItem="Ig2-fb-vZB" secondAttribute="centerY" id="Zpz-hr-Z9x"/>
+                        <constraint firstAttribute="height" constant="40" id="nwj-hv-0B9"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务期：3月25日-4月20日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-cW-fIa">
+                    <rect key="frame" x="103" y="25" width="170" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.63529411764705879" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100人订阅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oai-N5-zHk">
+                    <rect key="frame" x="129" y="57" width="118" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="053-R7-5va">
+                    <rect key="frame" x="0.0" y="148" width="375" height="42"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wj-w7-5IE">
+                            <rect key="frame" x="0.0" y="0.0" width="125" height="42"/>
+                            <subviews>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aya-RD-mAI">
+                                    <rect key="frame" x="23" y="0.0" width="80" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="更改价格" image="neican_money_icon">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ClickModifyPriceBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="1ln-XF-a7G"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Aya-RD-mAI" firstAttribute="top" secondItem="6wj-w7-5IE" secondAttribute="top" id="Lol-1b-Gks"/>
+                                <constraint firstItem="Aya-RD-mAI" firstAttribute="centerX" secondItem="6wj-w7-5IE" secondAttribute="centerX" id="iIg-Ef-S2p"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysL-At-UE3">
+                            <rect key="frame" x="250" y="0.0" width="125" height="42"/>
+                            <subviews>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8Z-Ob-eDD">
+                                    <rect key="frame" x="20" y="0.0" width="85" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="85" id="tX1-E5-dzQ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="停止销售" image="neican_stop_icon">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ClickStopSellBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="WkO-WH-3I5"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="p8Z-Ob-eDD" firstAttribute="centerX" secondItem="ysL-At-UE3" secondAttribute="centerX" id="eDV-PL-M6T"/>
+                                <constraint firstItem="p8Z-Ob-eDD" firstAttribute="top" secondItem="ysL-At-UE3" secondAttribute="top" id="nSY-3E-mdg"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ugs-df-p1K">
+                            <rect key="frame" x="125" y="0.0" width="125" height="42"/>
+                            <subviews>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YO-TK-ZJv">
+                                    <rect key="frame" x="16" y="0.0" width="94" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="更改服务期" image="neican_time_icon">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ClickModifyServiceDateBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="uQf-hD-GNL"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="8YO-TK-ZJv" firstAttribute="centerX" secondItem="Ugs-df-p1K" secondAttribute="centerX" id="5z3-FE-CSm"/>
+                                <constraint firstItem="8YO-TK-ZJv" firstAttribute="top" secondItem="Ugs-df-p1K" secondAttribute="top" id="FGm-L6-any"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ysL-At-UE3" secondAttribute="bottom" id="GGf-3v-iwN"/>
+                        <constraint firstItem="Ugs-df-p1K" firstAttribute="leading" secondItem="6wj-w7-5IE" secondAttribute="trailing" id="HPR-Qf-6EO"/>
+                        <constraint firstItem="ysL-At-UE3" firstAttribute="width" secondItem="6wj-w7-5IE" secondAttribute="width" id="MpW-43-mWW"/>
+                        <constraint firstAttribute="trailing" secondItem="ysL-At-UE3" secondAttribute="trailing" id="Pe4-Xd-1xc"/>
+                        <constraint firstItem="Ugs-df-p1K" firstAttribute="top" secondItem="053-R7-5va" secondAttribute="top" id="Pfm-5f-f6Q"/>
+                        <constraint firstItem="6wj-w7-5IE" firstAttribute="leading" secondItem="053-R7-5va" secondAttribute="leading" id="QVk-y9-e62"/>
+                        <constraint firstAttribute="bottom" secondItem="6wj-w7-5IE" secondAttribute="bottom" id="U4x-Ge-cqp"/>
+                        <constraint firstItem="ysL-At-UE3" firstAttribute="top" secondItem="053-R7-5va" secondAttribute="top" id="Vm8-bM-Cw1"/>
+                        <constraint firstItem="ysL-At-UE3" firstAttribute="leading" secondItem="Ugs-df-p1K" secondAttribute="trailing" id="WTO-lO-41j"/>
+                        <constraint firstItem="Ugs-df-p1K" firstAttribute="width" secondItem="6wj-w7-5IE" secondAttribute="width" id="Ymf-nI-2L4"/>
+                        <constraint firstItem="6wj-w7-5IE" firstAttribute="top" secondItem="053-R7-5va" secondAttribute="top" id="dpo-OZ-qj7"/>
+                        <constraint firstAttribute="bottom" secondItem="Ugs-df-p1K" secondAttribute="bottom" id="uKj-nD-6dc"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbY-gZ-NvS">
+                    <rect key="frame" x="133" y="148" width="109" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="109" id="Uq3-23-IFA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="已停止销售" image="neican_stop_icon2">
+                        <color key="titleColor" red="0.99607843137254903" green="0.85098039215686272" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rrM-EZ-i3K" firstAttribute="top" secondItem="oai-N5-zHk" secondAttribute="bottom" constant="14" id="2LN-p4-pIE"/>
+                <constraint firstItem="HaE-04-qTe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AVt-SO-viY"/>
+                <constraint firstItem="rrM-EZ-i3K" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Agy-BW-mJX"/>
+                <constraint firstItem="RbY-gZ-NvS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EBb-el-t9g"/>
+                <constraint firstAttribute="trailing" secondItem="HaE-04-qTe" secondAttribute="trailing" id="IrY-5V-TzX"/>
+                <constraint firstItem="oai-N5-zHk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LgV-Wr-rMe"/>
+                <constraint firstItem="Ig2-fb-vZB" firstAttribute="top" secondItem="053-R7-5va" secondAttribute="bottom" id="OGU-X8-QaZ"/>
+                <constraint firstItem="wCc-cW-fIa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="PbW-uQ-dXU"/>
+                <constraint firstItem="wCc-cW-fIa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q0Q-hP-NuJ"/>
+                <constraint firstItem="Ig2-fb-vZB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RPR-uf-EV3"/>
+                <constraint firstAttribute="trailing" secondItem="053-R7-5va" secondAttribute="trailing" id="TUd-Po-kFZ"/>
+                <constraint firstItem="Ig2-fb-vZB" firstAttribute="top" secondItem="HaE-04-qTe" secondAttribute="bottom" id="WZV-Om-yQg"/>
+                <constraint firstItem="HaE-04-qTe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YvC-2Y-pAo"/>
+                <constraint firstItem="oai-N5-zHk" firstAttribute="top" secondItem="wCc-cW-fIa" secondAttribute="bottom" constant="15" id="YzW-zE-rfT"/>
+                <constraint firstAttribute="trailing" secondItem="Ig2-fb-vZB" secondAttribute="trailing" id="bFW-qr-NFg"/>
+                <constraint firstItem="RbY-gZ-NvS" firstAttribute="top" secondItem="rrM-EZ-i3K" secondAttribute="bottom" constant="30" id="eBe-Ln-zLU"/>
+                <constraint firstItem="053-R7-5va" firstAttribute="top" secondItem="rrM-EZ-i3K" secondAttribute="bottom" constant="30" id="eyh-qb-qRB"/>
+                <constraint firstItem="053-R7-5va" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qO0-G1-EIr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addReferenceBtn" destination="oSY-1V-ujg" id="erO-zD-Ij3"/>
+                <outlet property="alreadyStopSellBtn" destination="RbY-gZ-NvS" id="0Jh-cU-ehB"/>
+                <outlet property="modifyPriceBtn" destination="Aya-RD-mAI" id="oap-DV-Vur"/>
+                <outlet property="modifyServiceDateBtn" destination="8YO-TK-ZJv" id="TjI-wO-Ywz"/>
+                <outlet property="payCountLabel" destination="oai-N5-zHk" id="ucZ-KZ-ntr"/>
+                <outlet property="priceLabel" destination="rrM-EZ-i3K" id="XKD-P3-40Z"/>
+                <outlet property="serviceDateLabel" destination="wCc-cW-fIa" id="o0H-Ya-Hv5"/>
+                <outlet property="stopSellBtn" destination="p8Z-Ob-eDD" id="qwl-FB-cUf"/>
+            </connections>
+            <point key="canvasLocation" x="261.5" y="234"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="neican_btn1-1" width="75" height="25"/>
+        <image name="neican_img" width="375" height="175"/>
+        <image name="neican_money_icon" width="24" height="24"/>
+        <image name="neican_stop_icon" width="24" height="24"/>
+        <image name="neican_stop_icon2" width="24" height="24"/>
+        <image name="neican_time_icon" width="24" height="24"/>
+    </resources>
+</document>

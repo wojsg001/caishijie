@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SJPopupModifyPriceView">
+            <connections>
+                <outlet property="innerView" destination="iN0-l3-epB" id="Nn2-xm-5cp"/>
+                <outlet property="nowPriceTextField" destination="QCm-S6-Wk9" id="4JX-Ly-bEf"/>
+                <outlet property="oldPriceTextField" destination="YuG-TZ-nlo" id="46I-k9-Ofn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="483" height="272"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpr-wb-msX">
+                    <rect key="frame" x="0.0" y="0.0" width="483" height="43"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更改价格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="or5-ul-fAg">
+                            <rect key="frame" x="205" y="11" width="72" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="or5-ul-fAg" firstAttribute="centerY" secondItem="dpr-wb-msX" secondAttribute="centerY" id="IDc-NR-bOP"/>
+                        <constraint firstItem="or5-ul-fAg" firstAttribute="centerX" secondItem="dpr-wb-msX" secondAttribute="centerX" id="QDQ-aN-9q0"/>
+                        <constraint firstAttribute="height" constant="43" id="ePa-6C-zpL"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0G-t4-4aR">
+                    <rect key="frame" x="112" y="77" width="260" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原价格:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0K-rk-GTF">
+                            <rect key="frame" x="0.0" y="11" width="50" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="neican_price_inputicon" translatesAutoresizingMaskIntoConstraints="NO" id="QCm-S6-Wk9">
+                            <rect key="frame" x="68" y="60" width="190" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="190" id="QKu-Zu-a8y"/>
+                                <constraint firstAttribute="height" constant="40" id="yYC-d2-cub"/>
+                            </constraints>
+                            <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更改为:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OL-vv-GZ0">
+                            <rect key="frame" x="0.0" y="71" width="50" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="neican_price_inputicon" translatesAutoresizingMaskIntoConstraints="NO" id="YuG-TZ-nlo">
+                            <rect key="frame" x="68" y="0.0" width="190" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="DnK-vR-j0Y"/>
+                                <constraint firstAttribute="width" constant="190" id="xcF-7O-1KY"/>
+                            </constraints>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="YuG-TZ-nlo" firstAttribute="top" secondItem="f0G-t4-4aR" secondAttribute="top" id="3dv-xz-l2u"/>
+                        <constraint firstItem="1OL-vv-GZ0" firstAttribute="centerY" secondItem="QCm-S6-Wk9" secondAttribute="centerY" id="454-RN-xkJ"/>
+                        <constraint firstItem="Q0K-rk-GTF" firstAttribute="leading" secondItem="f0G-t4-4aR" secondAttribute="leading" id="JnO-0i-TUB"/>
+                        <constraint firstItem="Q0K-rk-GTF" firstAttribute="centerY" secondItem="YuG-TZ-nlo" secondAttribute="centerY" id="VsU-JA-oIe"/>
+                        <constraint firstAttribute="height" constant="100" id="Yde-W3-SUj"/>
+                        <constraint firstItem="YuG-TZ-nlo" firstAttribute="leading" secondItem="Q0K-rk-GTF" secondAttribute="trailing" constant="18" id="aA6-8A-8aT"/>
+                        <constraint firstAttribute="bottom" secondItem="QCm-S6-Wk9" secondAttribute="bottom" id="iuM-XE-3mp"/>
+                        <constraint firstItem="QCm-S6-Wk9" firstAttribute="leading" secondItem="1OL-vv-GZ0" secondAttribute="trailing" constant="18" id="qEJ-3b-gpS"/>
+                        <constraint firstAttribute="width" constant="260" id="sW6-K5-a9L"/>
+                        <constraint firstItem="1OL-vv-GZ0" firstAttribute="leading" secondItem="f0G-t4-4aR" secondAttribute="leading" id="vA8-VH-R13"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z4p-nO-PKf">
+                    <rect key="frame" x="0.0" y="214" width="483" height="58"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEt-E0-Yom">
+                            <rect key="frame" x="112" y="10" width="115" height="38"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="取消" backgroundImage="neican_yesordel_btn">
+                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="dismissViewDropAction:" destination="-1" eventType="touchUpInside" id="OQH-Qa-Dz0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1io-bI-J7n">
+                            <rect key="frame" x="257" y="10" width="115" height="38"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="确定" backgroundImage="neican_yesordel_btn">
+                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="ClickOKButton:" destination="-1" eventType="touchUpInside" id="wfn-Lt-MgG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="3ZJ-6U-RUt"/>
+                        <constraint firstItem="1io-bI-J7n" firstAttribute="leading" secondItem="Z4p-nO-PKf" secondAttribute="centerX" constant="15" id="7e9-O1-YrY"/>
+                        <constraint firstItem="lEt-E0-Yom" firstAttribute="trailing" secondItem="Z4p-nO-PKf" secondAttribute="centerX" constant="-15" id="9Zv-TZ-vGd"/>
+                        <constraint firstItem="lEt-E0-Yom" firstAttribute="centerY" secondItem="Z4p-nO-PKf" secondAttribute="centerY" id="yPB-yf-ySK"/>
+                        <constraint firstItem="1io-bI-J7n" firstAttribute="centerY" secondItem="Z4p-nO-PKf" secondAttribute="centerY" id="z8D-4C-KEj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dpr-wb-msX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6uq-h1-a6t"/>
+                <constraint firstAttribute="trailing" secondItem="dpr-wb-msX" secondAttribute="trailing" id="BqR-Ba-ylS"/>
+                <constraint firstItem="dpr-wb-msX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="H18-lA-J0G"/>
+                <constraint firstAttribute="bottom" secondItem="Z4p-nO-PKf" secondAttribute="bottom" id="Hgl-8K-ZnO"/>
+                <constraint firstItem="f0G-t4-4aR" firstAttribute="top" secondItem="dpr-wb-msX" secondAttribute="bottom" constant="34" id="RWL-RW-8us"/>
+                <constraint firstAttribute="trailing" secondItem="Z4p-nO-PKf" secondAttribute="trailing" id="UOB-dZ-q6P"/>
+                <constraint firstItem="Z4p-nO-PKf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Zei-gX-16x"/>
+                <constraint firstItem="f0G-t4-4aR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sWi-B6-hv1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="467.5" y="151"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="neican_price_inputicon" width="190" height="40"/>
+        <image name="neican_yesordel_btn" width="115" height="38"/>
+    </resources>
+</document>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SJsearchController">
+            <connections>
+                <outlet property="resultView" destination="C9f-51-ZDz" id="3e4-Va-HbP"/>
+                <outlet property="searchDisplayController" destination="0Nh-My-JRl" id="wm8-k2-Yqa"/>
+                <outlet property="searchbar" destination="8Eo-0f-8mE" id="7zA-UD-ZEL"/>
+                <outlet property="tablview" destination="wWD-4T-obd" id="6yi-0Q-ccg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="股票代码.首字母" translatesAutoresizingMaskIntoConstraints="NO" id="8Eo-0f-8mE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="0mF-qC-Leq"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="dqB-rA-kLZ"/>
+                    </connections>
+                </searchBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9f-51-ZDz">
+                    <rect key="frame" x="0.0" y="44" width="375" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索结果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c1-He-Do8">
+                            <rect key="frame" x="10" y="7" width="56" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.51764705882352935" green="0.51764705882352935" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Vv0-vo-BO7"/>
+                        <constraint firstItem="1c1-He-Do8" firstAttribute="centerY" secondItem="C9f-51-ZDz" secondAttribute="centerY" id="Whp-M4-8j6"/>
+                        <constraint firstItem="1c1-He-Do8" firstAttribute="leading" secondItem="C9f-51-ZDz" secondAttribute="leading" constant="10" id="xfW-Ur-Fgp"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wWD-4T-obd">
+                    <rect key="frame" x="0.0" y="74" width="375" height="593"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wWD-4T-obd" secondAttribute="trailing" id="0lp-It-qgz"/>
+                <constraint firstItem="wWD-4T-obd" firstAttribute="top" secondItem="C9f-51-ZDz" secondAttribute="bottom" id="2DJ-Z6-yFi"/>
+                <constraint firstAttribute="bottom" secondItem="wWD-4T-obd" secondAttribute="bottom" id="AO4-nk-NWa"/>
+                <constraint firstAttribute="trailing" secondItem="C9f-51-ZDz" secondAttribute="trailing" id="Mfk-zf-Bhw"/>
+                <constraint firstItem="8Eo-0f-8mE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PPY-vc-cma"/>
+                <constraint firstAttribute="trailing" secondItem="8Eo-0f-8mE" secondAttribute="trailing" id="aMo-Uf-Jxy"/>
+                <constraint firstItem="C9f-51-ZDz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ae0-f1-irh"/>
+                <constraint firstItem="8Eo-0f-8mE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mt9-ZA-ioa"/>
+                <constraint firstItem="C9f-51-ZDz" firstAttribute="top" secondItem="8Eo-0f-8mE" secondAttribute="bottom" id="w03-Wp-ZAQ"/>
+                <constraint firstItem="wWD-4T-obd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xkz-KP-Jcv"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+        <searchDisplayController id="Yk9-5H-wT8">
+            <connections>
+                <outlet property="delegate" destination="-1" id="Kn0-c5-b1X"/>
+                <outlet property="searchContentsController" destination="-1" id="klE-Y5-JKJ"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="quW-hu-y0P"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="1jp-4u-OHc"/>
+            </connections>
+        </searchDisplayController>
+        <searchDisplayController id="0Nh-My-JRl">
+            <connections>
+                <outlet property="delegate" destination="-1" id="axh-TH-pkr"/>
+                <outlet property="searchBar" destination="8Eo-0f-8mE" id="vyu-aN-0gW"/>
+                <outlet property="searchContentsController" destination="-1" id="hCt-SR-WTp"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="JOG-d5-kWa"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="hpn-7D-D2i"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+</document>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="KGk-i7-Jjw" customClass="SJLiveOpenMessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RK-W1-9rY">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="超短王者：OPEC产量无边结果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUm-ys-OMy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="7YJ-r3-7BQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播时间：2016-9-19 9:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2f-Zr-jN3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="qzn-Xu-OUC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AUm-ys-OMy" firstAttribute="leading" secondItem="8RK-W1-9rY" secondAttribute="leading" constant="15" id="WZe-tF-nzJ"/>
+                            <constraint firstAttribute="trailing" secondItem="E2f-Zr-jN3" secondAttribute="trailing" constant="15" id="e91-7M-kgP"/>
+                            <constraint firstItem="E2f-Zr-jN3" firstAttribute="top" secondItem="AUm-ys-OMy" secondAttribute="bottom" constant="10" id="r5e-mW-OCh"/>
+                            <constraint firstItem="E2f-Zr-jN3" firstAttribute="leading" secondItem="8RK-W1-9rY" secondAttribute="leading" constant="15" id="rA0-A7-pAQ"/>
+                            <constraint firstItem="AUm-ys-OMy" firstAttribute="top" secondItem="8RK-W1-9rY" secondAttribute="top" constant="17" id="uFc-zM-G6O"/>
+                            <constraint firstAttribute="trailing" secondItem="AUm-ys-OMy" secondAttribute="trailing" constant="15" id="vEz-4L-GGm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="8RK-W1-9rY" secondAttribute="bottom" constant="-8" id="18g-r6-Afh"/>
+                    <constraint firstItem="8RK-W1-9rY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="aRv-zX-6Xq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8RK-W1-9rY" secondAttribute="trailing" constant="-8" id="u0o-I9-uwr"/>
+                    <constraint firstItem="8RK-W1-9rY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="ucD-5e-E0b"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="timeLabel" destination="E2f-Zr-jN3" id="5HB-y2-Xum"/>
+                <outlet property="titleLabel" destination="AUm-ys-OMy" id="xZO-yi-aE3"/>
+            </connections>
+            <point key="canvasLocation" x="397" y="313"/>
+        </tableViewCell>
+    </objects>
+</document>
