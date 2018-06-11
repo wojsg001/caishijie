@@ -48,8 +48,25 @@
     [self addObserver:self forKeyPath:@"selectedViewController" options:NSKeyValueObservingOptionNew context:nil];
 }
 
+//自定义的tabbar在iOS中重叠的情况.就是原本已经移除的UITabBarButton再次出现
+-(void)viewWillLayoutSubviews{
+    
+    [super viewWillLayoutSubviews];
+    
+    for (UIView *child in self.tabBar.subviews) {
+        
+        if ([child isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            
+            [child removeFromSuperview];
+            
+        }
+        
+    }
+    
+}
+
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    
     
     // 移除系统的tabBarButton
     for (UIView *tabBarButton in self.tabBar.subviews) {
@@ -57,6 +74,8 @@
             [tabBarButton removeFromSuperview];
         }
     }
+    
+    [super viewWillAppear:animated];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -90,7 +109,7 @@
     //股民学院
     SJSchoolViewcontroller *share = [[SJSchoolViewcontroller alloc] init];
     [self setUpOneChildViewController:share image:[UIImage imageNamed:@"table_bar_icon_share_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_share_h"] title:@"股民学院"];
-    
+
     //我的
     SJProfileViewController *profile = [[SJProfileViewController alloc] init];
     [self setUpOneChildViewController:profile image:[UIImage imageNamed:@"table_bar_icon_mine_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_mine_h"] title:@"我的"];

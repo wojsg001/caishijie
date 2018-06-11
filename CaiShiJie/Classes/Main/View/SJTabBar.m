@@ -101,11 +101,7 @@
     // 设置tabBarButton的frame
     for (UIView *tabBarButton in self.buttons) {
         btnX = i * btnW;
-        if (i == 2) {
-            tabBarButton.frame = CGRectMake((w - 56) * 0.5, btnH - 60, 56, 60);
-        } else {
-            tabBarButton.frame = CGRectMake(btnX, btnY, btnW, btnH);
-        }
+        tabBarButton.frame = CGRectMake(btnX, btnY, btnW, btnH);
         i++;
     }
 }
