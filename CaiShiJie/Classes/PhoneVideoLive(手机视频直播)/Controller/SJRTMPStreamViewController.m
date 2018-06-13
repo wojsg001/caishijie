@@ -7,7 +7,7 @@
 //
 
 #import "SJRTMPStreamViewController.h"
-#import "PLMediaStreamingKit.h"
+#import <PLMediaStreamingKit/PLMediaStreamingKit.h>
 #import "TLChatBoxViewController.h"
 #import "SJVideoInteractiveCell.h"
 #import "SJVideoInteractiveModel.h"
@@ -542,12 +542,12 @@
         SJLog(@"无法访问");
     };
     
-    switch ([PLCameraStreamingSession cameraAuthorizationStatus]) {
+    switch ([PLMediaStreamingSession cameraAuthorizationStatus]) {
         case PLAuthorizationStatusAuthorized:
             permissionBlock();
             break;
         case PLAuthorizationStatusNotDetermined: {
-            [PLCameraStreamingSession requestCameraAccessWithCompletionHandler:^(BOOL granted) {
+            [PLMediaStreamingSession requestCameraAccessWithCompletionHandler:^(BOOL granted) {
                 granted ? permissionBlock() : noAccessBlock();
             }];
         }

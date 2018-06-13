@@ -23,8 +23,7 @@
 #import "MQTTSessionManager.h"
 #import "SJUserInfo.h"
 #import "SJToken.h"
-#import <PLPlayerKit/PLPlayerEnv.h>
-#import "PLMediaStreamingKit.h"
+#import <PLMediaStreamingKit/PLMediaStreamingKit.h>
 
 static AppDelegate *_appDelegate = nil;
 
@@ -53,8 +52,7 @@ static AppDelegate *_appDelegate = nil;
 
     [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
     _appDelegate = self;
-    
-    [PLPlayerEnv initEnv];
+
     [PLStreamingEnv initEnv];
     
     // 添加对网络的监听
