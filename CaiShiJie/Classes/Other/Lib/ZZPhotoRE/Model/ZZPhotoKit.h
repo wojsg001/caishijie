@@ -3,7 +3,7 @@
 //  ZZPhotoKit
 //
 //  Created by Yuan on 16/1/14.
-//  Copyright © 2016年 Ace. All rights reserved.
+//  Copyright © 2018年 Ace. All rights reserved.
 //
 
 #ifndef ZZPhotoKit_h
@@ -33,7 +33,7 @@
  
  ** 联系方式
  
- *** 关注微博：袁亮_TRICK  *** QQ:412016060
+ *** 关注微博：袁亮_TRICK  *** QQ:412018060
  
  */
 

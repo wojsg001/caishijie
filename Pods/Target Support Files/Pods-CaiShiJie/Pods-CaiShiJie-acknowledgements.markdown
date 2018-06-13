@@ -33,7 +33,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 The MIT License (MIT)
 
-Copyright (c) 2012-2016 qiniu.com
+Copyright (c) 2012-2018 qiniu.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -746,7 +746,7 @@ Apache License
 
 The MIT License (MIT)
 
-Copyright (c) 2012-2016 qiniu.com
+Copyright (c) 2012-2018 qiniu.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -769,7 +769,7 @@ THE SOFTWARE.
 
 ## SDWebImage
 
-Copyright (c) 2016 Olivier Poitrey rs@dailymotion.com
+Copyright (c) 2018 Olivier Poitrey rs@dailymotion.com
  
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -793,7 +793,7 @@ THE SOFTWARE.
 
 ## SVProgressHUD
 
-Copyright (c) 2011-2016 Sam Vermette, Tobias Tiemerding and contributors.
+Copyright (c) 2011-2018 Sam Vermette, Tobias Tiemerding and contributors.
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation

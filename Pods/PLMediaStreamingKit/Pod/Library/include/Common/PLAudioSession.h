@@ -3,7 +3,7 @@
 //  PLMediaStreamingKit
 //
 //  Created by WangSiyu on 8/30/16.
-//  Copyright © 2016 Pili Engineering, Qiniu Inc. All rights reserved.
+//  Copyright © 2018 Pili Engineering, Qiniu Inc. All rights reserved.
 //
 
 #import <AVFoundation/AVFoundation.h>

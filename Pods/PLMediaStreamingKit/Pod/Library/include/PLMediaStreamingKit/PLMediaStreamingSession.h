@@ -3,7 +3,7 @@
 //  PLCameraStreamingKit
 //
 //  Created by lawder on 16/7/28.
-//  Copyright © 2016年 Pili Engineering, Qiniu Inc. All rights reserved.
+//  Copyright © 2018年 Pili Engineering, Qiniu Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

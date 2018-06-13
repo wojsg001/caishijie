@@ -3,7 +3,7 @@
 //  CaiShiJie
 //
 //  Created by user on 16/2/18.
-//  Copyright © 2016年 user. All rights reserved.
+//  Copyright © 2018年 user. All rights reserved.
 //
 
 #import "SJLogDetailViewController.h"
@@ -13,7 +13,7 @@
 #import "MJExtension.h"
 #import "SJLogDetail.h"
 #import "SJShareView.h"
-#import <UMSocialCore/UMSocialCore.h>
+#import <UMShare/UMShare.h>
 #import "SJToken.h"
 #import "SJLoginViewController.h"
 #import "SJReportViewController.h"
@@ -103,7 +103,7 @@
             
             [SJShareView hideShareView];
             //调用分享接口
-            [[UMSocialManager defaultManager] shareToPlatform:UMSocialPlatformType_WechatTimeLine messageObject:messageObject currentViewController:self completion:^(id result, NSError *error) {
+            [[UMSocialManager defaultManager] shareToPlatform:UMSocialPlatformType_WechatSession messageObject:messageObject currentViewController:self completion:^(id result, NSError *error) {
                 if (error) {
                     SJLog(@"分享成功%@", error);
                     return ;
@@ -156,7 +156,27 @@
             }];
         }
             break;
+        case 105:
+        {
+            // 创建分享消息对象
+            UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+            // 创建网页内容对象
+            UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:self.logDetail.title descr:self.logDetail.summary thumImage:[NSString stringWithFormat:@"http://img.csjimg.com/%@",self.logDetail.head_img]];
+            shareObject.webpageUrl = [NSString stringWithFormat:@"http://www.18csj.com/article/detail/%@.html",self.logDetail.article_id];
+            // 分享消息对象设置分享内容对象
+            messageObject.shareObject = shareObject;
             
+            [SJShareView hideShareView];
+            //调用分享接口
+            [[UMSocialManager defaultManager] shareToPlatform:UMSocialPlatformType_WechatTimeLine messageObject:messageObject currentViewController:self completion:^(id result, NSError *error) {
+                if (error) {
+                    SJLog(@"分享成功%@", error);
+                    return ;
+                }
+                SJLog(@"分享成功%@", result);
+            }];
+        }
+            break;
         default:
             break;
     }

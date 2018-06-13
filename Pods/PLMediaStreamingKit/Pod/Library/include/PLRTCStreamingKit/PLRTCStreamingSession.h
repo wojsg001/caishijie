@@ -3,7 +3,7 @@
 //  PLRTCStreamingKit
 //
 //  Created by lawder on 16/7/8.
-//  Copyright © 2016年 PILI. All rights reserved.
+//  Copyright © 2018年 PILI. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

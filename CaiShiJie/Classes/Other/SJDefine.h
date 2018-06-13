@@ -3,7 +3,7 @@
 //  CaiShiJie
 //
 //  Created by user on 16/3/18.
-//  Copyright © 2016年 user. All rights reserved.
+//  Copyright © 2018年 user. All rights reserved.
 //
 
 #ifndef SJDefine_h
@@ -33,6 +33,8 @@
     #define imHost   @"im.csjapi.com"        // web服务器地址
     #define MQTTHost @"mqtt.18csj.com"
 //#endif
+
+#define UMENG_APPKEY @"5b1f2ca2f43e48145e0000ac" //友盟appKey
 
 #define KNotificationLoadOpinion          @"loadOpinion"
 #define KNotificationLoadInteract         @"loadInteract"

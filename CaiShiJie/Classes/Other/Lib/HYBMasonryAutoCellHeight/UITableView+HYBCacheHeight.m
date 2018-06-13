@@ -3,7 +3,7 @@
 //  CellAutoHeightDemo
 //
 //  Created by huangyibiao on 16/1/22.
-//  Copyright © 2016年 huangyibiao. All rights reserved.
+//  Copyright © 2018年 huangyibiao. All rights reserved.
 //
 
 #import "UITableView+HYBCacheHeight.h"

@@ -8,7 +8,7 @@
  This file contains definitions for mqttio-OBJC backward compatibility
  
  @author Christoph Krey krey.christoph@gmail.com
- @copyright Copyright © 2013-2016, Christoph Krey 
+ @copyright Copyright © 2013-2018, Christoph Krey 
  
  based on Copyright (c) 2011, 2013, 2lemetry LLC
     All rights reserved. This program and the accompanying materials

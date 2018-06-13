@@ -3,7 +3,7 @@
 //  PLPlayerKit
 //
 //  Created by 孙菲 on 16/7/11.
-//  Copyright © 2016年 Pili Engineering, Qiniu Inc. All rights reserved.
+//  Copyright © 2018年 Pili Engineering, Qiniu Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -3,14 +3,14 @@
 //  SocialSDK
 //
 //  Created by umeng on 16/4/14.
-//  Copyright © 2016年 dongjianxiong. All rights reserved.
+//  Copyright © 2018年 dongjianxiong. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <UMSocialCore/UMSocialCore.h>
+#import <UMShare/UMShare.h>
 
 @interface UMSocialWechatHandler : UMSocialHandler
 
-+ (UMSocialWechatHandler *)defaultManager;
++ (instancetype)defaultManager;
 
 @end

@@ -3,7 +3,7 @@
 //  PLCameraStreamingKit
 //
 //  Created by TaoZeyu on 16/6/21.
-//  Copyright © 2016年 Pili Engineering, Qiniu Inc. All rights reserved.
+//  Copyright © 2018年 Pili Engineering, Qiniu Inc. All rights reserved.
 //
 
 #import "PLAudioEffectConfiguration.h"

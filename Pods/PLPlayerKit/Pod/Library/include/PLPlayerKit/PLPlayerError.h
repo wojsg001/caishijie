@@ -3,7 +3,7 @@
 //  PLPlayerKit
 //
 //  Created by liang on 4/22/16.
-//  Copyright © 2016年 Pili Engineering. All rights reserved.
+//  Copyright © 2018年 Pili Engineering. All rights reserved.
 //
 
 #ifndef PLPlayerError_h

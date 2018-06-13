@@ -3,7 +3,7 @@
 //  PLStreamingKit
 //
 //  Created by 0dayZh on 16/1/9.
-//  Copyright © 2016年 pili-engineering. All rights reserved.
+//  Copyright © 2018年 pili-engineering. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

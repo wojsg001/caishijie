@@ -3,7 +3,7 @@
 //  CaiShiJie
 //
 //  Created by user on 16/5/12.
-//  Copyright © 2016年 user. All rights reserved.
+//  Copyright © 2018年 user. All rights reserved.
 //
 
 #import "SJHomeRecommendViewController.h"
@@ -116,6 +116,8 @@
     self.navigationBar = navigationBar;
     navigationBar.backgroundColor = [UIColor colorWithHexString:@"#f76408" withAlpha:0.0];
     _isClear = YES;
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    statusBar.backgroundColor = [UIColor colorWithHexString:@"#f76408" withAlpha:1.0];
     [self.view addSubview:navigationBar];
     
     UIButton *searchButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 25, SJScreenW - 20, 28)];
@@ -605,7 +607,11 @@
         if (!_isClear) {
             [UIView animateWithDuration:0.2 animations:^{
                 self.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#f76408" withAlpha:0.0];
+                
                 [_searchButton setBackgroundColor:[UIColor colorWithHexString:@"#ffffff" withAlpha:0.4]];
+                
+                UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+                statusBar.backgroundColor = [UIColor colorWithHexString:@"#f76408" withAlpha:1.0];
             } completion:^(BOOL finished) {
                 _isClear = YES;
             }];

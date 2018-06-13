@@ -3,7 +3,7 @@
 //  PLPlayerKit
 //
 //  Created by WangSiyu on 2/24/16.
-//  Copyright © 2016 qgenius. All rights reserved.
+//  Copyright © 2018 qgenius. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

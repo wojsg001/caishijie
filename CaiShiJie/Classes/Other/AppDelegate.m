@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 #import "SJGuideTool.h"
-#import <UMSocialCore/UMSocialCore.h>
-#import "UMMobClick/MobClick.h"
+#import <UMShare/UMShare.h>
+#import <UMCommon/UMCommon.h>
+#import <UMPush/UMessage.h>
+#import <UMCommonLog/UMCommonLogHeaders.h>
+#import <UMAnalytics/MobClick.h>
 #import "iflyMSC/IFlyMSC.h"
 #import "BeeCloud.h"
 #import "SJNetManager.h"
@@ -56,6 +59,7 @@ static AppDelegate *_appDelegate = nil;
     
     // 添加对网络的监听
     [self checkAFNetworkStatus];
+    
     // 添加通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:KNotificationLoginSuccess object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exitLogin) name:KNotificationExitLogin object:nil];
@@ -68,16 +72,18 @@ static AppDelegate *_appDelegate = nil;
     }
     // 设置配置信息
     [self setupConfiguration];
-    // 消息推送注册
-    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)]) {
-        // 创建UIUserNotificationSettings，并设置消息的显示类类型(IOS8)
-        UIUserNotificationSettings *notiSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];
-        [application registerUserNotificationSettings:notiSettings];
-        [application registerForRemoteNotifications];
-    } else {
-        // IOS7
-        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
-    }
+    
+    // Push's basic setting
+    UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
+    //type是对推送的几个参数的选择，可以选择一个或者多个。默认是三个全部打开，即：声音，弹窗，角标
+    entity.types = UMessageAuthorizationOptionBadge|UMessageAuthorizationOptionAlert;
+    [UNUserNotificationCenter currentNotificationCenter].delegate=self;
+    [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (granted) {
+        }else
+        {
+        }
+    }];
     
     // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -92,6 +98,45 @@ static AppDelegate *_appDelegate = nil;
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     SJLog(@"----Token----%@", deviceToken);
+    NSLog(@"%@",[[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                  stringByReplacingOccurrencesOfString: @">" withString: @""]
+                 stringByReplacingOccurrencesOfString: @" " withString: @""]);
+}
+
+//iOS10以下使用这两个方法接收通知
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    [UMessage setAutoAlert:NO];
+    if([[[UIDevice currentDevice] systemVersion]intValue] < 10){
+        [UMessage didReceiveRemoteNotification:userInfo];
+    }
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+//iOS10新增：处理前台收到通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [UMessage setAutoAlert:NO];
+        //应用处于前台时的远程推送接受
+        //必须加这句代码
+        [UMessage didReceiveRemoteNotification:userInfo];
+    }else{
+        //应用处于前台时的本地推送接受
+    }
+    completionHandler(UNNotificationPresentationOptionSound|UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionAlert);
+}
+
+//iOS10新增：处理后台点击通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler{
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        //应用处于后台时的远程推送接受
+        //必须加这句代码
+        [UMessage didReceiveRemoteNotification:userInfo];
+    }else{
+        //应用处于后台时的本地推送接受
+    }
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo {
@@ -292,22 +337,31 @@ static AppDelegate *_appDelegate = nil;
 }
 #pragma mark - 设置配置信息
 - (void)setupConfiguration {
-    UMConfigInstance.appKey = @"56836d7de0f55ab8230012e8";
-    UMConfigInstance.channelId = @"App Store";
-    [MobClick startWithConfigure:UMConfigInstance];
-    //打开日志
-    [[UMSocialManager defaultManager] openLog:YES];
+    
+    //打开加密传输
+    [UMConfigure setEncryptEnabled:YES];
+    
+    //开发者需要显式的调用此函数，日志系统才能工作
+    [UMCommonLogManager setUpUMCommonLogManager];
+    [UMConfigure setLogEnabled:YES];
+    
+    // 开启Crash收集
+    [MobClick setCrashReportEnabled:YES];
+    
     //设置友盟appkey
-    [[UMSocialManager defaultManager] setUmSocialAppkey:@"56837fe2e0f55ae461000104"];
+    [UMConfigure initWithAppkey:UMENG_APPKEY channel:@"App Store"];
+    
+    [MobClick setScenarioType:E_UM_GAME|E_UM_DPLUS];
     
     //各平台的详细配置
     //设置分享到QQ互联的appId和appKey
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"101280116" appSecret:@"084eca13aa3ba41b653baf81b6308a9a" redirectURL:@"http://www.18csj.com"];
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Qzone appKey:@"101280116" appSecret:@"084eca13aa3ba41b653baf81b6308a9a" redirectURL:@"http://www.18csj.com"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"101280116" appSecret:@"084eca13aa3ba41b653baf81b6308a9a" redirectURL:@"http://www.18csj.com"]; ////QQ聊天页面
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Qzone appKey:@"101280116" appSecret:@"084eca13aa3ba41b653baf81b6308a9a" redirectURL:@"http://www.18csj.com"];////qq空间
     //设置微信的appId和appKey
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx08a034f206b96be5" appSecret:@"2249fe73b6efd7bf16724c54b6fd2a44" redirectURL:@"http://www.18csj.com"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession  appKey:@"wx08a034f206b96be5" appSecret:@"2249fe73b6efd7bf16724c54b6fd2a44" redirectURL:@"http://www.18csj.com"]; //微信聊天
+   [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatTimeLine appKey:@"wx08a034f206b96be5" appSecret:@"2249fe73b6efd7bf16724c54b6fd2a44" redirectURL:@"http://www.18csj.com"]; //微信朋友圈
     //设置新浪的appId和appKey
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"1260789526" appSecret:@"1843a9cd69a4bcbba528b1c384aaa9b9" redirectURL:@"http://sns.whalecloud.com/sina2/callback"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"1260789526" appSecret:@"1843a9cd69a4bcbba528b1c384aaa9b9" redirectURL:@"http://sns.whalecloud.com/sina2/callback"]; ////新浪
 
     /*
      创建语音配置,appid必须要传入，仅执行一次则可

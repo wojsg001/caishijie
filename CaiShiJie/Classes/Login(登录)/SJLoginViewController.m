@@ -11,7 +11,7 @@
 #import "SJForgetPasswordViewController.h"
 #import "SJOtherRegisterViewController.h"
 #import "SJUserInfo.h"
-#import <UMSocialCore/UMSocialCore.h>
+#import <UMShare/UMShare.h>
 
 #define kNotificationBeginLogin @"beginLogin"
 

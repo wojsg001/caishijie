@@ -3,7 +3,7 @@
 //  HappyDNS
 //
 //  Created by bailong on 16/5/28.
-//  Copyright © 2016年 Qiniu Cloud Storage. All rights reserved.
+//  Copyright © 2018年 Qiniu Cloud Storage. All rights reserved.
 //
 
 #ifndef QNResolv_h

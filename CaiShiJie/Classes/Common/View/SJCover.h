@@ -3,7 +3,7 @@
 //  CaiShiJie
 //
 //  Created by user on 16/1/17.
-//  Copyright © 2016年 user. All rights reserved.
+//  Copyright © 2018年 user. All rights reserved.
 //新增蒙版
 
 #import <UIKit/UIKit.h>

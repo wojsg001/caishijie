@@ -3,10 +3,10 @@
 //  SocialSDK
 //
 //  Created by umeng on 16/4/15.
-//  Copyright © 2016年 dongjianxiong. All rights reserved.
+//  Copyright © 2018年 dongjianxiong. All rights reserved.
 //
 
-#import <UMSocialCore/UMSocialCore.h>
+#import <UMShare/UMShare.h>
 
 @interface UMSocialQQHandler : UMSocialHandler
 
@@ -15,6 +15,6 @@
 /** QQ是否支持网页分享
  * @param support 是否支持
  */
-- (void)setSupportWebView:(BOOL)support;
+- (void)setSupportWebView:(BOOL)support __deprecated;
 
 @end

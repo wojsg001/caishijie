@@ -3,7 +3,7 @@
 //  ZZPhotoKit
 //
 //  Created by Yuan on 16/1/22.
-//  Copyright © 2016年 Ace. All rights reserved.
+//  Copyright © 2018年 Ace. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
