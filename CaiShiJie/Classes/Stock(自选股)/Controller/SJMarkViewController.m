@@ -668,7 +668,37 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section==2) {
+    
+    //大盘
+    if (indexPath.section == 0) {
+//        NSDictionary *dict = self.arr[indexPath.row];
+//        NSString *symbol = dict[@"symbol"];
+//        NSString *type = [symbol substringToIndex:2];
+//        NSString *code = [NSString stringWithFormat:@"%@",dict[@"code"]];
+//        NSString *name = dict[@"name"];
+//
+//        SJStockDetailContentViewController *stockDetailVC = [[SJStockDetailContentViewController alloc] init];
+//        stockDetailVC.code = code;
+//        stockDetailVC.type = type;
+//        stockDetailVC.name = name;
+//        [self.navigationController pushViewController:stockDetailVC animated:YES];
+    }
+    
+    //热门行业
+    else if (indexPath.section == 1) {
+//        NSDictionary *dict = self.arr[indexPath.row];
+//        NSString *symbol = dict[@"symbol"];
+//        NSString *type = [symbol substringToIndex:2];
+//        NSString *code = [NSString stringWithFormat:@"%@",dict[@"code"]];
+//        NSString *name = dict[@"name"];
+//        
+//        SJStockDetailContentViewController *stockDetailVC = [[SJStockDetailContentViewController alloc] init];
+//        stockDetailVC.code = code;
+//        stockDetailVC.type = type;
+//        stockDetailVC.name = name;
+//        [self.navigationController pushViewController:stockDetailVC animated:YES];
+    }
+    else if (indexPath.section == 2) {
         NSDictionary *dict = self.arr[indexPath.row];
         NSString *symbol = dict[@"symbol"];
         NSString *type = [symbol substringToIndex:2];

@@ -16,7 +16,7 @@
 @property (nonatomic, copy) NSString *summary;
 @property (nonatomic, copy) NSString *user_id;
 @property (nonatomic, copy) NSString *course_id;
-@property (nonatomic, copy) NSString *period_id;
+@property (nonatomic, copy) NSString *period_id; //课时id
 @property (nonatomic, copy) NSString *vod;
 @property (nonatomic, copy) NSString *url;
 @property (nonatomic, copy) NSString *data;

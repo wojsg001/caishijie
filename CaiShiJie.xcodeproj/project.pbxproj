@@ -873,13 +873,6 @@
 			remoteGlobalIDString = 4D9C71DD27F6441C257EA87038FFACE1;
 			remoteInfo = BlocksKit;
 		};
-		043BF6BB20CB88AB000C6E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 043BF6A220CB88AA000C6E50 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B996E3202BC65A689B70783AC79954F0;
-			remoteInfo = HappyDNS;
-		};
 		043BF6BD20CB88AB000C6E50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 043BF6A220CB88AA000C6E50 /* Pods.xcodeproj */;
@@ -908,33 +901,12 @@
 			remoteGlobalIDString = 3160C4FB9FFC5985B88E070998C87ADD;
 			remoteInfo = MQTTClient;
 		};
-		043BF6C520CB88AB000C6E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 043BF6A220CB88AA000C6E50 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 98FC19F5C16512D4AC46BF9F0ED1719A;
-			remoteInfo = "pili-librtmp";
-		};
-		043BF6C720CB88AB000C6E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 043BF6A220CB88AA000C6E50 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FBD0FBF3646DA875DD3AFCEEBCE7C204;
-			remoteInfo = PLPlayerKit;
-		};
 		043BF6C920CB88AB000C6E50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 043BF6A220CB88AA000C6E50 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E86420DCDD1B094A9FFD6CFC188110AD;
 			remoteInfo = "Pods-CaiShiJie";
-		};
-		043BF6CB20CB88AB000C6E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 043BF6A220CB88AA000C6E50 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 119663BCB651FA3CEBA56A4F38D86998;
-			remoteInfo = QNNetDiag;
 		};
 		043BF6CD20CB88AB000C6E50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -2571,15 +2543,11 @@
 			children = (
 				043BF6B820CB88AB000C6E50 /* libARChromeActivity.a */,
 				043BF6BA20CB88AB000C6E50 /* libBlocksKit.a */,
-				043BF6BC20CB88AB000C6E50 /* libHappyDNS.a */,
 				043BF6BE20CB88AB000C6E50 /* libHexColors.a */,
 				043BF6C020CB88AB000C6E50 /* libKINWebBrowser.a */,
 				043BF6C220CB88AB000C6E50 /* libMJPhotoBrowser.a */,
 				043BF6C420CB88AB000C6E50 /* libMQTTClient.a */,
-				043BF6C620CB88AB000C6E50 /* libpili-librtmp.a */,
-				043BF6C820CB88AB000C6E50 /* libPLPlayerKit.a */,
 				043BF6CA20CB88AB000C6E50 /* libPods-CaiShiJie.a */,
-				043BF6CC20CB88AB000C6E50 /* libQNNetDiag.a */,
 				043BF6CE20CB88AB000C6E50 /* libSDWebImage.a */,
 				043BF6D020CB88AB000C6E50 /* libSocketRocket.a */,
 				043BF6D220CB88AB000C6E50 /* libSVProgressHUD.a */,
@@ -5816,13 +5784,6 @@
 			remoteRef = 043BF6B920CB88AB000C6E50 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		043BF6BC20CB88AB000C6E50 /* libHappyDNS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libHappyDNS.a;
-			remoteRef = 043BF6BB20CB88AB000C6E50 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		043BF6BE20CB88AB000C6E50 /* libHexColors.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -5851,32 +5812,11 @@
 			remoteRef = 043BF6C320CB88AB000C6E50 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		043BF6C620CB88AB000C6E50 /* libpili-librtmp.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libpili-librtmp.a";
-			remoteRef = 043BF6C520CB88AB000C6E50 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		043BF6C820CB88AB000C6E50 /* libPLPlayerKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libPLPlayerKit.a;
-			remoteRef = 043BF6C720CB88AB000C6E50 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		043BF6CA20CB88AB000C6E50 /* libPods-CaiShiJie.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libPods-CaiShiJie.a";
 			remoteRef = 043BF6C920CB88AB000C6E50 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		043BF6CC20CB88AB000C6E50 /* libQNNetDiag.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libQNNetDiag.a;
-			remoteRef = 043BF6CB20CB88AB000C6E50 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		043BF6CE20CB88AB000C6E50 /* libSDWebImage.a */ = {

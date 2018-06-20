@@ -31,6 +31,7 @@
 #import "SJRTMPStreamViewController.h"
 #import <NSArray+BlocksKit.h>
 #import "UIScrollView+HeaderScaleImage.h"
+#import "SJPersonsettingViewController.h"
 
 @interface SJProfileViewController ()<UITableViewDataSource,UITableViewDelegate,SJProfileDefaultHeaderViewDelegate, SJProfileHeaderViewDelegate>
 
@@ -100,18 +101,18 @@
     if ([[SJUserInfo sharedUserInfo] isSucessLogined]
         && ![[[NSUserDefaults standardUserDefaults] valueForKey:kUserName] isEqualToString:@"散户哨兵"]
         && ![[[NSUserDefaults standardUserDefaults] valueForKey:kUserName] isEqualToString:@"hanxiao"]) {
-        _firstTeacherArray = @[@{@"image":@"mine_icon1.png",@"title":@"我的金币"},
+        _firstTeacherArray = @[/*@{@"image":@"mine_icon1.png",@"title":@"我的金币"},*/
                                @{@"image":@"mine_icon2.png",@"title":@"我的消息"},
                                @{@"image":@"mine_icon3.png",@"title":@"我的问股"},
                                @{@"image":@"mine_icon4.png",@"title":@"我的博文"},
                                @{@"image":@"mine_icon5.png",@"title":@"我的直播"}];
-        _firstuserArray = @[@{@"image":@"mine_icon1.png",@"title":@"我的金币"},
+        _firstuserArray = @[/*@{@"image":@"mine_icon1.png",@"title":@"我的金币"},*/
                             @{@"image":@"mine_icon2.png",@"title":@"我的消息"},
                             @{@"image":@"mine_icon3.png",@"title":@"我的问股"},
                             @{@"image":@"mine_icon4.png",@"title":@"我的博文"}];
         
-        _secondTeacherArray = @[@{@"image":@"mine_icon8.png",@"title":@"我的收入"},
-                                @{@"image":@"mine_icon6.png",@"title":@"消费记录"},
+        _secondTeacherArray = @[/*@{@"image":@"mine_icon8.png",@"title":@"我的收入"},*/
+                                /*@{@"image":@"mine_icon6.png",@"title":@"消费记录"},*/
                                 @{@"image":@"mine_icon7.png",@"title":@"设置"}];
         _seconduserArray = @[@{@"image":@"mine_icon6.png",@"title":@"消费记录"},
                              @{@"image":@"mine_icon7.png",@"title":@"设置"}];
@@ -286,15 +287,15 @@
 - (void)firstSectionTeacherDidSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (![[SJUserDefaults valueForKey:kUserName] isEqualToString:@"散户哨兵"] && ![[SJUserDefaults valueForKey:kUserName] isEqualToString:@"hanxiao"]) {
         switch (indexPath.row) {
+//            case 0:
+//            {
+//                SJMyGoldCoinViewController *myGoldCoinVC = [[SJMyGoldCoinViewController alloc] init];
+//                myGoldCoinVC.title = @"我的金币";
+//                myGoldCoinVC.goldCoinStr = self.userInfoDict[@"account"];
+//                [self.navigationController pushViewController:myGoldCoinVC animated:YES];
+//            }
+//                break;
             case 0:
-            {
-                SJMyGoldCoinViewController *myGoldCoinVC = [[SJMyGoldCoinViewController alloc] init];
-                myGoldCoinVC.title = @"我的金币";
-                myGoldCoinVC.goldCoinStr = self.userInfoDict[@"account"];
-                [self.navigationController pushViewController:myGoldCoinVC animated:YES];
-            }
-                break;
-            case 1:
             {
                 SJMineMessageViewController *messageVC = [[SJMineMessageViewController alloc] init];
                 messageVC.navigationItem.title = @"消息";
@@ -302,13 +303,13 @@
                 [self.navigationController pushViewController:messageVC animated:YES];
             }
                 break;
-            case 2:
+            case 1:
             {
                 SJMyQuestionViewController *myQuestionVC = [[SJMyQuestionViewController alloc] init];
                 [self.navigationController pushViewController:myQuestionVC animated:YES];
             }
                 break;
-            case 3:
+            case 2:
             {
                 SJProfileBlogArticleViewController *myBlogArticleVC = [[SJProfileBlogArticleViewController alloc] init];
                 myBlogArticleVC.userid = [SJUserDefaults valueForKey:kUserid];
@@ -316,7 +317,7 @@
                 [self.navigationController pushViewController:myBlogArticleVC animated:YES];
             }
                 break;
-            case 4:
+            case 3:
             {
                 if ([[SJUserDefaults valueForKey:kUserid] isEqualToString:@"10412"]) {
                     SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
@@ -384,15 +385,15 @@
 - (void)firstSectionUserDidSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (![[SJUserDefaults valueForKey:kUserName] isEqualToString:@"散户哨兵"] && ![[SJUserDefaults valueForKey:kUserName] isEqualToString:@"hanxiao"]) {
         switch (indexPath.row) {
+//            case 0:
+//            {
+//                SJMyGoldCoinViewController *myGoldCoinVC = [[SJMyGoldCoinViewController alloc] init];
+//                myGoldCoinVC.title = @"我的金币";
+//                myGoldCoinVC.goldCoinStr = self.userInfoDict[@"account"];
+//                [self.navigationController pushViewController:myGoldCoinVC animated:YES];
+//            }
+//                break;
             case 0:
-            {
-                SJMyGoldCoinViewController *myGoldCoinVC = [[SJMyGoldCoinViewController alloc] init];
-                myGoldCoinVC.title = @"我的金币";
-                myGoldCoinVC.goldCoinStr = self.userInfoDict[@"account"];
-                [self.navigationController pushViewController:myGoldCoinVC animated:YES];
-            }
-                break;
-            case 1:
             {
                 SJMineMessageViewController *messageVC = [[SJMineMessageViewController alloc] init];
                 messageVC.navigationItem.title = @"消息";
@@ -400,7 +401,7 @@
                 [self.navigationController pushViewController:messageVC animated:YES];
             }
                 break;
-            case 2:
+            case 1:
             {
                 SJUserQuestionViewController *userQuestionVC = [[SJUserQuestionViewController alloc] init];
                 userQuestionVC.title = @"我的问股";
@@ -408,7 +409,7 @@
                 
             }
                 break;
-            case 3:
+            case 2:
             {
                 SJProfileBlogArticleViewController *myBlogArticleVC = [[SJProfileBlogArticleViewController alloc] init];
                 myBlogArticleVC.userid = [SJUserDefaults valueForKey:kUserid];
@@ -456,20 +457,20 @@
 - (void)secondSectionTeacherDidSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (![[SJUserDefaults valueForKey:kUserName] isEqualToString:@"散户哨兵"] && ![[SJUserDefaults valueForKey:kUserName] isEqualToString:@"hanxiao"]) {
         switch (indexPath.row) {
+//            case 0:
+//            {
+//                SJMyIncomeViewController *incomeVC = [[SJMyIncomeViewController alloc] init];
+//                incomeVC.title = @"我的收入";
+//                [self.navigationController pushViewController:incomeVC animated:YES];
+//            }
+//                break;
+//            case 1:
+//            {
+//                SJConsumptionViewController *consumeVC = [[SJConsumptionViewController alloc] init];
+//                [self.navigationController pushViewController:consumeVC animated:YES];
+//            }
+//                break;
             case 0:
-            {
-                SJMyIncomeViewController *incomeVC = [[SJMyIncomeViewController alloc] init];
-                incomeVC.title = @"我的收入";
-                [self.navigationController pushViewController:incomeVC animated:YES];
-            }
-                break;
-            case 1:
-            {
-                SJConsumptionViewController *consumeVC = [[SJConsumptionViewController alloc] init];
-                [self.navigationController pushViewController:consumeVC animated:YES];
-            }
-                break;
-            case 2:
             {
                 SJSettingViewController *setVC = [[UIStoryboard storyboardWithName:@"SJSetting" bundle:nil] instantiateViewControllerWithIdentifier:@"SJSettingViewController"];
                 setVC.title = @"设置";
@@ -490,13 +491,13 @@
 - (void)secondSectionUserDidSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (![[SJUserDefaults valueForKey:kUserName] isEqualToString:@"散户哨兵"] && ![[SJUserDefaults valueForKey:kUserName] isEqualToString:@"hanxiao"]) {
         switch (indexPath.row) {
+//            case 0:
+//            {
+//                SJConsumptionViewController *consumeVC = [[SJConsumptionViewController alloc] init];
+//                [self.navigationController pushViewController:consumeVC animated:YES];
+//            }
+//                break;
             case 0:
-            {
-                SJConsumptionViewController *consumeVC = [[SJConsumptionViewController alloc] init];
-                [self.navigationController pushViewController:consumeVC animated:YES];
-            }
-                break;
-            case 1:
             {
                 SJSettingViewController *setVC = [[UIStoryboard storyboardWithName:@"SJSetting" bundle:nil] instantiateViewControllerWithIdentifier:@"SJSettingViewController"];
                 setVC.title = @"设置";
@@ -574,6 +575,16 @@
         default:
             break;
     }
+}
+
+- (void)headImgTapClicked{
+    SJPersonsettingViewController *personvc =[[SJPersonsettingViewController alloc]initWithNibName:@"SJPersonsettingViewController" bundle:nil];
+    personvc.title = @"个人设置";
+    // 显示导航栏
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    
+    [self.navigationController pushViewController:personvc animated:YES];
 }
 
 - (void)dealloc {

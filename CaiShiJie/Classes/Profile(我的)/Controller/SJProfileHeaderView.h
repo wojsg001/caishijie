@@ -11,7 +11,7 @@
 @protocol SJProfileHeaderViewDelegate <NSObject>
 
 - (void)headerViewButtonClicked:(UIButton *)button;
-
+- (void)headImgTapClicked;
 @end
 
 @interface SJProfileHeaderView : UIView

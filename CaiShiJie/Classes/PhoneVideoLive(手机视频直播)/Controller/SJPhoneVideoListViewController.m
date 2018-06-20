@@ -39,8 +39,10 @@
     _model = model;
 
     if ([_model.status isEqualToString:@"1"]) {
+        //视频图片地址
         [_voverImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@/%@.jpg?t=%@", kVideo_imgURL, _model.hub, _model.video_id, [[NSDate date] stringDateWithYMDHM]]] placeholderImage:[UIImage imageNamed:@"live_list_placeholder"]];
     } else {
+        //头像图片地址
         [_voverImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kHead_imgURL, _model.img]] placeholderImage:[UIImage imageNamed:@"live_list_placeholder"]];
     }
     

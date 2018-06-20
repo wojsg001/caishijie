@@ -75,7 +75,7 @@
             // 创建分享消息对象
             UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
             // 创建网页内容对象
-            UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:self.logDetail.title descr:self.logDetail.summary thumImage:[NSString stringWithFormat:@"http://img.csjimg.com/%@",self.logDetail.head_img]];
+            UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:self.logDetail.title descr:self.logDetail.summary thumImage:[NSString stringWithFormat:@"https://img.csjimg.com/%@",self.logDetail.head_img]];
             shareObject.webpageUrl = [NSString stringWithFormat:@"http://www.18csj.com/article/detail/%@.html",self.logDetail.article_id];
             // 分享消息对象设置分享内容对象
             messageObject.shareObject = shareObject;
@@ -96,7 +96,7 @@
             // 创建分享消息对象
             UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
             // 创建网页内容对象
-            UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:self.logDetail.title descr:self.logDetail.summary thumImage:[NSString stringWithFormat:@"http://img.csjimg.com/%@",self.logDetail.head_img]];
+            UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:self.logDetail.title descr:self.logDetail.summary thumImage:[NSString stringWithFormat:@"https://img.csjimg.com/%@",self.logDetail.head_img]];
             shareObject.webpageUrl = [NSString stringWithFormat:@"http://www.18csj.com/article/detail/%@.html",self.logDetail.article_id];
             // 分享消息对象设置分享内容对象
             messageObject.shareObject = shareObject;
@@ -140,7 +140,7 @@
             // 创建分享消息对象
             UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
             // 创建网页内容对象
-            UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:self.logDetail.title descr:self.logDetail.summary thumImage:[NSString stringWithFormat:@"http://img.csjimg.com/%@",self.logDetail.head_img]];
+            UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:self.logDetail.title descr:self.logDetail.summary thumImage:[NSString stringWithFormat:@"https://img.csjimg.com/%@",self.logDetail.head_img]];
             shareObject.webpageUrl = [NSString stringWithFormat:@"http://www.18csj.com/article/detail/%@.html",self.logDetail.article_id];
             // 分享消息对象设置分享内容对象
             messageObject.shareObject = shareObject;
@@ -161,7 +161,7 @@
             // 创建分享消息对象
             UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
             // 创建网页内容对象
-            UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:self.logDetail.title descr:self.logDetail.summary thumImage:[NSString stringWithFormat:@"http://img.csjimg.com/%@",self.logDetail.head_img]];
+            UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:self.logDetail.title descr:self.logDetail.summary thumImage:[NSString stringWithFormat:@"https://img.csjimg.com/%@",self.logDetail.head_img]];
             shareObject.webpageUrl = [NSString stringWithFormat:@"http://www.18csj.com/article/detail/%@.html",self.logDetail.article_id];
             // 分享消息对象设置分享内容对象
             messageObject.shareObject = shareObject;

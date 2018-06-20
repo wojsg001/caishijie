@@ -27,6 +27,10 @@
     [self layoutIfNeeded];
     self.head_img.layer.cornerRadius = self.head_img.frame.size.width / 2;
     self.head_img.layer.masksToBounds = YES;
+    self.head_img.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *headImgTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headImgTap:)];
+    [self.head_img addGestureRecognizer:headImgTap];
 }
 
 - (void)setDict:(NSDictionary *)dict {
@@ -58,7 +62,8 @@
 }
 
 - (NSMutableAttributedString *)getMutableAttributedStringWithString:(NSString *)string {
-    NSString *str =[NSString stringWithFormat:@"余额：%@币", string];
+    //NSString *str =[NSString stringWithFormat:@"余额：%@币", string];
+    NSString *str =[NSString stringWithFormat:@"提醒：%@条", string];
     NSMutableAttributedString *hintStr = [[NSMutableAttributedString alloc] initWithString:str];
     NSRange range = [[hintStr string] rangeOfString:string];
     [hintStr addAttribute:NSForegroundColorAttributeName value:RGB(255, 193, 8) range:range];
@@ -73,4 +78,9 @@
     }
 }
 
+- (IBAction)headImgTap:(id)sender{
+    if (_delegate && [_delegate respondsToSelector:@selector(headerViewButtonClicked:)]) {
+        [_delegate headImgTapClicked];
+    }
+}
 @end

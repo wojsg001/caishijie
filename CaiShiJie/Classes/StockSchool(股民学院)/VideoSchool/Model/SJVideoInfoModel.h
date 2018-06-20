@@ -15,7 +15,7 @@
 @property (nonatomic, copy) NSString *course_name;
 @property (nonatomic, copy) NSString *course_type;
 @property (nonatomic, copy) NSString *created_at;
-@property (nonatomic, copy) NSString *cur_period_id;
+@property (nonatomic, copy) NSString *cur_period_id; //课时id
 @property (nonatomic, copy) NSString *end_at;
 @property (nonatomic, copy) NSString *img;
 @property (nonatomic, copy) NSString *introduce;

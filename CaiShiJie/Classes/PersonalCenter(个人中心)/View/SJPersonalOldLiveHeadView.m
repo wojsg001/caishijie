@@ -38,8 +38,8 @@
     self.backgroundViewHeightConstraint.constant = 75.0f;
     
     [_liveButton setTitle:@"正在直播" forState:UIControlStateNormal];
-    self.peopleCountLabel.text = [NSString stringWithFormat:@"人气：%@", _infoDic[@"total_count"]];
-    self.liveTitleLabel.text = [NSString stringWithFormat:@"%@", _infoDic[@"title"]];
+    self.peopleCountLabel.text = [NSString stringWithFormat:@"人气：%@", NonEmptyString(_infoDic[@"total_count"])];
+    self.liveTitleLabel.text = [NSString stringWithFormat:@"%@", NonEmptyString(_infoDic[@"title"])];
 }
 
 - (IBAction)liveButtonClicked:(id)sender {

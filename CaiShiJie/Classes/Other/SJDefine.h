@@ -71,4 +71,15 @@
 // 判断是否小余
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
+
+#define NonEmptyString(a)    (a == nil || [a isKindOfClass:[NSNull class]] || a == NULL) ? @"" :a
+// 是否为NSDictionary，并且是否为空
+#define NSDictionaryMatchAndCount(ownOBJ)    ([ownOBJ isKindOfClass:[NSDictionary class]] && ((NSDictionary *)ownOBJ).allKeys.count > 0)
+// 是否为NSArray，并且是否为空
+#define NSArrayMatchAndCount(ownOBJ)    ([ownOBJ isKindOfClass:[NSArray class]] && ((NSArray *)ownOBJ).count > 0)
+/// 仅支持value为String类型
+#define NSDictionaryContentWithKey(dic, key)  [NSString stringWithFormat:@"%@", NonEmptyString([dic objectForKey:key])]
+// 是否为NSArray，并且是否为空
+#define NSArrayMatchAndCount(ownOBJ)    ([ownOBJ isKindOfClass:[NSArray class]] && ((NSArray *)ownOBJ).count > 0)
+
 #endif /* SJDefine_h */

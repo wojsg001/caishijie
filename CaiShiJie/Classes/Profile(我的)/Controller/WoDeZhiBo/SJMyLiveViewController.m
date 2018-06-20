@@ -63,6 +63,11 @@
     [self addChildViewController:self.liveManagerVC];
 
     self.navigationItem.titleView = self.titleView;
+    
+    [self.titleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.navigationItem.titleView.mas_centerY).offset(-10);
+    }];
+
     // 默认发送观点
     isOpinion = YES;
     netManager = [SJNetManager sharedNetManager];

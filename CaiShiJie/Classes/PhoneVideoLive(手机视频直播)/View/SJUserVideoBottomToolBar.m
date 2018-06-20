@@ -45,6 +45,9 @@
     _giftButton.tag = 103;
     [_giftButton addTarget:self action:@selector(clickButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_giftButton];
+    _giftButton.userInteractionEnabled = NO;
+    [_giftButton setHidden:YES];
+
     
     _fullButton = [[UIButton alloc] init];
     [_fullButton setImage:[UIImage imageNamed:@"live_down_icon4"] forState:UIControlStateNormal];
@@ -73,7 +76,8 @@
     }];
     
     [_recordButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(weakSelf.giftButton.mas_left).offset(-15);
+        //make.right.equalTo(weakSelf.fullButton.mas_left).offset(-15);
+        make.right.equalTo(weakSelf.fullButton.mas_left).offset(-15);
         make.bottom.equalTo(weakSelf.mas_bottom).offset(-10);
     }];
 }

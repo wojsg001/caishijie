@@ -115,10 +115,9 @@
 @interface SJRTMPStreamViewController ()<PLMediaStreamingSessionDelegate, TLChatBoxViewControllerDelegate, UITableViewDelegate, UITableViewDataSource, SRWebSocketDelegate>
 {
     SRWebSocket *_webSocket;
+    PLMediaStreamingSession *_streamingSession;
 }
 
-@property (nonatomic, strong) PLMediaStreamingSession *streamSession;
-@property (nonatomic, strong) dispatch_queue_t sessionQueue;
 @property (nonatomic, strong) UIButton *chartButton;
 @property (nonatomic, strong) UIButton *backButton;
 @property (nonatomic, strong) UIButton *meiyanButton;
@@ -161,7 +160,6 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor blackColor];
-    self.sessionQueue = dispatch_queue_create("csj.queue.streaming", DISPATCH_QUEUE_SERIAL);
     [self setupAddLiveInfoView];
     [self setupPLStreamSession];
     [self loadTeacherInfoData];
@@ -409,7 +407,7 @@
     switch (button.tag) {
         case -1: {
             // 关闭直播
-            if (PLStreamStateConnected == self.streamSession.streamState) {
+            if (PLStreamStateConnected == _streamingSession.streamState) {
                 [self showAlert];
             } else {
                 [self.timer invalidate];
@@ -429,17 +427,13 @@
         case 103: {
             // 闪光
             button.selected = !button.selected;
-            dispatch_async(self.sessionQueue, ^{
-                self.streamSession.torchOn = !self.streamSession.isTorchOn;
-            });
+            _streamingSession.torchOn = !_streamingSession.isTorchOn;
         }
             break;
         case 104: {
             // 翻转
             button.selected = !button.selected;
-            dispatch_async(self.sessionQueue, ^{
-                [self.streamSession toggleCamera];
-            });
+            [_streamingSession toggleCamera];
         }
             break;
             
@@ -449,13 +443,13 @@
 }
 #pragma mark - 设置美颜
 - (void)setBeautifyOpenOrClose:(BOOL)isOpen {
-    [self.streamSession setBeautifyModeOn:isOpen];
+    [_streamingSession setBeautifyModeOn:isOpen];
     if (isOpen) {
-        [self.streamSession setBeautify:1];
-        [self.streamSession setWhiten:1];
+        [_streamingSession setBeautify:1];
+        [_streamingSession setWhiten:1];
     } else {
-        [self.streamSession setBeautify:0];
-        [self.streamSession setWhiten:0];
+        [_streamingSession setBeautify:0];
+        [_streamingSession setWhiten:0];
     }
 }
 
@@ -492,7 +486,7 @@
 #pragma mark - 设置推流对象
 - (void)setupPLStreamSession {
     void(^permissionBlock)(void) = ^{
-        dispatch_async(self.sessionQueue, ^{
+       
             // 视频采集配置
             PLVideoCaptureConfiguration *videoCaptureConfiguration = [[PLVideoCaptureConfiguration alloc] initWithVideoFrameRate:24 sessionPreset:AVCaptureSessionPreset640x480 previewMirrorFrontFacing:YES previewMirrorRearFacing:NO streamMirrorFrontFacing:NO streamMirrorRearFacing:NO cameraPosition:AVCaptureDevicePositionFront videoOrientation:AVCaptureVideoOrientationPortrait];
             // 音频采集配置
@@ -504,12 +498,12 @@
             PLAudioStreamingConfiguration *audioStreamingConfiguration = [PLAudioStreamingConfiguration defaultConfiguration];
             
             // 推流对象
-            self.streamSession = [[PLMediaStreamingSession alloc] initWithVideoCaptureConfiguration:videoCaptureConfiguration audioCaptureConfiguration:audioCaptureConfiguration videoStreamingConfiguration:videoStreamingConfiguration audioStreamingConfiguration:audioStreamingConfiguration stream:nil];
-            self.streamSession.delegate = self;
-            self.streamSession.dynamicFrameEnable = YES;
-            [self.streamSession enableAdaptiveBitrateControlWithMinVideoBitRate:200 * 1024];
-            self.streamSession.monitorNetworkStateEnable = YES; // 开启网络切换监测
-            self.streamSession.connectionChangeActionCallback = ^(PLNetworkStateTransition transition) {
+            _streamingSession= [[PLMediaStreamingSession alloc] initWithVideoCaptureConfiguration:videoCaptureConfiguration audioCaptureConfiguration:audioCaptureConfiguration videoStreamingConfiguration:videoStreamingConfiguration audioStreamingConfiguration:audioStreamingConfiguration stream:nil];
+            _streamingSession.delegate = self;
+            _streamingSession.dynamicFrameEnable = YES;
+            [_streamingSession enableAdaptiveBitrateControlWithMinVideoBitRate:200 * 1024];
+            _streamingSession.monitorNetworkStateEnable = YES; // 开启网络切换监测
+            _streamingSession.connectionChangeActionCallback = ^(PLNetworkStateTransition transition) {
                 switch (transition) {
                     case PLNetworkStateTransitionWWANToWiFi:
                         return YES;
@@ -531,11 +525,11 @@
             [self.streamSession setWaterMarkWithImage:waterMark position:CGPointMake(50, 50)];
              */
             dispatch_async(dispatch_get_main_queue(), ^{
-                UIView *perviewView = self.streamSession.previewView;
+                UIView *perviewView = _streamingSession.previewView;
                 perviewView.autoresizingMask = UIViewAutoresizingFlexibleHeight| UIViewAutoresizingFlexibleWidth;
                 [self.view insertSubview:perviewView atIndex:0];
             });
-        });
+    
     };
     
     void(^noAccessBlock)(void) = ^{
@@ -567,12 +561,11 @@
  开始推流
  */
 - (void)startSession {
-    if (_streamSession.isStreamingRunning || _streamSession == nil) {
+    if (_streamingSession.isStreamingRunning || _streamingSession == nil) {
         return;
     }
     _addLiveInfoView.startButton.enabled = NO;
-    dispatch_async(self.sessionQueue, ^{
-        [self.streamSession startStreamingWithPushURL:[NSURL URLWithString:_streamURL] feedback:^(PLStreamStartStateFeedback feedback) {
+        [_streamingSession startStreamingWithPushURL:[NSURL URLWithString:_streamURL] feedback:^(PLStreamStartStateFeedback feedback) {
             switch (feedback) {
                 case PLStreamStartStateSuccess:
                     SJLog(@"推流成功");
@@ -587,19 +580,17 @@
                     break;
             }
         }];
-    });
 }
 
 /**
  重新推流
  */
 - (void)reStartSession {
-    if (_streamSession.isStreamingRunning || _streamSession == nil || _streamURL == nil) {
+    if (_streamingSession.isStreamingRunning || _streamingSession == nil || _streamURL == nil) {
         return;
     }
     
-    dispatch_async(self.sessionQueue, ^{
-        [self.streamSession restartStreamingWithPushURL:[NSURL URLWithString:_streamURL] feedback:^(PLStreamStartStateFeedback feedback) {
+    [_streamingSession restartStreamingWithPushURL:[NSURL URLWithString:_streamURL] feedback:^(PLStreamStartStateFeedback feedback) {
             switch (feedback) {
                 case PLStreamStartStateSuccess:
                     SJLog(@"重新推流成功");
@@ -608,25 +599,22 @@
                 default:
                     SJLog(@"重新推流失败");
                     break;
-            }
-        }];
-    });
+            }}];
 }
 
 /**
  停止推流
  */
 - (void)stopSession {
-    dispatch_async(self.sessionQueue, ^{
-        [self.streamSession stopStreaming];
-    });
+
+        [_streamingSession stopStreaming];
+
 }
 
 - (void)dealloc {
     SJLog(@"%s", __func__);
-    [self.streamSession destroy];
-    self.streamSession = nil;
-    self.sessionQueue = nil;
+    [_streamingSession destroy];
+    _streamingSession = nil;
     _webSocket.delegate = nil;
     [_webSocket close];
     _webSocket = nil;

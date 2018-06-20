@@ -101,7 +101,7 @@
                 // 已开启直播
                 self.isOpenLive = YES;
                 NSDictionary *tmpDic = respose[@"data"][@"live"];
-                if (tmpDic) {
+                if (NSDictionaryMatchAndCount(tmpDic)) {
                     self.tableHeadView.infoDic = tmpDic;
                 }
             } else {

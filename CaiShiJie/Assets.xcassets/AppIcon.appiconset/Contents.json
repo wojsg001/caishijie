@@ -77,15 +77,13 @@
       "scale" : "2x"
     },
     {
-      "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "icon(76新).png",
+      "size" : "76x76",
       "scale" : "1x"
     },
     {
-      "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "icon(152新)副本.png",
+      "size" : "76x76",
       "scale" : "2x"
     },
     {
