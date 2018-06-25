@@ -2,7 +2,7 @@
 //  SJRecommendStockModel.m
 //  CaiShiJie
 //
-//  Created by user on 16/5/13.
+//  Created by user on 18/5/13.
 //  Copyright © 2018年 user. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
     if ([zhangdie isEqualToString:@"-100"]) {
         _zhangdie = @"----";
     }else {
-        double num = [_zhangdie doubleValue];
+        double num = [zhangdie doubleValue];
         if (num > 0) {
             _zhangdie = [NSString stringWithFormat:@"+%.2f%@",num,@"%"];
         }else {

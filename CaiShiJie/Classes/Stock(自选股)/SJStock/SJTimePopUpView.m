@@ -2,7 +2,7 @@
 //  SJTimePopUpView.m
 //  QuartzDemo
 //
-//  Created by user on 16/9/26.
+//  Created by user on 18/9/26.
 //  Copyright © 2018年 user. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  SJChatMessageModel.m
 //  CaiShiJie
 //
-//  Created by user on 16/10/10.
+//  Created by user on 18/10/10.
 //  Copyright © 2018年 user. All rights reserved.
 //
 

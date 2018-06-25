@@ -2,7 +2,7 @@
 //  SJGiveHongBaoCell.m
 //  CaiShiJie
 //
-//  Created by user on 16/8/18.
+//  Created by user on 18/8/18.
 //  Copyright © 2018年 user. All rights reserved.
 //
 

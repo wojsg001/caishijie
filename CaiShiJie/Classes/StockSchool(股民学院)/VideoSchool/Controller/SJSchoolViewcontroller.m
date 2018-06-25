@@ -2,7 +2,7 @@
 //  SJschoolViewcontroller.m
 //  CaiShiJie
 //
-//  Created by user on 16/4/19.
+//  Created by user on 18/4/19.
 //  Copyright © 2018年 user. All rights reserved.
 //
 
@@ -190,12 +190,22 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         if (indexPath.item == 0) {
-            [self.collectionView reloadData];
+            //[MBHUDHelper showWarningWithText:@"此功能待开发！"];
+            //[self.collectionView reloadData];
+            
+            //更多最新视频
+            MorevideoViewController *morevc = [[MorevideoViewController alloc] init];
+            morevc.navigationItem.title = @"课程视频";
+            [self.navigationController pushViewController:morevc animated:YES];
         } else if (indexPath.item == 1) {
             SJRecommendBookViewController *recommendBookVC = [[SJRecommendBookViewController alloc] init];
             [self.navigationController pushViewController:recommendBookVC animated:YES];
         } else {
-            [MBHUDHelper showWarningWithText:@"此功能待开发！"];
+            //[MBHUDHelper showWarningWithText:@"此功能待开发！"];
+            //更多最热视频
+            MorevideoViewController *morevc = [[MorevideoViewController alloc] init];
+            morevc.navigationItem.title = @"原创类";
+            [self.navigationController pushViewController:morevc animated:YES];
         }
     } else if (indexPath.section == 1) {
         SJVideoViewController *video = [[SJVideoViewController alloc]init];

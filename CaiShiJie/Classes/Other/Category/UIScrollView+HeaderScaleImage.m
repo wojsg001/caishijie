@@ -2,7 +2,7 @@
 //  UIScrollView+HeaderScaleImage.m
 //  CaiShiJie
 //
-//  Created by user on 16/12/9.
+//  Created by user on 18/12/9.
 //  Copyright © 2018年 user. All rights reserved.
 //
 

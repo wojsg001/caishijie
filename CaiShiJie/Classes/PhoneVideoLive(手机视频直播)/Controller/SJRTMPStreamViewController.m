@@ -2,7 +2,7 @@
 //  SJRTMPStreamViewController.m
 //  CaiShiJie
 //
-//  Created by user on 16/11/21.
+//  Created by user on 18/11/21.
 //  Copyright © 2018年 user. All rights reserved.
 //
 
@@ -361,7 +361,7 @@
     }
 }
 
-#pragma mark - 提交数据
+#pragma mark - 提交推流数据（满足后才可以推流）
 - (void)submitData:(NSDictionary *)params {
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/video/openlivevideo", HOST];
     [SJhttptool GET:urlStr paramers:params success:^(id respose) {

@@ -2,7 +2,7 @@
 //  SJOpinionView.m
 //  CaiShiJie
 //
-//  Created by user on 16/7/27.
+//  Created by user on 18/7/27.
 //  Copyright © 2018年 user. All rights reserved.
 //
 

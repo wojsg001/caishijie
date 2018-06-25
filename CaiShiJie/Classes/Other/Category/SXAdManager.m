@@ -1,6 +1,5 @@
 //
 //  SXAdManager.m
-//  81 - 网易新闻
 //
 //  Created by dongshangxian on 15/9/27.
 //  Copyright © 2015年 ShangxianDante. All rights reserved.

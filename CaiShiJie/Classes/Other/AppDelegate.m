@@ -14,7 +14,8 @@
 #import <UMCommonLog/UMCommonLogHeaders.h>
 #import <UMAnalytics/MobClick.h>
 #import "iflyMSC/IFlyMSC.h"
-#import "BeeCloud.h"
+//暂时去掉BeeCloud
+//#import "BeeCloud.h"
 #import "SJNetManager.h"
 #import "SJhttptool.h"
 #import "SXAdManager.h"
@@ -152,10 +153,11 @@ static AppDelegate *_appDelegate = nil;
     if (!result) {
         
     }
-    // 为保证从支付宝，微信返回本应用，须绑定openUrl.
-    if (![BeeCloud handleOpenUrl:url]) {
-        
-    }
+    //暂时去掉BeeCloud
+//    // 为保证从支付宝，微信返回本应用，须绑定openUrl.
+//    if (![BeeCloud handleOpenUrl:url]) {
+//
+//    }
     return YES;
 }
 
@@ -253,6 +255,7 @@ static AppDelegate *_appDelegate = nil;
         [_adView addSubview:adImg];
         adBottomImg.frame = CGRectMake(0, SJScreenH - SJScreenW * 256/750, SJScreenW, SJScreenW * 256/750);
         adImg.frame = CGRectMake(0, 0, SJScreenW, SJScreenH - SJScreenW * 256/750);
+        NSLog(@"%@",NSStringFromCGRect(adImg.frame));
         UIButton *btn = [[UIButton alloc] init];
         btn.backgroundColor = [UIColor clearColor];
         btn.frame = CGRectMake(0, 0, SJScreenW, SJScreenH - SJScreenW * 256/750);
@@ -321,6 +324,10 @@ static AppDelegate *_appDelegate = nil;
 // 图片点击事件
 - (void)buttonDown
 {
+    if([[[NSUserDefaults standardUserDefaults] valueForKey:kAdUrlStr] isEqualToString:@""]){
+        return;
+    }
+        
     if ([[NSUserDefaults standardUserDefaults] valueForKey:kAdUrlStr])
     {
         [self skipAdView];
@@ -330,7 +337,7 @@ static AppDelegate *_appDelegate = nil;
         webBrowser.showsPageTitleInNavigationBar = NO;
         [SJKeyWindow.rootViewController presentViewController:webBrowserNavigationController animated:YES completion:nil];
         
-        [webBrowser loadURLString:[[NSUserDefaults standardUserDefaults] valueForKey:kAdUrlStr]];
+        [webBrowser loadURLString: [[NSUserDefaults standardUserDefaults] valueForKey:kAdUrlStr]];
     }
 }
 #pragma mark - 设置配置信息
@@ -369,9 +376,11 @@ static AppDelegate *_appDelegate = nil;
     /*
      如果使用BeeCloud控制台的APP Secret初始化，代表初始化生产环境；
      */
-    [BeeCloud initWithAppID:@"0307998b-ecce-40d4-ba15-5eec11d2b63d" andAppSecret:@"7e210716-7cbb-4392-8bd4-ad4591c0115f"];
-    //初始化微信
-    [BeeCloud initWeChatPay:@"wx08a034f206b96be5"];
+    
+    //暂时去掉BeeCloud
+//    [BeeCloud initWithAppID:@"0307998b-ecce-40d4-ba15-5eec11d2b63d" andAppSecret:@"7e210716-7cbb-4392-8bd4-ad4591c0115f"];
+//    //初始化微信
+//    [BeeCloud initWeChatPay:@"wx08a034f206b96be5"];
 }
 #pragma mark - NSNotification
 - (void)loginSuccess {

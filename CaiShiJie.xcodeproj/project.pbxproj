@@ -154,56 +154,6 @@
 		CE289E5B1CE32ECB00202A55 /* SJBlogZhuanTiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE289E5A1CE32ECB00202A55 /* SJBlogZhuanTiModel.m */; };
 		CE2A22061CC6118C00A5B7BE /* UITableView+HYBCacheHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A22031CC6118C00A5B7BE /* UITableView+HYBCacheHeight.m */; };
 		CE2A22071CC6118C00A5B7BE /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A22051CC6118C00A5B7BE /* UITableViewCell+HYBMasonryAutoCellHeight.m */; };
-		CE2C88BE1D74289500CCD71A /* BeeCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C883B1D74289500CCD71A /* BeeCloud.m */; };
-		CE2C88BF1D74289500CCD71A /* BCBaseReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C883F1D74289500CCD71A /* BCBaseReq.m */; };
-		CE2C88C01D74289500CCD71A /* BCBaseResp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88411D74289500CCD71A /* BCBaseResp.m */; };
-		CE2C88C11D74289500CCD71A /* BCPayReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88441D74289500CCD71A /* BCPayReq.m */; };
-		CE2C88C21D74289500CCD71A /* BCPayResp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88461D74289500CCD71A /* BCPayResp.m */; };
-		CE2C88C31D74289500CCD71A /* BCPayPalReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88491D74289500CCD71A /* BCPayPalReq.m */; };
-		CE2C88C41D74289500CCD71A /* BCPayPalVerifyReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C884B1D74289500CCD71A /* BCPayPalVerifyReq.m */; };
-		CE2C88C51D74289500CCD71A /* BCPreRefundReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C884E1D74289500CCD71A /* BCPreRefundReq.m */; };
-		CE2C88C61D74289500CCD71A /* BCPreRefundResp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88501D74289500CCD71A /* BCPreRefundResp.m */; };
-		CE2C88C71D74289500CCD71A /* BCQueryBillByIdReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88531D74289500CCD71A /* BCQueryBillByIdReq.m */; };
-		CE2C88C81D74289500CCD71A /* BCQueryBillByIdResp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88551D74289500CCD71A /* BCQueryBillByIdResp.m */; };
-		CE2C88C91D74289500CCD71A /* BCQueryBillsReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88581D74289500CCD71A /* BCQueryBillsReq.m */; };
-		CE2C88CA1D74289500CCD71A /* BCQueryBillsResp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C885A1D74289500CCD71A /* BCQueryBillsResp.m */; };
-		CE2C88CB1D74289500CCD71A /* BCQueryBillsCountReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C885D1D74289500CCD71A /* BCQueryBillsCountReq.m */; };
-		CE2C88CC1D74289500CCD71A /* BCQueryBillsCountResp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C885F1D74289500CCD71A /* BCQueryBillsCountResp.m */; };
-		CE2C88CD1D74289500CCD71A /* BCQueryRefundByIdReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88621D74289500CCD71A /* BCQueryRefundByIdReq.m */; };
-		CE2C88CE1D74289500CCD71A /* BCQueryRefundByIdResp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88641D74289500CCD71A /* BCQueryRefundByIdResp.m */; };
-		CE2C88CF1D74289500CCD71A /* BCQueryRefundsReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88671D74289500CCD71A /* BCQueryRefundsReq.m */; };
-		CE2C88D01D74289500CCD71A /* BCQueryRefundsResp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88691D74289500CCD71A /* BCQueryRefundsResp.m */; };
-		CE2C88D11D74289500CCD71A /* BCQueryRefundsCountReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C886C1D74289500CCD71A /* BCQueryRefundsCountReq.m */; };
-		CE2C88D21D74289500CCD71A /* BCQueryRefundsCountResp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C886E1D74289500CCD71A /* BCQueryRefundsCountResp.m */; };
-		CE2C88D31D74289500CCD71A /* BCRefundStatusReq.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88711D74289500CCD71A /* BCRefundStatusReq.m */; };
-		CE2C88D41D74289500CCD71A /* BCRefundStatusResp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88731D74289500CCD71A /* BCRefundStatusResp.m */; };
-		CE2C88D51D74289500CCD71A /* BCBaseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88761D74289500CCD71A /* BCBaseResult.m */; };
-		CE2C88D61D74289500CCD71A /* BCQueryBillResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88781D74289500CCD71A /* BCQueryBillResult.m */; };
-		CE2C88D71D74289500CCD71A /* BCQueryRefundResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C887A1D74289500CCD71A /* BCQueryRefundResult.m */; };
-		CE2C88D81D74289500CCD71A /* BCNewSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C887D1D74289500CCD71A /* BCNewSubscription.m */; };
-		CE2C88D91D74289500CCD71A /* BCSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C887F1D74289500CCD71A /* BCSubscription.m */; };
-		CE2C88DA1D74289500CCD71A /* BCSubscriptionQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88811D74289500CCD71A /* BCSubscriptionQuery.m */; };
-		CE2C88DB1D74289500CCD71A /* BCHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88861D74289500CCD71A /* BCHTTPSessionManager.m */; };
-		CE2C88DC1D74289500CCD71A /* BCNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88891D74289500CCD71A /* BCNetworkReachabilityManager.m */; };
-		CE2C88DD1D74289500CCD71A /* BCSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C888B1D74289500CCD71A /* BCSecurityPolicy.m */; };
-		CE2C88DE1D74289500CCD71A /* BCURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C888D1D74289500CCD71A /* BCURLRequestSerialization.m */; };
-		CE2C88DF1D74289500CCD71A /* BCURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C888F1D74289500CCD71A /* BCURLResponseSerialization.m */; };
-		CE2C88E01D74289500CCD71A /* BCURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88911D74289500CCD71A /* BCURLSessionManager.m */; };
-		CE2C88E11D74289500CCD71A /* BCPayCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88931D74289500CCD71A /* BCPayCache.m */; };
-		CE2C88E21D74289500CCD71A /* BCPayUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88961D74289500CCD71A /* BCPayUtil.m */; };
-		CE2C88E31D74289500CCD71A /* BeeCloud+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88981D74289500CCD71A /* BeeCloud+Utils.m */; };
-		CE2C88E41D74289500CCD71A /* NSDictionary+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C889A1D74289500CCD71A /* NSDictionary+Utils.m */; };
-		CE2C88E51D74289500CCD71A /* NSString+IsValid.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C889C1D74289500CCD71A /* NSString+IsValid.m */; };
-		CE2C88E61D74289500CCD71A /* BeeCloudAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C889F1D74289500CCD71A /* BeeCloudAdapter.m */; };
-		CE2C88E71D74289500CCD71A /* BCSandBoxAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88A41D74289500CCD71A /* BCSandBoxAdapter.m */; };
-		CE2C88E81D74289500CCD71A /* BeeCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE2C88A51D74289500CCD71A /* BeeCloud.bundle */; };
-		CE2C88E91D74289500CCD71A /* PaySandBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88A71D74289500CCD71A /* PaySandBoxViewController.m */; };
-		CE2C88EA1D74289500CCD71A /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2C88AA1D74289500CCD71A /* AlipaySDK.framework */; };
-		CE2C88EB1D74289500CCD71A /* BCAliPayAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88AD1D74289500CCD71A /* BCAliPayAdapter.m */; };
-		CE2C88EC1D74289500CCD71A /* BCUnionPayAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88B11D74289500CCD71A /* BCUnionPayAdapter.m */; };
-		CE2C88ED1D74289500CCD71A /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2C88B21D74289500CCD71A /* libUPPayPlugin.a */; };
-		CE2C88EE1D74289500CCD71A /* BCWXPayAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C88B81D74289500CCD71A /* BCWXPayAdapter.m */; };
-		CE2C88EF1D74289500CCD71A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2C88B91D74289500CCD71A /* libWeChatSDK.a */; };
 		CE2DFD241D7D654000FCB41F /* SJNewLiveVideoAboveView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2DFD231D7D654000FCB41F /* SJNewLiveVideoAboveView.m */; };
 		CE2E39461DBDD20000D3312D /* SJTextContainerParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E39451DBDD20000D3312D /* SJTextContainerParser.m */; };
 		CE2E5B6F1DD5CC4500A050FA /* SJNeiCanPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E5B6D1DD5CC4500A050FA /* SJNeiCanPayViewController.m */; };
@@ -1234,111 +1184,6 @@
 		CE2A22031CC6118C00A5B7BE /* UITableView+HYBCacheHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HYBCacheHeight.m"; sourceTree = "<group>"; };
 		CE2A22041CC6118C00A5B7BE /* UITableViewCell+HYBMasonryAutoCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+HYBMasonryAutoCellHeight.h"; sourceTree = "<group>"; };
 		CE2A22051CC6118C00A5B7BE /* UITableViewCell+HYBMasonryAutoCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+HYBMasonryAutoCellHeight.m"; sourceTree = "<group>"; };
-		CE2C88391D74289500CCD71A /* BCPayObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayObjects.h; sourceTree = "<group>"; };
-		CE2C883A1D74289500CCD71A /* BeeCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeeCloud.h; sourceTree = "<group>"; };
-		CE2C883B1D74289500CCD71A /* BeeCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeeCloud.m; sourceTree = "<group>"; };
-		CE2C883E1D74289500CCD71A /* BCBaseReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCBaseReq.h; sourceTree = "<group>"; };
-		CE2C883F1D74289500CCD71A /* BCBaseReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCBaseReq.m; sourceTree = "<group>"; };
-		CE2C88401D74289500CCD71A /* BCBaseResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCBaseResp.h; sourceTree = "<group>"; };
-		CE2C88411D74289500CCD71A /* BCBaseResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCBaseResp.m; sourceTree = "<group>"; };
-		CE2C88431D74289500CCD71A /* BCPayReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayReq.h; sourceTree = "<group>"; };
-		CE2C88441D74289500CCD71A /* BCPayReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayReq.m; sourceTree = "<group>"; };
-		CE2C88451D74289500CCD71A /* BCPayResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayResp.h; sourceTree = "<group>"; };
-		CE2C88461D74289500CCD71A /* BCPayResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayResp.m; sourceTree = "<group>"; };
-		CE2C88481D74289500CCD71A /* BCPayPalReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayPalReq.h; sourceTree = "<group>"; };
-		CE2C88491D74289500CCD71A /* BCPayPalReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayPalReq.m; sourceTree = "<group>"; };
-		CE2C884A1D74289500CCD71A /* BCPayPalVerifyReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayPalVerifyReq.h; sourceTree = "<group>"; };
-		CE2C884B1D74289500CCD71A /* BCPayPalVerifyReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayPalVerifyReq.m; sourceTree = "<group>"; };
-		CE2C884D1D74289500CCD71A /* BCPreRefundReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPreRefundReq.h; sourceTree = "<group>"; };
-		CE2C884E1D74289500CCD71A /* BCPreRefundReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPreRefundReq.m; sourceTree = "<group>"; };
-		CE2C884F1D74289500CCD71A /* BCPreRefundResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPreRefundResp.h; sourceTree = "<group>"; };
-		CE2C88501D74289500CCD71A /* BCPreRefundResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPreRefundResp.m; sourceTree = "<group>"; };
-		CE2C88521D74289500CCD71A /* BCQueryBillByIdReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryBillByIdReq.h; sourceTree = "<group>"; };
-		CE2C88531D74289500CCD71A /* BCQueryBillByIdReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryBillByIdReq.m; sourceTree = "<group>"; };
-		CE2C88541D74289500CCD71A /* BCQueryBillByIdResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryBillByIdResp.h; sourceTree = "<group>"; };
-		CE2C88551D74289500CCD71A /* BCQueryBillByIdResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryBillByIdResp.m; sourceTree = "<group>"; };
-		CE2C88571D74289500CCD71A /* BCQueryBillsReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryBillsReq.h; sourceTree = "<group>"; };
-		CE2C88581D74289500CCD71A /* BCQueryBillsReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryBillsReq.m; sourceTree = "<group>"; };
-		CE2C88591D74289500CCD71A /* BCQueryBillsResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryBillsResp.h; sourceTree = "<group>"; };
-		CE2C885A1D74289500CCD71A /* BCQueryBillsResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryBillsResp.m; sourceTree = "<group>"; };
-		CE2C885C1D74289500CCD71A /* BCQueryBillsCountReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryBillsCountReq.h; sourceTree = "<group>"; };
-		CE2C885D1D74289500CCD71A /* BCQueryBillsCountReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryBillsCountReq.m; sourceTree = "<group>"; };
-		CE2C885E1D74289500CCD71A /* BCQueryBillsCountResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryBillsCountResp.h; sourceTree = "<group>"; };
-		CE2C885F1D74289500CCD71A /* BCQueryBillsCountResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryBillsCountResp.m; sourceTree = "<group>"; };
-		CE2C88611D74289500CCD71A /* BCQueryRefundByIdReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryRefundByIdReq.h; sourceTree = "<group>"; };
-		CE2C88621D74289500CCD71A /* BCQueryRefundByIdReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryRefundByIdReq.m; sourceTree = "<group>"; };
-		CE2C88631D74289500CCD71A /* BCQueryRefundByIdResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryRefundByIdResp.h; sourceTree = "<group>"; };
-		CE2C88641D74289500CCD71A /* BCQueryRefundByIdResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryRefundByIdResp.m; sourceTree = "<group>"; };
-		CE2C88661D74289500CCD71A /* BCQueryRefundsReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryRefundsReq.h; sourceTree = "<group>"; };
-		CE2C88671D74289500CCD71A /* BCQueryRefundsReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryRefundsReq.m; sourceTree = "<group>"; };
-		CE2C88681D74289500CCD71A /* BCQueryRefundsResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryRefundsResp.h; sourceTree = "<group>"; };
-		CE2C88691D74289500CCD71A /* BCQueryRefundsResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryRefundsResp.m; sourceTree = "<group>"; };
-		CE2C886B1D74289500CCD71A /* BCQueryRefundsCountReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryRefundsCountReq.h; sourceTree = "<group>"; };
-		CE2C886C1D74289500CCD71A /* BCQueryRefundsCountReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryRefundsCountReq.m; sourceTree = "<group>"; };
-		CE2C886D1D74289500CCD71A /* BCQueryRefundsCountResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryRefundsCountResp.h; sourceTree = "<group>"; };
-		CE2C886E1D74289500CCD71A /* BCQueryRefundsCountResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryRefundsCountResp.m; sourceTree = "<group>"; };
-		CE2C88701D74289500CCD71A /* BCRefundStatusReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRefundStatusReq.h; sourceTree = "<group>"; };
-		CE2C88711D74289500CCD71A /* BCRefundStatusReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCRefundStatusReq.m; sourceTree = "<group>"; };
-		CE2C88721D74289500CCD71A /* BCRefundStatusResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRefundStatusResp.h; sourceTree = "<group>"; };
-		CE2C88731D74289500CCD71A /* BCRefundStatusResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCRefundStatusResp.m; sourceTree = "<group>"; };
-		CE2C88751D74289500CCD71A /* BCBaseResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCBaseResult.h; sourceTree = "<group>"; };
-		CE2C88761D74289500CCD71A /* BCBaseResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCBaseResult.m; sourceTree = "<group>"; };
-		CE2C88771D74289500CCD71A /* BCQueryBillResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryBillResult.h; sourceTree = "<group>"; };
-		CE2C88781D74289500CCD71A /* BCQueryBillResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryBillResult.m; sourceTree = "<group>"; };
-		CE2C88791D74289500CCD71A /* BCQueryRefundResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryRefundResult.h; sourceTree = "<group>"; };
-		CE2C887A1D74289500CCD71A /* BCQueryRefundResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCQueryRefundResult.m; sourceTree = "<group>"; };
-		CE2C887C1D74289500CCD71A /* BCNewSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCNewSubscription.h; sourceTree = "<group>"; };
-		CE2C887D1D74289500CCD71A /* BCNewSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCNewSubscription.m; sourceTree = "<group>"; };
-		CE2C887E1D74289500CCD71A /* BCSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSubscription.h; sourceTree = "<group>"; };
-		CE2C887F1D74289500CCD71A /* BCSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSubscription.m; sourceTree = "<group>"; };
-		CE2C88801D74289500CCD71A /* BCSubscriptionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSubscriptionQuery.h; sourceTree = "<group>"; };
-		CE2C88811D74289500CCD71A /* BCSubscriptionQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSubscriptionQuery.m; sourceTree = "<group>"; };
-		CE2C88831D74289500CCD71A /* BCCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCategory.h; sourceTree = "<group>"; };
-		CE2C88851D74289500CCD71A /* BCHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCHTTPSessionManager.h; sourceTree = "<group>"; };
-		CE2C88861D74289500CCD71A /* BCHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCHTTPSessionManager.m; sourceTree = "<group>"; };
-		CE2C88871D74289500CCD71A /* BCNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCNetworking.h; sourceTree = "<group>"; };
-		CE2C88881D74289500CCD71A /* BCNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		CE2C88891D74289500CCD71A /* BCNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		CE2C888A1D74289500CCD71A /* BCSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSecurityPolicy.h; sourceTree = "<group>"; };
-		CE2C888B1D74289500CCD71A /* BCSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSecurityPolicy.m; sourceTree = "<group>"; };
-		CE2C888C1D74289500CCD71A /* BCURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCURLRequestSerialization.h; sourceTree = "<group>"; };
-		CE2C888D1D74289500CCD71A /* BCURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCURLRequestSerialization.m; sourceTree = "<group>"; };
-		CE2C888E1D74289500CCD71A /* BCURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCURLResponseSerialization.h; sourceTree = "<group>"; };
-		CE2C888F1D74289500CCD71A /* BCURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCURLResponseSerialization.m; sourceTree = "<group>"; };
-		CE2C88901D74289500CCD71A /* BCURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCURLSessionManager.h; sourceTree = "<group>"; };
-		CE2C88911D74289500CCD71A /* BCURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCURLSessionManager.m; sourceTree = "<group>"; };
-		CE2C88921D74289500CCD71A /* BCPayCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayCache.h; sourceTree = "<group>"; };
-		CE2C88931D74289500CCD71A /* BCPayCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayCache.m; sourceTree = "<group>"; };
-		CE2C88941D74289500CCD71A /* BCPayConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayConstant.h; sourceTree = "<group>"; };
-		CE2C88951D74289500CCD71A /* BCPayUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayUtil.h; sourceTree = "<group>"; };
-		CE2C88961D74289500CCD71A /* BCPayUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayUtil.m; sourceTree = "<group>"; };
-		CE2C88971D74289500CCD71A /* BeeCloud+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeeCloud+Utils.h"; sourceTree = "<group>"; };
-		CE2C88981D74289500CCD71A /* BeeCloud+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BeeCloud+Utils.m"; sourceTree = "<group>"; };
-		CE2C88991D74289500CCD71A /* NSDictionary+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utils.h"; sourceTree = "<group>"; };
-		CE2C889A1D74289500CCD71A /* NSDictionary+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utils.m"; sourceTree = "<group>"; };
-		CE2C889B1D74289500CCD71A /* NSString+IsValid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IsValid.h"; sourceTree = "<group>"; };
-		CE2C889C1D74289500CCD71A /* NSString+IsValid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+IsValid.m"; sourceTree = "<group>"; };
-		CE2C889E1D74289500CCD71A /* BeeCloudAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeeCloudAdapter.h; sourceTree = "<group>"; };
-		CE2C889F1D74289500CCD71A /* BeeCloudAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeeCloudAdapter.m; sourceTree = "<group>"; };
-		CE2C88A01D74289500CCD71A /* BeeCloudAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeeCloudAdapterProtocol.h; sourceTree = "<group>"; };
-		CE2C88A31D74289500CCD71A /* BCSandBoxAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSandBoxAdapter.h; sourceTree = "<group>"; };
-		CE2C88A41D74289500CCD71A /* BCSandBoxAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSandBoxAdapter.m; sourceTree = "<group>"; };
-		CE2C88A51D74289500CCD71A /* BeeCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BeeCloud.bundle; sourceTree = "<group>"; };
-		CE2C88A61D74289500CCD71A /* PaySandBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaySandBoxViewController.h; sourceTree = "<group>"; };
-		CE2C88A71D74289500CCD71A /* PaySandBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaySandBoxViewController.m; sourceTree = "<group>"; };
-		CE2C88AA1D74289500CCD71A /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
-		CE2C88AC1D74289500CCD71A /* BCAliPayAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAliPayAdapter.h; sourceTree = "<group>"; };
-		CE2C88AD1D74289500CCD71A /* BCAliPayAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAliPayAdapter.m; sourceTree = "<group>"; };
-		CE2C88B01D74289500CCD71A /* BCUnionPayAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCUnionPayAdapter.h; sourceTree = "<group>"; };
-		CE2C88B11D74289500CCD71A /* BCUnionPayAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCUnionPayAdapter.m; sourceTree = "<group>"; };
-		CE2C88B21D74289500CCD71A /* libUPPayPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUPPayPlugin.a; sourceTree = "<group>"; };
-		CE2C88B31D74289500CCD71A /* UPPayPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPayPlugin.h; sourceTree = "<group>"; };
-		CE2C88B41D74289500CCD71A /* UPPayPluginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPayPluginDelegate.h; sourceTree = "<group>"; };
-		CE2C88B71D74289500CCD71A /* BCWXPayAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCWXPayAdapter.h; sourceTree = "<group>"; };
-		CE2C88B81D74289500CCD71A /* BCWXPayAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCWXPayAdapter.m; sourceTree = "<group>"; };
-		CE2C88B91D74289500CCD71A /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		CE2C88BA1D74289500CCD71A /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		CE2C88BB1D74289500CCD71A /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		CE2DFD221D7D654000FCB41F /* SJNewLiveVideoAboveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJNewLiveVideoAboveView.h; sourceTree = "<group>"; };
 		CE2DFD231D7D654000FCB41F /* SJNewLiveVideoAboveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJNewLiveVideoAboveView.m; sourceTree = "<group>"; };
 		CE2E39441DBDD20000D3312D /* SJTextContainerParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTextContainerParser.h; sourceTree = "<group>"; };
@@ -2484,7 +2329,6 @@
 				04ECA87720CF5F6C00E76C27 /* UMAnalytics.framework in Frameworks */,
 				CE47D42C1C33E85F00C14F7E /* libstdc++.tbd in Frameworks */,
 				CE337BF61C7D4F76002D30AC /* libmp3lame.a in Frameworks */,
-				CE2C88EA1D74289500CCD71A /* AlipaySDK.framework in Frameworks */,
 				04ECA87220CF5F6C00E76C27 /* UMPush.framework in Frameworks */,
 				04ECA87420CF5F6C00E76C27 /* libSocialWeChat.a in Frameworks */,
 				CE466CF01D7408B30067C032 /* CoreMotion.framework in Frameworks */,
@@ -2497,8 +2341,6 @@
 				CE017F301C9B8E0D00FAB205 /* AssetsLibrary.framework in Frameworks */,
 				04ECA87520CF5F6C00E76C27 /* libSocialSina.a in Frameworks */,
 				CE017F2E1C9B8E0500FAB205 /* OpenAL.framework in Frameworks */,
-				CE2C88ED1D74289500CCD71A /* libUPPayPlugin.a in Frameworks */,
-				CE2C88EF1D74289500CCD71A /* libWeChatSDK.a in Frameworks */,
 				CE38CCA41C87C75300907633 /* OpenGLES.framework in Frameworks */,
 				04ECA87C20CF69E500E76C27 /* UMCommonLog.framework in Frameworks */,
 				CE38CCA81C87C76700907633 /* QuartzCore.framework in Frameworks */,
@@ -3084,342 +2926,6 @@
 				CE2A22051CC6118C00A5B7BE /* UITableViewCell+HYBMasonryAutoCellHeight.m */,
 			);
 			path = HYBMasonryAutoCellHeight;
-			sourceTree = "<group>";
-		};
-		CE2C88361D74289500CCD71A /* BeeCloud */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88371D74289500CCD71A /* BCPaySDK */,
-			);
-			path = BeeCloud;
-			sourceTree = "<group>";
-		};
-		CE2C88371D74289500CCD71A /* BCPaySDK */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88381D74289500CCD71A /* BeeCloud */,
-				CE2C88A81D74289500CCD71A /* Channel */,
-			);
-			path = BCPaySDK;
-			sourceTree = "<group>";
-		};
-		CE2C88381D74289500CCD71A /* BeeCloud */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88391D74289500CCD71A /* BCPayObjects.h */,
-				CE2C883A1D74289500CCD71A /* BeeCloud.h */,
-				CE2C883B1D74289500CCD71A /* BeeCloud.m */,
-				CE2C883C1D74289500CCD71A /* Classes */,
-				CE2C88821D74289500CCD71A /* Internal */,
-				CE2C889D1D74289500CCD71A /* Protocol */,
-				CE2C88A11D74289500CCD71A /* SandBox */,
-			);
-			path = BeeCloud;
-			sourceTree = "<group>";
-		};
-		CE2C883C1D74289500CCD71A /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C883D1D74289500CCD71A /* BCBase */,
-				CE2C88421D74289500CCD71A /* BCPay */,
-				CE2C88471D74289500CCD71A /* BCPayPal */,
-				CE2C884C1D74289500CCD71A /* BCPreRefund */,
-				CE2C88511D74289500CCD71A /* BCQueryBillById */,
-				CE2C88561D74289500CCD71A /* BCQueryBills */,
-				CE2C885B1D74289500CCD71A /* BCQueryBillsCount */,
-				CE2C88601D74289500CCD71A /* BCQueryRefundById */,
-				CE2C88651D74289500CCD71A /* BCQueryRefunds */,
-				CE2C886A1D74289500CCD71A /* BCQueryRefundsCount */,
-				CE2C886F1D74289500CCD71A /* BCQueryRefundStatus */,
-				CE2C88741D74289500CCD71A /* BCResults */,
-				CE2C887B1D74289500CCD71A /* BCSubscription */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		CE2C883D1D74289500CCD71A /* BCBase */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C883E1D74289500CCD71A /* BCBaseReq.h */,
-				CE2C883F1D74289500CCD71A /* BCBaseReq.m */,
-				CE2C88401D74289500CCD71A /* BCBaseResp.h */,
-				CE2C88411D74289500CCD71A /* BCBaseResp.m */,
-			);
-			path = BCBase;
-			sourceTree = "<group>";
-		};
-		CE2C88421D74289500CCD71A /* BCPay */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88431D74289500CCD71A /* BCPayReq.h */,
-				CE2C88441D74289500CCD71A /* BCPayReq.m */,
-				CE2C88451D74289500CCD71A /* BCPayResp.h */,
-				CE2C88461D74289500CCD71A /* BCPayResp.m */,
-			);
-			path = BCPay;
-			sourceTree = "<group>";
-		};
-		CE2C88471D74289500CCD71A /* BCPayPal */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88481D74289500CCD71A /* BCPayPalReq.h */,
-				CE2C88491D74289500CCD71A /* BCPayPalReq.m */,
-				CE2C884A1D74289500CCD71A /* BCPayPalVerifyReq.h */,
-				CE2C884B1D74289500CCD71A /* BCPayPalVerifyReq.m */,
-			);
-			path = BCPayPal;
-			sourceTree = "<group>";
-		};
-		CE2C884C1D74289500CCD71A /* BCPreRefund */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C884D1D74289500CCD71A /* BCPreRefundReq.h */,
-				CE2C884E1D74289500CCD71A /* BCPreRefundReq.m */,
-				CE2C884F1D74289500CCD71A /* BCPreRefundResp.h */,
-				CE2C88501D74289500CCD71A /* BCPreRefundResp.m */,
-			);
-			path = BCPreRefund;
-			sourceTree = "<group>";
-		};
-		CE2C88511D74289500CCD71A /* BCQueryBillById */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88521D74289500CCD71A /* BCQueryBillByIdReq.h */,
-				CE2C88531D74289500CCD71A /* BCQueryBillByIdReq.m */,
-				CE2C88541D74289500CCD71A /* BCQueryBillByIdResp.h */,
-				CE2C88551D74289500CCD71A /* BCQueryBillByIdResp.m */,
-			);
-			path = BCQueryBillById;
-			sourceTree = "<group>";
-		};
-		CE2C88561D74289500CCD71A /* BCQueryBills */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88571D74289500CCD71A /* BCQueryBillsReq.h */,
-				CE2C88581D74289500CCD71A /* BCQueryBillsReq.m */,
-				CE2C88591D74289500CCD71A /* BCQueryBillsResp.h */,
-				CE2C885A1D74289500CCD71A /* BCQueryBillsResp.m */,
-			);
-			path = BCQueryBills;
-			sourceTree = "<group>";
-		};
-		CE2C885B1D74289500CCD71A /* BCQueryBillsCount */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C885C1D74289500CCD71A /* BCQueryBillsCountReq.h */,
-				CE2C885D1D74289500CCD71A /* BCQueryBillsCountReq.m */,
-				CE2C885E1D74289500CCD71A /* BCQueryBillsCountResp.h */,
-				CE2C885F1D74289500CCD71A /* BCQueryBillsCountResp.m */,
-			);
-			path = BCQueryBillsCount;
-			sourceTree = "<group>";
-		};
-		CE2C88601D74289500CCD71A /* BCQueryRefundById */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88611D74289500CCD71A /* BCQueryRefundByIdReq.h */,
-				CE2C88621D74289500CCD71A /* BCQueryRefundByIdReq.m */,
-				CE2C88631D74289500CCD71A /* BCQueryRefundByIdResp.h */,
-				CE2C88641D74289500CCD71A /* BCQueryRefundByIdResp.m */,
-			);
-			path = BCQueryRefundById;
-			sourceTree = "<group>";
-		};
-		CE2C88651D74289500CCD71A /* BCQueryRefunds */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88661D74289500CCD71A /* BCQueryRefundsReq.h */,
-				CE2C88671D74289500CCD71A /* BCQueryRefundsReq.m */,
-				CE2C88681D74289500CCD71A /* BCQueryRefundsResp.h */,
-				CE2C88691D74289500CCD71A /* BCQueryRefundsResp.m */,
-			);
-			path = BCQueryRefunds;
-			sourceTree = "<group>";
-		};
-		CE2C886A1D74289500CCD71A /* BCQueryRefundsCount */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C886B1D74289500CCD71A /* BCQueryRefundsCountReq.h */,
-				CE2C886C1D74289500CCD71A /* BCQueryRefundsCountReq.m */,
-				CE2C886D1D74289500CCD71A /* BCQueryRefundsCountResp.h */,
-				CE2C886E1D74289500CCD71A /* BCQueryRefundsCountResp.m */,
-			);
-			path = BCQueryRefundsCount;
-			sourceTree = "<group>";
-		};
-		CE2C886F1D74289500CCD71A /* BCQueryRefundStatus */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88701D74289500CCD71A /* BCRefundStatusReq.h */,
-				CE2C88711D74289500CCD71A /* BCRefundStatusReq.m */,
-				CE2C88721D74289500CCD71A /* BCRefundStatusResp.h */,
-				CE2C88731D74289500CCD71A /* BCRefundStatusResp.m */,
-			);
-			path = BCQueryRefundStatus;
-			sourceTree = "<group>";
-		};
-		CE2C88741D74289500CCD71A /* BCResults */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88751D74289500CCD71A /* BCBaseResult.h */,
-				CE2C88761D74289500CCD71A /* BCBaseResult.m */,
-				CE2C88771D74289500CCD71A /* BCQueryBillResult.h */,
-				CE2C88781D74289500CCD71A /* BCQueryBillResult.m */,
-				CE2C88791D74289500CCD71A /* BCQueryRefundResult.h */,
-				CE2C887A1D74289500CCD71A /* BCQueryRefundResult.m */,
-			);
-			path = BCResults;
-			sourceTree = "<group>";
-		};
-		CE2C887B1D74289500CCD71A /* BCSubscription */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C887C1D74289500CCD71A /* BCNewSubscription.h */,
-				CE2C887D1D74289500CCD71A /* BCNewSubscription.m */,
-				CE2C887E1D74289500CCD71A /* BCSubscription.h */,
-				CE2C887F1D74289500CCD71A /* BCSubscription.m */,
-				CE2C88801D74289500CCD71A /* BCSubscriptionQuery.h */,
-				CE2C88811D74289500CCD71A /* BCSubscriptionQuery.m */,
-			);
-			path = BCSubscription;
-			sourceTree = "<group>";
-		};
-		CE2C88821D74289500CCD71A /* Internal */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88831D74289500CCD71A /* BCCategory.h */,
-				CE2C88841D74289500CCD71A /* BCNetworking */,
-				CE2C88921D74289500CCD71A /* BCPayCache.h */,
-				CE2C88931D74289500CCD71A /* BCPayCache.m */,
-				CE2C88941D74289500CCD71A /* BCPayConstant.h */,
-				CE2C88951D74289500CCD71A /* BCPayUtil.h */,
-				CE2C88961D74289500CCD71A /* BCPayUtil.m */,
-				CE2C88971D74289500CCD71A /* BeeCloud+Utils.h */,
-				CE2C88981D74289500CCD71A /* BeeCloud+Utils.m */,
-				CE2C88991D74289500CCD71A /* NSDictionary+Utils.h */,
-				CE2C889A1D74289500CCD71A /* NSDictionary+Utils.m */,
-				CE2C889B1D74289500CCD71A /* NSString+IsValid.h */,
-				CE2C889C1D74289500CCD71A /* NSString+IsValid.m */,
-			);
-			path = Internal;
-			sourceTree = "<group>";
-		};
-		CE2C88841D74289500CCD71A /* BCNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88851D74289500CCD71A /* BCHTTPSessionManager.h */,
-				CE2C88861D74289500CCD71A /* BCHTTPSessionManager.m */,
-				CE2C88871D74289500CCD71A /* BCNetworking.h */,
-				CE2C88881D74289500CCD71A /* BCNetworkReachabilityManager.h */,
-				CE2C88891D74289500CCD71A /* BCNetworkReachabilityManager.m */,
-				CE2C888A1D74289500CCD71A /* BCSecurityPolicy.h */,
-				CE2C888B1D74289500CCD71A /* BCSecurityPolicy.m */,
-				CE2C888C1D74289500CCD71A /* BCURLRequestSerialization.h */,
-				CE2C888D1D74289500CCD71A /* BCURLRequestSerialization.m */,
-				CE2C888E1D74289500CCD71A /* BCURLResponseSerialization.h */,
-				CE2C888F1D74289500CCD71A /* BCURLResponseSerialization.m */,
-				CE2C88901D74289500CCD71A /* BCURLSessionManager.h */,
-				CE2C88911D74289500CCD71A /* BCURLSessionManager.m */,
-			);
-			path = BCNetworking;
-			sourceTree = "<group>";
-		};
-		CE2C889D1D74289500CCD71A /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C889E1D74289500CCD71A /* BeeCloudAdapter.h */,
-				CE2C889F1D74289500CCD71A /* BeeCloudAdapter.m */,
-				CE2C88A01D74289500CCD71A /* BeeCloudAdapterProtocol.h */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		CE2C88A11D74289500CCD71A /* SandBox */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88A21D74289500CCD71A /* BCSandBoxAdapter */,
-				CE2C88A51D74289500CCD71A /* BeeCloud.bundle */,
-				CE2C88A61D74289500CCD71A /* PaySandBoxViewController.h */,
-				CE2C88A71D74289500CCD71A /* PaySandBoxViewController.m */,
-			);
-			path = SandBox;
-			sourceTree = "<group>";
-		};
-		CE2C88A21D74289500CCD71A /* BCSandBoxAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88A31D74289500CCD71A /* BCSandBoxAdapter.h */,
-				CE2C88A41D74289500CCD71A /* BCSandBoxAdapter.m */,
-			);
-			path = BCSandBoxAdapter;
-			sourceTree = "<group>";
-		};
-		CE2C88A81D74289500CCD71A /* Channel */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88A91D74289500CCD71A /* AliPay */,
-				CE2C88AE1D74289500CCD71A /* UnionPay */,
-				CE2C88B51D74289500CCD71A /* WXPay */,
-			);
-			path = Channel;
-			sourceTree = "<group>";
-		};
-		CE2C88A91D74289500CCD71A /* AliPay */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88AA1D74289500CCD71A /* AlipaySDK.framework */,
-				CE2C88AB1D74289500CCD71A /* BCAliPayAdapter */,
-			);
-			path = AliPay;
-			sourceTree = "<group>";
-		};
-		CE2C88AB1D74289500CCD71A /* BCAliPayAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88AC1D74289500CCD71A /* BCAliPayAdapter.h */,
-				CE2C88AD1D74289500CCD71A /* BCAliPayAdapter.m */,
-			);
-			path = BCAliPayAdapter;
-			sourceTree = "<group>";
-		};
-		CE2C88AE1D74289500CCD71A /* UnionPay */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88AF1D74289500CCD71A /* BCUnionPayAdapter */,
-				CE2C88B21D74289500CCD71A /* libUPPayPlugin.a */,
-				CE2C88B31D74289500CCD71A /* UPPayPlugin.h */,
-				CE2C88B41D74289500CCD71A /* UPPayPluginDelegate.h */,
-			);
-			path = UnionPay;
-			sourceTree = "<group>";
-		};
-		CE2C88AF1D74289500CCD71A /* BCUnionPayAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88B01D74289500CCD71A /* BCUnionPayAdapter.h */,
-				CE2C88B11D74289500CCD71A /* BCUnionPayAdapter.m */,
-			);
-			path = BCUnionPayAdapter;
-			sourceTree = "<group>";
-		};
-		CE2C88B51D74289500CCD71A /* WXPay */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88B61D74289500CCD71A /* BCWXPayAdapter */,
-				CE2C88B91D74289500CCD71A /* libWeChatSDK.a */,
-				CE2C88BA1D74289500CCD71A /* WXApi.h */,
-				CE2C88BB1D74289500CCD71A /* WXApiObject.h */,
-			);
-			path = WXPay;
-			sourceTree = "<group>";
-		};
-		CE2C88B61D74289500CCD71A /* BCWXPayAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				CE2C88B71D74289500CCD71A /* BCWXPayAdapter.h */,
-				CE2C88B81D74289500CCD71A /* BCWXPayAdapter.m */,
-			);
-			path = BCWXPayAdapter;
 			sourceTree = "<group>";
 		};
 		CE337BDD1C7D4F76002D30AC /* D3RecordBtutton */ = {
@@ -4299,7 +3805,6 @@
 				CE34F3C61C4F19CC0089292A /* MJExtension */,
 				CEFF746C1DAF18E800F7A0DD /* SDPhotoBrowser */,
 				CE0DAA2C1DAB80FB00A65C59 /* SDAutoLayout */,
-				CE2C88361D74289500CCD71A /* BeeCloud */,
 				CE97692E1D6FD9350080DE55 /* RegexKitLite */,
 				CE21F5401D6C364900FED35F /* BarrageRenderer */,
 				CE586B2D1D40A8BA003E386A /* XHPlayer */,
@@ -5918,7 +5423,6 @@
 				CEFD09D71DFAAD3F006917AE /* SJHomeLiveViewController.xib in Resources */,
 				CEFD0A091DFAAD3F006917AE /* SJIntoTeacherCell.xib in Resources */,
 				CE1FE2EB1CBD0CAA0054769F /* SJMyselfViewController.xib in Resources */,
-				CE2C88E81D74289500CCD71A /* BeeCloud.bundle in Resources */,
 				CE3F410D1CB75675008BCDBE /* SJReplacePasswordViewController.xib in Resources */,
 				CE8AEA4C1D4B4943001A47C8 /* SJUserAnswerViewController.xib in Resources */,
 				CE666F7B1CDCACB200C24BF6 /* SJBlogArticleHeaderView.xib in Resources */,
@@ -6238,7 +5742,6 @@
 				CEFD0A961DFAB046006917AE /* SJProfileHeaderView.m in Sources */,
 				CE586B401D40A8BA003E386A /* XHPlayerViewBottomView.m in Sources */,
 				CE586B411D40A8BA003E386A /* XHPlayerViewTopView.m in Sources */,
-				CE2C88D51D74289500CCD71A /* BCBaseResult.m in Sources */,
 				CE4AF6271CC4DA550067D674 /* UIView+SDExtension.m in Sources */,
 				CEFD0A6C1DFAADDC006917AE /* SJRTMPStreamViewController.m in Sources */,
 				CE21F5711D6C364900FED35F /* BarrageWalkSprite.m in Sources */,
@@ -6252,7 +5755,6 @@
 				CEFF74761DAF18E800F7A0DD /* SDWaitingView.m in Sources */,
 				CEFD0AC31DFAB252006917AE /* SJMarkViewController.m in Sources */,
 				CEC4E7651D991AF500A63390 /* SJStockTimeLineViewController.m in Sources */,
-				CE2C88DB1D74289500CCD71A /* BCHTTPSessionManager.m in Sources */,
 				CE40EA7A1CD9977B0054A770 /* SJBookDetailHead.m in Sources */,
 				CE6414D01C842D350013C584 /* MASViewConstraint.m in Sources */,
 				CE4AF6221CC4DA550067D674 /* TAAnimatedDotView.m in Sources */,
@@ -6263,22 +5765,18 @@
 				CE132CCA1D9CC2A500C93DC8 /* SJPersonalHomeCell.m in Sources */,
 				CE49B01C1D99196D003EC699 /* pinyin.c in Sources */,
 				CE52437D1CAA25AC00C9995B /* SJTeacherReferenceDetailViewController.m in Sources */,
-				CE2C88D11D74289500CCD71A /* BCQueryRefundsCountReq.m in Sources */,
 				CE40EA731CD9977B0054A770 /* SJMoreBookViewController.m in Sources */,
 				CE40EA781CD9977B0054A770 /* SJBeforeAndNextChapterModel.m in Sources */,
 				CE3B20E81C7BF3FD00BBBF74 /* ZZPhotoListViewController.m in Sources */,
 				CEE1E8B21DB9FF14006A82C5 /* TLChatBoxFaceMenuView.m in Sources */,
 				CEAEC23A1D781E0E00750A17 /* SJLiveVideoListCell.m in Sources */,
 				CEFD0A101DFAAD3F006917AE /* SJMasterTeacherView.m in Sources */,
-				CE2C88CF1D74289500CCD71A /* BCQueryRefundsReq.m in Sources */,
 				CE586B3C1D40A8BA003E386A /* XHForwardView.m in Sources */,
 				CE1FE2F01CBD0CAA0054769F /* SJyearsoldviewcontroller.m in Sources */,
 				CE3B20FE1C7BF3FD00BBBF74 /* ZZPageControl.m in Sources */,
 				CE34F3EF1C4F19CC0089292A /* MJRefreshBaseView.m in Sources */,
 				CE132CBD1D9CA60700C93DC8 /* SJPersonalOldLiveViewController.m in Sources */,
-				CE2C88E01D74289500CCD71A /* BCURLSessionManager.m in Sources */,
 				CE3F41321CB7582D008BCDBE /* SJHisReferenceViewController.m in Sources */,
-				CE2C88C61D74289500CCD71A /* BCPreRefundResp.m in Sources */,
 				CE33E98A1C4C869500B837AA /* MBProgressHUD.m in Sources */,
 				CE586B3D1D40A8BA003E386A /* XHPlayer.m in Sources */,
 				CEFD09DA1DFAAD3F006917AE /* SJHomeViewController.m in Sources */,
@@ -6316,10 +5814,8 @@
 				CE409FAF1C47C7D300C21DE9 /* SJMyNeiCan.m in Sources */,
 				CE4AF6261CC4DA550067D674 /* SDCycleScrollView.m in Sources */,
 				CEFD093F1DFAAC88006917AE /* SJBadgeView.m in Sources */,
-				CE2C88C01D74289500CCD71A /* BCBaseResp.m in Sources */,
 				CE4AF5F61CC486A20067D674 /* SJupdatephoneNumberVC.m in Sources */,
 				CEFD0A081DFAAD3F006917AE /* SJIntoTeacherCell.m in Sources */,
-				CE2C88DA1D74289500CCD71A /* BCSubscriptionQuery.m in Sources */,
 				CE49B0301D99196D003EC699 /* SJselfSelectedCell.m in Sources */,
 				CE3B29DA1C91118100EE2D13 /* SJAboutViewController.m in Sources */,
 				CE0DAA151DAB326F00A65C59 /* SJMineMessageViewController.m in Sources */,
@@ -6347,7 +5843,6 @@
 				CEFD09E91DFAAD3F006917AE /* SJReportDetailViewController.m in Sources */,
 				CE3B20E91C7BF3FD00BBBF74 /* ZZPhotoPickerViewController.m in Sources */,
 				CE409F191C474A9000C21DE9 /* SJQuestionCell.m in Sources */,
-				CE2C88CD1D74289500CCD71A /* BCQueryRefundByIdReq.m in Sources */,
 				CE3B20EA1C7BF3FD00BBBF74 /* UIImageHandle.m in Sources */,
 				CE409FBE1C47CD9D00C21DE9 /* SJUserQuestionCell.m in Sources */,
 				CE63A5321CE418230033BB34 /* SJBlogRankModel.m in Sources */,
@@ -6365,7 +5860,6 @@
 				CE5F96301CDAEBDF005C2C67 /* DLScrollTabbarView.m in Sources */,
 				CEFD0AC51DFAB252006917AE /* SJpageViewController.m in Sources */,
 				CE409F9B1C47C71000C21DE9 /* SJMyInteractionMessageFrame.m in Sources */,
-				CE2C88BE1D74289500CCD71A /* BeeCloud.m in Sources */,
 				CE409F981C47C71000C21DE9 /* SJQuestionFrame.m in Sources */,
 				CE3F41341CB7582D008BCDBE /* SJHisReferenceDetailViewController.m in Sources */,
 				CEFD0A201DFAAD40006917AE /* SJRecommendStockCell.m in Sources */,
@@ -6375,13 +5869,10 @@
 				CEAEC2331D77D23700750A17 /* SJNewLiveVideoTeacherViewController.m in Sources */,
 				CEE1E8B71DB9FF14006A82C5 /* TLChatBoxViewController.m in Sources */,
 				CE1B14171CE07E26006A0118 /* SJBlogArticlePublicCell.m in Sources */,
-				CE2C88DE1D74289500CCD71A /* BCURLRequestSerialization.m in Sources */,
 				CEB54DCC1CF8568E00069C14 /* SJZhuanLanTwoCell.m in Sources */,
 				CE4D86B61C31126B00F9A77F /* SJRegisterDetailViewController.m in Sources */,
 				CEFD0A0F1DFAAD3F006917AE /* SJMasterTeacherCell.m in Sources */,
-				CE2C88CA1D74289500CCD71A /* BCQueryBillsResp.m in Sources */,
 				CEFD0A881DFAADDC006917AE /* SJVideoOpinionCell.m in Sources */,
-				CE2C88E61D74289500CCD71A /* BeeCloudAdapter.m in Sources */,
 				CEF1CD311C58656E000AA709 /* NSString+SJMD5.m in Sources */,
 				CE3F412A1CB75765008BCDBE /* SJWaitPayViewController.m in Sources */,
 				CE37633E1C3E67D600620444 /* SJMyIssueCell.m in Sources */,
@@ -6389,7 +5880,6 @@
 				CEA8E0FB1C313DD800458B2B /* SJRegisterSucceedViewController.m in Sources */,
 				CEFD0A691DFAADDC006917AE /* SJPhoneVideoFullViewController.m in Sources */,
 				CE49B0321D99196D003EC699 /* SJThreesectionCollectionCell.m in Sources */,
-				CE2C88E41D74289500CCD71A /* NSDictionary+Utils.m in Sources */,
 				CEFD0AC91DFAB253006917AE /* SJsearchController.m in Sources */,
 				CEF0D30D1D796DFB006F09F0 /* SJNewLiewVideoListModel.m in Sources */,
 				CE6301001D33A12B00B06D0F /* SJAnswerDetailFrame.m in Sources */,
@@ -6397,8 +5887,6 @@
 				CE337BF81C7D4F77002D30AC /* RecordHUD.m in Sources */,
 				CE6414D21C842D350013C584 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				CEE1E8841DB9F054006A82C5 /* SJFaceHandler.m in Sources */,
-				CE2C88EE1D74289500CCD71A /* BCWXPayAdapter.m in Sources */,
-				CE2C88C51D74289500CCD71A /* BCPreRefundReq.m in Sources */,
 				CE409FB51C47C7D300C21DE9 /* SJMyIssueMessage.m in Sources */,
 				CE108AA41DD9978C0003197C /* SJPayView.m in Sources */,
 				CE3B20E71C7BF3FD00BBBF74 /* ZZPhotoController.m in Sources */,
@@ -6436,7 +5924,6 @@
 				CE6300F71D338E3E00B06D0F /* SJQuestionDetailFrame.m in Sources */,
 				CE0DAA321DAB80FB00A65C59 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				CE4AF5FE1CC4A9410067D674 /* UIView+Extension.m in Sources */,
-				CE2C88E31D74289500CCD71A /* BeeCloud+Utils.m in Sources */,
 				CE0DAA331DAB80FB00A65C59 /* UIView+SDAutoLayout.m in Sources */,
 				CE3AC9481CA8C90F004CDEA5 /* SJTeacherReferenceViewController.m in Sources */,
 				CE409FB11C47C7D300C21DE9 /* SJQuestionModel.m in Sources */,
@@ -6480,7 +5967,6 @@
 				CEC4E7601D991AF500A63390 /* SJKLines.m in Sources */,
 				CE40EA791CD9977B0054A770 /* SJBookChapterModel.m in Sources */,
 				CE4A9EC01CBE1D8B00D4CA27 /* SJToken.m in Sources */,
-				CE2C88D91D74289500CCD71A /* BCSubscription.m in Sources */,
 				CEFD0AC11DFAB252006917AE /* SJEditViewController.m in Sources */,
 				CE10D6011D9B774E0000120D /* SJStockIndicatorView.m in Sources */,
 				CE132CE51D9CE2E200C93DC8 /* SJOldModel.m in Sources */,
@@ -6500,8 +5986,6 @@
 				CE5C1E321D3C7AAA0089C190 /* UIColor+helper.m in Sources */,
 				CE409F821C47C65A00C21DE9 /* SJMyLiveViewController.m in Sources */,
 				CE409F641C47C4D600C21DE9 /* SJQuestionDetailController.m in Sources */,
-				CE2C88C71D74289500CCD71A /* BCQueryBillByIdReq.m in Sources */,
-				CE2C88D41D74289500CCD71A /* BCRefundStatusResp.m in Sources */,
 				CE5AF3AF1C8EBDFD00D923A3 /* SJSenderModel.m in Sources */,
 				CEC4E76B1D991AF500A63390 /* SJTimeWuDangView.m in Sources */,
 				CE8AEA461D4B293A001A47C8 /* SJTeacherAnswerViewController.m in Sources */,
@@ -6509,7 +5993,6 @@
 				CE49B01E1D99196D003EC699 /* ChineseToPinyinResource.m in Sources */,
 				CEFD0A711DFAADDC006917AE /* SJVideoTeacherInfoModel.m in Sources */,
 				CE0F844A1DB76405003D4314 /* TYViewStorage.m in Sources */,
-				CE2C88E71D74289500CCD71A /* BCSandBoxAdapter.m in Sources */,
 				CEF1CD301C58656E000AA709 /* NSString+SJDate.m in Sources */,
 				CEC4E7611D991AF500A63390 /* SJKLineView.m in Sources */,
 				CE0749D91DB0D3D3004B212A /* SJCSJMessageModel.m in Sources */,
@@ -6517,13 +6000,11 @@
 				CE3B29E11C9111B600EE2D13 /* SJMyIncomeViewController.m in Sources */,
 				CE34F3F31C4F19CC0089292A /* UIScrollView+MJExtension.m in Sources */,
 				CE0F84431DB76405003D4314 /* TYDrawStorage.m in Sources */,
-				CE2C88C81D74289500CCD71A /* BCQueryBillByIdResp.m in Sources */,
 				CE3624D91C521996006452BE /* SJYiJingHuiDaAnswer.m in Sources */,
 				CE017F341C9B914F00FAB205 /* UIView+ITTAdditions.m in Sources */,
 				CE7CE75C1CBB91C300AC3E72 /* SJCityGroupSection.m in Sources */,
 				CE4FB13E1C5476AB00CDE0C5 /* SJUserAnswerDetail.m in Sources */,
 				CE39DEC81DB4761F0069040E /* SJMineFansModel.m in Sources */,
-				CE2C88D21D74289500CCD71A /* BCQueryRefundsCountResp.m in Sources */,
 				CE289E551CE3234300202A55 /* SJBlogZhuanLanModel.m in Sources */,
 				CEBE83A51CABCAE2001E2775 /* SJAddNewReferenceViewController.m in Sources */,
 				CEFD09F41DFAAD3F006917AE /* SJLogDetail.m in Sources */,
@@ -6535,11 +6016,9 @@
 				CEFD09FB1DFAAD3F006917AE /* SJRecommendLogFrame.m in Sources */,
 				CEFD0AE71DFAB373006917AE /* SJBlogRankViewController.m in Sources */,
 				CE34F3EC1C4F19CC0089292A /* NSObject+MJIvar.m in Sources */,
-				CE2C88E21D74289500CCD71A /* BCPayUtil.m in Sources */,
 				CEFD09ED1DFAAD3F006917AE /* SJReportViewController.m in Sources */,
 				CE409F6B1C47C54800C21DE9 /* SJUserQuestionDetailViewController.m in Sources */,
 				CEFD09401DFAAC88006917AE /* SJTabBar.m in Sources */,
-				CE2C88E51D74289500CCD71A /* NSString+IsValid.m in Sources */,
 				CEFD0A6F1DFAADDC006917AE /* SJVideoInteractiveModel.m in Sources */,
 				CE409F661C47C4D600C21DE9 /* SJUserQuestionViewController.m in Sources */,
 				CE34F3EA1C4F19CC0089292A /* MJType.m in Sources */,
@@ -6570,14 +6049,10 @@
 				CE666F7C1CDCACB200C24BF6 /* SJBlogArticleTopView.m in Sources */,
 				CE409F991C47C71000C21DE9 /* SJWeiHuiDaFrame.m in Sources */,
 				CEFD09EE1DFAAD3F006917AE /* SJSearchTeacherViewController.m in Sources */,
-				CE2C88DC1D74289500CCD71A /* BCNetworkReachabilityManager.m in Sources */,
-				CE2C88C21D74289500CCD71A /* BCPayResp.m in Sources */,
 				CE3B29E71C91120900EE2D13 /* SJMyTeacherCell.m in Sources */,
 				CE0F84411DB76405003D4314 /* NSMutableAttributedString+TY.m in Sources */,
 				CE21F5691D6C364900FED35F /* BarrageSpriteFactory.m in Sources */,
 				CEFD0A181DFAAD3F006917AE /* SJRecommendHeaderView.m in Sources */,
-				CE2C88DF1D74289500CCD71A /* BCURLResponseSerialization.m in Sources */,
-				CE2C88E11D74289500CCD71A /* BCPayCache.m in Sources */,
 				CE4AF6241CC4DA550067D674 /* TAPageControl.m in Sources */,
 				CE1FE2EC1CBD0CAA0054769F /* SJPersonsettingViewController.m in Sources */,
 				CE3B20FF1C7BF3FD00BBBF74 /* ZZPhotoHud.m in Sources */,
@@ -6589,21 +6064,16 @@
 				CEFD09411DFAAC88006917AE /* SJTabBarBigButton.m in Sources */,
 				CE43F5B51CAE196600A8BC9D /* SJBlogArticleSettingViewController.m in Sources */,
 				CE3B20EB1C7BF3FD00BBBF74 /* ZZBrowerAnimate.m in Sources */,
-				CE2C88CC1D74289500CCD71A /* BCQueryBillsCountResp.m in Sources */,
 				CED9C3AD1D73DC4C00E64FCF /* AFURLRequestSerialization.m in Sources */,
 				CEC4E7641D991AF500A63390 /* SJStockPopUpView.m in Sources */,
 				CE34F3E91C4F19CC0089292A /* MJIvar.m in Sources */,
-				CE2C88CE1D74289500CCD71A /* BCQueryRefundByIdResp.m in Sources */,
 				CE1FE2FA1CBD0D340054769F /* SJpersonCell.m in Sources */,
-				CE2C88D71D74289500CCD71A /* BCQueryRefundResult.m in Sources */,
 				CEFD0A751DFAADDC006917AE /* SJShakeLabel.m in Sources */,
-				CE2C88C91D74289500CCD71A /* BCQueryBillsReq.m in Sources */,
 				CEFD0A6D1DFAADDC006917AE /* SJWatchViewController.m in Sources */,
 				CE3B2A051C91223200EE2D13 /* SJConsumeCell.m in Sources */,
 				CEF07BAB1C29204200A89756 /* main.m in Sources */,
 				CE460B421D9384510061F477 /* SJSchoolVideoModel.m in Sources */,
 				CE1FE2C91CBC85040054769F /* SJCityCell.m in Sources */,
-				CE2C88CB1D74289500CCD71A /* BCQueryBillsCountReq.m in Sources */,
 				CE1132801C9F8DED002A6EC6 /* SJDragButton.m in Sources */,
 				CE34F4061C4F1BA10089292A /* SJhttptool.m in Sources */,
 				CE132CC31D9CA68100C93DC8 /* SJPersonalSummaryViewController.m in Sources */,
@@ -6621,7 +6091,6 @@
 				CE409FB21C47C7D300C21DE9 /* SJWeiHuiDaModel.m in Sources */,
 				CE40EA821CD9977B0054A770 /* SJBookGroupSectionView.m in Sources */,
 				CEFD0A891DFAADDC006917AE /* SJVideoUserEnterView.m in Sources */,
-				CE2C88D81D74289500CCD71A /* BCNewSubscription.m in Sources */,
 				CE21F56D1D6C364900FED35F /* BarrageFloatTextSprite.m in Sources */,
 				CEFD09E61DFAAD3F006917AE /* SJQuestionRankViewController.m in Sources */,
 				CEFF74751DAF18E800F7A0DD /* SDPhotoBrowser.m in Sources */,
@@ -6643,14 +6112,12 @@
 				CEC4E7671D991AF500A63390 /* SJStockWeekLineViewController.m in Sources */,
 				CEE1E8AC1DB9FF14006A82C5 /* ISRDataHelper.m in Sources */,
 				CE108AAB1DD9A4560003197C /* SJGiveGfitSuccessView.m in Sources */,
-				CE2C88D61D74289500CCD71A /* BCQueryBillResult.m in Sources */,
 				CEAEC22D1D77CCE800750A17 /* SJNewLiveRoomViewController.m in Sources */,
 				CE20022D1DADD70F000E3A31 /* SJPersonalHomeUserView.m in Sources */,
 				CE43F5B01CAE184700A8BC9D /* SJCreateNewBlogArticleViewController.m in Sources */,
 				CE4AF6231CC4DA550067D674 /* TADotView.m in Sources */,
 				CE666F7D1CDCACB200C24BF6 /* SJBlogArticleTopViewCell.m in Sources */,
 				CE409F2D1C4769D800C21DE9 /* SJTextView.m in Sources */,
-				CE2C88C31D74289500CCD71A /* BCPayPalReq.m in Sources */,
 				CE3B2A0A1C9162FB00EE2D13 /* SJWaitPayCell.m in Sources */,
 				CE7CE7471CBB799400AC3E72 /* SJCitySelectionViewController.m in Sources */,
 				CEFD0A021DFAAD3F006917AE /* SJHomeLiveHeadVIew.m in Sources */,
@@ -6662,7 +6129,6 @@
 				CE49B01F1D99196D003EC699 /* HanyuPinyinOutputFormat.m in Sources */,
 				CEFD0A7D1DFAADDC006917AE /* SJOpinionView.m in Sources */,
 				CEFD0A221DFAAD40006917AE /* SJReportTableViewCell.m in Sources */,
-				CE2C88C11D74289500CCD71A /* BCPayReq.m in Sources */,
 				CE4AF6251CC4DA550067D674 /* SDCollectionViewCell.m in Sources */,
 				CE133E191DD43D1100576BCE /* SJGivePresentCell.m in Sources */,
 				CE5AF3B81C8ECF3200D923A3 /* SJGiveGiftCell.m in Sources */,
@@ -6691,7 +6157,6 @@
 				CEC4E7631D991AF500A63390 /* SJStockMonthLineViewController.m in Sources */,
 				CE4FB1411C548EC900CDE0C5 /* SJMyTeacher.m in Sources */,
 				CEFD0A781DFAADDC006917AE /* SJDanMuView.m in Sources */,
-				CE2C88BF1D74289500CCD71A /* BCBaseReq.m in Sources */,
 				CEFD0A981DFAB046006917AE /* SJProfileViewController.m in Sources */,
 				CEFD0AA41DFAB17A006917AE /* MorevideoViewController.m in Sources */,
 				CE5AF3A91C8E938F00D923A3 /* SJGoldPay.m in Sources */,
@@ -6730,7 +6195,6 @@
 				CEFD09D81DFAAD3F006917AE /* SJHomeQuestionViewController.m in Sources */,
 				CE52C4501D3F17F100AABC3E /* SJPopMenu.m in Sources */,
 				CE0F84441DB76405003D4314 /* TYImageCache.m in Sources */,
-				CE2C88D01D74289500CCD71A /* BCQueryRefundsResp.m in Sources */,
 				CEBD41421CB3C7C500823FD0 /* SJCreatNewBlogArticle.m in Sources */,
 				CE50C1711CEC444A0026CFD6 /* UIImage+SJimage_UIcolor.m in Sources */,
 				CEFD0A0D1DFAAD3F006917AE /* SJLogInfoCell.m in Sources */,
@@ -6756,7 +6220,6 @@
 				CE40EA7C1CD9977B0054A770 /* SJBookSectionModel.m in Sources */,
 				CE1FE2EE1CBD0CAA0054769F /* SJsexViewController.m in Sources */,
 				CE5F96311CDAEBDF005C2C67 /* DLTabedSlideView.m in Sources */,
-				CE2C88EB1D74289500CCD71A /* BCAliPayAdapter.m in Sources */,
 				CE3F410A1CB75675008BCDBE /* SJGetIdentifyingCodeViewController.m in Sources */,
 				CE183CBB1C925C41003D081A /* SJBillModel.m in Sources */,
 				CE49A1151CB65D4800B474B5 /* SJMySendBlogArticleCell.m in Sources */,
@@ -6772,12 +6235,10 @@
 				CEA2AB701DAA077E0079CE95 /* SJPersonalQuestionModel.m in Sources */,
 				CEF3F0F81C4E5D5C008E9E5B /* NSDate+MJ.m in Sources */,
 				CE7CE7581CBB914200AC3E72 /* SJCityModel.m in Sources */,
-				CE2C88EC1D74289500CCD71A /* BCUnionPayAdapter.m in Sources */,
 				CEFD09D51DFAAD3F006917AE /* SJGiveGiftViewController.m in Sources */,
 				CE409FB41C47C7D300C21DE9 /* SJMyInteractionMessage.m in Sources */,
 				CE39DEC21DB475D70069040E /* SJAddressBookSearchResultView.m in Sources */,
 				CEFD0ACF1DFAB253006917AE /* SJStockDetailContentViewController.m in Sources */,
-				CE2C88DD1D74289500CCD71A /* BCSecurityPolicy.m in Sources */,
 				CE5243811CAA2C2A00C9995B /* SJTeacherReferenceDetailCell.m in Sources */,
 				CEC7A2121C560DCE0081CA68 /* SJDetailModel.m in Sources */,
 				CE409F9A1C47C71000C21DE9 /* SJYiJingHuiDaFrame.m in Sources */,
@@ -6803,8 +6264,6 @@
 				CE49B0221D99196D003EC699 /* PinYinForObjc.m in Sources */,
 				CE183CB71C9254F3003D081A /* SJUserConsumeParam.m in Sources */,
 				CE1FE2E81CBD0CAA0054769F /* SJinverstViewController.m in Sources */,
-				CE2C88E91D74289500CCD71A /* PaySandBoxViewController.m in Sources */,
-				CE2C88C41D74289500CCD71A /* BCPayPalVerifyReq.m in Sources */,
 				CE63A54F1CE461E20033BB34 /* SJBlogArticleModel.m in Sources */,
 				CE0F84421DB76405003D4314 /* TYAttributedLabel.m in Sources */,
 				CE132CEA1D9CE73300C93DC8 /* SJPersonalOldLiveHeadView.m in Sources */,
@@ -6818,7 +6277,6 @@
 				CEFD09F11DFAAD3F006917AE /* SJCustom.m in Sources */,
 				CE40EA6F1CD9977B0054A770 /* SJBookContentViewController.m in Sources */,
 				CEA2AB731DAA079E0079CE95 /* SJPersonalQuestionFrame.m in Sources */,
-				CE2C88D31D74289500CCD71A /* BCRefundStatusReq.m in Sources */,
 				CE0DAA221DAB5C1500A65C59 /* SJCSJMessageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

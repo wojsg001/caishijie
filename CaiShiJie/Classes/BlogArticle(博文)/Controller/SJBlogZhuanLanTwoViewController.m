@@ -2,7 +2,7 @@
 //  SJBlogZhuanLanTwoViewController.m
 //  CaiShiJie
 //
-//  Created by user on 16/5/27.
+//  Created by user on 18/5/27.
 //  Copyright © 2018年 user. All rights reserved.
 //
 
@@ -77,6 +77,13 @@
                 [self.dataArray removeAllObjects];
                 [self.dataArray addObjectsFromArray:tmpArr];
                 [self.tableView reloadData];
+            }
+            
+            if (!self.dataArray.count) {
+                // 如果没有数据，显示提示页
+                [SJNoDataView showNoDataViewToView:self.view];
+            } else {
+                [SJNoDataView hideNoDataViewFromView:self.view];
             }
         }
         else

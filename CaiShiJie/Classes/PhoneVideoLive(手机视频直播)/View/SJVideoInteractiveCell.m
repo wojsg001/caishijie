@@ -2,7 +2,7 @@
 //  SJVideoInteractiveCell.m
 //  CaiShiJie
 //
-//  Created by user on 16/11/16.
+//  Created by user on 18/11/16.
 //  Copyright © 2018年 user. All rights reserved.
 //
 

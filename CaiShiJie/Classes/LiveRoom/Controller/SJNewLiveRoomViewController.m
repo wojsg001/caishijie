@@ -2,7 +2,7 @@
 //  SJLiveRoomViewController.m
 //  CaiShiJie
 //
-//  Created by user on 16/9/1.
+//  Created by user on 18/9/1.
 //  Copyright © 2018年 user. All rights reserved.
 //
 
@@ -472,7 +472,7 @@
     [self setUpButtonWithTitle:@"观点" tag:101 target:self action:@selector(btnClick:)];
     [self setUpButtonWithTitle:@"互动" tag:102 target:self action:@selector(btnClick:)];
     [self setUpButtonWithTitle:@"直播" tag:103 target:self action:@selector(btnClick:)];
-    [self setUpButtonWithTitle:@"送礼" tag:104 target:self action:@selector(btnClick:)];
+    //[self setUpButtonWithTitle:@"送礼" tag:104 target:self action:@selector(btnClick:)];
     [self setUpButtonWithTitle:@"老师" tag:105 target:self action:@selector(btnClick:)];
     
     for (int i = 0; i < self.menuBtnArr.count; i++) {

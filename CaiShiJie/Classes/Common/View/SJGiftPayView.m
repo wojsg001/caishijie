@@ -2,7 +2,7 @@
 //  SJGiftPayView.m
 //  CaiShiJie
 //
-//  Created by user on 16/11/10.
+//  Created by user on 18/11/10.
 //  Copyright © 2018年 user. All rights reserved.
 //
 
@@ -10,14 +10,17 @@
 #import "SJGiftModel.h"
 #import "SJToken.h"
 #import "SJhttptool.h"
-#import "BeeCloud.h"
+//暂时去掉BeeCloud
+//#import "BeeCloud.h"
 #import "SJMixPayParam.h"
 #import "MJExtension.h"
 
 #define KGiftPayViewH 235
 #define KGiftPayViewW 310
 
-@interface SJGiftPayView ()<BeeCloudDelegate>
+//暂时去掉BeeCloud
+@interface SJGiftPayView ()
+//@interface SJGiftPayView ()<BeeCloudDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
@@ -69,7 +72,9 @@
     self.cancelButton.layer.borderWidth = 0.5f;
     self.confirmButton.layer.cornerRadius = 5.0f;
     self.confirmButton.layer.masksToBounds = YES;
-    [BeeCloud setBeeCloudDelegate:self];
+    
+    //暂时去掉BeeCloud
+    //[BeeCloud setBeeCloudDelegate:self];
 }
 
 - (IBAction)buttonClicked:(id)sender {
@@ -143,9 +148,11 @@
         if ([respose[@"status"] isEqualToString:@"1"]) {
             self.billno = [NSString stringWithFormat:@"%@", respose[@"data"][@"order_id"]];
             if ([channel isEqualToString:@"WX_APP"]) {
-                [self doPay:PayChannelWxApp];
+                //暂时去掉BeeCloud
+                //[self doPay:PayChannelWxApp];
             } else if ([channel isEqualToString:@"ALI_APP"]) {
-                [self doPay:PayChannelAliApp];
+                //暂时去掉BeeCloud
+                //[self doPay:PayChannelAliApp];
             }
         }
     } failure:^(NSError *error) {
@@ -154,51 +161,54 @@
     }];
 }
 
-#pragma mark - 微信、支付宝、银联、百度钱包
-- (void)doPay:(PayChannel)channel {
-    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value",@"key", nil];
-    /**
-     按住键盘上的option键，点击参数名称，可以查看参数说明
-     **/
-    BCPayReq *payReq = [[BCPayReq alloc] init];
-    payReq.channel = channel; //支付渠道
-    payReq.title = _giftModel.gift_name;//订单标题
-    payReq.totalFee = _paygold;//订单价格
-    payReq.billNo = _billno;//商户自定义订单号
-    payReq.scheme = @"payDemo";//URL Scheme,在Info.plist中配置; 支付宝必有参数
-    payReq.billTimeOut = 1800;//订单超时时间
-    //payReq.viewController = self; //银联支付和Sandbox环境必填
-    payReq.optional = dict;//商户业务扩展参数，会在webhook回调时返回
-    [BeeCloud sendBCReq:payReq];
-}
-#pragma mark - BCPay回调
-- (void)onBeeCloudResp:(BCBaseResp *)resp {
-    switch (resp.type) {
-        case BCObjsTypePayResp: {
-            [self removePayView];
-            // 支付请求响应
-            BCPayResp *tempResp = (BCPayResp *)resp;
-            if (tempResp.resultCode == 0) {
-                //微信、支付宝、银联支付成功
-                [self showAlertView:resp.resultMsg];
-            } else {
-                //支付取消或者支付失败
-                [self showAlertView:[NSString stringWithFormat:@"%@ : %@",tempResp.resultMsg, tempResp.errDetail]];
-            }
-        }
-            break;
-            
-        default: {
-            [self removePayView];
-            if (resp.resultCode == 0) {
-                [self showAlertView:resp.resultMsg];
-            } else {
-                [self showAlertView:[NSString stringWithFormat:@"%@ : %@",resp.resultMsg, resp.errDetail]];
-            }
-        }
-            break;
-    }
-}
+//暂时去掉BeeCloud
+//#pragma mark - 微信、支付宝、银联、百度钱包
+//- (void)doPay:(PayChannel)channel {
+//    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value",@"key", nil];
+//    /**
+//     按住键盘上的option键，点击参数名称，可以查看参数说明
+//     **/
+//    BCPayReq *payReq = [[BCPayReq alloc] init];
+//    payReq.channel = channel; //支付渠道
+//    payReq.title = _giftModel.gift_name;//订单标题
+//    payReq.totalFee = _paygold;//订单价格
+//    payReq.billNo = _billno;//商户自定义订单号
+//    payReq.scheme = @"payDemo";//URL Scheme,在Info.plist中配置; 支付宝必有参数
+//    payReq.billTimeOut = 1800;//订单超时时间
+//    //payReq.viewController = self; //银联支付和Sandbox环境必填
+//    payReq.optional = dict;//商户业务扩展参数，会在webhook回调时返回
+//    [BeeCloud sendBCReq:payReq];
+//}
+
+//暂时去掉BeeCloud
+//#pragma mark - BCPay回调
+//- (void)onBeeCloudResp:(BCBaseResp *)resp {
+//    switch (resp.type) {
+//        case BCObjsTypePayResp: {
+//            [self removePayView];
+//            // 支付请求响应
+//            BCPayResp *tempResp = (BCPayResp *)resp;
+//            if (tempResp.resultCode == 0) {
+//                //微信、支付宝、银联支付成功
+//                [self showAlertView:resp.resultMsg];
+//            } else {
+//                //支付取消或者支付失败
+//                [self showAlertView:[NSString stringWithFormat:@"%@ : %@",tempResp.resultMsg, tempResp.errDetail]];
+//            }
+//        }
+//            break;
+//
+//        default: {
+//            [self removePayView];
+//            if (resp.resultCode == 0) {
+//                [self showAlertView:resp.resultMsg];
+//            } else {
+//                [self showAlertView:[NSString stringWithFormat:@"%@ : %@",resp.resultMsg, resp.errDetail]];
+//            }
+//        }
+//            break;
+//    }
+//}
 
 - (void)showAlertView:(NSString *)msg {
     UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];

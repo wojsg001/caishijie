@@ -114,7 +114,7 @@
         _secondTeacherArray = @[/*@{@"image":@"mine_icon8.png",@"title":@"我的收入"},*/
                                 /*@{@"image":@"mine_icon6.png",@"title":@"消费记录"},*/
                                 @{@"image":@"mine_icon7.png",@"title":@"设置"}];
-        _seconduserArray = @[@{@"image":@"mine_icon6.png",@"title":@"消费记录"},
+        _seconduserArray = @[/*@{@"image":@"mine_icon6.png",@"title":@"消费记录"},*/
                              @{@"image":@"mine_icon7.png",@"title":@"设置"}];
     } else {
         _firstTeacherArray = @[@{@"image":@"mine_icon2.png",@"title":@"我的消息"},

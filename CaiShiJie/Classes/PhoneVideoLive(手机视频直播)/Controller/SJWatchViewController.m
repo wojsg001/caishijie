@@ -2,7 +2,7 @@
 //  SJWatchViewController.m
 //  CaiShiJie
 //
-//  Created by user on 16/7/25.
+//  Created by user on 18/7/25.
 //  Copyright © 2018年 user. All rights reserved.
 //
 
@@ -298,11 +298,21 @@
 }
 
 #pragma mark - <PLPlayerDelegate>
+// 实现 <PLPlayerDelegate> 来控制流状态的变更
 - (void)player:(nonnull PLPlayer *)player statusDidChange:(PLPlayerStatus)state {
     SJLog(@"%ld", (long)state);
+    // 这里会返回流的各种状态，你可以根据状态做 UI 定制及各类其他业务操作
+    // 除了 Error 状态，其他状态都会回调这个方法
+    // 开始播放，当连接成功后，将收到第一个 PLPlayerStatusCaching 状态
+    // 第一帧渲染后，将收到第一个 PLPlayerStatusPlaying 状态
+    // 播放过程中出现卡顿时，将收到 PLPlayerStatusCaching 状态
+    // 卡顿结束后，将收到 PLPlayerStatusPlaying 状态
+    // 点播结束后，将收到 PLPlayerStatusCompleted 状态
+    // 播放器播放结束或手动停止的状态 PLPlayerStatusStopped 状态
     if (PLPlayerStatusCaching == state) {
         [MBProgressHUD showHUDAddedTo:self.player.playerView animated:YES];
-    } else {
+    }
+    else {
         [MBProgressHUD hideHUDForView:self.player.playerView animated:YES];
     }
 }

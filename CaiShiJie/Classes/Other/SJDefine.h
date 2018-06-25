@@ -2,7 +2,7 @@
 //  SJDefine.h
 //  CaiShiJie
 //
-//  Created by user on 16/3/18.
+//  Created by user on 18/3/18.
 //  Copyright © 2018年 user. All rights reserved.
 //
 
@@ -22,7 +22,7 @@
 
 #define kHead_imgURL   @"http://img.csjimg.com/"   // 头像地址
 #define kScroll_imgURL @"http://common.csjimg.com" // 滚动图地址
-#define kVideo_imgURL  @"http://img.csjvod.com"    // 视频图片地址
+//#define kVideo_imgURL  @"http://img.csjvod.com"    // 视频图片地址
 
 //#if DEBUG  // 调试状态
 //    #define HOST     @"http://192.168.6.110:8081"  // 服务器地址
@@ -79,7 +79,5 @@
 #define NSArrayMatchAndCount(ownOBJ)    ([ownOBJ isKindOfClass:[NSArray class]] && ((NSArray *)ownOBJ).count > 0)
 /// 仅支持value为String类型
 #define NSDictionaryContentWithKey(dic, key)  [NSString stringWithFormat:@"%@", NonEmptyString([dic objectForKey:key])]
-// 是否为NSArray，并且是否为空
-#define NSArrayMatchAndCount(ownOBJ)    ([ownOBJ isKindOfClass:[NSArray class]] && ((NSArray *)ownOBJ).count > 0)
 
 #endif /* SJDefine_h */

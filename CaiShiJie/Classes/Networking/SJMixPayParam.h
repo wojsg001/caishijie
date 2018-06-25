@@ -2,7 +2,7 @@
 //  SJMixPayParam.h
 //  CaiShiJie
 //
-//  Created by user on 16/3/22.
+//  Created by user on 18/3/22.
 //  Copyright © 2018年 user. All rights reserved.
 //
 //混合支付参数

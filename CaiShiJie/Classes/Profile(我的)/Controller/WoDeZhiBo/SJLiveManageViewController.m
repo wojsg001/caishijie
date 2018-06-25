@@ -2,7 +2,7 @@
 //  SJLiveManageViewController.m
 //  CaiShiJie
 //
-//  Created by user on 16/2/29.
+//  Created by user on 18/2/29.
 //  Copyright © 2018年 user. All rights reserved.
 //
 
@@ -146,7 +146,7 @@
     
     [self setUpButtonWithTitle:@"观点" tag:101 target:self action:@selector(btnClick:)];
     [self setUpButtonWithTitle:@"互动" tag:102 target:self action:@selector(btnClick:)];
-    [self setUpButtonWithTitle:@"送礼" tag:103 target:self action:@selector(btnClick:)];
+    //[self setUpButtonWithTitle:@"送礼" tag:103 target:self action:@selector(btnClick:)];
     [self setUpButtonWithTitle:@"更多" tag:104 target:self action:@selector(btnClick:)];
     
     

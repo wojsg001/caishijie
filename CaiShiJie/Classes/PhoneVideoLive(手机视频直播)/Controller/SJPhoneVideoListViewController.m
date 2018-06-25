@@ -2,7 +2,7 @@
 //  SJPhoneVideoListViewController.m
 //  CaiShiJie
 //
-//  Created by user on 16/12/2.
+//  Created by user on 18/12/2.
 //  Copyright © 2018年 user. All rights reserved.
 //
 
@@ -38,13 +38,14 @@
 - (void)setModel:(SJPhoneVideoListModel *)model {
     _model = model;
 
-    if ([_model.status isEqualToString:@"1"]) {
-        //视频图片地址
-        [_voverImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@/%@.jpg?t=%@", kVideo_imgURL, _model.hub, _model.video_id, [[NSDate date] stringDateWithYMDHM]]] placeholderImage:[UIImage imageNamed:@"live_list_placeholder"]];
-    } else {
+//    if ([_model.status isEqualToString:@"1"]) {
+//        //视频图片地址
+//        [_voverImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@/%@.jpg?t=%@", kVideo_imgURL, _model.hub, _model.video_id, [[NSDate date] stringDateWithYMDHM]]] placeholderImage:[UIImage imageNamed:@"live_list_placeholder"]];
+//    } else {
+    
         //头像图片地址
         [_voverImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kHead_imgURL, _model.img]] placeholderImage:[UIImage imageNamed:@"live_list_placeholder"]];
-    }
+// }
     
     [_titleButton setTitle:_model.title forState:UIControlStateNormal];
     _countLabel.text = [NSString stringWithFormat:@"%@人", _model.total_count];
@@ -87,6 +88,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self refresh];
 }
 
 - (void)refresh {
@@ -100,19 +102,20 @@
         [self.collectionView headerEndRefreshing];
         [SJNoWifiView hideNoWifiViewFromView:self.view];
         SJLog(@"%@", respose);
-        NSArray *tmpArray = [SJPhoneVideoListModel objectArrayWithKeyValuesArray:respose];
-        if (tmpArray.count) {
-            [self.dataArray removeAllObjects];
-            [self.dataArray addObjectsFromArray:tmpArray];
-            [self.collectionView reloadData];
-        }
+        if ([respose[@"status"] integerValue]) {
+          NSArray *tmpArray = [SJPhoneVideoListModel objectArrayWithKeyValuesArray:respose[@"data"]];
+          if (tmpArray.count || !tmpArray.count) {
+              [self.dataArray removeAllObjects];
+              [self.dataArray addObjectsFromArray:tmpArray];
+              [self.collectionView reloadData];
+         }
         
-        if (!self.dataArray.count) {
-            [SJNoDataView showNoDataViewToView:self.view];
-        } else {
-            [SJNoDataView hideNoDataViewFromView:self.view];
+            if (!self.dataArray.count ||  self.dataArray.count == 0) {
+                [SJNoDataView showNoDataViewToView:self.view];
+            } else {
+                [SJNoDataView hideNoDataViewFromView:self.view];
+            }
         }
-        
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUDForView:self.view];
         [self.collectionView headerEndRefreshing];
