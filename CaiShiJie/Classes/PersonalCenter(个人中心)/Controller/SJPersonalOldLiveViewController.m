@@ -186,10 +186,10 @@
                 liveRoomVC.target_id = weakSelf.target_id;
                 [weakSelf.navigationController pushViewController:liveRoomVC animated:YES];
             } else {
-                SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
-                myLiveVC.user_id = [[NSUserDefaults standardUserDefaults] valueForKey:kUserid];
-                myLiveVC.target_id = weakSelf.target_id;
-                [weakSelf.navigationController pushViewController:myLiveVC animated:YES];
+//                SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+//                myLiveVC.user_id = [[NSUserDefaults standardUserDefaults] valueForKey:kUserid];
+//                myLiveVC.target_id = weakSelf.target_id;
+//                [weakSelf.navigationController pushViewController:myLiveVC animated:YES];
             }
         }
     };
@@ -210,15 +210,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row > 0) {
-        SJOldModel *model = self.dataArray[indexPath.row - 1];
-        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
-        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
-        myLiveVC.user_id = [d valueForKey:kUserid];
-        myLiveVC.target_id = model.user_id;
-        myLiveVC.live_id = model.live_id;
-        myLiveVC.isOldLive = YES;
-        
-        [self.navigationController pushViewController:myLiveVC animated:YES];
+//        SJOldModel *model = self.dataArray[indexPath.row - 1];
+//        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+//        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+//        myLiveVC.user_id = [d valueForKey:kUserid];
+//        myLiveVC.target_id = model.user_id;
+//        myLiveVC.live_id = model.live_id;
+//        myLiveVC.isOldLive = YES;
+//        
+//        [self.navigationController pushViewController:myLiveVC animated:YES];
     }
 }
 

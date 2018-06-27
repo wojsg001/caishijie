@@ -84,7 +84,7 @@
                 // 如果没有数据，显示提示页
                 [SJNoDataView showNoDataViewToView:self.view];
             } else {
-                [SJNoDataView showNoDataViewToView:self.view];
+                [SJNoDataView hideNoDataViewFromView:self.view];
             }
         } else {
             [MBHUDHelper showWarningWithText:@"获取失败！"];

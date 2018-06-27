@@ -324,10 +324,10 @@
                     liveRoomVC.target_id = [SJUserDefaults valueForKey:kUserid];
                     [self.navigationController pushViewController:liveRoomVC animated:YES];
                 } else {
-                    SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
-                    myLiveVC.user_id = [SJUserDefaults valueForKey:kUserid];
-                    myLiveVC.target_id = [SJUserDefaults valueForKey:kUserid];
-                    [self.navigationController pushViewController:myLiveVC animated:YES];
+//                    SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+//                    myLiveVC.user_id = [SJUserDefaults valueForKey:kUserid];
+//                    myLiveVC.target_id = [SJUserDefaults valueForKey:kUserid];
+//                    [self.navigationController pushViewController:myLiveVC animated:YES];
                 }
             }
                 break;
@@ -367,11 +367,11 @@
                     liveRoomVC.target_id = [SJUserDefaults valueForKey:kUserid];
                     [self.navigationController pushViewController:liveRoomVC animated:YES];
                 } else {
-                    SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
-                    myLiveVC.user_id = [SJUserDefaults valueForKey:kUserid];
-                    myLiveVC.target_id = [SJUserDefaults valueForKey:kUserid];
-                    
-                    [self.navigationController pushViewController:myLiveVC animated:YES];
+//                    SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+//                    myLiveVC.user_id = [SJUserDefaults valueForKey:kUserid];
+//                    myLiveVC.target_id = [SJUserDefaults valueForKey:kUserid];
+//                    
+//                    [self.navigationController pushViewController:myLiveVC animated:YES];
                 }
             }
                 break;

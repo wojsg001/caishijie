@@ -45,7 +45,7 @@
 - (IBAction)liveButtonClicked:(id)sender {
     SJLog(@"点击了按钮");
     if (self.liveButtonClickBlock) {
-        self.liveButtonClickBlock();
+        //self.liveButtonClickBlock();
     }
 }
 

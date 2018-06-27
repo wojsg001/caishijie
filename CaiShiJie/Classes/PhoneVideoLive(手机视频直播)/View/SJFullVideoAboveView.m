@@ -132,6 +132,7 @@
     _chatButton.tag = 102;
     [_chatButton addTarget:self action:@selector(clickButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_chatButton];
+    [_chatButton setHidden:YES];
     
     _barrageButton = [[UIButton alloc] init];
     [_barrageButton setImage:[UIImage imageNamed:@"tan_icon"] forState:UIControlStateNormal];
@@ -140,24 +141,28 @@
     _barrageButton.tag = 103;
     [_barrageButton addTarget:self action:@selector(clickButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_barrageButton];
+    [_barrageButton setHidden:YES];
     
     _recordButton = [[UIButton alloc] init];
     [_recordButton setImage:[UIImage imageNamed:@"live_down_icon2"] forState:UIControlStateNormal];
     _recordButton.tag = 104;
     [_recordButton addTarget:self action:@selector(clickButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_recordButton];
+    [_recordButton setHidden:YES];
     
     _giftButton = [[UIButton alloc] init];
     [_giftButton setImage:[UIImage imageNamed:@"live_down_icon3"] forState:UIControlStateNormal];
     _giftButton.tag = 105;
     [_giftButton addTarget:self action:@selector(clickButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_giftButton];
+    [_giftButton setHidden:YES];
     
     _fullButton = [[UIButton alloc] init];
     [_fullButton setImage:[UIImage imageNamed:@"live_suo"] forState:UIControlStateNormal];
     _fullButton.tag = 106;
     [_fullButton addTarget:self action:@selector(clickButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_fullButton];
+    [_fullButton setHidden:YES];
     
     [self addSubview:self.chatBoxVC.view];
     [self.chatBoxVC.view mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -192,12 +192,12 @@
         liveRoomVC.target_id = model.user_id;
         [self.navigationController pushViewController:liveRoomVC animated:YES];
     } else {
-        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
-        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
-        myLiveVC.user_id = [d valueForKey:kUserid];
-        myLiveVC.target_id = model.user_id;
-        //myLiveVC.live_id = hotLive.live_id;
-        [self.navigationController pushViewController:myLiveVC animated:YES];
+//        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+//        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+//        myLiveVC.user_id = [d valueForKey:kUserid];
+//        myLiveVC.target_id = model.user_id;
+//        //myLiveVC.live_id = hotLive.live_id;
+//        [self.navigationController pushViewController:myLiveVC animated:YES];
     }
 }
 

@@ -33,12 +33,14 @@
     _chatButton.tag = 101;
     [_chatButton addTarget:self action:@selector(clickButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_chatButton];
+    [_chatButton setHidden:YES];
     
     _recordButton = [[UIButton alloc] init];
     [_recordButton setImage:[UIImage imageNamed:@"live_down_icon2"] forState:UIControlStateNormal];
     _recordButton.tag = 102;
     [_recordButton addTarget:self action:@selector(clickButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_recordButton];
+    [_recordButton setHidden:YES];
     
     _giftButton = [[UIButton alloc] init];
     [_giftButton setImage:[UIImage imageNamed:@"live_down_icon3"] forState:UIControlStateNormal];
@@ -54,6 +56,7 @@
     _fullButton.tag = 104;
     [_fullButton addTarget:self action:@selector(clickButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_fullButton];
+    [_fullButton setHidden:YES];
 }
 
 - (void)layoutSubviews {

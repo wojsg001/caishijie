@@ -164,6 +164,7 @@
         
         cell.sendButton.tag = indexPath.row + 101;
         [cell.sendButton addTarget:self action:@selector(sendButtonClickDown:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.sendButton setHidden:YES];
     }
     
     return cell;

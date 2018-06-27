@@ -167,12 +167,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SJMyNeiCan *userReference = self.userReferenceArr[indexPath.row];
-    SJUserReferenceDetailViewController *userReferenceDetailVC = [[SJUserReferenceDetailViewController alloc] init];
-    userReferenceDetailVC.title = @"内参详情";
-    userReferenceDetailVC.referenceid = userReference.reference_id;
-    
-    [self.navigationController pushViewController:userReferenceDetailVC animated:YES];
+//    SJMyNeiCan *userReference = self.userReferenceArr[indexPath.row];
+//    SJUserReferenceDetailViewController *userReferenceDetailVC = [[SJUserReferenceDetailViewController alloc] init];
+//    userReferenceDetailVC.title = @"内参详情";
+//    userReferenceDetailVC.referenceid = userReference.reference_id;
+//    
+//    [self.navigationController pushViewController:userReferenceDetailVC animated:YES];
 }
 
 #pragma mark - SJNoWifiViewDelegate

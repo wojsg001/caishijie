@@ -332,12 +332,12 @@
                         [weakSelf.player pause];
                     }
                     SJLog(@"直播室");
-                    SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
-                    NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
-                    myLiveVC.user_id = [d valueForKey:kUserid];
-                    myLiveVC.target_id = weakSelf.videoInfoModel.user_id;
-                    
-                    [weakSelf.navigationController pushViewController:myLiveVC animated:YES];
+//                    SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+//                    NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+//                    myLiveVC.user_id = [d valueForKey:kUserid];
+//                    myLiveVC.target_id = weakSelf.videoInfoModel.user_id;
+//                    
+//                    [weakSelf.navigationController pushViewController:myLiveVC animated:YES];
                 }
                     break;
                     

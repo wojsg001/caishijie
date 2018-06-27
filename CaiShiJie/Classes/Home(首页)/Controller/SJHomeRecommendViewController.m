@@ -343,10 +343,10 @@
     SJScrollViewImageModel *model = self.imageModelArr[index];
     
     if ([model.url integerValue] > 0) {
-        SJMyLiveViewController *liveVC = [[SJMyLiveViewController alloc] init];
-        liveVC.target_id = model.url;
-        
-        [self.navigationController pushViewController:liveVC animated:YES];
+//        SJMyLiveViewController *liveVC = [[SJMyLiveViewController alloc] init];
+//        liveVC.target_id = model.url;
+//
+//        [self.navigationController pushViewController:liveVC animated:YES];
     } else {
         KINWebBrowserViewController *webBrowserVC = [KINWebBrowserViewController webBrowser];
         [webBrowserVC setDelegate:self];
@@ -398,7 +398,7 @@
         if (self.recommendLiveArray.count) {
             cell.model = self.recommendLiveArray[indexPath.row];
         }
-        
+        cell.hidden = YES;
         return cell;
     } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
@@ -464,6 +464,9 @@
     sectionHeader.iconView.image = [UIImage imageNamed:dic[@"icon"]];
     sectionHeader.titleLabel.text = dic[@"title"];
     
+    if(section == 1){
+        sectionHeader.hidden = YES;
+    }
     return sectionHeader;
 }
 
@@ -487,16 +490,26 @@
     sectionFooter.moreBtn.tag = section + 101;
     [sectionFooter.moreBtn addTarget:self action:@selector(clickMoreBtnDown:) forControlEvents:UIControlEventTouchUpInside];
     
+    if (section == 1){
+        sectionFooter.hidden = YES;
+    }
     return sectionFooter;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 1) {
+        return 0;
+    }
     return 45;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     if (section == 3) {
         return 55;
+    }
+    
+    if (section == 1) {
+        return 0;
     }
     
     return 35;
@@ -506,7 +519,7 @@
     if (indexPath.section == 0) {
         return 110;
     } else if (indexPath.section == 1) {
-        return 70;
+        return 0;
     } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
             return (SJScreenW - 30)/2 * 107/172 + 48;
@@ -536,10 +549,10 @@
             liveRoomVC.target_id = model.user_id;
             [self.navigationController pushViewController:liveRoomVC animated:YES];
         } else {
-            SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
-            myLiveVC.user_id = [SJUserDefaults valueForKey:kUserid];
-            myLiveVC.target_id = model.user_id;
-            [self.navigationController pushViewController:myLiveVC animated:YES];
+//            SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+//            myLiveVC.user_id = [SJUserDefaults valueForKey:kUserid];
+//            myLiveVC.target_id = model.user_id;
+//            [self.navigationController pushViewController:myLiveVC animated:YES];
         }
     } else if (indexPath.section == 2) {
         if (indexPath.row != 0) {

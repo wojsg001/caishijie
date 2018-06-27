@@ -271,12 +271,12 @@
                 liveRoomVC.target_id = self.questionRankModel.user_id;
                 [self.navigationController pushViewController:liveRoomVC animated:YES];
             } else {
-                SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
-                NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
-                myLiveVC.user_id = [d valueForKey:kUserid];
-                myLiveVC.target_id = self.questionRankModel.user_id;
-                
-                [self.navigationController pushViewController:myLiveVC animated:YES];
+//                SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+//                NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+//                myLiveVC.user_id = [d valueForKey:kUserid];
+//                myLiveVC.target_id = self.questionRankModel.user_id;
+//                
+//                [self.navigationController pushViewController:myLiveVC animated:YES];
             }
         }
             break;

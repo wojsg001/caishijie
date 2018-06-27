@@ -222,6 +222,7 @@
         // 加关注
         cell.attentionBtn.tag = indexPath.row;
         [cell.attentionBtn addTarget:self action:@selector(attentionBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.attentionBtn setHidden:YES];
         // 咨询
         cell.zhixunBtn.tag = indexPath.row;
         [cell.zhixunBtn addTarget:self action:@selector(zhixunBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -284,12 +285,12 @@
         liveRoomVC.target_id = peopleRank.user_id;
         [self.navigationController pushViewController:liveRoomVC animated:YES];
     } else {
-        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
-        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
-        myLiveVC.user_id = [d valueForKey:kUserid];
-        myLiveVC.target_id = peopleRank.user_id;
-        
-        [self.navigationController pushViewController:myLiveVC animated:YES];
+//        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+//        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+//        myLiveVC.user_id = [d valueForKey:kUserid];
+//        myLiveVC.target_id = peopleRank.user_id;
+//        
+//        [self.navigationController pushViewController:myLiveVC animated:YES];
     }
 }
 

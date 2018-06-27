@@ -162,12 +162,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SJMyNeiCan *model = self.dataArray[indexPath.row];
-    SJHisReferenceDetailViewController *hisReferenceVC = [[SJHisReferenceDetailViewController alloc] init];
-    hisReferenceVC.title = @"内参详情";
-    hisReferenceVC.referenceid = model.reference_id;
-    
-    [self.navigationController pushViewController:hisReferenceVC animated:YES];
+//    SJMyNeiCan *model = self.dataArray[indexPath.row];
+//    SJHisReferenceDetailViewController *hisReferenceVC = [[SJHisReferenceDetailViewController alloc] init];
+//    hisReferenceVC.title = @"内参详情";
+//    hisReferenceVC.referenceid = model.reference_id;
+//    
+//    [self.navigationController pushViewController:hisReferenceVC animated:YES];
 }
 
 - (void)payReferenceWith:(SJMyNeiCan *)referencemodel {
