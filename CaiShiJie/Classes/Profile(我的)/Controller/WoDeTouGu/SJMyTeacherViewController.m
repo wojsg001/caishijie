@@ -50,7 +50,7 @@
     self.tableView.headerRefreshingText = @"正在刷新";
     self.tableView.footerRefreshingText = @"正在加载";
     
-    // 加载我的投顾列表
+    // 加载我的老师列表
     [MBProgressHUD showMessage:@"加载中..." toView:self.view];
     [self loadMyTeacherListData];
 }
@@ -63,7 +63,7 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
-#pragma mark - 加载我的投顾列表
+#pragma mark - 加载我的老师列表
 - (void)loadMyTeacherListData
 {
     i = 1;
@@ -90,7 +90,7 @@
         [SJNoWifiView showNoWifiViewToView:self.view delegate:self];
     }];
 }
-#pragma mark - 加载更多投顾信息
+#pragma mark - 加载更多老师信息
 - (void)loadMoreMyTeacherListData
 {
     i = i + 1;

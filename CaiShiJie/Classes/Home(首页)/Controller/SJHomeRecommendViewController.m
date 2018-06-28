@@ -96,7 +96,7 @@
 }
 
 - (void)setUpSubviews {
-    self.sectionArray = @[@{@"icon":@"index_tuijian_icon1",@"title":@"推荐股评"}, @{@"icon":@"index_tuijian_icon2",@"title":@"热点直播"}, @{@"icon":@"index_tuijian_icon3",@"title":@"热门视频"}, @{@"icon":@"index_tuijian_icon4",@"title":@"热门股票"}];
+    self.sectionArray = @[@{@"icon":@"index_tuijian_icon1",@"title":@"推荐股评"}, @{@"icon":@"index_tuijian_icon2",@"title":@"热点"}, @{@"icon":@"index_tuijian_icon3",@"title":@"热门视频"}, @{@"icon":@"index_tuijian_icon4",@"title":@"热门股票"}];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, SJScreenH - HEIGHT_TABBAR) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
@@ -164,7 +164,7 @@
             self.cycleScrollView.imageURLStringsGroup = imagesURLStrings;
             // 博文数据
             self.recommendBlogArray = [SJBlogArticleModel objectArrayWithKeyValuesArray:respose[@"data"][@"ElectArticle"]];
-            // 直播数据
+            // 视频数据
             self.recommendLiveArray = [SJLiveRoomModel objectArrayWithKeyValuesArray:respose[@"data"][@"ElectLive"]];
             // 股票数据
             NSArray *stockArray = respose[@"data"][@"ElectStock"];
@@ -272,9 +272,9 @@
     tableHeaderView.backgroundColor = RGB(245, 245, 248);
     [tableHeaderView addSubview:cycleScrollView];
     
-    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon1"] tag:0 title:@"推荐直播"];
+    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon1"] tag:0 title:@"推荐"];
     [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon2"] tag:1 title:@"问答"];
-    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon3"] tag:2 title:@"找投顾"];
+    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon3"] tag:2 title:@"找老师"];
     [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon4"] tag:3 title:@"股评"];
     [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon5"] tag:4 title:@"排行榜"];
 
@@ -297,9 +297,9 @@
 - (void)customButtonPressed:(UIButton *)button {
     switch (button.tag) {
         case 0: {
-            // 股市直播
+            // 股市视频
             SJHomeLiveViewController *liveVC = [[SJHomeLiveViewController alloc] init];
-            liveVC.navigationItem.title = @"股市直播";
+            liveVC.navigationItem.title = @"股市视频";
             [self.navigationController pushViewController:liveVC animated:YES];
         }
             break;
@@ -311,9 +311,9 @@
         }
             break;
         case 2: {
-            // 找投顾
+            // 找老师
             SJFindTeacherViewController *findTeacherVC = [[SJFindTeacherViewController alloc] init];
-            findTeacherVC.navigationItem.title = @"找投顾";
+            findTeacherVC.navigationItem.title = @"找老师";
             [self.navigationController pushViewController:findTeacherVC animated:YES];
         }
             break;
@@ -585,7 +585,7 @@
         case 102:
         {
             SJHomeLiveViewController *liveVC = [[SJHomeLiveViewController alloc] init];
-            liveVC.navigationItem.title = @"推荐直播";
+            liveVC.navigationItem.title = @"推荐";
             [self.navigationController pushViewController:liveVC animated:YES];
         }
             break;

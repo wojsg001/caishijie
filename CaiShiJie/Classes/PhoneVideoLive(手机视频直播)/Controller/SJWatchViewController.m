@@ -49,7 +49,7 @@
     _alreadyCreatPLPlayer = NO;
     // 设置子视图
     [self setupChildViews];
-    // 加载直播用户信息
+    // 加载视频用户信息
     [self loadLiveData];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:KNotificationLoginSuccess object:nil];
@@ -92,7 +92,7 @@
             
             if ([_teacherInfoModel.live_status isEqualToString:@"2"]) {
                 if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
-                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"直播未开始" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"视频未开始" preferredStyle:UIAlertControllerStyleAlert];
                     __weak typeof(self) weakSelf = self;
                     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -107,7 +107,7 @@
             [self reconnect];
             if (!_alreadyCreatPLPlayer) {
                 _alreadyCreatPLPlayer = YES;
-                // 根据URL创建直播流播放器
+                // 根据URL创建视频流播放器
                 [self setupPLPlayerWithURL:[NSURL URLWithString:_teacherInfoModel.video_url]];
             }
         }
@@ -443,9 +443,9 @@
         }
             break;
         case 103: {
-            // 历史直播
+            // 历史视频
             SJOldLiveViewController *oldLiveVC = [[SJOldLiveViewController alloc] init];
-            oldLiveVC.title = @"历史直播";
+            oldLiveVC.title = @"历史视频";
             oldLiveVC.userid = self.targetid;
             [self.navigationController pushViewController:oldLiveVC animated:YES];
         }

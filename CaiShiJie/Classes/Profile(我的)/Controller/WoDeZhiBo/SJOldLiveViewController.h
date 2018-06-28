@@ -10,6 +10,6 @@
 
 @interface SJOldLiveViewController : SJBaseViewController
 
-@property (nonatomic, copy) NSString *userid;// 直播老师id
+@property (nonatomic, copy) NSString *userid;// 视频老师id
 
 @end

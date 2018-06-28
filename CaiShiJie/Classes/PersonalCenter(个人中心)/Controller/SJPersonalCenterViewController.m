@@ -80,7 +80,7 @@
     [self loadPersonalData];
 }
 
-//投顾信息
+//老师信息
 - (void)loadPersonalData {
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/user/getteacherinfo", HOST];
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObject:self.target_id forKey:@"targetid"];
@@ -95,7 +95,7 @@
         if ([respose[@"status"] isEqualToString:@"1"]) {
             SJPersonalInfoModel *model = [SJPersonalInfoModel objectWithKeyValues:respose[@"data"]];
             [self updateUIWithModel:model];
-            // 将投顾信息传递到主页填充头像和昵称
+            // 将老师信息传递到主页填充头像和昵称
             self.teacherInfoDic = respose[@"data"];
             [[NSNotificationCenter defaultCenter] postNotificationName:kPassUserInfoNotification object:self.teacherInfoDic];
         }

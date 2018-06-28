@@ -63,7 +63,7 @@
     // 设置表格状态
     [self setUpTableView];
     // section数组
-    sectionArr = @[@"热点直播",@"火爆直播"];
+    sectionArr = @[@"热点",@"火爆"];
     // 加载数据
     [MBProgressHUD showMessage:@"加载中..." toView:self.view];
     [self loadNewLiveData];
@@ -89,7 +89,7 @@
     self.tableView.tableHeaderView = self.headView;
 }
 
-#pragma mark - 加载推荐直播数据
+#pragma mark - 加载推荐视频数据
 - (void)loadNewLiveData {
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/home/live?hotSize=%i&fireSize=%i", HOST, 8, 8];
     [SJhttptool GET:urlStr paramers:nil success:^(id respose) {
@@ -126,10 +126,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        // 热点直播
+        // 热点
         return self.hotLiveArr.count;
     } else if (section == 1) {
-        // 火爆直播
+        // 火爆
         return self.fireLiveArr.count;
     }
     
@@ -141,7 +141,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     if (indexPath.section == 0) {
-        // 热点直播
+        // 热点视频
         if (self.hotLiveArr.count) {
             if (indexPath.row == self.hotLiveArr.count - 1) {
                 cell.lineWidth.constant = SJScreenW - 20;
@@ -152,7 +152,7 @@
             cell.hotOrFireModel = self.hotLiveArr[indexPath.row];
         }
     } else {
-        // 火爆直播
+        // 火爆视频
         if (self.fireLiveArr.count) {
             if (indexPath.row == self.fireLiveArr.count - 1) {
                 cell.lineWidth.constant = SJScreenW - 20;
@@ -205,7 +205,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        // 选择热点直播
+        // 选择热点
         SJLiveRoomModel *model = self.hotLiveArr[indexPath.row];
         if ([model.user_id isEqualToString:@"10412"]) {
             SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
@@ -220,7 +220,7 @@
 //            [self.navigationController pushViewController:myLiveVC animated:YES];
         }
     } else {
-        // 选择火爆直播
+        // 选择火爆视频
         SJLiveRoomModel *model = self.fireLiveArr[indexPath.row];
         if ([model.user_id isEqualToString:@"10412"]) {
             SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];

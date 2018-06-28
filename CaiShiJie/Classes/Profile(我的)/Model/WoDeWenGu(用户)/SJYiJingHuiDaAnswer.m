@@ -14,7 +14,7 @@
 - (NSString *)honor
 {
     if (_honor == nil) {
-        _honor = @"投资顾问";
+        _honor = @"老师";
     }
     return _honor;
 }

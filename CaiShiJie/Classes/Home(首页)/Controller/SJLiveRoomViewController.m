@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"直播间";
+    self.navigationItem.title = @"视频间";
     self.view.backgroundColor = RGB(245, 245, 248);
     [self setUpSlideView];
 }

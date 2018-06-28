@@ -39,7 +39,7 @@
                       withSuccessBlock:(void (^)(NSDictionary *dict))successBlock
                           andFailBlock:(void (^)(NSError *error))failBlock;
 
-//请求直播主题
+//请求视频主题
 - (void)requestLiveTitleWithToken:(NSString *)token
                         andUserid:(NSString *)userid
                           andTime:(NSString *)time
@@ -118,7 +118,7 @@
                       withSuccessBlock:(void (^)(NSDictionary *dict))successBlock
                           andFailBlock:(void (^)(NSError *error))failBlock;
 
-// 请求我的投顾列表
+// 请求我的老师列表
 - (void)requestMyTeacherListWithUserid:(NSString *)userid
                           andPageindex:(NSString *)pageindex
                            andPageSize:(NSString *)pagesize
@@ -132,7 +132,7 @@
                       withSuccessBlock:(void (^)(NSDictionary *dict))successBlock
                           andFailBlock:(void (^)(NSError *error))failBlock;
 
-// 请求投顾的内参列表
+// 请求老师的内参列表
 - (void)requestTeacherNeiCanListWithUserid:(NSString *)userid
                          andPageindex:(NSString *)pageindex
                           andPageSize:(NSString *)pagesize
@@ -174,7 +174,7 @@
                    success:(void (^)(NSDictionary *dict))success
                    failure:(void (^)(NSError *error))failure;
 
-// 获取投顾收益
+// 获取老师收益
 - (void)getTeacherEarningsWithToken:(NSString *)token
                           andUserId:(NSString *)userId
                             andTime:(NSString *)time
@@ -193,12 +193,12 @@
                  success:(void (^)(NSDictionary *dict))success
                  failure:(void (^)(NSError *error))failure;
 
-// 打开视频直播
+// 打开视频视频
 - (void)openVideoWithDict:(NSDictionary *)dict
                    success:(void (^)(NSDictionary *dict))success
                    failure:(void (^)(NSError *error))failure;
 
-// 获取获取SDK直播操作token
+// 获取获取SDK视频操作token
 - (void)requestVideoLiveAccessTokensuccess:(void (^)(NSDictionary *dict))success
                                    failure:(void (^)(NSError *error))failure;
 

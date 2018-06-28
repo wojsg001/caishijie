@@ -124,7 +124,7 @@
 - (void)loadVideoListData {
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/live/today-programs?user_id=%@", HOST, self.target_id];
     [SJhttptool GET:urlStr paramers:nil success:^(id respose) {
-        //SJLog(@"直播列表%@", respose);
+        //SJLog(@"视频列表%@", respose);
         if ([respose[@"status"] isEqualToString:@"1"]) {
             [self.tableView headerEndRefreshing];
             self.course_id = respose[@"data"][@"course_id"];
@@ -137,7 +137,7 @@
                 [MBHUDHelper showWarningWithText:@"暂无数据"];
             }
         } else {
-            [MBHUDHelper showWarningWithText:@"获取直播列表失败"];
+            [MBHUDHelper showWarningWithText:@"获取视频列表失败"];
         }
     } failure:^(NSError *error) {
         [self.tableView headerEndRefreshing];
@@ -175,9 +175,9 @@
             self.skipToVideoCourseBlock();
         }
     } else if ([model.status isEqualToString:@"will"]) {
-        [MBHUDHelper showWarningWithText:@"直播尚未开始"];
+        [MBHUDHelper showWarningWithText:@"视频尚未开始"];
     } else {
-        [MBHUDHelper showWarningWithText:@"正在直播"];
+        [MBHUDHelper showWarningWithText:@"正在视频"];
     }
     
 }

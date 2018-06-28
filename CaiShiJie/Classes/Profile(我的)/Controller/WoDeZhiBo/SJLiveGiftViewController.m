@@ -90,9 +90,9 @@
     [self loadGiftListData];
     // 获取用户金币数
     [self loadUserGoldCount];
-    // 接收禁止送礼通知(为历史直播状态时)
+    // 接收禁止送礼通知(为历史视频状态时)
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cannotSendGift) name:KNotificationTextFieldStopEdit object:nil];
-    // 接收允许送礼通知(为直播状态时)
+    // 接收允许送礼通知(为视频状态时)
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(canSendGift) name:KNotificationTextFieldAllowEdit object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:KNotificationLoginSuccess object:nil];
 }
@@ -215,7 +215,7 @@
             // 发送
             SJLog(@"发送");
             if (_isCanSendGift == NO) {
-                [MBHUDHelper showWarningWithText:@"直播已结束，不能送礼！"];
+                [MBHUDHelper showWarningWithText:@"视频已结束，不能送礼！"];
                 return;
             }
             if (![[SJUserInfo sharedUserInfo] isSucessLogined]) {
@@ -336,7 +336,7 @@
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"SJLiveGiftHeader" forIndexPath:indexPath];
         UILabel *label = [[UILabel alloc] init];
-        label.text = @"给直播的老师送上礼物吧！";
+        label.text = @"给视频的老师送上礼物吧！";
         label.textColor = [UIColor colorWithHexString:@"#444444" withAlpha:1];
         label.font = [UIFont systemFontOfSize:15];
         [header addSubview:label];

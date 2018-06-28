@@ -108,7 +108,7 @@
     _label2 = [[UILabel alloc] init];
     _label2.font = [UIFont systemFontOfSize:16];
     _label2.textColor = RGB(68, 68, 68);
-    _label2.text = @"进入直播室";
+    _label2.text = @"进入视频室";
     [_view2 addSubview:_label2];
     [_label2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(weakSelf.view2);

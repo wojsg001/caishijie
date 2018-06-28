@@ -397,13 +397,13 @@ static AppDelegate *_appDelegate = nil;
     }
     _unreadMessageCount = @"0"; // 归零
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    [[[tabBarController.viewControllers objectAtIndex:4] tabBarItem] setBadgeValue:_unreadMessageCount];
+    [[[tabBarController.viewControllers objectAtIndex:3] tabBarItem] setBadgeValue:_unreadMessageCount];
 }
 
 - (void)chatMessageUnreadCountChange:(NSNotification *)n {
     _unreadMessageCount = [NSString stringWithFormat:@"%@", n.object];
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    [[[tabBarController.viewControllers objectAtIndex:4] tabBarItem] setBadgeValue:_unreadMessageCount];
+    [[[tabBarController.viewControllers objectAtIndex:3] tabBarItem] setBadgeValue:_unreadMessageCount];
 }
 #pragma mark - 开始连接MQTT
 - (void)connectMQTT {
@@ -417,7 +417,7 @@ static AppDelegate *_appDelegate = nil;
     NSString *user = [NSString stringWithFormat:@"u%@", dic[@"user_id"]];
     NSString *pass = [NSString stringWithFormat:@"%@", dic[@"token"]];
     [sessionManager connectTo:MQTTHost
-                          port:1883
+                          port:80
                            tls:NO
                      keepalive:60
                          clean:YES
@@ -463,7 +463,7 @@ static AppDelegate *_appDelegate = nil;
         // 如何数据不为空
         _unreadMessageCount = [NSString stringWithFormat:@"%ld", [_unreadMessageCount integerValue] + 1];
         UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-        [[[tabBarController.viewControllers objectAtIndex:4] tabBarItem] setBadgeValue:_unreadMessageCount];
+        [[[tabBarController.viewControllers objectAtIndex:3] tabBarItem] setBadgeValue:_unreadMessageCount];
         [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationMQTTHaveNewData object:dictionary];
     }
 }
@@ -476,7 +476,7 @@ static AppDelegate *_appDelegate = nil;
         if ([respose[@"status"] integerValue] && [respose[@"data"] integerValue]) {
             _unreadMessageCount = [NSString stringWithFormat:@"%@", respose[@"data"]];
             UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-            [[[tabBarController.viewControllers objectAtIndex:4] tabBarItem] setBadgeValue:_unreadMessageCount];
+            [[[tabBarController.viewControllers objectAtIndex:3] tabBarItem] setBadgeValue:_unreadMessageCount];
         }
     } failure:^(NSError *error) {
         SJLog(@"%@", error);

@@ -104,7 +104,7 @@
     self.view.backgroundColor = RGB(245, 245, 248);
     isHideVideoToolBar = NO;
     
-    // 设置直播标题
+    // 设置视频标题
     [self setUpLive];
     // 设置菜单栏
     [self setUpMenuBar];
@@ -112,7 +112,7 @@
     [self setUpView];
 }
 
-#pragma mark - 设置直播主题
+#pragma mark - 设置视频主题
 - (void)setUpLive
 {
     [self.view addSubview:self.titleView];
@@ -375,7 +375,7 @@
 #pragma mark - SJMoreToolViewControllerDelegate 代理方法
 - (void)ClickWhichButton:(NSInteger)index
 {
-    // 选择历史/博文/内参直播时
+    // 选择历史/博文/内参视频时
     if (self.delegate && [self.delegate respondsToSelector:@selector(ClickWhichButton:)]) {
         [self.delegate ClickWhichButton:index];
     }

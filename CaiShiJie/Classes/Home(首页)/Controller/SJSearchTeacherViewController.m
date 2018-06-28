@@ -75,7 +75,7 @@
 {
     _searchBar = [[UISearchBar alloc] init];
     _searchBar.keyboardType = UIKeyboardAppearanceDefault;
-    _searchBar.placeholder = @"搜索投顾";
+    _searchBar.placeholder = @"搜索老师";
     _searchBar.delegate = self;
     _searchBar.barTintColor = RGB(245, 245, 248);
     _searchBar.layer.borderColor = RGB(245, 245, 248).CGColor;
@@ -113,7 +113,7 @@
 #pragma mark - 获取搜索结果
 - (void)loadSearchResultWithString:(NSString *)text
 {
-    // 如果登录过，先获取当前用户关注过的投顾
+    // 如果登录过，先获取当前用户关注过的老师
     if ([[SJUserInfo sharedUserInfo] isSucessLogined])
     {
         [self loadMineAttentionData];
@@ -138,7 +138,7 @@
     }];
 }
 
-#pragma mark - 加载用户关注过的投顾
+#pragma mark - 加载用户关注过的老师
 - (void)loadMineAttentionData
 {
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/user/focusteacher",HOST];

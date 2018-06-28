@@ -110,7 +110,7 @@
 
 @end
 /**
- 直播流控制器
+ 视频流控制器
  */
 @interface SJRTMPStreamViewController ()<PLMediaStreamingSessionDelegate, TLChatBoxViewControllerDelegate, UITableViewDelegate, UITableViewDataSource, SRWebSocketDelegate>
 {
@@ -406,7 +406,7 @@
 - (void)actionButtonPressed:(UIButton *)button {
     switch (button.tag) {
         case -1: {
-            // 关闭直播
+            // 关闭视频
             if (PLStreamStateConnected == _streamingSession.streamState) {
                 [self showAlert];
             } else {
@@ -454,7 +454,7 @@
 }
 
 - (void)showAlert {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否结束直播？" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否结束视频？" message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self stopSession];

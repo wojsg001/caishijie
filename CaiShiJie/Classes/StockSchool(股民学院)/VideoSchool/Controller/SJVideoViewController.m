@@ -331,7 +331,7 @@
                     if (weakSelf.player) {
                         [weakSelf.player pause];
                     }
-                    SJLog(@"直播室");
+                    SJLog(@"视频室");
 //                    SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
 //                    NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
 //                    myLiveVC.user_id = [d valueForKey:kUserid];

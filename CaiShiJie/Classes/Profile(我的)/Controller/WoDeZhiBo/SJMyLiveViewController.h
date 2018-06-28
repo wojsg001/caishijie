@@ -11,8 +11,8 @@
 @interface SJMyLiveViewController : SJBaseViewController
 
 @property (nonatomic, strong) NSString *user_id; // 登录用户id
-@property (nonatomic, strong) NSString *target_id; // 直播用户id
-@property (nonatomic, strong) NSString *live_id; // 直播id
-@property (nonatomic, assign) BOOL isOldLive; // 是否是历史直播
+@property (nonatomic, strong) NSString *target_id; // 视频用户id
+@property (nonatomic, strong) NSString *live_id; // 视频id
+@property (nonatomic, assign) BOOL isOldLive; // 是否是历史视频
 
 @end

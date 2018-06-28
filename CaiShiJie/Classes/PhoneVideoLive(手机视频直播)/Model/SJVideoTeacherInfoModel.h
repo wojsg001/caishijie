@@ -21,7 +21,7 @@
 @property (nonatomic, copy) NSString *nickname;
 @property (nonatomic, copy) NSString *opinion_count;
 /**
- 文字直播状态, 0-直播中, 1-未开始直播
+ 文字视频状态, 0-视频中, 1-未开始视频
  */
 @property (nonatomic, copy) NSString *status;
 @property (nonatomic, copy) NSString *title;
@@ -30,7 +30,7 @@
 @property (nonatomic, copy) NSString *video_id;
 @property (nonatomic, copy) NSString *video_img;
 /**
- 直播平台类型，1-PC, 2-iOS
+ 视频平台类型，1-PC, 2-iOS
  */
 @property (nonatomic, copy) NSString *video_type;
 @property (nonatomic, copy) NSString *video_url;
@@ -38,7 +38,7 @@
 @property (nonatomic, copy) NSString *user_live_img;
 @property (nonatomic, copy) NSString *user_live_title;
 /**
- 视频直播状态，1-开播，2-未开播
+ 视频视频状态，1-开播，2-未开播
  */
 @property (nonatomic, copy) NSString *live_status;
 

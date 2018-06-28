@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = RGB(245, 245, 248);
-    self.navigationItem.title = @"直播";
+    self.navigationItem.title = @"视频";
     [self setupSubViews];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"stock_del_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(deleteAllMessage)];
     self.navigationItem.rightBarButtonItem = rightButton;

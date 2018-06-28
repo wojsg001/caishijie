@@ -101,7 +101,7 @@
 }
 
 - (void)loadVideoTeacherData {
-    // 如果登录过，先获取当前用户关注过的投顾
+    // 如果登录过，先获取当前用户关注过的老师
     if ([[SJUserInfo sharedUserInfo] isSucessLogined]) {
         [self loadMineAttentionData];
     }
@@ -119,14 +119,14 @@
                 [MBHUDHelper showWarningWithText:@"暂无数据"];
             }
         } else {
-            [MBHUDHelper showWarningWithText:@"获取直播列表失败"];
+            [MBHUDHelper showWarningWithText:@"获取视频列表失败"];
         }
     } failure:^(NSError *error) {
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];
 }
 
-#pragma mark - 加载用户关注过的投顾
+#pragma mark - 加载用户关注过的老师
 - (void)loadMineAttentionData {
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/user/focusteacher",HOST];
     SJToken *token = [SJToken sharedToken];

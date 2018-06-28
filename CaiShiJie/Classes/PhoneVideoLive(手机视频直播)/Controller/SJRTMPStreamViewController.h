@@ -19,7 +19,7 @@
 @end
 
 /**
- 直播流控制器
+ 视频流控制器
  */
 @interface SJRTMPStreamViewController : SJBaseViewController
 

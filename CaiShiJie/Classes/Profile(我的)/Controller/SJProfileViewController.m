@@ -105,7 +105,7 @@
                                @{@"image":@"mine_icon2.png",@"title":@"我的消息"},
                                @{@"image":@"mine_icon3.png",@"title":@"我的问股"},
                                @{@"image":@"mine_icon4.png",@"title":@"我的博文"},
-                               @{@"image":@"mine_icon5.png",@"title":@"我的直播"}];
+                               @{@"image":@"mine_icon5.png",@"title":@"我的视频"}];
         _firstuserArray = @[/*@{@"image":@"mine_icon1.png",@"title":@"我的金币"},*/
                             @{@"image":@"mine_icon2.png",@"title":@"我的消息"},
                             @{@"image":@"mine_icon3.png",@"title":@"我的问股"},
@@ -120,7 +120,7 @@
         _firstTeacherArray = @[@{@"image":@"mine_icon2.png",@"title":@"我的消息"},
                                @{@"image":@"mine_icon3.png",@"title":@"我的问股"},
                                @{@"image":@"mine_icon4.png",@"title":@"我的博文"},
-                               @{@"image":@"mine_icon5.png",@"title":@"我的直播"}];
+                               @{@"image":@"mine_icon5.png",@"title":@"我的视频"}];
         _firstuserArray = @[@{@"image":@"mine_icon2.png",@"title":@"我的消息"},
                             @{@"image":@"mine_icon3.png",@"title":@"我的问股"},
                             @{@"image":@"mine_icon4.png",@"title":@"我的博文"}];
@@ -556,7 +556,7 @@
             }
         }
             break;
-        case 12:// 开启直播、我的投顾
+        case 12:// 开启视频、我的老师
         {
             if ([self.userInfoDict[@"level"] isEqualToString:@"10"]) {
                 // 老师身份
@@ -566,7 +566,7 @@
             } else {
                 // 普通身份
                 SJMyTeacherViewController *myTeacherVC = [[SJMyTeacherViewController alloc] init];
-                myTeacherVC.title = @"我的投顾";
+                myTeacherVC.title = @"我的老师";
                 [self.navigationController pushViewController:myTeacherVC animated:YES];
             }
         }

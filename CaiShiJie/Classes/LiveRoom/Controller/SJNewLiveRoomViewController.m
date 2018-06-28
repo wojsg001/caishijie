@@ -45,7 +45,7 @@
 @property (nonatomic, strong) SJLiveGiftViewController *liveGiftVC;
 @property (nonatomic, strong) SJNewLiveVideoListViewController *videoListVC;
 @property (nonatomic, strong) SJNewLiveVideoTeacherViewController *videoTeacherVC;
-@property (nonatomic, strong) NSDictionary *liveUserDict;// 直播用户者的信息
+@property (nonatomic, strong) NSDictionary *liveUserDict;// 视频用户者的信息
 @property (nonatomic, copy  ) NSString *snMax;// 最大sn
 @property (nonatomic, strong) NSString *replyid;// 回复item_id
 @property (nonatomic, strong) PLPlayer *player;
@@ -144,7 +144,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     [UIApplication sharedApplication].idleTimerDisabled = YES;
-    // 获取直播主题
+    // 获取视频主题
     [MBProgressHUD showMessage:@"加载中..." toView:self.view];
     [self getLiveTitle];
 }
@@ -166,7 +166,7 @@
     [t invalidate];
 }
 
-#pragma mark - 获取直播主题
+#pragma mark - 获取视频主题
 - (void)getLiveTitle {
     SJToken *instance = [SJToken sharedToken];
     [[SJNetManager sharedNetManager] requestLiveTitleWithToken:instance.token andUserid:instance.userid andTime:instance.time andTargetid:self.target_id andLiveid:@"" withSuccessBlock:^(NSDictionary *dict) {
@@ -176,7 +176,7 @@
             SJLog(@"+++%@",self.liveUserDict);
             self.videoListVC.total_count = self.liveUserDict[@"total_count"];
         
-            // 判断是否为今日直播
+            // 判断是否为今日视频
             [self isOrNoTodayLive];
             // 获取观点和互动
             [self getViewAndInteraction];
@@ -197,7 +197,7 @@
     }];
 }
 
-#pragma mark - 判断是否为今日直播
+#pragma mark - 判断是否为今日视频
 - (void)isOrNoTodayLive
 {
     NSDate *date = [NSDate date];
@@ -471,7 +471,7 @@
     
     [self setUpButtonWithTitle:@"观点" tag:101 target:self action:@selector(btnClick:)];
     [self setUpButtonWithTitle:@"互动" tag:102 target:self action:@selector(btnClick:)];
-    [self setUpButtonWithTitle:@"直播" tag:103 target:self action:@selector(btnClick:)];
+    [self setUpButtonWithTitle:@"视频" tag:103 target:self action:@selector(btnClick:)];
     //[self setUpButtonWithTitle:@"送礼" tag:104 target:self action:@selector(btnClick:)];
     [self setUpButtonWithTitle:@"老师" tag:105 target:self action:@selector(btnClick:)];
     
@@ -561,14 +561,14 @@
     }];
 }
 
-#pragma mark - 获取直播播放地址
+#pragma mark - 获取视频播放地址
 - (void)loadLiveVideoPath {
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/live/video?user_id=%@", HOST, self.target_id];
     [SJhttptool GET:urlStr paramers:nil success:^(id respose) {
         if ([respose[@"status"] isEqualToString:@"1"] && respose[@"data"] != nil) {
             self.livePathDic = respose[@"data"];
             //SJLog(@"%@", self.livePathDic[@"url"]);
-            // 根据播放地址创建直播流播放器
+            // 根据播放地址创建视频流播放器
             [self setupPLPlayerWithUrlString:self.livePathDic[@"url"]];
         } else {
             [MBProgressHUD showError:@"获取播放地址失败" toView:self.playerViewBackgroundView];
@@ -637,7 +637,7 @@
 
 - (void)player:(PLPlayer *)player stoppedWithError:(NSError *)error {
     SJLog(@"回调错误状态：---%@---", error);
-    [MBProgressHUD showError:@"视频直播未开始" toView:self.playerViewBackgroundView];
+    [MBProgressHUD showError:@"视频视频未开始" toView:self.playerViewBackgroundView];
     [self.liveVideoAboveView hideProgressHUD];
     [self.liveVideoAboveView removeSingleGesture];
     [self.liveVideoAboveView setPlayButtonAndFullButtonHide:YES];
@@ -657,7 +657,7 @@
         });
     } else {
         self.reconnectCount = 0; // 重新初始化
-        [MBProgressHUD showError:@"直播未开始" toView:self.playerViewBackgroundView];
+        [MBProgressHUD showError:@"视频未开始" toView:self.playerViewBackgroundView];
         [self.liveVideoAboveView hideProgressHUD];
         [self.liveVideoAboveView removeSingleGesture];
         [self.liveVideoAboveView setPlayButtonAndFullButtonHide:YES];

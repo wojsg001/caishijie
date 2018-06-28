@@ -39,10 +39,10 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) TLChatBoxViewController *chatBoxVC;
 @property (nonatomic, strong) NSMutableArray *interactArr;
-@property (nonatomic, strong) NSDictionary *liveUserDict;// 直播用户信息
+@property (nonatomic, strong) NSDictionary *liveUserDict;// 视频用户信息
 @property (nonatomic, copy  ) NSString *snMin;// 最小sn
 @property (nonatomic, strong) NSString *replyid;// 回复item_id
-@property (nonatomic, strong) NSString *noTodayLive;// 不是今日直播
+@property (nonatomic, strong) NSString *noTodayLive;// 不是今日视频
 @property (nonatomic, strong) NSArray *computerFaceArray;
 @property (nonatomic, strong) UIView *showMoreMessageView;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGR;
@@ -476,7 +476,7 @@
     self.replyid = @"";
     
     if ([self.noTodayLive isEqual:@"1"]) {
-        [self.chatBoxVC setUpChatBoxTextViewPlaceholder:@"直播已结束！"];
+        [self.chatBoxVC setUpChatBoxTextViewPlaceholder:@"视频已结束！"];
     } else {
         [self.chatBoxVC setUpChatBoxTextViewPlaceholder:@"开始互动吧..."];
     }

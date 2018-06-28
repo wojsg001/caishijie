@@ -82,7 +82,7 @@
 #pragma mark - 加载人气排行数据
 - (void)loadPeopleRankData
 {
-    // 如果登录过，先获取当前用户关注过的投顾
+    // 如果登录过，先获取当前用户关注过的老师
     if ([[SJUserInfo sharedUserInfo] isSucessLogined])
     {
         [self loadMineAttentionData];
@@ -152,7 +152,7 @@
     }];
 }
 
-#pragma mark - 加载用户关注过的投顾
+#pragma mark - 加载用户关注过的老师
 - (void)loadMineAttentionData
 {
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/user/focusteacher",HOST];

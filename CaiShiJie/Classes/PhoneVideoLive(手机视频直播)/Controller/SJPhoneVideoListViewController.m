@@ -77,7 +77,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"直播间";
+    self.navigationItem.title = @"视频间";
     // 获取列表数据
     [MBProgressHUD showMessage:@"加载中..." toView:self.view];
     [self loadListData];

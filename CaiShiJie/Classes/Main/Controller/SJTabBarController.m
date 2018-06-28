@@ -101,10 +101,10 @@
     SJpageViewController *attention = [[SJpageViewController alloc] init];
     [self setUpOneChildViewController:attention image:[UIImage imageNamed:@"table_bar_icon_index_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_index_h"] title:@"自选股"];
 
-    //直播
-    SJPhoneVideoListViewController *videoListVC = [[SJPhoneVideoListViewController alloc] init];
-    [self setUpOneChildViewController:videoListVC image:[UIImage imageNamed:@"nav_icon_n"] selectedImage:[UIImage imageWithOriginalName:@"nav_icon_h"] title:@"直播"];
-    _videoListVC = videoListVC;
+//    //视频
+//    SJPhoneVideoListViewController *videoListVC = [[SJPhoneVideoListViewController alloc] init];
+//    [self setUpOneChildViewController:videoListVC image:[UIImage imageNamed:@"nav_icon_n"] selectedImage:[UIImage imageWithOriginalName:@"nav_icon_h"] title:@"视频"];
+//    _videoListVC = videoListVC;
 
     //股民学院
     SJSchoolViewcontroller *share = [[SJSchoolViewcontroller alloc] init];
@@ -130,9 +130,9 @@
 
 #pragma mark - SJTabBarDelegate
 - (void)tabBar:(SJTabBar *)tabBar didClickButton:(NSInteger)index {
-    if (index == 2 && self.selectedIndex == index) {
-        [_videoListVC refresh];
-    }
+//    if (index == 2 && self.selectedIndex == index) {
+//        [_videoListVC refresh];
+//    }
     self.selectedIndex = index;
 }
 

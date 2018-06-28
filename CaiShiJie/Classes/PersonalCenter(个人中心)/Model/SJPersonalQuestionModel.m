@@ -13,9 +13,9 @@
 - (void)setLevel:(NSString *)level {
     _level = level;
     if ([_level isEqualToString:@"1"]) {
-        self.honnor = @"投资达人";
+        self.honnor = @"老师";
     } else {
-        self.honnor = @"投资顾问";
+        self.honnor = @"老师";
     }
 }
 

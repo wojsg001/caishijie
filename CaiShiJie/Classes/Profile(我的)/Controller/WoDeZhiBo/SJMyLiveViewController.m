@@ -26,7 +26,7 @@
 }
 
 @property (nonatomic, strong) SJTitleView *titleView;
-@property (nonatomic, strong) NSDictionary *liveUserDict;// 直播用户者的信息
+@property (nonatomic, strong) NSDictionary *liveUserDict;// 视频用户者的信息
 @property (nonatomic, assign) NSInteger snMax;// 最大sn
 @property (nonatomic, strong) NSString *replyid;// 回复item_id
 @property (nonatomic, strong) SJLiveManageViewController *liveManagerVC;
@@ -83,7 +83,7 @@
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     // 显示导航栏
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    // 获取直播主题
+    // 获取视频主题
     [MBProgressHUD showMessage:@"加载中..." toView:self.view];
     [self getLiveTitle];
 }
@@ -93,7 +93,7 @@
     [UIApplication sharedApplication].idleTimerDisabled = NO;
 }
 
-#pragma mark - 判断是否为今日直播
+#pragma mark - 判断是否为今日视频
 - (void)isOrNoTodayLive
 {
     NSDate *date = [NSDate date];
@@ -102,11 +102,11 @@
     NSString *dateStr = [format stringFromDate:date];
     if (![self.liveUserDict[@"live_id"] isEqual:dateStr]) {
         //SJLog(@"%i",[dateStr integerValue]);
-        self.titleView.stateLabel.text = @"直播已结束";
+        self.titleView.stateLabel.text = @"视频已结束";
         // 发出通知禁止textfield编辑
         [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationTextFieldStopEdit object:@"1"];
     } else {
-        self.titleView.stateLabel.text = @"直播中";
+        self.titleView.stateLabel.text = @"视频中";
         // 开始连接服务器
         [self reconnect];
         // 发出通知允许textfield编辑
@@ -114,7 +114,7 @@
     }
 }
 
-#pragma mark - 获取直播主题
+#pragma mark - 获取视频主题
 - (void)getLiveTitle
 {
     SJToken *instance = [SJToken sharedToken];
@@ -127,7 +127,7 @@
             
             // 给界面控件赋值
             [self setUpChildView];
-            // 判断是否为今日直播
+            // 判断是否为今日视频
             [self isOrNoTodayLive];
             // 获取观点和互动
             [self getViewAndInteraction];
@@ -337,7 +337,7 @@
 - (void)ClickWhichButton:(NSInteger)index
 {
     if (self.isOldLive) {
-        // 如果是从历史直播页进入本界面时，提示不允许交互
+        // 如果是从历史视频页进入本界面时，提示不允许交互
         [MBHUDHelper showWarningWithText:@"当前页面不允许交互！"];
         return;
     }
@@ -363,9 +363,9 @@
         }
             break;
         case 103: {
-            // 历史直播
+            // 历史视频
             SJOldLiveViewController *oldLiveVC = [[SJOldLiveViewController alloc] init];
-            oldLiveVC.title = @"历史直播";
+            oldLiveVC.title = @"历史视频";
             oldLiveVC.userid = self.target_id;
             [self.navigationController pushViewController:oldLiveVC animated:YES];
         }

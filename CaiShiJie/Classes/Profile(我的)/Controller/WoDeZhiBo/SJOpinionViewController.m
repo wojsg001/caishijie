@@ -44,7 +44,7 @@
 @property (nonatomic, strong) TLChatBoxViewController *chatBoxVC;
 @property (nonatomic, strong) NSArray *computerFaceArray;
 @property (nonatomic, strong) NSMutableArray *opinionArr;
-@property (nonatomic, strong) NSDictionary *liveUserDict;// 直播用户信息
+@property (nonatomic, strong) NSDictionary *liveUserDict;// 视频用户信息
 @property (nonatomic, copy) NSString *snMin;// 最小sn
 @property (nonatomic, strong) UIView *showMoreMessageView;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGR;
@@ -148,9 +148,9 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addOpinion:) name:KNotificationAddOpinion object:nil];
     // 接收取消第一响应通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelFocus) name:KNotificationResignFirstResponder object:nil];
-    // 接收禁止textfield编辑的通知(为历史直播状态时)
+    // 接收禁止textfield编辑的通知(为历史视频状态时)
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(issueTextFieldStopEdit) name:KNotificationTextFieldStopEdit object:nil];
-    // 接收允许textfield编辑的通知(为直播状态时)
+    // 接收允许textfield编辑的通知(为视频状态时)
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(issueTextFieldAllowEdit) name:KNotificationTextFieldAllowEdit object:nil];
     // 接收添加轮询观点的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addLunxunOpinion:) name:KNotificationAddLunXunOpinion object:nil];
@@ -403,7 +403,7 @@
     
     self.liveUserDict = dict[@"liveInfo"];
     //SJLog(@"+++%@",self.liveUserDict);
-    // 判断当前用户是普通用户、代理还是投顾
+    // 判断当前用户是普通用户、代理还是老师
     if ([self.liveUserDict[@"identity"] isEqual:@"0"]) {
         self.tableViewBottomMargin.constant = 0;
         self.chatBoxVC.view.hidden = YES;

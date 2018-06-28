@@ -43,7 +43,7 @@
         _statusLabel.textColor = [UIColor colorWithHexString:@"#666666" withAlpha:1];
     } else {
         _statusIcon.image = [UIImage imageNamed:@"new_todaylive_icon4"];
-        _statusLabel.text = @"正在直播";
+        _statusLabel.text = @"正在视频";
         _statusLabel.textColor = [UIColor whiteColor];
     }
 }

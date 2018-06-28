@@ -47,11 +47,11 @@
     
     if ([_dict[@"level"] isEqualToString:@"10"]) {
         // 如果是老师身份
-        [_secondButton setTitle:@"开启直播" forState:UIControlStateNormal];
+        [_secondButton setTitle:@"开启视频" forState:UIControlStateNormal];
         [_secondButton setImage:[UIImage imageNamed:@"mine_icon_r"] forState:UIControlStateNormal];
     } else {
         // 普通身份
-        [_secondButton setTitle:@"我的投顾" forState:UIControlStateNormal];
+        [_secondButton setTitle:@"我的老师" forState:UIControlStateNormal];
         [_secondButton setImage:[UIImage imageNamed:@"mine_icon_r2"] forState:UIControlStateNormal];
     }
     

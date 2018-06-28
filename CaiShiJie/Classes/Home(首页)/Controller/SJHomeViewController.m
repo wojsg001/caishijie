@@ -49,7 +49,7 @@
     SJRankingsViewController *rankVC = [[SJRankingsViewController alloc] init];
     SJHomeQuestionViewController *questionVC = [[SJHomeQuestionViewController alloc] init];
     
-    NSArray *titleArr = @[@"推荐",@"直播",@"找投顾",@"问答",@"排行榜"];
+    NSArray *titleArr = @[@"推荐",@"视频",@"找老师",@"问答",@"排行榜"];
     _slideVC.titlesArr = titleArr;
     
     [_slideVC addChildViewController:recommendLiveVC title:titleArr[0]];

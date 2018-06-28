@@ -98,14 +98,14 @@
         if ([respose[@"states"] isEqualToString:@"1"]) {
             NSArray *tmpArray = [SJOldModel objectArrayWithKeyValuesArray:respose[@"data"][@"history"]];
             if ([respose[@"data"][@"isOpenLive"] isEqual:@(0)]) {
-                // 已开启直播
+                // 已开启视频
                 self.isOpenLive = YES;
                 NSDictionary *tmpDic = respose[@"data"][@"live"];
                 if (NSDictionaryMatchAndCount(tmpDic)) {
                     self.tableHeadView.infoDic = tmpDic;
                 }
             } else {
-                // 尚未开启直播
+                // 尚未开启视频
                 self.isOpenLive = NO;
             }
             if (tmpArray.count) {

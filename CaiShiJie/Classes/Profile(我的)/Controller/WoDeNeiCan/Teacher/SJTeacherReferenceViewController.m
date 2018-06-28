@@ -87,7 +87,7 @@
     [self.navigationController pushViewController:createNewReferenceVC animated:YES];
 }
 
-#pragma mark - 加载投顾内参数据
+#pragma mark - 加载老师内参数据
 - (void)loadNewTeacherListData
 {
     i = 1;
@@ -128,7 +128,7 @@
     }];
 }
 
-#pragma mark - 加载更多投顾内参数据
+#pragma mark - 加载更多老师内参数据
 - (void)loadMoreTeacherListData
 {
     i = i + 1;

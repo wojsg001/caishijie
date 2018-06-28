@@ -25,7 +25,7 @@
         NSNumber *level = dictionaray[@"level"];
         NSString *levels = [NSString stringWithFormat:@"%@",level];
         if ([levels isEqualToString:@"10"]) {
-            self.level= @"投资顾问";
+            self.level= @"老师";
         } else {
             self.level = @"投资";
         }

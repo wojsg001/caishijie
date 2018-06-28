@@ -81,10 +81,10 @@
     
     self.view.backgroundColor = RGB(245, 245, 248);
     self.isNetwork = YES;
-    self.sectionArray = @[@{@"icon":@"index_account_icon1",@"title":@"精英投顾"},@{@"icon":@"index_account_icon2",@"title":@"入驻投顾"}];
+    self.sectionArray = @[@{@"icon":@"index_account_icon1",@"title":@"精英老师"},@{@"icon":@"index_account_icon2",@"title":@"入驻老师"}];
     // 设置表格
     [self setUpTableView];
-    // 加载精英投顾
+    // 加载精英老师
     [self loadMasterTeacherData];
     // 加载数据
     [MBProgressHUD showMessage:@"加载中..." toView:self.view];
@@ -134,9 +134,9 @@
     }];
 }
 
-#pragma mark - 加载入驻投顾数据
+#pragma mark - 加载入驻老师数据
 - (void)loadInteTeacherData {
-    // 如果登录过，先获取当前用户关注过的投顾
+    // 如果登录过，先获取当前用户关注过的老师
     if ([[SJUserInfo sharedUserInfo] isSucessLogined]) {
         [self loadMineAttentionData];
     }
@@ -173,7 +173,7 @@
     }];
 }
 
-#pragma mark - 加载更多入驻投顾数据
+#pragma mark - 加载更多入驻老师数据
 - (void)loadMoreInteTeacherData {
     i = i + 1;
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/recommend/fire",HOST];
@@ -200,7 +200,7 @@
         [MBHUDHelper showWarningWithText:@"连接错误！"];
     }];
 }
-#pragma mark - 加载用户关注过的投顾
+#pragma mark - 加载用户关注过的老师
 - (void)loadMineAttentionData {
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/user/focusteacher",HOST];
     SJToken *token = [SJToken sharedToken];
@@ -403,7 +403,7 @@
 #pragma mark - UISearchBarDelegate
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
     SJSearchTeacherViewController *searchTeacherVC = [[SJSearchTeacherViewController alloc] init];
-    searchTeacherVC.navigationItem.title = @"搜索投顾";
+    searchTeacherVC.navigationItem.title = @"搜索老师";
     [self.navigationController pushViewController:searchTeacherVC animated:YES];
     
     return NO;
