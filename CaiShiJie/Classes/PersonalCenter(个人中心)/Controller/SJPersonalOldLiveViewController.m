@@ -182,9 +182,9 @@
     self.tableHeadView.liveButtonClickBlock = ^() {
         if (weakSelf.isOpenLive) {
             if ([weakSelf.target_id isEqualToString:@"10412"]) {
-                SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
-                liveRoomVC.target_id = weakSelf.target_id;
-                [weakSelf.navigationController pushViewController:liveRoomVC animated:YES];
+//                SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
+//                liveRoomVC.target_id = weakSelf.target_id;
+//                [weakSelf.navigationController pushViewController:liveRoomVC animated:YES];
             } else {
 //                SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
 //                myLiveVC.user_id = [[NSUserDefaults standardUserDefaults] valueForKey:kUserid];

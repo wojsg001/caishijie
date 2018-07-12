@@ -281,9 +281,9 @@
 
     SJCustom *peopleRank = self.dataArray[indexPath.row];
     if ([peopleRank.user_id isEqualToString:@"10412"]) {
-        SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
-        liveRoomVC.target_id = peopleRank.user_id;
-        [self.navigationController pushViewController:liveRoomVC animated:YES];
+//        SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
+//        liveRoomVC.target_id = peopleRank.user_id;
+//        [self.navigationController pushViewController:liveRoomVC animated:YES];
     } else {
 //        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
 //        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];

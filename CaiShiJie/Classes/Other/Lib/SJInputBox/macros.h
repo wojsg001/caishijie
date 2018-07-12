@@ -14,9 +14,9 @@
 #pragma mark - Frame
 #define WIDTH_SCREEN        [UIScreen mainScreen].bounds.size.width
 #define HEIGHT_SCREEN       [UIScreen mainScreen].bounds.size.height
-#define HEIGHT_STATUSBAR	20
-#define HEIGHT_TABBAR       49
-#define HEIGHT_NAVBAR       44
+#define kStatusBarHeight	20
+#define kTabbarHeight       49
+#define kStatusBarHeight       44
 #define HEIGHT_CHATBOXVIEW  180
 
 #pragma mark - Color

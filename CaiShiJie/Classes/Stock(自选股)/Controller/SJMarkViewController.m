@@ -105,7 +105,7 @@
         SJLog(@"JSON: %@", obj);
         NSArray *arr1 = [obj componentsSeparatedByString:@"="];
         NSString *str1 = [arr1 objectAtIndex:1];
-        self.arr6 =[str1 componentsSeparatedByString:@","];
+        self.arr6 = [str1 componentsSeparatedByString:@","];
         
         [self.collectionview reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

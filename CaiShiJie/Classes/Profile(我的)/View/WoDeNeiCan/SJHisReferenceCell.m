@@ -34,12 +34,17 @@
 {
     _hisReference = hisReference;
     
-    [_reference_imgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_hisReference.reference_img]] placeholderImage:[UIImage imageNamed:@"neican_photo"]];
+//    [_reference_imgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_hisReference.reference_img]] placeholderImage:[UIImage imageNamed:@"neican_photo"]];
+    
+    [_reference_imgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_hisReference.reference_img]] placeholderImage:[UIImage imageNamed:@"AppIcon"]];
+    
     _titleLabel.text = _hisReference.title;
     _serviceDateLabel.text = [NSString stringWithFormat:@"服务期：%@至%@",_hisReference.start_at,_hisReference.end_at];
+    [_serviceDateLabel setHidden:YES];
     _summaryLabel.text = _hisReference.summary;
     _priceLabel.text = [NSString stringWithFormat:@"¥%@",_hisReference.price];
     _pay_countLabel.text = [NSString stringWithFormat:@"%@人订阅",_hisReference.pay_count];
+    [_pay_countLabel setHidden:YES];
     
     
     if ([_hisReference.status isEqualToString:@"0"]) {
@@ -56,6 +61,7 @@
         [_statusBtn setImage:[UIImage imageNamed:@"neican_icon1"] forState:UIControlStateNormal];
         [_payBtn setImage:[UIImage imageNamed:@"neican_btn_end"] forState:UIControlStateNormal];
     }
+    [_statusBtn setHidden:YES];
 }
 
 #pragma mark - 点击了购买按钮

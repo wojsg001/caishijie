@@ -23,28 +23,22 @@ PODS:
     - SDWebImage
     - SVProgressHUD
     - YLGIFImage
-  - MQTTClient (0.8.5):
-    - MQTTClient/Core (= 0.8.5)
-  - MQTTClient/Core (0.8.5):
+  - MQTTClient (0.14.0):
+    - MQTTClient/Core (= 0.14.0)
+  - MQTTClient/Core (0.14.0):
     - MQTTClient/Manager
     - MQTTClient/Min
-  - MQTTClient/Manager (0.8.5):
+  - MQTTClient/Manager (0.14.0):
     - MQTTClient/Min
-  - MQTTClient/Min (0.8.5)
-  - MQTTClient/Websocket (0.8.5):
+  - MQTTClient/Min (0.14.0)
+  - MQTTClient/Websocket (0.14.0):
     - MQTTClient/Min
     - SocketRocket
-  - PLMediaStreamingKit (2.3.1):
-    - PLMediaStreamingKit/iphoneos (= 2.3.1)
-  - PLMediaStreamingKit/iphoneos (2.3.1)
-  - PLPlayerKit (3.3.1):
-    - PLPlayerKit/iphoneos (= 3.3.1)
-  - PLPlayerKit/iphoneos (3.3.1)
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
+  - SDWebImage (4.4.1):
+    - SDWebImage/Core (= 4.4.1)
+  - SDWebImage/Core (4.4.1)
   - SocketRocket (0.5.1)
-  - SVProgressHUD (2.0.3)
+  - SVProgressHUD (2.2.5)
   - TSMessagesNW (0.9.15):
     - HexColors (~> 2.3.0)
   - TUSafariActivity (1.0.4)
@@ -53,11 +47,9 @@ PODS:
 DEPENDENCIES:
   - BlocksKit (~> 2.2.5)
   - KINWebBrowser (~> 1.3.2)
-  - MJPhotoBrowser (~> 1.0.2)
+  - MJPhotoBrowser
   - MQTTClient
   - MQTTClient/Websocket
-  - PLMediaStreamingKit (~> 2.3.1)
-  - PLPlayerKit (~> 3.3.1)
   - SocketRocket
   - TSMessagesNW (~> 0.9.15)
 
@@ -69,8 +61,6 @@ SPEC REPOS:
     - KINWebBrowser
     - MJPhotoBrowser
     - MQTTClient
-    - PLMediaStreamingKit
-    - PLPlayerKit
     - SDWebImage
     - SocketRocket
     - SVProgressHUD
@@ -84,16 +74,14 @@ SPEC CHECKSUMS:
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
   KINWebBrowser: 27aa857a2aa39063ed102cca781d130b679d205f
   MJPhotoBrowser: b98b04d0e3b6a999feb44df68adec413af446809
-  MQTTClient: fca939bcd74aa70af2d8ee35f3e44f258f4e9888
-  PLMediaStreamingKit: 0ce240ed28fe73b2132ce0810190728799700da7
-  PLPlayerKit: 63a9c6a7661f497591c84121e854e8e6ac003256
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  MQTTClient: eea2eaaa6ddef852a1019a4dda091e22ad928b58
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TSMessagesNW: a1e7b4b77d54aee4a0492adda948746252ef1f2d
   TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
   YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
 
-PODFILE CHECKSUM: c42968bb3939e4277059dc2669541fce6b3d8ca7
+PODFILE CHECKSUM: ab1a98cd2e61e9c324fc47013e022349d359e98f
 
 COCOAPODS: 1.5.3

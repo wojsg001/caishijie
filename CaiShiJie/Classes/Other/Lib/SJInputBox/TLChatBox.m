@@ -12,7 +12,7 @@
 #import "UIImage+TL.h"
 
 #define     CHATBOX_BUTTON_WIDTH        37
-#define     HEIGHT_TEXTVIEW             HEIGHT_TABBAR * 0.74
+#define     HEIGHT_TEXTVIEW             kTabbarHeight * 0.74
 #define     MAX_TEXTVIEW_HEIGHT         104
 
 
@@ -74,7 +74,7 @@
     [super setFrame:frame];
     [self.topLine setFrameWidth:self.frameWidth];
     
-    float y = self.frameHeight - self.moreButton.frameHeight - (HEIGHT_TABBAR - CHATBOX_BUTTON_WIDTH) / 2;
+    float y = self.frameHeight - self.moreButton.frameHeight - (kTabbarHeight - CHATBOX_BUTTON_WIDTH) / 2;
     if (self.moreButton.originY != y) {
         [UIView animateWithDuration:0.1 animations:^{
             [self.moreButton setOriginY:y];
@@ -150,7 +150,7 @@
     CGFloat height = [textView sizeThatFits:CGSizeMake(self.textView.frameWidth, MAXFLOAT)].height;
     height = height > HEIGHT_TEXTVIEW ? height : HEIGHT_TEXTVIEW;
     height = height < MAX_TEXTVIEW_HEIGHT ? height : textView.frameHeight;
-    _curHeight = height + HEIGHT_TABBAR - HEIGHT_TEXTVIEW;
+    _curHeight = height + kTabbarHeight - HEIGHT_TEXTVIEW;
     
     if (_curHeight != self.frameHeight) {
         [UIView animateWithDuration:0.05 animations:^{
@@ -273,7 +273,7 @@
 - (UIButton *) sendButton
 {
     if (_sendButton == nil) {
-        _sendButton = [[UIButton alloc] initWithFrame:CGRectMake(WIDTH_SCREEN - 60, (HEIGHT_TABBAR - 35) / 2, 50, 35)];
+        _sendButton = [[UIButton alloc] initWithFrame:CGRectMake(WIDTH_SCREEN - 60, (kTabbarHeight - 35) / 2, 50, 35)];
         [_sendButton setTitle:@"发送" forState:UIControlStateNormal];
         [_sendButton setBackgroundImage:[UIImage imageNamed:@"btn_broadcast_n"] forState:UIControlStateNormal];
         [_sendButton addTarget:self action:@selector(sendButtonDown:) forControlEvents:UIControlEventTouchUpInside];
@@ -314,7 +314,7 @@
 - (UIButton *) faceButton
 {
     if (_faceButton == nil) {
-        _faceButton = [[UIButton alloc] initWithFrame:CGRectMake(self.moreButton.originX + CHATBOX_BUTTON_WIDTH, (HEIGHT_TABBAR - CHATBOX_BUTTON_WIDTH) / 2, CHATBOX_BUTTON_WIDTH, CHATBOX_BUTTON_WIDTH)];
+        _faceButton = [[UIButton alloc] initWithFrame:CGRectMake(self.moreButton.originX + CHATBOX_BUTTON_WIDTH, (kTabbarHeight - CHATBOX_BUTTON_WIDTH) / 2, CHATBOX_BUTTON_WIDTH, CHATBOX_BUTTON_WIDTH)];
         [_faceButton setImage:[UIImage imageNamed:@"ToolViewEmotion"] forState:UIControlStateNormal];
         [_faceButton setImage:[UIImage imageNamed:@"ToolViewEmotionHL"] forState:UIControlStateHighlighted];
         [_faceButton addTarget:self action:@selector(faceButtonDown:) forControlEvents:UIControlEventTouchUpInside];
@@ -325,7 +325,7 @@
 - (UIButton *) moreButton
 {
     if (_moreButton == nil) {
-        _moreButton = [[UIButton alloc] initWithFrame:CGRectMake(0, (HEIGHT_TABBAR - CHATBOX_BUTTON_WIDTH) / 2, CHATBOX_BUTTON_WIDTH, CHATBOX_BUTTON_WIDTH)];
+        _moreButton = [[UIButton alloc] initWithFrame:CGRectMake(0, (kTabbarHeight - CHATBOX_BUTTON_WIDTH) / 2, CHATBOX_BUTTON_WIDTH, CHATBOX_BUTTON_WIDTH)];
         [_moreButton setImage:[UIImage imageNamed:@"TypeSelectorBtn_Black"] forState:UIControlStateNormal];
         [_moreButton setImage:[UIImage imageNamed:@"TypeSelectorBtnHL_Black"] forState:UIControlStateHighlighted];
         [_moreButton addTarget:self action:@selector(moreButtonDown:) forControlEvents:UIControlEventTouchUpInside];
@@ -336,15 +336,15 @@
 - (void) setMoreButtonHidden:(BOOL)isHidden {
     if (isHidden) {
         self.moreButton.hidden = isHidden;
-        self.faceButton.frame = CGRectMake(0, (HEIGHT_TABBAR - CHATBOX_BUTTON_WIDTH) / 2, CHATBOX_BUTTON_WIDTH, CHATBOX_BUTTON_WIDTH);
+        self.faceButton.frame = CGRectMake(0, (kTabbarHeight - CHATBOX_BUTTON_WIDTH) / 2, CHATBOX_BUTTON_WIDTH, CHATBOX_BUTTON_WIDTH);
         self.textView.frame = CGRectMake(self.faceButton.originX + self.faceButton.frameWidth + 4, self.frameHeight * 0.13, self.sendButton.originX - self.faceButton.originX - self.faceButton.frameWidth - 8, HEIGHT_TEXTVIEW);
-        self.sendButton.frame = CGRectMake(WIDTH_SCREEN - 60, (HEIGHT_TABBAR - 35) / 2, 50, 35);
+        self.sendButton.frame = CGRectMake(WIDTH_SCREEN - 60, (kTabbarHeight - 35) / 2, 50, 35);
     }
 }
 
 - (void)updateSubviewsFrame {
-    self.faceButton.frame = CGRectMake(0, (HEIGHT_TABBAR - CHATBOX_BUTTON_WIDTH) / 2, CHATBOX_BUTTON_WIDTH, CHATBOX_BUTTON_WIDTH);
-    self.sendButton.frame = CGRectMake(HEIGHT_SCREEN - 60, (HEIGHT_TABBAR - 35) / 2, 50, 35);
+    self.faceButton.frame = CGRectMake(0, (kTabbarHeight - CHATBOX_BUTTON_WIDTH) / 2, CHATBOX_BUTTON_WIDTH, CHATBOX_BUTTON_WIDTH);
+    self.sendButton.frame = CGRectMake(HEIGHT_SCREEN - 60, (kTabbarHeight - 35) / 2, 50, 35);
     self.textView.frame = CGRectMake(self.faceButton.originX + self.faceButton.frameWidth + 4, self.frameHeight * 0.13, self.sendButton.originX - self.faceButton.originX - self.faceButton.frameWidth - 8, HEIGHT_TEXTVIEW);
 }
 

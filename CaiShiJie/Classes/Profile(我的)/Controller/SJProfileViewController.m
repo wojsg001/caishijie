@@ -133,7 +133,7 @@
 }
 
 - (void)setUpTableView {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, SJScreenH - HEIGHT_TABBAR) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, SJScreenH - kTabbarHeight) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.showsVerticalScrollIndicator = NO;
@@ -320,9 +320,9 @@
             case 3:
             {
                 if ([[SJUserDefaults valueForKey:kUserid] isEqualToString:@"10412"]) {
-                    SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
-                    liveRoomVC.target_id = [SJUserDefaults valueForKey:kUserid];
-                    [self.navigationController pushViewController:liveRoomVC animated:YES];
+//                    SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
+//                    liveRoomVC.target_id = [SJUserDefaults valueForKey:kUserid];
+//                    [self.navigationController pushViewController:liveRoomVC animated:YES];
                 } else {
 //                    SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
 //                    myLiveVC.user_id = [SJUserDefaults valueForKey:kUserid];
@@ -363,9 +363,9 @@
             case 3:
             {
                 if ([[SJUserDefaults valueForKey:kUserid] isEqualToString:@"10412"]) {
-                    SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
-                    liveRoomVC.target_id = [SJUserDefaults valueForKey:kUserid];
-                    [self.navigationController pushViewController:liveRoomVC animated:YES];
+//                    SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
+//                    liveRoomVC.target_id = [SJUserDefaults valueForKey:kUserid];
+//                    [self.navigationController pushViewController:liveRoomVC animated:YES];
                 } else {
 //                    SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
 //                    myLiveVC.user_id = [SJUserDefaults valueForKey:kUserid];
@@ -536,46 +536,46 @@
     [self.navigationController pushViewController:registerVC animated:YES];
 }
 
-#pragma mark - SJProfileHeaderViewDelegate 
-- (void)headerViewButtonClicked:(UIButton *)button {
-    switch (button.tag) {
-        case 11:// 我的内参
-        {
-            if ([self.userInfoDict[@"level"] isEqualToString:@"10"]) {
-                // 老师身份
-                SJTeacherReferenceViewController *teacherReferenceVC = [[SJTeacherReferenceViewController alloc] init];
-                teacherReferenceVC.title = @"我的内参";
-                teacherReferenceVC.user_id = self.userInfoDict[@"user_id"];
-                [self.navigationController pushViewController:teacherReferenceVC animated:YES];
-            } else {
-                // 普通身份
-                SJUserReferenceViewController *userReferenceVC = [[SJUserReferenceViewController alloc] init];
-                userReferenceVC.title = @"我的内参";
-                userReferenceVC.user_id = self.userInfoDict[@"user_id"];
-                [self.navigationController pushViewController:userReferenceVC animated:YES];
-            }
-        }
-            break;
-        case 12:// 开启视频、我的老师
-        {
-            if ([self.userInfoDict[@"level"] isEqualToString:@"10"]) {
-                // 老师身份
-                SJRTMPStreamViewController *rtmpVC = [[SJRTMPStreamViewController alloc] init];
-                rtmpVC.targetid = self.userInfoDict[@"user_id"];
-                [self presentViewController:rtmpVC animated:YES completion:nil];
-            } else {
-                // 普通身份
-                SJMyTeacherViewController *myTeacherVC = [[SJMyTeacherViewController alloc] init];
-                myTeacherVC.title = @"我的老师";
-                [self.navigationController pushViewController:myTeacherVC animated:YES];
-            }
-        }
-            break;
-            
-        default:
-            break;
-    }
-}
+//#pragma mark - SJProfileHeaderViewDelegate
+//- (void)headerViewButtonClicked:(UIButton *)button {
+//    switch (button.tag) {
+//        case 11:// 我的内参
+//        {
+//            if ([self.userInfoDict[@"level"] isEqualToString:@"10"]) {
+//                // 老师身份
+//                SJTeacherReferenceViewController *teacherReferenceVC = [[SJTeacherReferenceViewController alloc] init];
+//                teacherReferenceVC.title = @"我的内参";
+//                teacherReferenceVC.user_id = self.userInfoDict[@"user_id"];
+//                [self.navigationController pushViewController:teacherReferenceVC animated:YES];
+//            } else {
+//                // 普通身份
+//                SJUserReferenceViewController *userReferenceVC = [[SJUserReferenceViewController alloc] init];
+//                userReferenceVC.title = @"我的内参";
+//                userReferenceVC.user_id = self.userInfoDict[@"user_id"];
+//                [self.navigationController pushViewController:userReferenceVC animated:YES];
+//            }
+//        }
+//            break;
+//        case 12:// 开启视频、我的老师
+//        {
+//            if ([self.userInfoDict[@"level"] isEqualToString:@"10"]) {
+//                // 老师身份
+//                SJRTMPStreamViewController *rtmpVC = [[SJRTMPStreamViewController alloc] init];
+//                rtmpVC.targetid = self.userInfoDict[@"user_id"];
+//                [self presentViewController:rtmpVC animated:YES completion:nil];
+//            } else {
+//                // 普通身份
+//                SJMyTeacherViewController *myTeacherVC = [[SJMyTeacherViewController alloc] init];
+//                myTeacherVC.title = @"我的老师";
+//                [self.navigationController pushViewController:myTeacherVC animated:YES];
+//            }
+//        }
+//            break;
+//
+//        default:
+//            break;
+//    }
+//}
 
 - (void)headImgTapClicked{
     SJPersonsettingViewController *personvc =[[SJPersonsettingViewController alloc]initWithNibName:@"SJPersonsettingViewController" bundle:nil];

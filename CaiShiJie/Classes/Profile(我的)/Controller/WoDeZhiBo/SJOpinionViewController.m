@@ -121,7 +121,7 @@
     [self.view addSubview:self.chatBoxVC.view];
     [self.chatBoxVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(HEIGHT_TABBAR);
+        make.height.mas_equalTo(kTabbarHeight);
     }];
     self.chatBoxVC.view.hidden = YES;
 }

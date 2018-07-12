@@ -92,7 +92,7 @@
     WS(weakSelf);
     [self.chatBoxVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.mas_equalTo(0);
-        make.height.mas_equalTo(HEIGHT_TABBAR);
+        make.height.mas_equalTo(kTabbarHeight);
     }];
     
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {

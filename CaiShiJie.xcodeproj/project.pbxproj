@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		04112FD420CF946700A925ED /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04112FD320CF946700A925ED /* UserNotifications.framework */; };
+		0441F28820F3271F00D3AF84 /* libPods-CaiShiJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 043BF6CA20CB88AB000C6E50 /* libPods-CaiShiJie.a */; };
+		0441F28A20F34B0800D3AF84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9948691C29165800EE67B1 /* Assets.xcassets */; };
+		0441F29D20F4956D00D3AF84 /* SJIndexCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0441F29C20F4956D00D3AF84 /* SJIndexCollectionViewController.m */; };
 		04ECA86F20CF5F6C00E76C27 /* UMSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04ECA85C20CF5F6C00E76C27 /* UMSocialSDKResources.bundle */; };
 		04ECA87020CF5F6C00E76C27 /* UShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECA85D20CF5F6C00E76C27 /* UShareUI.framework */; };
 		04ECA87120CF5F6C00E76C27 /* UMShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECA85E20CF5F6C00E76C27 /* UMShare.framework */; };
@@ -19,7 +22,6 @@
 		04ECA87720CF5F6C00E76C27 /* UMAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECA86E20CF5F6C00E76C27 /* UMAnalytics.framework */; };
 		04ECA87C20CF69E500E76C27 /* UMCommonLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECA87A20CF69E400E76C27 /* UMCommonLog.framework */; };
 		04ECA87D20CF69E500E76C27 /* UMCommonLog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04ECA87B20CF69E400E76C27 /* UMCommonLog.bundle */; };
-		7FCEC8502A027E994940FA6C /* libPods-CaiShiJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F809CE27A03AB0D5AEE100A /* libPods-CaiShiJie.a */; };
 		CE017F041C9B8D4000FAB205 /* MBHUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE017F031C9B8D4000FAB205 /* MBHUDHelper.m */; };
 		CE017F2C1C9B8DE500FAB205 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE017F2B1C9B8DE500FAB205 /* libbz2.tbd */; };
 		CE017F2E1C9B8E0500FAB205 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE017F2D1C9B8E0500FAB205 /* OpenAL.framework */; };
@@ -154,7 +156,6 @@
 		CE289E5B1CE32ECB00202A55 /* SJBlogZhuanTiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE289E5A1CE32ECB00202A55 /* SJBlogZhuanTiModel.m */; };
 		CE2A22061CC6118C00A5B7BE /* UITableView+HYBCacheHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A22031CC6118C00A5B7BE /* UITableView+HYBCacheHeight.m */; };
 		CE2A22071CC6118C00A5B7BE /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A22051CC6118C00A5B7BE /* UITableViewCell+HYBMasonryAutoCellHeight.m */; };
-		CE2DFD241D7D654000FCB41F /* SJNewLiveVideoAboveView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2DFD231D7D654000FCB41F /* SJNewLiveVideoAboveView.m */; };
 		CE2E39461DBDD20000D3312D /* SJTextContainerParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E39451DBDD20000D3312D /* SJTextContainerParser.m */; };
 		CE2E5B6F1DD5CC4500A050FA /* SJNeiCanPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E5B6D1DD5CC4500A050FA /* SJNeiCanPayViewController.m */; };
 		CE2E5B701DD5CC4500A050FA /* SJNeiCanPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2E5B6E1DD5CC4500A050FA /* SJNeiCanPayViewController.xib */; };
@@ -526,7 +527,6 @@
 		CE8AEA551D4B5510001A47C8 /* SJUserNoAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8AEA531D4B5510001A47C8 /* SJUserNoAnswerViewController.m */; };
 		CE8AEA561D4B5510001A47C8 /* SJUserNoAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8AEA541D4B5510001A47C8 /* SJUserNoAnswerViewController.xib */; };
 		CE9769311D6FD9350080DE55 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9769301D6FD9350080DE55 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CE99486A1C29165800EE67B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9948691C29165800EE67B1 /* Assets.xcassets */; };
 		CE99486D1C29165800EE67B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE99486B1C29165800EE67B1 /* LaunchScreen.storyboard */; };
 		CE9948781C29165800EE67B1 /* CaiShiJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9948771C29165800EE67B1 /* CaiShiJieTests.m */; };
 		CE9948831C29165800EE67B1 /* CaiShiJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9948821C29165800EE67B1 /* CaiShiJieUITests.m */; };
@@ -535,14 +535,8 @@
 		CEA2AB771DAA21180079CE95 /* SJPersonalQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2AB761DAA21180079CE95 /* SJPersonalQuestionCell.m */; };
 		CEA8E0FB1C313DD800458B2B /* SJRegisterSucceedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA8E0F91C313DD800458B2B /* SJRegisterSucceedViewController.m */; };
 		CEA8E0FC1C313DD800458B2B /* SJRegisterSucceedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA8E0FA1C313DD800458B2B /* SJRegisterSucceedViewController.xib */; };
-		CEAEC22D1D77CCE800750A17 /* SJNewLiveRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAEC22C1D77CCE800750A17 /* SJNewLiveRoomViewController.m */; };
-		CEAEC2331D77D23700750A17 /* SJNewLiveVideoTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAEC2321D77D23700750A17 /* SJNewLiveVideoTeacherViewController.m */; };
-		CEAEC2361D780C1D00750A17 /* SJNewLiveVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAEC2351D780C1D00750A17 /* SJNewLiveVideoListViewController.m */; };
-		CEAEC23A1D781E0E00750A17 /* SJLiveVideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAEC2381D781E0E00750A17 /* SJLiveVideoListCell.m */; };
 		CEAEC23B1D781E0E00750A17 /* SJLiveVideoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAEC2391D781E0E00750A17 /* SJLiveVideoListCell.xib */; };
-		CEAEC23F1D7828D100750A17 /* SJLiveVideoTeacherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAEC23D1D7828D100750A17 /* SJLiveVideoTeacherCell.m */; };
 		CEAEC2401D7828D100750A17 /* SJLiveVideoTeacherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAEC23E1D7828D100750A17 /* SJLiveVideoTeacherCell.xib */; };
-		CEAEC2431D78317E00750A17 /* SJLiveVideoTeacherSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAEC2421D78317E00750A17 /* SJLiveVideoTeacherSummaryView.m */; };
 		CEB54DCC1CF8568E00069C14 /* SJZhuanLanTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB54DCA1CF8568E00069C14 /* SJZhuanLanTwoCell.m */; };
 		CEB54DCD1CF8568E00069C14 /* SJZhuanLanTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB54DCB1CF8568E00069C14 /* SJZhuanLanTwoCell.xib */; };
 		CEBD41421CB3C7C500823FD0 /* SJCreatNewBlogArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBD41411CB3C7C500823FD0 /* SJCreatNewBlogArticle.m */; };
@@ -619,8 +613,6 @@
 		CEEE56951CA93B350073AB13 /* SJMixPayParam.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEE56941CA93B350073AB13 /* SJMixPayParam.m */; };
 		CEF07BAA1C29204200A89756 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF07BA01C29204200A89756 /* AppDelegate.m */; };
 		CEF07BAB1C29204200A89756 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF07BA11C29204200A89756 /* main.m */; };
-		CEF0D30D1D796DFB006F09F0 /* SJNewLiewVideoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF0D30C1D796DFB006F09F0 /* SJNewLiewVideoListModel.m */; };
-		CEF0D3101D7977EC006F09F0 /* SJNewLiveVideoTeacherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF0D30F1D7977EC006F09F0 /* SJNewLiveVideoTeacherModel.m */; };
 		CEF1CD301C58656E000AA709 /* NSString+SJDate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CD2D1C58656E000AA709 /* NSString+SJDate.m */; };
 		CEF1CD311C58656E000AA709 /* NSString+SJMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1CD2F1C58656E000AA709 /* NSString+SJMD5.m */; };
 		CEF3F0831C4DE1C3008E9E5B /* SJOtherRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3F0811C4DE1C3008E9E5B /* SJOtherRegisterViewController.m */; };
@@ -728,11 +720,7 @@
 		CEFD0A211DFAAD40006917AE /* SJRecommendStockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFD09CD1DFAAD3F006917AE /* SJRecommendStockCell.xib */; };
 		CEFD0A221DFAAD40006917AE /* SJReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD09CF1DFAAD3F006917AE /* SJReportTableViewCell.m */; };
 		CEFD0A231DFAAD40006917AE /* SJReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFD09D01DFAAD3F006917AE /* SJReportTableViewCell.xib */; };
-		CEFD0A691DFAADDC006917AE /* SJPhoneVideoFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD0A261DFAADDC006917AE /* SJPhoneVideoFullViewController.m */; };
-		CEFD0A6A1DFAADDC006917AE /* SJPhoneVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD0A281DFAADDC006917AE /* SJPhoneVideoListViewController.m */; };
 		CEFD0A6B1DFAADDC006917AE /* SJPhoneVideoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFD0A291DFAADDC006917AE /* SJPhoneVideoStoryboard.storyboard */; };
-		CEFD0A6C1DFAADDC006917AE /* SJRTMPStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD0A2B1DFAADDC006917AE /* SJRTMPStreamViewController.m */; };
-		CEFD0A6D1DFAADDC006917AE /* SJWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD0A2D1DFAADDC006917AE /* SJWatchViewController.m */; };
 		CEFD0A6E1DFAADDC006917AE /* SJPhoneVideoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD0A301DFAADDC006917AE /* SJPhoneVideoListModel.m */; };
 		CEFD0A6F1DFAADDC006917AE /* SJVideoInteractiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD0A321DFAADDC006917AE /* SJVideoInteractiveModel.m */; };
 		CEFD0A701DFAADDC006917AE /* SJVideoOpinionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD0A341DFAADDC006917AE /* SJVideoOpinionModel.m */; };
@@ -926,6 +914,8 @@
 /* Begin PBXFileReference section */
 		04112FD320CF946700A925ED /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		043BF6A220CB88AA000C6E50 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		0441F29B20F4956D00D3AF84 /* SJIndexCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJIndexCollectionViewController.h; sourceTree = "<group>"; };
+		0441F29C20F4956D00D3AF84 /* SJIndexCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJIndexCollectionViewController.m; sourceTree = "<group>"; };
 		04ECA85C20CF5F6C00E76C27 /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResources.bundle; sourceTree = "<group>"; };
 		04ECA85D20CF5F6C00E76C27 /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UShareUI.framework; sourceTree = "<group>"; };
 		04ECA85E20CF5F6C00E76C27 /* UMShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMShare.framework; sourceTree = "<group>"; };
@@ -2314,6 +2304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0441F28820F3271F00D3AF84 /* libPods-CaiShiJie.a in Frameworks */,
 				04112FD420CF946700A925ED /* UserNotifications.framework in Frameworks */,
 				CE0862E61DDD4BB400BCFE14 /* ImageIO.framework in Frameworks */,
 				CE466CF21D7408C90067C032 /* libz.1.2.5.tbd in Frameworks */,
@@ -2359,7 +2350,6 @@
 				04ECA87320CF5F6C00E76C27 /* UMCommon.framework in Frameworks */,
 				CEF6F66A1C50A7BB0042B750 /* CFNetwork.framework in Frameworks */,
 				04ECA87620CF5F6C00E76C27 /* libSocialQQ.a in Frameworks */,
-				7FCEC8502A027E994940FA6C /* libPods-CaiShiJie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4910,6 +4900,8 @@
 				CEFD09751DFAAD3F006917AE /* SJTodayHotViewController.h */,
 				CEFD09761DFAAD3F006917AE /* SJTodayHotViewController.m */,
 				CEFD09771DFAAD3F006917AE /* SJTodayHotViewController.xib */,
+				0441F29B20F4956D00D3AF84 /* SJIndexCollectionViewController.h */,
+				0441F29C20F4956D00D3AF84 /* SJIndexCollectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -5166,7 +5158,6 @@
 				CE9948561C29165800EE67B1 /* Sources */,
 				CE9948571C29165800EE67B1 /* Frameworks */,
 				CE9948581C29165800EE67B1 /* Resources */,
-				930534198095316B438A3EE7 /* [CP] Embed Pods Frameworks */,
 				BEF74762A72DF29F24604486 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -5567,7 +5558,6 @@
 				CEFD09FF1DFAAD3F006917AE /* SJFindTeacherSectionView.xib in Resources */,
 				CE3B20F11C7BF3FD00BBBF74 /* flash_open_pic.png in Resources */,
 				CEDBC7F71CAD017500396AEE /* SJHisReferenceCell.xib in Resources */,
-				CE99486A1C29165800EE67B1 /* Assets.xcassets in Resources */,
 				CED0BA581CA52DF900A3F3CF /* SJPersonalArticleViewController.xib in Resources */,
 				CE3B20EF1C7BF3FD00BBBF74 /* change_camera_pic.png in Resources */,
 				CE6395941CA543CB0084AC59 /* SJUserReferenceViewController.xib in Resources */,
@@ -5581,6 +5571,7 @@
 				CEF3F0841C4DE1C3008E9E5B /* SJOtherRegisterViewController.xib in Resources */,
 				CE49B0381D991999003EC699 /* SJShareView.xib in Resources */,
 				CE8418AA1D40B76900CF932D /* SJVideoSectionTwoCell.xib in Resources */,
+				0441F28A20F34B0800D3AF84 /* Assets.xcassets in Resources */,
 				CE666F7E1CDCACB200C24BF6 /* SJBlogArticleTopViewCell.xib in Resources */,
 				CEFD09DD1DFAAD3F006917AE /* SJLogDetailViewController.xib in Resources */,
 			);
@@ -5619,28 +5610,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		930534198095316B438A3EE7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CaiShiJie/Pods-CaiShiJie-frameworks.sh",
-				"${PODS_ROOT}/PLMediaStreamingKit/Pod/Library/PLMediaStreamingKit.framework",
-				"${PODS_ROOT}/PLMediaStreamingKit/Pod/Library/HappyDNS.framework",
-				"${PODS_ROOT}/PLPlayerKit/Pod/Library/PLPlayerKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLMediaStreamingKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLPlayerKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CaiShiJie/Pods-CaiShiJie-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BEF74762A72DF29F24604486 /* [CP] Copy Pods Resources */ = {
@@ -5743,10 +5712,8 @@
 				CE586B401D40A8BA003E386A /* XHPlayerViewBottomView.m in Sources */,
 				CE586B411D40A8BA003E386A /* XHPlayerViewTopView.m in Sources */,
 				CE4AF6271CC4DA550067D674 /* UIView+SDExtension.m in Sources */,
-				CEFD0A6C1DFAADDC006917AE /* SJRTMPStreamViewController.m in Sources */,
 				CE21F5711D6C364900FED35F /* BarrageWalkSprite.m in Sources */,
 				CE2002301DADD76C000E3A31 /* SJPersonalHomeToolBar.m in Sources */,
-				CEF0D3101D7977EC006F09F0 /* SJNewLiveVideoTeacherModel.m in Sources */,
 				CE0F84491DB76405003D4314 /* TYTextStorage.m in Sources */,
 				CEFD0ACD1DFAB253006917AE /* SJselfSelectedViewController.m in Sources */,
 				CEFD0A871DFAADDC006917AE /* SJVideoInteractiveCell.m in Sources */,
@@ -5769,7 +5736,6 @@
 				CE40EA781CD9977B0054A770 /* SJBeforeAndNextChapterModel.m in Sources */,
 				CE3B20E81C7BF3FD00BBBF74 /* ZZPhotoListViewController.m in Sources */,
 				CEE1E8B21DB9FF14006A82C5 /* TLChatBoxFaceMenuView.m in Sources */,
-				CEAEC23A1D781E0E00750A17 /* SJLiveVideoListCell.m in Sources */,
 				CEFD0A101DFAAD3F006917AE /* SJMasterTeacherView.m in Sources */,
 				CE586B3C1D40A8BA003E386A /* XHForwardView.m in Sources */,
 				CE1FE2F01CBD0CAA0054769F /* SJyearsoldviewcontroller.m in Sources */,
@@ -5830,7 +5796,6 @@
 				CEFD0A831DFAADDC006917AE /* SJUserVideoTopView.m in Sources */,
 				CEFD0ACB1DFAB253006917AE /* SJselfSelectedDefaultController.m in Sources */,
 				CEFD0A1E1DFAAD40006917AE /* SJRecommendLiveCell.m in Sources */,
-				CEAEC2361D780C1D00750A17 /* SJNewLiveVideoListViewController.m in Sources */,
 				CE40EAA21CD9977B0054A770 /* VideoCollectionViewCell.m in Sources */,
 				CE21F5661D6C364900FED35F /* BarrageDescriptor.m in Sources */,
 				CE1FE2E61CBD0CAA0054769F /* SJGoodAtViewController.m in Sources */,
@@ -5866,7 +5831,6 @@
 				CE666F801CDCACB200C24BF6 /* SJBlogArticleWonderfulViewCell.m in Sources */,
 				CEFD09DB1DFAAD3F006917AE /* SJLiveRoomViewController.m in Sources */,
 				CE2002421DADD8EC000E3A31 /* SJPhotoContainerView.m in Sources */,
-				CEAEC2331D77D23700750A17 /* SJNewLiveVideoTeacherViewController.m in Sources */,
 				CEE1E8B71DB9FF14006A82C5 /* TLChatBoxViewController.m in Sources */,
 				CE1B14171CE07E26006A0118 /* SJBlogArticlePublicCell.m in Sources */,
 				CEB54DCC1CF8568E00069C14 /* SJZhuanLanTwoCell.m in Sources */,
@@ -5878,10 +5842,8 @@
 				CE37633E1C3E67D600620444 /* SJMyIssueCell.m in Sources */,
 				CEE1E8AD1DB9FF14006A82C5 /* SJInputVoiceView.m in Sources */,
 				CEA8E0FB1C313DD800458B2B /* SJRegisterSucceedViewController.m in Sources */,
-				CEFD0A691DFAADDC006917AE /* SJPhoneVideoFullViewController.m in Sources */,
 				CE49B0321D99196D003EC699 /* SJThreesectionCollectionCell.m in Sources */,
 				CEFD0AC91DFAB253006917AE /* SJsearchController.m in Sources */,
-				CEF0D30D1D796DFB006F09F0 /* SJNewLiewVideoListModel.m in Sources */,
 				CE6301001D33A12B00B06D0F /* SJAnswerDetailFrame.m in Sources */,
 				CE0F84461DB76405003D4314 /* TYLinkTextStorage.m in Sources */,
 				CE337BF81C7D4F77002D30AC /* RecordHUD.m in Sources */,
@@ -5941,6 +5903,7 @@
 				CEFD0A821DFAADDC006917AE /* SJUserVideoBottomToolBar.m in Sources */,
 				CEFD0AED1DFAB373006917AE /* SJNewBlogArticleViewController.m in Sources */,
 				CE34F4341C4FBEF10089292A /* SJOpinion.m in Sources */,
+				0441F29D20F4956D00D3AF84 /* SJIndexCollectionViewController.m in Sources */,
 				CE1FE2EA1CBD0CAA0054769F /* SJMyselfViewController.m in Sources */,
 				CEFD09D91DFAAD3F006917AE /* SJHomeRecommendViewController.m in Sources */,
 				CE40EA9C1CD9977B0054A770 /* SJsecondsectionCell.m in Sources */,
@@ -5974,7 +5937,6 @@
 				CE49A1231CB6837B00B474B5 /* SJMyBlogArticleModel.m in Sources */,
 				CE3B20AD1C7BF31800BBBF74 /* SJUploadParam.m in Sources */,
 				CE49B02A1D99196D003EC699 /* SJHeadcollectvc.m in Sources */,
-				CEAEC23F1D7828D100750A17 /* SJLiveVideoTeacherCell.m in Sources */,
 				CE1DF4A51D5DA287007C71B9 /* SJParser.m in Sources */,
 				CE132CDE1D9CE1E100C93DC8 /* SJHistoryDownCell.m in Sources */,
 				CE34F3E81C4F19CC0089292A /* MJFoundation.m in Sources */,
@@ -6025,7 +5987,6 @@
 				CEFD0A6E1DFAADDC006917AE /* SJPhoneVideoListModel.m in Sources */,
 				CE3624D61C521926006452BE /* SJYiJingHuiDaQuestion.m in Sources */,
 				CE586B3F1D40A8BA003E386A /* XHPlayerView.m in Sources */,
-				CEFD0A6A1DFAADDC006917AE /* SJPhoneVideoListViewController.m in Sources */,
 				CE132CBA1D9CA51800C93DC8 /* SJPersonalHomeViewController.m in Sources */,
 				CEFD0AEB1DFAB373006917AE /* SJBlogZhuanTiViewController.m in Sources */,
 				CED0BA571CA52DF900A3F3CF /* SJPersonalArticleViewController.m in Sources */,
@@ -6069,7 +6030,6 @@
 				CE34F3E91C4F19CC0089292A /* MJIvar.m in Sources */,
 				CE1FE2FA1CBD0D340054769F /* SJpersonCell.m in Sources */,
 				CEFD0A751DFAADDC006917AE /* SJShakeLabel.m in Sources */,
-				CEFD0A6D1DFAADDC006917AE /* SJWatchViewController.m in Sources */,
 				CE3B2A051C91223200EE2D13 /* SJConsumeCell.m in Sources */,
 				CEF07BAB1C29204200A89756 /* main.m in Sources */,
 				CE460B421D9384510061F477 /* SJSchoolVideoModel.m in Sources */,
@@ -6112,7 +6072,6 @@
 				CEC4E7671D991AF500A63390 /* SJStockWeekLineViewController.m in Sources */,
 				CEE1E8AC1DB9FF14006A82C5 /* ISRDataHelper.m in Sources */,
 				CE108AAB1DD9A4560003197C /* SJGiveGfitSuccessView.m in Sources */,
-				CEAEC22D1D77CCE800750A17 /* SJNewLiveRoomViewController.m in Sources */,
 				CE20022D1DADD70F000E3A31 /* SJPersonalHomeUserView.m in Sources */,
 				CE43F5B01CAE184700A8BC9D /* SJCreateNewBlogArticleViewController.m in Sources */,
 				CE4AF6231CC4DA550067D674 /* TADotView.m in Sources */,
@@ -6145,7 +6104,6 @@
 				CE20023C1DADD865000E3A31 /* SJPersonalHomeForwardView.m in Sources */,
 				CE0749D61DB07AD9004B212A /* SJMineMessageCell.m in Sources */,
 				CE409FB31C47C7D300C21DE9 /* SJYiJingHuiDaModel.m in Sources */,
-				CE2DFD241D7D654000FCB41F /* SJNewLiveVideoAboveView.m in Sources */,
 				CE5AF3B21C8EBFE200D923A3 /* SJGiftGeterModel.m in Sources */,
 				CEBE83AB1CABD72E001E2775 /* SJAddReferenceContentView.m in Sources */,
 				CE409F621C47C4D600C21DE9 /* SJMyQuestionViewController.m in Sources */,
@@ -6185,7 +6143,6 @@
 				CE108A9A1DD956F10003197C /* SJGiftPayView.m in Sources */,
 				CEF6F6611C506F1C0042B750 /* SJOriginal.m in Sources */,
 				CEC876B81CB50B7F00A35E60 /* SJInteractViewController.m in Sources */,
-				CEAEC2431D78317E00750A17 /* SJLiveVideoTeacherSummaryView.m in Sources */,
 				CE5F962C1CDAEBDF005C2C67 /* DLLRUCache.m in Sources */,
 				CE21F56F1D6C364900FED35F /* BarrageSpriteUtility.m in Sources */,
 				CE017F371C9B92B100FAB205 /* UIImage+SJImage.m in Sources */,
@@ -6436,7 +6393,6 @@
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/SMS_SDK",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/FaceView",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib",
-					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/BeeCloud/BCPaySDK/Channel/AliPay",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/SocialLibraries/QQ",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/UMSocialSDK",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/UMSocialUI",
@@ -6454,8 +6410,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/D3RecordBtutton",
-					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/BeeCloud/BCPaySDK/Channel/UnionPay",
-					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/BeeCloud/BCPaySDK/Channel/WXPay",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/SocialLibraries/QQ",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/SocialLibraries/Sina",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/SocialLibraries/WeChat",
@@ -6487,7 +6441,6 @@
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/SMS_SDK",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/FaceView",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib",
-					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/BeeCloud/BCPaySDK/Channel/AliPay",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/SocialLibraries/QQ",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/UMSocialSDK",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/UMSocialUI",
@@ -6505,8 +6458,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/D3RecordBtutton",
-					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/BeeCloud/BCPaySDK/Channel/UnionPay",
-					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/BeeCloud/BCPaySDK/Channel/WXPay",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/SocialLibraries/QQ",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/SocialLibraries/Sina",
 					"$(PROJECT_DIR)/CaiShiJie/Classes/Other/Lib/UMSocial/SocialLibraries/WeChat",

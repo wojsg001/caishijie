@@ -43,6 +43,31 @@
 #define SJScreenW [UIScreen mainScreen].bounds.size.width
 #define SJScreenH [UIScreen mainScreen].bounds.size.height
 
+
+//判断是否iPhone X
+
+#define IS_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+// status bar height.
+
+#define  kStatusBarHeight      (IS_iPhoneX ? 44.f : 20.f)
+
+// Navigation bar height.
+
+#define  kNavigationBarHeight  44.f
+
+// Tabbar height.
+
+#define  kTabbarHeight        (IS_iPhoneX ? (49.f+34.f) : 49.f)
+
+// Tabbar safe bottom margin.
+
+#define  kTabbarSafeBottomMargin        (IS_iPhoneX ? 34.f : 0.f)
+
+// Status bar & navigation bar height.
+
+#define  kStatusBarAndNavigationBarHeight  (IS_iPhoneX ? 88.f : 64.f)
+
 #define RGB(__r, __g, __b)  [UIColor colorWithRed:(1.0*(__r)/255)\
 green:(1.0*(__g)/255)\
 blue:(1.0*(__b)/255)\
@@ -53,9 +78,5 @@ alpha:1.0]
 #else      // 发布状态, 关闭LOG功能
 #define SJLog(...)
 #endif
-
-#define HEIGHT_STATUSBAR	20
-#define HEIGHT_TABBAR       49
-#define HEIGHT_NAVBAR       44
 
 #endif /* Prefix_pch */

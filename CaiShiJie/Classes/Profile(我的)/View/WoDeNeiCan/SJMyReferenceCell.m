@@ -36,13 +36,18 @@
 {
     _teacherReference = teacherReference;
     
-    [_reference_imgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_teacherReference.reference_img]] placeholderImage:[UIImage imageNamed:@"neican_photo"]];
+//    [_reference_imgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_teacherReference.reference_img]] placeholderImage:[UIImage imageNamed:@"neican_photo"]];
+    
+    [_reference_imgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_teacherReference.reference_img]] placeholderImage:[UIImage imageNamed:@"AppIcon"]];
+    
     _titleLabel.text = _teacherReference.title;
     _serviceDateLabel.text = [NSString stringWithFormat:@"服务期：%@至%@",_teacherReference.start_at,_teacherReference.end_at];
     _summaryLabel.text = _teacherReference.summary;
     _priceLabel.text = [NSString stringWithFormat:@"¥%@",_teacherReference.price];
+    [_priceLabel setHidden:YES];
     _pay_countLabel.text = [NSString stringWithFormat:@"%@人订阅",_teacherReference.pay_count];
     [_pay_countLabel sizeToFit];
+    [_pay_countLabel setHidden:YES];
     // 修改订阅人数label的宽度约束
     _pay_countLabelWidthMargin.constant = _pay_countLabel.width;
     
@@ -60,19 +65,26 @@
     {
         [_statusBtn setImage:[UIImage imageNamed:@"neican_icon1"] forState:UIControlStateNormal];
     }
+    [_statusBtn setHidden:YES];
 }
 
 - (void)setUserReference:(SJMyNeiCan *)userReference
 {
     _userReference = userReference;
     
-    [_reference_imgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_userReference.reference_img]] placeholderImage:[UIImage imageNamed:@"neican_photo"]];
+//    [_reference_imgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_userReference.reference_img]] placeholderImage:[UIImage imageNamed:@"neican_photo"]];
+    
+    [_reference_imgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_teacherReference.reference_img]] placeholderImage:[UIImage imageNamed:@"AppIcon"]];
+    
     _titleLabel.text = _userReference.title;
     _serviceDateLabel.text = [NSString stringWithFormat:@"服务期：%@至%@",_userReference.start_at,_userReference.end_at];
     _summaryLabel.text = _userReference.summary;
     _priceLabel.text = [NSString stringWithFormat:@"¥%@",_userReference.price];
+    [_priceLabel setHidden:YES];
     _pay_countLabel.text = [NSString stringWithFormat:@"%@人订阅",_userReference.pay_count];
     [_pay_countLabel sizeToFit];
+    [_pay_countLabel setHidden:YES];
+    
     // 修改订阅人数label的宽度约束
     _pay_countLabelWidthMargin.constant = _pay_countLabel.width;
     
@@ -90,6 +102,7 @@
     {
         [_statusBtn setImage:[UIImage imageNamed:@"neican_icon1"] forState:UIControlStateNormal];
     }
+    [_statusBtn setHidden:YES];
 }
 
 @end

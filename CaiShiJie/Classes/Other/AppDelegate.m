@@ -24,7 +24,7 @@
 #import "MQTTSessionManager.h"
 #import "SJUserInfo.h"
 #import "SJToken.h"
-#import <PLMediaStreamingKit/PLMediaStreamingKit.h>
+//#import <PLMediaStreamingKit/PLMediaStreamingKit.h>
 
 static AppDelegate *_appDelegate = nil;
 
@@ -54,7 +54,7 @@ static AppDelegate *_appDelegate = nil;
     [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
     _appDelegate = self;
 
-    [PLStreamingEnv initEnv];
+//    [PLStreamingEnv initEnv];
     
     // 添加对网络的监听
     [self checkAFNetworkStatus];
@@ -391,10 +391,10 @@ static AppDelegate *_appDelegate = nil;
 }
 
 - (void)exitLogin {
-    // 退出登录关闭MQTT
-    if (sessionManager) {
-        [sessionManager disconnect];
-    }
+//    // 退出登录关闭MQTT
+//    if (sessionManager) {
+//        [sessionManager disconnect];
+//    }
     _unreadMessageCount = @"0"; // 归零
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     [[[tabBarController.viewControllers objectAtIndex:3] tabBarItem] setBadgeValue:_unreadMessageCount];
@@ -416,19 +416,19 @@ static AppDelegate *_appDelegate = nil;
     NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:kUserInfo];
     NSString *user = [NSString stringWithFormat:@"u%@", dic[@"user_id"]];
     NSString *pass = [NSString stringWithFormat:@"%@", dic[@"token"]];
-    [sessionManager connectTo:MQTTHost
-                          port:80
-                           tls:NO
-                     keepalive:60
-                         clean:YES
-                          auth:YES
-                          user:user
-                          pass:pass
-                     willTopic:@""
-                          will:[NSData data]
-                       willQos:MQTTQosLevelAtMostOnce
-                willRetainFlag:NO
-                  withClientId:[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
+//[sessionManager connectTo:MQTTHost
+//                          port:80
+//                           tls:NO
+//                     keepalive:60
+//                         clean:YES
+//                          auth:YES
+//                          user:user
+//                          pass:pass
+//                     willTopic:@""    
+//                          will:[NSData data]
+//                       willQos:MQTTQosLevelAtMostOnce
+//                willRetainFlag:NO
+//                  withClientId:[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {

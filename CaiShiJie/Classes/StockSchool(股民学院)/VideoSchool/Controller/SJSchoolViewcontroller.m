@@ -66,7 +66,7 @@
 
 - (void)initsubviews {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, SJScreenH - HEIGHT_TABBAR - HEIGHT_STATUSBAR - HEIGHT_NAVBAR) collectionViewLayout:layout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, SJScreenH - kTabbarHeight - kStatusBarHeight - kStatusBarHeight) collectionViewLayout:layout];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     _collectionView.backgroundColor = [UIColor clearColor];

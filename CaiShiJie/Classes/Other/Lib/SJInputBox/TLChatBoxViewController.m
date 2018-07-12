@@ -82,7 +82,7 @@
 }
 
 - (void)setLandscapeChatBoxFrame {
-    self.chatBox.frame = CGRectMake(0, 0, HEIGHT_SCREEN, HEIGHT_TABBAR);
+    self.chatBox.frame = CGRectMake(0, 0, HEIGHT_SCREEN, kTabbarHeight);
     [self.chatBox updateSubviewsFrame];
 }
 
@@ -318,7 +318,7 @@
 - (TLChatBox *) chatBox
 {
     if (_chatBox == nil) {
-        _chatBox = [[TLChatBox alloc] initWithFrame:CGRectMake(0, 0, WIDTH_SCREEN, HEIGHT_TABBAR)];
+        _chatBox = [[TLChatBox alloc] initWithFrame:CGRectMake(0, 0, WIDTH_SCREEN, kTabbarHeight)];
         [_chatBox setDelegate:self];
     }
     return _chatBox;
@@ -327,7 +327,7 @@
 - (TLChatBoxMoreView *) chatBoxMoreView
 {
     if (_chatBoxMoreView == nil) {
-        _chatBoxMoreView = [[TLChatBoxMoreView alloc] initWithFrame:CGRectMake(0, HEIGHT_TABBAR, WIDTH_SCREEN, HEIGHT_CHATBOXVIEW)];
+        _chatBoxMoreView = [[TLChatBoxMoreView alloc] initWithFrame:CGRectMake(0, kTabbarHeight, WIDTH_SCREEN, HEIGHT_CHATBOXVIEW)];
         [_chatBoxMoreView setDelegate:self];
         
         TLChatBoxMoreItem *photosItem = [TLChatBoxMoreItem createChatBoxMoreItemWithTitle:@"照片" imageName:@"sharemore_pic"];
@@ -344,7 +344,7 @@
 - (TLChatBoxFaceView *) chatBoxFaceView
 {
     if (_chatBoxFaceView == nil) {
-        _chatBoxFaceView = [[TLChatBoxFaceView alloc] initWithFrame:CGRectMake(0, HEIGHT_TABBAR, WIDTH_SCREEN, HEIGHT_CHATBOXVIEW)];
+        _chatBoxFaceView = [[TLChatBoxFaceView alloc] initWithFrame:CGRectMake(0, kTabbarHeight, WIDTH_SCREEN, HEIGHT_CHATBOXVIEW)];
         [_chatBoxFaceView setDelegate:self];
     }
     return _chatBoxFaceView;
@@ -356,7 +356,7 @@
     if (_inputVoiceView == nil)
     {
         _inputVoiceView = [[NSBundle mainBundle] loadNibNamed:@"SJInputVoiceView" owner:nil options:nil].lastObject;
-        _inputVoiceView.frame = CGRectMake(0, HEIGHT_TABBAR, WIDTH_SCREEN, 180);
+        _inputVoiceView.frame = CGRectMake(0, kTabbarHeight, WIDTH_SCREEN, 180);
     }
     return _inputVoiceView;
 }
@@ -367,7 +367,7 @@
     if (_speechRecognizerView == nil)
     {
         _speechRecognizerView = [[NSBundle mainBundle] loadNibNamed:@"SJSpeechRecognizerView" owner:nil options:nil].lastObject;
-        _speechRecognizerView.frame = CGRectMake(0, HEIGHT_TABBAR, WIDTH_SCREEN, 180);
+        _speechRecognizerView.frame = CGRectMake(0, kTabbarHeight, WIDTH_SCREEN, 180);
         _speechRecognizerView.delegate = self;
     }
     return _speechRecognizerView;

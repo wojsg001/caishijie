@@ -3,7 +3,7 @@
 //  MQTTClient
 //
 //  Created by Christoph Krey on 06.12.15.
-//  Copyright © 2015-2018 Christoph Krey. All rights reserved.
+//  Copyright © 2015-2017 Christoph Krey. All rights reserved.
 //
 
 #import "MQTTWebsocketTransport.h"
@@ -17,8 +17,8 @@
 @implementation MQTTWebsocketTransport
 @synthesize state;
 @synthesize delegate;
-@synthesize runLoop;
-@synthesize runLoopMode;
+@dynamic host;
+@dynamic port;
 
 - (instancetype)init {
     self = [super init];

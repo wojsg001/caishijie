@@ -9,9 +9,10 @@
 #import "SJHomeRecommendViewController.h"
 #import "SJRecommendHeaderView.h"
 #import "SJRecommendFooterView.h"
-#import "SJHomeRecommendBlogCell.h"
+//#import "SJHomeRecommendBlogCell.h" 去掉热点股评
 #import "SJHomeRecommendLiveCell.h"
-#import "SJRecommendStockCell.h"
+#import "SJIndexCollectionViewController.h"
+//#import "SJRecommendStockCell.h" 去掉股票列表
 #import "SJRecommendHotVideoOneCell.h"
 #import "SJRecommendHotVideoTwoCell.h"
 #import "SDCycleScrollView.h"
@@ -96,9 +97,10 @@
 }
 
 - (void)setUpSubviews {
-    self.sectionArray = @[@{@"icon":@"index_tuijian_icon1",@"title":@"推荐股评"}, @{@"icon":@"index_tuijian_icon2",@"title":@"热点"}, @{@"icon":@"index_tuijian_icon3",@"title":@"热门视频"}, @{@"icon":@"index_tuijian_icon4",@"title":@"热门股票"}];
+    self.sectionArray = @[/*@{@"icon":@"index_tuijian_icon1",@"title":@"推荐股评"},*/
+                          @{@"icon":@"index_mingshi_icon1",@"title":@"名师专栏"},@{@"icon":@"index_tuijian_icon2",@"title":@"热点"}, @{@"icon":@"index_tuijian_icon3",@"title":@"热门视频"}, /*@{@"icon":@"index_tuijian_icon4",@"title":@"热门股票"}*/@{@"icon":@"index_dakaquanicon4",@"title":@"大咖圈"}, ];
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, SJScreenH - HEIGHT_TABBAR) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, SJScreenH - kTabbarHeight) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorColor = [UIColor colorWithHexString:@"#e3e3e3" withAlpha:1];
@@ -106,9 +108,9 @@
     _tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tableView];
     
-    [_tableView registerNib:[UINib nibWithNibName:@"SJHomeRecommendBlogCell" bundle:nil] forCellReuseIdentifier:@"SJHomeRecommendBlogCell"];
+//    [_tableView registerNib:[UINib nibWithNibName:@"SJHomeRecommendBlogCell" bundle:nil] forCellReuseIdentifier:@"SJHomeRecommendBlogCell"];
     [_tableView registerNib:[UINib nibWithNibName:@"SJHomeRecommendLiveCell" bundle:nil] forCellReuseIdentifier:@"SJHomeRecommendLiveCell"];
-    [_tableView registerNib:[UINib nibWithNibName:@"SJRecommendStockCell" bundle:nil] forCellReuseIdentifier:@"SJRecommendStockCell"];
+//    [_tableView registerNib:[UINib nibWithNibName:@"SJRecommendStockCell" bundle:nil] forCellReuseIdentifier:@"SJRecommendStockCell"];
     [_tableView registerNib:[UINib nibWithNibName:@"SJRecommendHotVideoOneCell" bundle:nil] forCellReuseIdentifier:@"SJRecommendHotVideoOneCell"];
     [_tableView registerNib:[UINib nibWithNibName:@"SJRecommendHotVideoTwoCell" bundle:nil] forCellReuseIdentifier:@"SJRecommendHotVideoTwoCell"];
     
@@ -120,7 +122,7 @@
     statusBar.backgroundColor = [UIColor colorWithHexString:@"#f76408" withAlpha:1.0];
     [self.view addSubview:navigationBar];
     
-    UIButton *searchButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 25, SJScreenW - 20, 28)];
+    UIButton *searchButton = [[UIButton alloc] initWithFrame:CGRectMake(10, kStatusBarHeight + 10, SJScreenW - 20, 28)];
     self.searchButton = searchButton;
     searchButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [searchButton setContentEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 0)];
@@ -267,16 +269,23 @@
     cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
     cycleScrollView.placeholderImage = [UIImage imageNamed:@"index-banner"];
     
+
+    
     UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 257)];
     self.tableHeaderView = tableHeaderView;
     tableHeaderView.backgroundColor = RGB(245, 245, 248);
     [tableHeaderView addSubview:cycleScrollView];
     
-    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon1"] tag:0 title:@"推荐"];
-    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon2"] tag:1 title:@"问答"];
-    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon3"] tag:2 title:@"找老师"];
-    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon4"] tag:3 title:@"股评"];
-    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon5"] tag:4 title:@"排行榜"];
+    SJIndexCollectionViewController *indexVC = [[SJIndexCollectionViewController alloc] init];
+
+    [indexVC.view setFrame:CGRectMake(0, cycleScrollView.size.height, SJScreenW, tableHeaderView.size.height - cycleScrollView.size.height)];
+    [tableHeaderView addSubview:indexVC.view];
+
+//    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon1"] tag:0 title:@"推荐"];
+//    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon2"] tag:1 title:@"问答"];
+//    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon3"] tag:2 title:@"找老师"];
+//    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon4"] tag:3 title:@"股评"];
+//    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon5"] tag:4 title:@"排行榜"];
 
     self.tableView.tableHeaderView = tableHeaderView;
 }
@@ -369,13 +378,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return self.recommendBlogArray.count;
+        //return self.recommendBlogArray.count;
     } else if (section == 1) {
         return self.recommendLiveArray.count;
     } else if (section == 2) {
         return self.recommendVideoArray.count;
     } else if (section == 3) {
-        return self.recommendStockArray.count;
+//        return self.recommendStockArray.count;
     }
     
     return 0;
@@ -383,14 +392,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        SJHomeRecommendBlogCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJHomeRecommendBlogCell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        if (self.recommendBlogArray.count) {
-            cell.model = self.recommendBlogArray[indexPath.row];
-        }
-        
-        return cell;
+//        SJHomeRecommendBlogCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJHomeRecommendBlogCell"];
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//
+//        if (self.recommendBlogArray.count) {
+//            cell.model = self.recommendBlogArray[indexPath.row];
+//        }
+//
+//        return cell;
     } else if (indexPath.section == 1) {
         SJHomeRecommendLiveCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJHomeRecommendLiveCell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -445,14 +454,14 @@
             return cell;
         }
     } else if (indexPath.section == 3) {
-        SJRecommendStockCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJRecommendStockCell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        if (self.recommendStockArray.count) {
-            cell.model = self.recommendStockArray[indexPath.row];
-        }
-        
-        return cell;
+//        SJRecommendStockCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJRecommendStockCell"];
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//
+//        if (self.recommendStockArray.count) {
+//            cell.model = self.recommendStockArray[indexPath.row];
+//        }
+//
+//        return cell;
     }
     
     return [UITableViewCell new];
@@ -470,31 +479,31 @@
     return sectionHeader;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    if (section == 3) {
-        UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 55)];
-        footerView.backgroundColor = [UIColor whiteColor];
-        UIButton *moreBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, footerView.frame.size.width - 20, footerView.frame.size.height - 20)];
-        [moreBtn setTitle:@"查看自选股..." forState:UIControlStateNormal];
-        [moreBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        moreBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-        [moreBtn setBackgroundColor:RGB(217, 67, 50)];
-        moreBtn.tag = section + 101;
-        [moreBtn addTarget:self action:@selector(clickMoreBtnDown:) forControlEvents:UIControlEventTouchUpInside];
-        [footerView addSubview:moreBtn];
-        
-        return footerView;
-    }
-    
-    SJRecommendFooterView *sectionFooter = [[NSBundle mainBundle] loadNibNamed:@"SJRecommendFooterView" owner:nil options:nil].lastObject;
-    sectionFooter.moreBtn.tag = section + 101;
-    [sectionFooter.moreBtn addTarget:self action:@selector(clickMoreBtnDown:) forControlEvents:UIControlEventTouchUpInside];
-    
-    if (section == 1){
-        sectionFooter.hidden = YES;
-    }
-    return sectionFooter;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+//    if (section == 3) {
+//        UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 55)];
+//        footerView.backgroundColor = [UIColor whiteColor];
+//        UIButton *moreBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, footerView.frame.size.width - 20, footerView.frame.size.height - 20)];
+//        [moreBtn setTitle:@"查看自选股..." forState:UIControlStateNormal];
+//        [moreBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        moreBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+//        [moreBtn setBackgroundColor:RGB(217, 67, 50)];
+//        moreBtn.tag = section + 101;
+//        [moreBtn addTarget:self action:@selector(clickMoreBtnDown:) forControlEvents:UIControlEventTouchUpInside];
+//        [footerView addSubview:moreBtn];
+//
+//        return footerView;
+//    }
+//
+//    SJRecommendFooterView *sectionFooter = [[NSBundle mainBundle] loadNibNamed:@"SJRecommendFooterView" owner:nil options:nil].lastObject;
+//    sectionFooter.moreBtn.tag = section + 101;
+//    [sectionFooter.moreBtn addTarget:self action:@selector(clickMoreBtnDown:) forControlEvents:UIControlEventTouchUpInside];
+//
+//    if (section == 1){
+//        sectionFooter.hidden = YES;
+//    }
+//    return sectionFooter;
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 1) {
@@ -538,16 +547,16 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
-        SJBlogArticleModel *model = self.recommendBlogArray[indexPath.row];
-        SJLogDetailViewController *logDetailVC = [[SJLogDetailViewController alloc] init];
-        logDetailVC.article_id = model.article_id;
-        [self.navigationController pushViewController:logDetailVC animated:YES];
+//        SJBlogArticleModel *model = self.recommendBlogArray[indexPath.row];
+//        SJLogDetailViewController *logDetailVC = [[SJLogDetailViewController alloc] init];
+//        logDetailVC.article_id = model.article_id;
+//        [self.navigationController pushViewController:logDetailVC animated:YES];
     } else if (indexPath.section == 1) {
         SJLiveRoomModel *model = self.recommendLiveArray[indexPath.row];
         if ([model.user_id isEqualToString:@"10412"]) {
-            SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
-            liveRoomVC.target_id = model.user_id;
-            [self.navigationController pushViewController:liveRoomVC animated:YES];
+//            SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
+//            liveRoomVC.target_id = model.user_id;
+//            [self.navigationController pushViewController:liveRoomVC animated:YES];
         } else {
 //            SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
 //            myLiveVC.user_id = [SJUserDefaults valueForKey:kUserid];

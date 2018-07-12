@@ -191,7 +191,7 @@
         make.top.equalTo(weakSelf.mas_bottom).offset(0);
         make.left.equalTo(weakSelf.mas_left).offset(0);
         make.right.equalTo(weakSelf.mas_right).offset(0);
-        make.height.mas_equalTo(HEIGHT_TABBAR);
+        make.height.mas_equalTo(kTabbarHeight);
     }];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -285,12 +285,12 @@
 - (void)chatBoxViewController:(TLChatBoxViewController *)chatboxViewController didChangeChatBoxHeight:(CGFloat)height andDuration:(CGFloat)duration
 {
     WS(weakSelf);
-    if (height <= HEIGHT_TABBAR) {
+    if (height <= kTabbarHeight) {
         [self.chatBoxVC.view mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(weakSelf.mas_bottom).offset(0);
             make.left.equalTo(weakSelf.mas_left).offset(0);
             make.right.equalTo(weakSelf.mas_right).offset(0);
-            make.height.mas_equalTo(HEIGHT_TABBAR);
+            make.height.mas_equalTo(kTabbarHeight);
         }];
         
         [UIView animateWithDuration:duration animations:^{

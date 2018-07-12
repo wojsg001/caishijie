@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *editBtn;
 @property (weak, nonatomic) IBOutlet UIView *selectedLine;
 @property (weak, nonatomic) IBOutlet UIView *markLine;
+@property (weak, nonatomic) IBOutlet UIView *zixuanView;
 // 未登录界面
 @property (nonatomic, strong) SJselfSelectedDefaultController *defaultvc;
 // 自选股
@@ -96,7 +97,8 @@
     [super viewDidLoad];
 
     _pvc = [[UIPageViewController alloc]initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    _pvc.view.frame = CGRectMake(0, HEIGHT_NAVBAR + HEIGHT_STATUSBAR, self.view.width, self.view.height - HEIGHT_NAVBAR - HEIGHT_STATUSBAR - HEIGHT_TABBAR);
+    _pvc.view.frame = CGRectMake(0, kStatusBarAndNavigationBarHeight+30, self.view.width, self.view.height - kStatusBarAndNavigationBarHeight - kTabbarHeight);
+    
     
     self.pvc.dataSource = self;
     self.pvc.delegate = self;

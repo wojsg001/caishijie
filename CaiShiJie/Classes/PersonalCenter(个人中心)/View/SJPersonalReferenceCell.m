@@ -52,7 +52,9 @@
     _titleLabel.text = _model.title;
     _timeLabel.text = [NSString stringWithFormat:@"服务期：%@至%@", _model.start_at, _model.end_at];
     _countLabel.text = [NSString stringWithFormat:@"%@人订阅", _model.pay_count];
+    [_countLabel setHidden:YES];
     _priceLabel.text = [NSString stringWithFormat:@"¥%@", _model.price];
+    [_priceLabel setHidden:YES];
     
     if ([_model.status isEqualToString:@"0"]) {
         [_statusButton setTitle:@"更新中" forState:UIControlStateNormal];
@@ -78,6 +80,7 @@
         [_statusButton setBackgroundColor:[UIColor colorWithHexString:@"#999999" withAlpha:1]];
         [_payButton setBackgroundColor:[UIColor colorWithHexString:@"#999999" withAlpha:1]];
     }
+    [_statusButton setHidden:YES];
 }
 
 - (IBAction)clickPayButton:(id)sender {

@@ -147,9 +147,9 @@
 {
     SJMyTeacher *myTeacher = self.teacherArr[indexPath.row];
     if ([myTeacher.user_id isEqualToString:@"10412"]) {
-        SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
-        liveRoomVC.target_id = myTeacher.user_id;
-        [self.navigationController pushViewController:liveRoomVC animated:YES];
+//        SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
+//        liveRoomVC.target_id = myTeacher.user_id;
+//        [self.navigationController pushViewController:liveRoomVC animated:YES];
     } else {
 //        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] initWithNibName:@"SJMyLiveViewController" bundle:[NSBundle mainBundle]];
 //        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];

@@ -106,17 +106,17 @@
         ESWeak_(_photoLoadingView);
         ESWeak_(_imageView);
         
-        [SDWebImageManager.sharedManager downloadImageWithURL:_photo.url options:SDWebImageRetryFailed| SDWebImageLowPriority| SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-            ESStrong_(_photoLoadingView);
-            if (receivedSize > kMinProgress) {
-                __photoLoadingView.progress = (float)receivedSize/expectedSize;
-            }
-        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-            ESStrongSelf;
-            ESStrong_(_imageView);
-            __imageView.image = image;
-            [_self photoDidFinishLoadWithImage:image];
-        }];
+//        [SDWebImageManager.sharedManager downloadImageWithURL:_photo.url options:SDWebImageRetryFailed| SDWebImageLowPriority| SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//            ESStrong_(_photoLoadingView);
+//            if (receivedSize > kMinProgress) {
+//                __photoLoadingView.progress = (float)receivedSize/expectedSize;
+//            }
+//        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+//            ESStrongSelf;
+//            ESStrong_(_imageView);
+//            __imageView.image = image;
+//            [_self photoDidFinishLoadWithImage:image];
+//        }];
     }
 }
 

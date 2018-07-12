@@ -3,7 +3,7 @@
 //  MQTTClient
 //
 //  Created by Christoph Krey on 06.12.15.
-//  Copyright © 2015-2018 Christoph Krey. All rights reserved.
+//  Copyright © 2015-2017 Christoph Krey. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -20,10 +20,10 @@
 */
 @property (strong, nonatomic) NSString *host;
 
-/** port an unsigned 16 bit integer containing the IP port number to connect to
+/** port an unsigned 32 bit integer containing the IP port number to connect to
  * defaults to 80
  */
-@property (nonatomic) UInt16 port;
+@property (nonatomic) UInt32 port;
 
 /** tls a boolean indicating whether the transport should be using security 
  * defaults to NO

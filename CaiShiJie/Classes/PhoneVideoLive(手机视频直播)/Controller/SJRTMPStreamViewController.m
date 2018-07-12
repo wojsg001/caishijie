@@ -272,7 +272,7 @@
     [self.chatBoxVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_bottom).offset(0);
         make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(HEIGHT_TABBAR);
+        make.height.mas_equalTo(kTabbarHeight);
     }];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -654,12 +654,12 @@
 
 #pragma mark - TLChatBoxViewControllerDelegate
 - (void)chatBoxViewController:(TLChatBoxViewController *)chatboxViewController didChangeChatBoxHeight:(CGFloat)height andDuration:(CGFloat)duration {
-    if (height <= HEIGHT_TABBAR) {
+    if (height <= kTabbarHeight) {
         [self.chatBoxVC.view mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view.mas_bottom).offset(0);
             make.left.equalTo(self.view.mas_left).offset(0);
             make.right.equalTo(self.view.mas_right).offset(0);
-            make.height.mas_equalTo(HEIGHT_TABBAR);
+            make.height.mas_equalTo(kTabbarHeight);
         }];
         
         [UIView animateWithDuration:duration animations:^{

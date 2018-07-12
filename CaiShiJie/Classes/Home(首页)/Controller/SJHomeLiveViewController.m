@@ -208,9 +208,9 @@
         // 选择热点
         SJLiveRoomModel *model = self.hotLiveArr[indexPath.row];
         if ([model.user_id isEqualToString:@"10412"]) {
-            SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
-            liveRoomVC.target_id = model.user_id;
-            [self.navigationController pushViewController:liveRoomVC animated:YES];
+//            SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
+//            liveRoomVC.target_id = model.user_id;
+//            [self.navigationController pushViewController:liveRoomVC animated:YES];
         } else {
 //            SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
 //            NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
@@ -223,9 +223,9 @@
         // 选择火爆视频
         SJLiveRoomModel *model = self.fireLiveArr[indexPath.row];
         if ([model.user_id isEqualToString:@"10412"]) {
-            SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
-            liveRoomVC.target_id = model.user_id;
-            [self.navigationController pushViewController:liveRoomVC animated:YES];
+//            SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
+//            liveRoomVC.target_id = model.user_id;
+//            [self.navigationController pushViewController:liveRoomVC animated:YES];
         } else {
 //            SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
 //            NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
