@@ -14,6 +14,7 @@
 #import "SJNavigationController.h"
 #import "SJSchoolViewcontroller.h"
 #import "SJPhoneVideoListViewController.h"
+#import "SJCollegeViewController.h"
 
 @interface SJTabBarController ()<SJTabBarDelegate>
 
@@ -97,6 +98,10 @@
     SJHomeRecommendViewController *home = [[SJHomeRecommendViewController alloc] init];
     [self setUpOneChildViewController:home image:[UIImage imageNamed:@"table_bar_icon_live_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_live_h"] title:@"首页"];
     
+    //精品课
+    SJSchoolViewcontroller *share = [[SJSchoolViewcontroller alloc] init];
+    [self setUpOneChildViewController:share image:[UIImage imageNamed:@"table_bar_icon_share_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_share_h"] title:@"精品课"];
+    
     //自选股
     SJpageViewController *attention = [[SJpageViewController alloc] init];
     [self setUpOneChildViewController:attention image:[UIImage imageNamed:@"table_bar_icon_index_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_index_h"] title:@"自选股"];
@@ -106,9 +111,9 @@
 //    [self setUpOneChildViewController:videoListVC image:[UIImage imageNamed:@"nav_icon_n"] selectedImage:[UIImage imageWithOriginalName:@"nav_icon_h"] title:@"视频"];
 //    _videoListVC = videoListVC;
 
-    //股民学院
-    SJSchoolViewcontroller *share = [[SJSchoolViewcontroller alloc] init];
-    [self setUpOneChildViewController:share image:[UIImage imageNamed:@"table_bar_icon_share_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_share_h"] title:@"股民学院"];
+    //学院
+    SJCollegeViewController *collegeVC = [[SJCollegeViewController alloc] init];
+    [self setUpOneChildViewController:collegeVC image:[UIImage imageNamed:@"table_bar_icon_index_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_index_h"] title:@"学院"];
 
     //我的
     SJProfileViewController *profile = [[SJProfileViewController alloc] init];

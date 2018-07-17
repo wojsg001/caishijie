@@ -11,6 +11,17 @@
 		0441F28820F3271F00D3AF84 /* libPods-CaiShiJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 043BF6CA20CB88AB000C6E50 /* libPods-CaiShiJie.a */; };
 		0441F28A20F34B0800D3AF84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9948691C29165800EE67B1 /* Assets.xcassets */; };
 		0441F29D20F4956D00D3AF84 /* SJIndexCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0441F29C20F4956D00D3AF84 /* SJIndexCollectionViewController.m */; };
+		0448667120F8476500B48D0E /* SJSchoolVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448666D20F8476500B48D0E /* SJSchoolVideoModel.m */; };
+		0448667220F8476500B48D0E /* SJVideoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448666E20F8476500B48D0E /* SJVideoInfoModel.m */; };
+		0448667320F8476500B48D0E /* SJVideoInfoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448667020F8476500B48D0E /* SJVideoInfoListModel.m */; };
+		0448667A20F8477400B48D0E /* SJVideoSectionOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448667420F8477200B48D0E /* SJVideoSectionOneCell.m */; };
+		0448667B20F8477400B48D0E /* SJVideoSectionTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448667620F8477300B48D0E /* SJVideoSectionTwoCell.m */; };
+		0448667C20F8477400B48D0E /* SJVideoSectionTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0448667720F8477300B48D0E /* SJVideoSectionTwoCell.xib */; };
+		0448667D20F8477400B48D0E /* SJVideoSectionOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0448667820F8477300B48D0E /* SJVideoSectionOneCell.xib */; };
+		0448668620F84DDE00B48D0E /* SJCollegeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448668420F84DDE00B48D0E /* SJCollegeViewController.m */; };
+		0448668720F84DDE00B48D0E /* SJCollegeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0448668520F84DDE00B48D0E /* SJCollegeViewController.xib */; };
+		04CB557D20FC758E002D9427 /* SJCollegeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB557B20FC758E002D9427 /* SJCollegeTableViewCell.m */; };
+		04CB557E20FC758E002D9427 /* SJCollegeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CB557C20FC758E002D9427 /* SJCollegeTableViewCell.xib */; };
 		04ECA86F20CF5F6C00E76C27 /* UMSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04ECA85C20CF5F6C00E76C27 /* UMSocialSDKResources.bundle */; };
 		04ECA87020CF5F6C00E76C27 /* UShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECA85D20CF5F6C00E76C27 /* UShareUI.framework */; };
 		04ECA87120CF5F6C00E76C27 /* UMShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECA85E20CF5F6C00E76C27 /* UMShare.framework */; };
@@ -361,7 +372,6 @@
 		CE43F5B51CAE196600A8BC9D /* SJBlogArticleSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43F5B31CAE196600A8BC9D /* SJBlogArticleSettingViewController.m */; };
 		CE43F5B61CAE196600A8BC9D /* SJBlogArticleSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE43F5B41CAE196600A8BC9D /* SJBlogArticleSettingViewController.xib */; };
 		CE43F5B91CAE501700A8BC9D /* SJBlogArticleTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE43F5B81CAE501700A8BC9D /* SJBlogArticleTypeView.m */; };
-		CE460B421D9384510061F477 /* SJSchoolVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE460B411D9384510061F477 /* SJSchoolVideoModel.m */; };
 		CE466CF01D7408B30067C032 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE466CEF1D7408B30067C032 /* CoreMotion.framework */; };
 		CE466CF21D7408C90067C032 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE466CF11D7408C90067C032 /* libz.1.2.5.tbd */; };
 		CE47D3E31C33A82200C14F7E /* SJUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47D3E21C33A82200C14F7E /* SJUserInfo.m */; };
@@ -512,12 +522,6 @@
 		CE812D1D1CA91D05007527EC /* SJUserReferenceDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE812D1C1CA91D05007527EC /* SJUserReferenceDetailCell.m */; };
 		CE812D211CA91E00007527EC /* SJUserReferenceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE812D1F1CA91E00007527EC /* SJUserReferenceDetailViewController.m */; };
 		CE812D221CA91E00007527EC /* SJUserReferenceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE812D201CA91E00007527EC /* SJUserReferenceDetailViewController.xib */; };
-		CE8418A41D40B74D00CF932D /* SJVideoSectionOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8418A21D40B74D00CF932D /* SJVideoSectionOneCell.m */; };
-		CE8418A51D40B74D00CF932D /* SJVideoSectionOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8418A31D40B74D00CF932D /* SJVideoSectionOneCell.xib */; };
-		CE8418A91D40B76900CF932D /* SJVideoSectionTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8418A71D40B76900CF932D /* SJVideoSectionTwoCell.m */; };
-		CE8418AA1D40B76900CF932D /* SJVideoSectionTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8418A81D40B76900CF932D /* SJVideoSectionTwoCell.xib */; };
-		CE8418AD1D40BA8C00CF932D /* SJVideoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8418AC1D40BA8C00CF932D /* SJVideoInfoModel.m */; };
-		CE8418B01D40BAA900CF932D /* SJVideoInfoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8418AF1D40BAA900CF932D /* SJVideoInfoListModel.m */; };
 		CE8AEA411D4B1E75001A47C8 /* SJTeacherQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8AEA3F1D4B1E75001A47C8 /* SJTeacherQuestionViewController.m */; };
 		CE8AEA421D4B1E75001A47C8 /* SJTeacherQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8AEA401D4B1E75001A47C8 /* SJTeacherQuestionViewController.xib */; };
 		CE8AEA461D4B293A001A47C8 /* SJTeacherAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8AEA441D4B293A001A47C8 /* SJTeacherAnswerViewController.m */; };
@@ -916,6 +920,24 @@
 		043BF6A220CB88AA000C6E50 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		0441F29B20F4956D00D3AF84 /* SJIndexCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJIndexCollectionViewController.h; sourceTree = "<group>"; };
 		0441F29C20F4956D00D3AF84 /* SJIndexCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJIndexCollectionViewController.m; sourceTree = "<group>"; };
+		0448666B20F8476400B48D0E /* SJVideoInfoListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJVideoInfoListModel.h; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/Model/SJVideoInfoListModel.h"; sourceTree = SOURCE_ROOT; };
+		0448666C20F8476400B48D0E /* SJVideoInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJVideoInfoModel.h; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/Model/SJVideoInfoModel.h"; sourceTree = SOURCE_ROOT; };
+		0448666D20F8476500B48D0E /* SJSchoolVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJSchoolVideoModel.m; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/Model/SJSchoolVideoModel.m"; sourceTree = SOURCE_ROOT; };
+		0448666E20F8476500B48D0E /* SJVideoInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJVideoInfoModel.m; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/Model/SJVideoInfoModel.m"; sourceTree = SOURCE_ROOT; };
+		0448666F20F8476500B48D0E /* SJSchoolVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJSchoolVideoModel.h; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/Model/SJSchoolVideoModel.h"; sourceTree = SOURCE_ROOT; };
+		0448667020F8476500B48D0E /* SJVideoInfoListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJVideoInfoListModel.m; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/Model/SJVideoInfoListModel.m"; sourceTree = SOURCE_ROOT; };
+		0448667420F8477200B48D0E /* SJVideoSectionOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJVideoSectionOneCell.m; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/View/SJVideoSectionOneCell.m"; sourceTree = SOURCE_ROOT; };
+		0448667520F8477200B48D0E /* SJVideoSectionTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJVideoSectionTwoCell.h; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/View/SJVideoSectionTwoCell.h"; sourceTree = SOURCE_ROOT; };
+		0448667620F8477300B48D0E /* SJVideoSectionTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJVideoSectionTwoCell.m; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/View/SJVideoSectionTwoCell.m"; sourceTree = SOURCE_ROOT; };
+		0448667720F8477300B48D0E /* SJVideoSectionTwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SJVideoSectionTwoCell.xib; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/View/SJVideoSectionTwoCell.xib"; sourceTree = SOURCE_ROOT; };
+		0448667820F8477300B48D0E /* SJVideoSectionOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SJVideoSectionOneCell.xib; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/View/SJVideoSectionOneCell.xib"; sourceTree = SOURCE_ROOT; };
+		0448667920F8477300B48D0E /* SJVideoSectionOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJVideoSectionOneCell.h; path = "CaiShiJie/Classes/StockSchool(精品课)/VideoSchool/View/SJVideoSectionOneCell.h"; sourceTree = SOURCE_ROOT; };
+		0448668320F84DDE00B48D0E /* SJCollegeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJCollegeViewController.h; sourceTree = "<group>"; };
+		0448668420F84DDE00B48D0E /* SJCollegeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJCollegeViewController.m; sourceTree = "<group>"; };
+		0448668520F84DDE00B48D0E /* SJCollegeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SJCollegeViewController.xib; sourceTree = "<group>"; };
+		04CB557A20FC758E002D9427 /* SJCollegeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJCollegeTableViewCell.h; sourceTree = "<group>"; };
+		04CB557B20FC758E002D9427 /* SJCollegeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJCollegeTableViewCell.m; sourceTree = "<group>"; };
+		04CB557C20FC758E002D9427 /* SJCollegeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SJCollegeTableViewCell.xib; sourceTree = "<group>"; };
 		04ECA85C20CF5F6C00E76C27 /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResources.bundle; sourceTree = "<group>"; };
 		04ECA85D20CF5F6C00E76C27 /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UShareUI.framework; sourceTree = "<group>"; };
 		04ECA85E20CF5F6C00E76C27 /* UMShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMShare.framework; sourceTree = "<group>"; };
@@ -1513,8 +1535,6 @@
 		CE43F5B41CAE196600A8BC9D /* SJBlogArticleSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJBlogArticleSettingViewController.xib; sourceTree = "<group>"; };
 		CE43F5B71CAE501700A8BC9D /* SJBlogArticleTypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBlogArticleTypeView.h; sourceTree = "<group>"; };
 		CE43F5B81CAE501700A8BC9D /* SJBlogArticleTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBlogArticleTypeView.m; sourceTree = "<group>"; };
-		CE460B401D9384510061F477 /* SJSchoolVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJSchoolVideoModel.h; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/Model/SJSchoolVideoModel.h"; sourceTree = SOURCE_ROOT; };
-		CE460B411D9384510061F477 /* SJSchoolVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJSchoolVideoModel.m; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/Model/SJSchoolVideoModel.m"; sourceTree = SOURCE_ROOT; };
 		CE466CEF1D7408B30067C032 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		CE466CF11D7408C90067C032 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		CE47D3E11C33A82200C14F7E /* SJUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJUserInfo.h; sourceTree = "<group>"; };
@@ -1775,16 +1795,6 @@
 		CE812D1E1CA91E00007527EC /* SJUserReferenceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJUserReferenceDetailViewController.h; sourceTree = "<group>"; };
 		CE812D1F1CA91E00007527EC /* SJUserReferenceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJUserReferenceDetailViewController.m; sourceTree = "<group>"; };
 		CE812D201CA91E00007527EC /* SJUserReferenceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJUserReferenceDetailViewController.xib; sourceTree = "<group>"; };
-		CE8418A11D40B74D00CF932D /* SJVideoSectionOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJVideoSectionOneCell.h; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/View/SJVideoSectionOneCell.h"; sourceTree = SOURCE_ROOT; };
-		CE8418A21D40B74D00CF932D /* SJVideoSectionOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJVideoSectionOneCell.m; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/View/SJVideoSectionOneCell.m"; sourceTree = SOURCE_ROOT; };
-		CE8418A31D40B74D00CF932D /* SJVideoSectionOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SJVideoSectionOneCell.xib; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/View/SJVideoSectionOneCell.xib"; sourceTree = SOURCE_ROOT; };
-		CE8418A61D40B76900CF932D /* SJVideoSectionTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJVideoSectionTwoCell.h; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/View/SJVideoSectionTwoCell.h"; sourceTree = SOURCE_ROOT; };
-		CE8418A71D40B76900CF932D /* SJVideoSectionTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJVideoSectionTwoCell.m; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/View/SJVideoSectionTwoCell.m"; sourceTree = SOURCE_ROOT; };
-		CE8418A81D40B76900CF932D /* SJVideoSectionTwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SJVideoSectionTwoCell.xib; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/View/SJVideoSectionTwoCell.xib"; sourceTree = SOURCE_ROOT; };
-		CE8418AB1D40BA8C00CF932D /* SJVideoInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJVideoInfoModel.h; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/Model/SJVideoInfoModel.h"; sourceTree = SOURCE_ROOT; };
-		CE8418AC1D40BA8C00CF932D /* SJVideoInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJVideoInfoModel.m; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/Model/SJVideoInfoModel.m"; sourceTree = SOURCE_ROOT; };
-		CE8418AE1D40BAA900CF932D /* SJVideoInfoListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJVideoInfoListModel.h; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/Model/SJVideoInfoListModel.h"; sourceTree = SOURCE_ROOT; };
-		CE8418AF1D40BAA900CF932D /* SJVideoInfoListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJVideoInfoListModel.m; path = "CaiShiJie/Classes/StockSchool(股民学院)/VideoSchool/Model/SJVideoInfoListModel.m"; sourceTree = SOURCE_ROOT; };
 		CE8AEA3E1D4B1E75001A47C8 /* SJTeacherQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTeacherQuestionViewController.h; sourceTree = "<group>"; };
 		CE8AEA3F1D4B1E75001A47C8 /* SJTeacherQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTeacherQuestionViewController.m; sourceTree = "<group>"; };
 		CE8AEA401D4B1E75001A47C8 /* SJTeacherQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTeacherQuestionViewController.xib; sourceTree = "<group>"; };
@@ -2389,6 +2399,43 @@
 				043BF6DA20CB88AB000C6E50 /* libYLGIFImage.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0448667F20F84DC800B48D0E /* College(学院) */ = {
+			isa = PBXGroup;
+			children = (
+				0448668020F84DC800B48D0E /* Controller */,
+				0448668120F84DC800B48D0E /* Model */,
+				0448668220F84DC800B48D0E /* View */,
+			);
+			path = "College(学院)";
+			sourceTree = "<group>";
+		};
+		0448668020F84DC800B48D0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0448668320F84DDE00B48D0E /* SJCollegeViewController.h */,
+				0448668420F84DDE00B48D0E /* SJCollegeViewController.m */,
+				0448668520F84DDE00B48D0E /* SJCollegeViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0448668120F84DC800B48D0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0448668220F84DC800B48D0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04CB557A20FC758E002D9427 /* SJCollegeTableViewCell.h */,
+				04CB557B20FC758E002D9427 /* SJCollegeTableViewCell.m */,
+				04CB557C20FC758E002D9427 /* SJCollegeTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		04ECA85A20CF5F6C00E76C27 /* UMSocial */ = {
@@ -3612,13 +3659,13 @@
 			path = "Home(首页)";
 			sourceTree = "<group>";
 		};
-		CE40EA091CD9977A0054A770 /* StockSchool(股民学院) */ = {
+		CE40EA091CD9977A0054A770 /* StockSchool(精品课) */ = {
 			isa = PBXGroup;
 			children = (
 				CE40EA0A1CD9977B0054A770 /* BookSchool */,
 				CE40EA3A1CD9977B0054A770 /* VideoSchool */,
 			);
-			path = "StockSchool(股民学院)";
+			path = "StockSchool(精品课)";
 			sourceTree = "<group>";
 		};
 		CE40EA0A1CD9977B0054A770 /* BookSchool */ = {
@@ -3723,12 +3770,12 @@
 		CE40EA481CD9977B0054A770 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CE8418AB1D40BA8C00CF932D /* SJVideoInfoModel.h */,
-				CE8418AC1D40BA8C00CF932D /* SJVideoInfoModel.m */,
-				CE8418AE1D40BAA900CF932D /* SJVideoInfoListModel.h */,
-				CE8418AF1D40BAA900CF932D /* SJVideoInfoListModel.m */,
-				CE460B401D9384510061F477 /* SJSchoolVideoModel.h */,
-				CE460B411D9384510061F477 /* SJSchoolVideoModel.m */,
+				0448666F20F8476500B48D0E /* SJSchoolVideoModel.h */,
+				0448666D20F8476500B48D0E /* SJSchoolVideoModel.m */,
+				0448666B20F8476400B48D0E /* SJVideoInfoListModel.h */,
+				0448667020F8476500B48D0E /* SJVideoInfoListModel.m */,
+				0448666C20F8476400B48D0E /* SJVideoInfoModel.h */,
+				0448666E20F8476500B48D0E /* SJVideoInfoModel.m */,
 			);
 			name = Model;
 			path = model;
@@ -3737,6 +3784,12 @@
 		CE40EA511CD9977B0054A770 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0448667920F8477300B48D0E /* SJVideoSectionOneCell.h */,
+				0448667420F8477200B48D0E /* SJVideoSectionOneCell.m */,
+				0448667820F8477300B48D0E /* SJVideoSectionOneCell.xib */,
+				0448667520F8477200B48D0E /* SJVideoSectionTwoCell.h */,
+				0448667620F8477300B48D0E /* SJVideoSectionTwoCell.m */,
+				0448667720F8477300B48D0E /* SJVideoSectionTwoCell.xib */,
 				CE40EA521CD9977B0054A770 /* SJCollectionHeadview.h */,
 				CE40EA531CD9977B0054A770 /* SJCollectionHeadview.m */,
 				CE40EA541CD9977B0054A770 /* SJCollectionHeadview.xib */,
@@ -3749,12 +3802,6 @@
 				CE40EA651CD9977B0054A770 /* VideoCollectionViewCell.h */,
 				CE40EA661CD9977B0054A770 /* VideoCollectionViewCell.m */,
 				CE40EA671CD9977B0054A770 /* VideoCollectionViewCell.xib */,
-				CE8418A11D40B74D00CF932D /* SJVideoSectionOneCell.h */,
-				CE8418A21D40B74D00CF932D /* SJVideoSectionOneCell.m */,
-				CE8418A31D40B74D00CF932D /* SJVideoSectionOneCell.xib */,
-				CE8418A61D40B76900CF932D /* SJVideoSectionTwoCell.h */,
-				CE8418A71D40B76900CF932D /* SJVideoSectionTwoCell.m */,
-				CE8418A81D40B76900CF932D /* SJVideoSectionTwoCell.xib */,
 			);
 			name = View;
 			path = view;
@@ -4684,7 +4731,8 @@
 				CE40E9701CD997320054A770 /* Home(首页) */,
 				CE5C1E391D3CCD480089C190 /* Stock(自选股) */,
 				CE666F591CDCACB200C24BF6 /* BlogArticle(博文) */,
-				CE40EA091CD9977A0054A770 /* StockSchool(股民学院) */,
+				CE40EA091CD9977A0054A770 /* StockSchool(精品课) */,
+				0448667F20F84DC800B48D0E /* College(学院) */,
 				CEF07BA21C29204200A89756 /* Profile(我的) */,
 				CEF07B9A1C29204200A89756 /* Main */,
 				CE3C90C11C29486000D00A37 /* NewFeature(新特性) */,
@@ -5375,7 +5423,6 @@
 				CE49A1161CB65D4800B474B5 /* SJMySendBlogArticleCell.xib in Resources */,
 				CEFD09D41DFAAD3F006917AE /* SJGiftRankViewController.xib in Resources */,
 				CEFD09EA1DFAAD3F006917AE /* SJReportDetailViewController.xib in Resources */,
-				CE8418A51D40B74D00CF932D /* SJVideoSectionOneCell.xib in Resources */,
 				CE132CF11D9D0DD500C93DC8 /* SJPersonalReferenceCell.xib in Resources */,
 				CEFD0A231DFAAD40006917AE /* SJReportTableViewCell.xib in Resources */,
 				CE62ADBD1D38A65300DB9032 /* SJLoginStoryboard.storyboard in Resources */,
@@ -5391,6 +5438,7 @@
 				CE132CE11D9CE1E100C93DC8 /* SJHistoryTopCell.xib in Resources */,
 				CEFD0A811DFAADDC006917AE /* SJUserInfoView.xib in Resources */,
 				CEFD0A151DFAAD3F006917AE /* SJRankHeadView.xib in Resources */,
+				04CB557E20FC758E002D9427 /* SJCollegeTableViewCell.xib in Resources */,
 				CE40EA9D1CD9977B0054A770 /* SJsecondsectionCell.xib in Resources */,
 				CE337BEF1C7D4F76002D30AC /* mic_0.png in Resources */,
 				CE40EA701CD9977B0054A770 /* SJBookContentViewController.xib in Resources */,
@@ -5403,6 +5451,7 @@
 				CEFD0AEF1DFAB373006917AE /* SJShaiZhanJiViewController.xib in Resources */,
 				CE409F651C47C4D600C21DE9 /* SJQuestionDetailController.xib in Resources */,
 				CEFD0A6B1DFAADDC006917AE /* SJPhoneVideoStoryboard.storyboard in Resources */,
+				0448667D20F8477400B48D0E /* SJVideoSectionOneCell.xib in Resources */,
 				CE40EA851CD9977B0054A770 /* SJBookSectionCell.xib in Resources */,
 				CEFD0A0C1DFAAD3F006917AE /* SJLogInfoBottomCell.xib in Resources */,
 				CE10D60A1D9BABE70000120D /* SJPersonalCenterViewController.xib in Resources */,
@@ -5538,6 +5587,7 @@
 				CE40EA831CD9977B0054A770 /* SJBookGroupSectionView.xib in Resources */,
 				CE3F41231CB75730008BCDBE /* SJMyGoldCoinViewController.xib in Resources */,
 				CEAEC23B1D781E0E00750A17 /* SJLiveVideoListCell.xib in Resources */,
+				0448668720F84DDE00B48D0E /* SJCollegeViewController.xib in Resources */,
 				CE49A0EC1CB6283100B474B5 /* SJOpinionViewController.xib in Resources */,
 				CEDBC80C1CAD1D1700396AEE /* SJCreateNewReferenceViewController.xib in Resources */,
 				CE1647691D7FF89A00F84F83 /* SJSendMoneyViewController.xib in Resources */,
@@ -5565,12 +5615,12 @@
 				CE3B20FA1C7BF3FD00BBBF74 /* zz_alumb_rightCell.png in Resources */,
 				CE1B14221CE08519006A0118 /* SJBlogZhuanTiCell.xib in Resources */,
 				04ECA86F20CF5F6C00E76C27 /* UMSocialSDKResources.bundle in Resources */,
+				0448667C20F8477400B48D0E /* SJVideoSectionTwoCell.xib in Resources */,
 				CEFD0AA51DFAB17A006917AE /* MorevideoViewController.xib in Resources */,
 				CEFD0A1F1DFAAD40006917AE /* SJRecommendLiveCell.xib in Resources */,
 				CEFD0A171DFAAD3F006917AE /* SJRecommendFooterView.xib in Resources */,
 				CEF3F0841C4DE1C3008E9E5B /* SJOtherRegisterViewController.xib in Resources */,
 				CE49B0381D991999003EC699 /* SJShareView.xib in Resources */,
-				CE8418AA1D40B76900CF932D /* SJVideoSectionTwoCell.xib in Resources */,
 				0441F28A20F34B0800D3AF84 /* Assets.xcassets in Resources */,
 				CE666F7E1CDCACB200C24BF6 /* SJBlogArticleTopViewCell.xib in Resources */,
 				CEFD09DD1DFAAD3F006917AE /* SJLogDetailViewController.xib in Resources */,
@@ -5720,6 +5770,7 @@
 				CEFD09F71DFAAD3F006917AE /* SJRecommendLog.m in Sources */,
 				CE34F3F51C4F19CC0089292A /* UIView+MJExtension.m in Sources */,
 				CEFF74761DAF18E800F7A0DD /* SDWaitingView.m in Sources */,
+				0448667B20F8477400B48D0E /* SJVideoSectionTwoCell.m in Sources */,
 				CEFD0AC31DFAB252006917AE /* SJMarkViewController.m in Sources */,
 				CEC4E7651D991AF500A63390 /* SJStockTimeLineViewController.m in Sources */,
 				CE40EA7A1CD9977B0054A770 /* SJBookDetailHead.m in Sources */,
@@ -5737,6 +5788,7 @@
 				CE3B20E81C7BF3FD00BBBF74 /* ZZPhotoListViewController.m in Sources */,
 				CEE1E8B21DB9FF14006A82C5 /* TLChatBoxFaceMenuView.m in Sources */,
 				CEFD0A101DFAAD3F006917AE /* SJMasterTeacherView.m in Sources */,
+				0448667320F8476500B48D0E /* SJVideoInfoListModel.m in Sources */,
 				CE586B3C1D40A8BA003E386A /* XHForwardView.m in Sources */,
 				CE1FE2F01CBD0CAA0054769F /* SJyearsoldviewcontroller.m in Sources */,
 				CE3B20FE1C7BF3FD00BBBF74 /* ZZPageControl.m in Sources */,
@@ -5764,7 +5816,6 @@
 				CE4FB13B1C546E1B00CDE0C5 /* SJUserQuestionDetail.m in Sources */,
 				CE3677211C8D1628001539C9 /* SJPresentCell.m in Sources */,
 				CEF786401DC059A700ECEBA9 /* SJNoWifiView.m in Sources */,
-				CE8418A41D40B74D00CF932D /* SJVideoSectionOneCell.m in Sources */,
 				CE337BEE1C7D4F76002D30AC /* D3RecordButton.m in Sources */,
 				CE40EA751CD9977B0054A770 /* SJRecommendBookViewController.m in Sources */,
 				CEFD0A131DFAAD3F006917AE /* SJQuestionRankPopView.m in Sources */,
@@ -5815,6 +5866,7 @@
 				CE0DAA261DAB6A0900A65C59 /* SJLiveOpenMessageViewController.m in Sources */,
 				CEFD0AE61DFAB373006917AE /* SJBlogArticleListViewController.m in Sources */,
 				CE21F5681D6C364900FED35F /* BarrageRenderer.m in Sources */,
+				0448667A20F8477400B48D0E /* SJVideoSectionOneCell.m in Sources */,
 				CE21F56B1D6C364900FED35F /* BarrageFloatImageSprite.m in Sources */,
 				CE4373421CA3CAAD0077F94D /* SJMoreToolViewController.m in Sources */,
 				CEFD091C1DFAABC2006917AE /* SJTabBarController.m in Sources */,
@@ -5863,6 +5915,7 @@
 				CEFD09D61DFAAD3F006917AE /* SJHomeLiveViewController.m in Sources */,
 				CE6395931CA543CB0084AC59 /* SJUserReferenceViewController.m in Sources */,
 				CEC7A2111C560DCE0081CA68 /* SJAnswerdetailModel.m in Sources */,
+				0448667220F8476500B48D0E /* SJVideoInfoModel.m in Sources */,
 				CE1B14261CE08BB7006A0118 /* SJBlogRankCell.m in Sources */,
 				CE409F501C47B6D500C21DE9 /* SJWeiHuiDaCell.m in Sources */,
 				CED9C3BA1D73DC4C00E64FCF /* UIWebView+AFNetworking.m in Sources */,
@@ -5891,7 +5944,6 @@
 				CE409FB11C47C7D300C21DE9 /* SJQuestionModel.m in Sources */,
 				CE3B20E41C7BF3FD00BBBF74 /* ZZBrowserPickerViewController.m in Sources */,
 				CE49B01A1D99196D003EC699 /* SJMySelectedStockModel.m in Sources */,
-				CE8418AD1D40BA8C00CF932D /* SJVideoInfoModel.m in Sources */,
 				CE4D86B11C30CCDC00F9A77F /* SJRegisterViewController.m in Sources */,
 				CEFD09EB1DFAAD3F006917AE /* SJReportSuccessViewController.m in Sources */,
 				CE3B21011C7BF3FD00BBBF74 /* ZZPhotoPickerCell.m in Sources */,
@@ -6032,7 +6084,6 @@
 				CEFD0A751DFAADDC006917AE /* SJShakeLabel.m in Sources */,
 				CE3B2A051C91223200EE2D13 /* SJConsumeCell.m in Sources */,
 				CEF07BAB1C29204200A89756 /* main.m in Sources */,
-				CE460B421D9384510061F477 /* SJSchoolVideoModel.m in Sources */,
 				CE1FE2C91CBC85040054769F /* SJCityCell.m in Sources */,
 				CE1132801C9F8DED002A6EC6 /* SJDragButton.m in Sources */,
 				CE34F4061C4F1BA10089292A /* SJhttptool.m in Sources */,
@@ -6078,6 +6129,7 @@
 				CE666F7D1CDCACB200C24BF6 /* SJBlogArticleTopViewCell.m in Sources */,
 				CE409F2D1C4769D800C21DE9 /* SJTextView.m in Sources */,
 				CE3B2A0A1C9162FB00EE2D13 /* SJWaitPayCell.m in Sources */,
+				04CB557D20FC758E002D9427 /* SJCollegeTableViewCell.m in Sources */,
 				CE7CE7471CBB799400AC3E72 /* SJCitySelectionViewController.m in Sources */,
 				CEFD0A021DFAAD3F006917AE /* SJHomeLiveHeadVIew.m in Sources */,
 				CE5F96321CDAEBDF005C2C67 /* DLUtility.m in Sources */,
@@ -6085,6 +6137,7 @@
 				CE337BF71C7D4F77002D30AC /* Mp3Recorder.m in Sources */,
 				CE165B2B1DA8FB82007A76EF /* SJPersonalSummaryTwoCell.m in Sources */,
 				CEEE56951CA93B350073AB13 /* SJMixPayParam.m in Sources */,
+				0448667120F8476500B48D0E /* SJSchoolVideoModel.m in Sources */,
 				CE49B01F1D99196D003EC699 /* HanyuPinyinOutputFormat.m in Sources */,
 				CEFD0A7D1DFAADDC006917AE /* SJOpinionView.m in Sources */,
 				CEFD0A221DFAAD40006917AE /* SJReportTableViewCell.m in Sources */,
@@ -6107,7 +6160,6 @@
 				CE5AF3B21C8EBFE200D923A3 /* SJGiftGeterModel.m in Sources */,
 				CEBE83AB1CABD72E001E2775 /* SJAddReferenceContentView.m in Sources */,
 				CE409F621C47C4D600C21DE9 /* SJMyQuestionViewController.m in Sources */,
-				CE8418B01D40BAA900CF932D /* SJVideoInfoListModel.m in Sources */,
 				CE21F56C1D6C364900FED35F /* BarrageFloatSprite.m in Sources */,
 				CE33E9881C4C869500B837AA /* MBProgressHUD+MJ.m in Sources */,
 				CE409F181C474A9000C21DE9 /* SJAnsweredCell.m in Sources */,
@@ -6160,7 +6212,6 @@
 				CEFD0A861DFAADDC006917AE /* SJVideoGiftView.m in Sources */,
 				CE40EA861CD9977B0054A770 /* SJRecommendBookCell.m in Sources */,
 				CEFD0A791DFAADDC006917AE /* SJFullVideoAboveView.m in Sources */,
-				CE8418A91D40B76900CF932D /* SJVideoSectionTwoCell.m in Sources */,
 				CEFD0A701DFAADDC006917AE /* SJVideoOpinionModel.m in Sources */,
 				CEFD09F91DFAAD3F006917AE /* SJRecommendVideoModel.m in Sources */,
 				CE49B02C1D99196D003EC699 /* SJsearchCell.m in Sources */,
@@ -6205,6 +6256,7 @@
 				CEE1E8AB1DB9FF14006A82C5 /* IATConfig.m in Sources */,
 				CEC4E7691D991AF500A63390 /* SJTimeLineView.m in Sources */,
 				CE0DAA3C1DAB875900A65C59 /* SJChatMessageCell.m in Sources */,
+				0448668620F84DDE00B48D0E /* SJCollegeViewController.m in Sources */,
 				CE6414CD1C842D350013C584 /* MASConstraintMaker.m in Sources */,
 				CE49A11A1CB65DAF00B474B5 /* SJMyDraftBlogArticleCell.m in Sources */,
 				CEF3F0831C4DE1C3008E9E5B /* SJOtherRegisterViewController.m in Sources */,

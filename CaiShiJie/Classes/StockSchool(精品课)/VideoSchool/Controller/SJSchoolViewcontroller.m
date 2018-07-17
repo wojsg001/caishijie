@@ -49,7 +49,7 @@
 
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.title = @"股民学院";
+    self.navigationItem.title = @"精品课";
     self.isNetwork = YES;
     [self initsubviews];
     
