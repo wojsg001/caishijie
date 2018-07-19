@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040E7A6E20FDC49D003CE4DF /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040E7A5F20FDC49C003CE4DF /* back@2x.png */; };
+		040E7A6F20FDC49D003CE4DF /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 040E7A6020FDC49C003CE4DF /* back@3x.png */; };
+		040E7A7020FDC49D003CE4DF /* UIDevice+TFDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E7A6220FDC49C003CE4DF /* UIDevice+TFDevice.m */; };
+		040E7A7120FDC49D003CE4DF /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E7A6420FDC49C003CE4DF /* UIImage+Extension.m */; };
+		040E7A7220FDC49D003CE4DF /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E7A6520FDC49C003CE4DF /* UIViewController+BackButtonHandler.m */; };
+		040E7A7320FDC49D003CE4DF /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E7A6620FDC49C003CE4DF /* CountdownView.m */; };
+		040E7A7420FDC49D003CE4DF /* ATJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E7A6720FDC49C003CE4DF /* ATJWebViewController.m */; };
+		040E7A7520FDC49D003CE4DF /* ATJURLFailture.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E7A6920FDC49C003CE4DF /* ATJURLFailture.m */; };
+		040E7A7620FDC49D003CE4DF /* WebNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E7A6B20FDC49C003CE4DF /* WebNavigationViewController.m */; };
+		040E7A7720FDC49D003CE4DF /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 040E7A6C20FDC49C003CE4DF /* back.png */; };
 		04112FD420CF946700A925ED /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04112FD320CF946700A925ED /* UserNotifications.framework */; };
 		0441F28820F3271F00D3AF84 /* libPods-CaiShiJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 043BF6CA20CB88AB000C6E50 /* libPods-CaiShiJie.a */; };
 		0441F28A20F34B0800D3AF84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9948691C29165800EE67B1 /* Assets.xcassets */; };
@@ -916,6 +926,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040E7A5D20FDC49C003CE4DF /* ATJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATJWebViewController.h; sourceTree = "<group>"; };
+		040E7A5E20FDC49C003CE4DF /* CountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownView.h; sourceTree = "<group>"; };
+		040E7A5F20FDC49C003CE4DF /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		040E7A6020FDC49C003CE4DF /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+		040E7A6120FDC49C003CE4DF /* ATJURLFailture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATJURLFailture.h; sourceTree = "<group>"; };
+		040E7A6220FDC49C003CE4DF /* UIDevice+TFDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+TFDevice.m"; sourceTree = "<group>"; };
+		040E7A6320FDC49C003CE4DF /* WebNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebNavigationViewController.h; sourceTree = "<group>"; };
+		040E7A6420FDC49C003CE4DF /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		040E7A6520FDC49C003CE4DF /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		040E7A6620FDC49C003CE4DF /* CountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownView.m; sourceTree = "<group>"; };
+		040E7A6720FDC49C003CE4DF /* ATJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATJWebViewController.m; sourceTree = "<group>"; };
+		040E7A6820FDC49C003CE4DF /* UIDevice+TFDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+TFDevice.h"; sourceTree = "<group>"; };
+		040E7A6920FDC49C003CE4DF /* ATJURLFailture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATJURLFailture.m; sourceTree = "<group>"; };
+		040E7A6A20FDC49C003CE4DF /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		040E7A6B20FDC49C003CE4DF /* WebNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebNavigationViewController.m; sourceTree = "<group>"; };
+		040E7A6C20FDC49C003CE4DF /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		040E7A6D20FDC49C003CE4DF /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		04112FD320CF946700A925ED /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		043BF6A220CB88AA000C6E50 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		0441F29B20F4956D00D3AF84 /* SJIndexCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJIndexCollectionViewController.h; sourceTree = "<group>"; };
@@ -2380,6 +2407,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040E7A5C20FDC49C003CE4DF /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				040E7A5D20FDC49C003CE4DF /* ATJWebViewController.h */,
+				040E7A5E20FDC49C003CE4DF /* CountdownView.h */,
+				040E7A5F20FDC49C003CE4DF /* back@2x.png */,
+				040E7A6020FDC49C003CE4DF /* back@3x.png */,
+				040E7A6120FDC49C003CE4DF /* ATJURLFailture.h */,
+				040E7A6220FDC49C003CE4DF /* UIDevice+TFDevice.m */,
+				040E7A6320FDC49C003CE4DF /* WebNavigationViewController.h */,
+				040E7A6420FDC49C003CE4DF /* UIImage+Extension.m */,
+				040E7A6520FDC49C003CE4DF /* UIViewController+BackButtonHandler.m */,
+				040E7A6620FDC49C003CE4DF /* CountdownView.m */,
+				040E7A6720FDC49C003CE4DF /* ATJWebViewController.m */,
+				040E7A6820FDC49C003CE4DF /* UIDevice+TFDevice.h */,
+				040E7A6920FDC49C003CE4DF /* ATJURLFailture.m */,
+				040E7A6A20FDC49C003CE4DF /* UIImage+Extension.h */,
+				040E7A6B20FDC49C003CE4DF /* WebNavigationViewController.m */,
+				040E7A6C20FDC49C003CE4DF /* back.png */,
+				040E7A6D20FDC49C003CE4DF /* UIViewController+BackButtonHandler.h */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		043BF6A320CB88AA000C6E50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -2431,6 +2482,7 @@
 		0448668220F84DC800B48D0E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				040E7A5C20FDC49C003CE4DF /* WebView */,
 				04CB557A20FC758E002D9427 /* SJCollegeTableViewCell.h */,
 				04CB557B20FC758E002D9427 /* SJCollegeTableViewCell.m */,
 				04CB557C20FC758E002D9427 /* SJCollegeTableViewCell.xib */,
@@ -5445,6 +5497,7 @@
 				CE4AF5F71CC486A20067D674 /* SJupdatephoneNumberVC.xib in Resources */,
 				CE3F41211CB75730008BCDBE /* SJBuyGoldCoinViewController.xib in Resources */,
 				CE3B20F41C7BF3FD00BBBF74 /* remove_btn_pic.png in Resources */,
+				040E7A6F20FDC49D003CE4DF /* back@3x.png in Resources */,
 				CE337BF31C7D4F76002D30AC /* mic_4.png in Resources */,
 				CE49B0291D99196D003EC699 /* SJFirstsectionCollectionCell.xib in Resources */,
 				CEFD0A031DFAAD3F006917AE /* SJHomeLiveHeadVIew.xib in Resources */,
@@ -5474,6 +5527,7 @@
 				CEFD0A071DFAAD3F006917AE /* SJHomeRecommendLiveCell.xib in Resources */,
 				CEA8E0FC1C313DD800458B2B /* SJRegisterSucceedViewController.xib in Resources */,
 				CE2E5B701DD5CC4500A050FA /* SJNeiCanPayViewController.xib in Resources */,
+				040E7A6E20FDC49D003CE4DF /* back@2x.png in Resources */,
 				CE3F41331CB7582D008BCDBE /* SJHisReferenceViewController.xib in Resources */,
 				CE7CE7481CBB799400AC3E72 /* SJCitySelectionViewController.xib in Resources */,
 				CE6414CA1C842D350013C584 /* Info.plist in Resources */,
@@ -5605,6 +5659,7 @@
 				CEFD0A051DFAAD3F006917AE /* SJHomeRecommendBlogCell.xib in Resources */,
 				CEFD0AEC1DFAB373006917AE /* SJBlogZhuanTiViewController.xib in Resources */,
 				CE259B811CAA772C00D49995 /* SJPopupModifyPriceView.xib in Resources */,
+				040E7A7720FDC49D003CE4DF /* back.png in Resources */,
 				CEFD09FF1DFAAD3F006917AE /* SJFindTeacherSectionView.xib in Resources */,
 				CE3B20F11C7BF3FD00BBBF74 /* flash_open_pic.png in Resources */,
 				CEDBC7F71CAD017500396AEE /* SJHisReferenceCell.xib in Resources */,
@@ -5912,6 +5967,7 @@
 				CE666F841CDCACB200C24BF6 /* SJRecommendBlogArticleView.m in Sources */,
 				CE259B9C1CAAA89F00D49995 /* MHDatePicker.m in Sources */,
 				CE666F7A1CDCACB200C24BF6 /* SJBlogArticleHeaderView.m in Sources */,
+				040E7A7020FDC49D003CE4DF /* UIDevice+TFDevice.m in Sources */,
 				CEFD09D61DFAAD3F006917AE /* SJHomeLiveViewController.m in Sources */,
 				CE6395931CA543CB0084AC59 /* SJUserReferenceViewController.m in Sources */,
 				CEC7A2111C560DCE0081CA68 /* SJAnswerdetailModel.m in Sources */,
@@ -5943,6 +5999,7 @@
 				CE3AC9481CA8C90F004CDEA5 /* SJTeacherReferenceViewController.m in Sources */,
 				CE409FB11C47C7D300C21DE9 /* SJQuestionModel.m in Sources */,
 				CE3B20E41C7BF3FD00BBBF74 /* ZZBrowserPickerViewController.m in Sources */,
+				040E7A7120FDC49D003CE4DF /* UIImage+Extension.m in Sources */,
 				CE49B01A1D99196D003EC699 /* SJMySelectedStockModel.m in Sources */,
 				CE4D86B11C30CCDC00F9A77F /* SJRegisterViewController.m in Sources */,
 				CEFD09EB1DFAAD3F006917AE /* SJReportSuccessViewController.m in Sources */,
@@ -5996,6 +6053,7 @@
 				CEF45E771C4880440061AEA8 /* SJUserAnswerFrame.m in Sources */,
 				CEFD0AA91DFAB17A006917AE /* SJVideoViewController.m in Sources */,
 				CE6B93081D65B299002A4689 /* SJGiveHongBaoFrame.m in Sources */,
+				040E7A7620FDC49D003CE4DF /* WebNavigationViewController.m in Sources */,
 				CEFD0A161DFAAD3F006917AE /* SJRecommendFooterView.m in Sources */,
 				CE5C1E321D3C7AAA0089C190 /* UIColor+helper.m in Sources */,
 				CE409F821C47C65A00C21DE9 /* SJMyLiveViewController.m in Sources */,
@@ -6060,6 +6118,7 @@
 				CE43F5B91CAE501700A8BC9D /* SJBlogArticleTypeView.m in Sources */,
 				CEC4E7681D991AF500A63390 /* SJTimeLines.m in Sources */,
 				CE666F7C1CDCACB200C24BF6 /* SJBlogArticleTopView.m in Sources */,
+				040E7A7520FDC49D003CE4DF /* ATJURLFailture.m in Sources */,
 				CE409F991C47C71000C21DE9 /* SJWeiHuiDaFrame.m in Sources */,
 				CEFD09EE1DFAAD3F006917AE /* SJSearchTeacherViewController.m in Sources */,
 				CE3B29E71C91120900EE2D13 /* SJMyTeacherCell.m in Sources */,
@@ -6099,6 +6158,7 @@
 				CEFD0A7A1DFAADDC006917AE /* SJFullVideoGiftCell.m in Sources */,
 				CEFD09FC1DFAAD3F006917AE /* SJCustomCell.m in Sources */,
 				CE259BA11CAAA9B400D49995 /* SJPopupModifyServiceDateView.m in Sources */,
+				040E7A7220FDC49D003CE4DF /* UIViewController+BackButtonHandler.m in Sources */,
 				CE409FB21C47C7D300C21DE9 /* SJWeiHuiDaModel.m in Sources */,
 				CE40EA821CD9977B0054A770 /* SJBookGroupSectionView.m in Sources */,
 				CEFD0A891DFAADDC006917AE /* SJVideoUserEnterView.m in Sources */,
@@ -6106,6 +6166,7 @@
 				CEFD09E61DFAAD3F006917AE /* SJQuestionRankViewController.m in Sources */,
 				CEFF74751DAF18E800F7A0DD /* SDPhotoBrowser.m in Sources */,
 				CE2E5B6F1DD5CC4500A050FA /* SJNeiCanPayViewController.m in Sources */,
+				040E7A7320FDC49D003CE4DF /* CountdownView.m in Sources */,
 				CEFD0A0B1DFAAD3F006917AE /* SJLogInfoBottomCell.m in Sources */,
 				CED9C3B31D73DC4C00E64FCF /* AFImageDownloader.m in Sources */,
 				CE34F3F11C4F19CC0089292A /* MJRefreshFooterView.m in Sources */,
@@ -6164,6 +6225,7 @@
 				CE33E9881C4C869500B837AA /* MBProgressHUD+MJ.m in Sources */,
 				CE409F181C474A9000C21DE9 /* SJAnsweredCell.m in Sources */,
 				CE52C44B1D3F17EA00AABC3E /* SJBombBox.m in Sources */,
+				040E7A7420FDC49D003CE4DF /* ATJWebViewController.m in Sources */,
 				CEC4E7631D991AF500A63390 /* SJStockMonthLineViewController.m in Sources */,
 				CE4FB1411C548EC900CDE0C5 /* SJMyTeacher.m in Sources */,
 				CEFD0A781DFAADDC006917AE /* SJDanMuView.m in Sources */,

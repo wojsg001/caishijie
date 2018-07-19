@@ -40,7 +40,7 @@
 @property (nonatomic, strong) TLChatBoxViewController *chatBoxVC;
 @property (nonatomic, strong) NSMutableArray *interactArr;
 @property (nonatomic, strong) NSDictionary *liveUserDict;// 视频用户信息
-@property (nonatomic, copy  ) NSString *snMin;// 最小sn
+@property (nonatomic, copy) NSString *snMin;// 最小sn
 @property (nonatomic, strong) NSString *replyid;// 回复item_id
 @property (nonatomic, strong) NSString *noTodayLive;// 不是今日视频
 @property (nonatomic, strong) NSArray *computerFaceArray;
@@ -190,6 +190,11 @@
     
     [self sendMessage:message];
     [self cancelFirstResponder];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:KNotificatioNInteractRefresh object:nil];
+    });
+    
 }
 
 - (void)chatBoxViewController:(TLChatBoxViewController *)chatboxViewController didSelectItem:(NSInteger)itemType
@@ -361,7 +366,6 @@
         [self.interactArr insertObjects:messageFrames atIndexes:indexSet];
         
         //NSLog(@"++%@",self.opinionArr);
-        
         [self.tableView reloadData];
     } andFailBlock:^(NSError *error) {
         [self.tableView headerEndRefreshing];
@@ -417,7 +421,6 @@
     
     [self.tableView reloadData];
     [self tableViewScrollToBottom];
-    
 }
 
 #pragma mark - 接收添加互动的通知

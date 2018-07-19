@@ -41,6 +41,7 @@
 
 #define KNotificationAddOpinion           @"addOpinion"
 #define KNotificationAddInteract          @"addInteract"
+#define KNotificatioNInteractRefresh      @"interactRefresh"
 
 #define KNotificationAddLunXunOpinion     @"addLunXunOpinion"
 #define KNotificationAddLunXUnInteract    @"addLunXunInteract"

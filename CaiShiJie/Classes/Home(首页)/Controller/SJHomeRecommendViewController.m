@@ -10,7 +10,7 @@
 #import "SJRecommendHeaderView.h"
 #import "SJRecommendFooterView.h"
 //#import "SJHomeRecommendBlogCell.h" 去掉热点股评
-#import "SJHomeRecommendLiveCell.h"
+//#import "SJHomeRecommendLiveCell.h"
 #import "SJIndexCollectionViewController.h"
 //#import "SJRecommendStockCell.h" 去掉股票列表
 #import "SJRecommendHotVideoOneCell.h"
@@ -39,8 +39,11 @@
 #import "SJHomeQuestionViewController.h"
 #import "SJNewBlogArticleViewController.h"
 #import "SJsearchController.h"
+#import "SJMasterTeacherCell.h"
+#import "SJMasterTeacherModel.h"
+#import "SJPersonalCenterViewController.h"
 
-@interface SJHomeRecommendViewController ()<UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate, KINWebBrowserDelegate, SJNoWifiViewDelegate>
+@interface SJHomeRecommendViewController ()<UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate, KINWebBrowserDelegate, SJNoWifiViewDelegate,SJMasterTeacherCellDelegate>
 {
     BOOL _isClear;
 }
@@ -56,7 +59,7 @@
 @property (nonatomic, weak) SDCycleScrollView *cycleScrollView;
 @property (nonatomic, weak) UIView *navigationBar;
 @property (nonatomic, weak) UIButton *searchButton;
-
+@property (nonatomic, strong) NSArray *masterArray;
 @end
 
 @implementation SJHomeRecommendViewController
@@ -88,6 +91,8 @@
     // 下拉刷新
     [self.tableView addHeaderWithTarget:self action:@selector(loadData)];
     self.tableView.headerRefreshingText = @"正在刷新...";
+    
+    [self loadMasterTeacherData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -109,8 +114,8 @@
     [self.view addSubview:_tableView];
     
 //    [_tableView registerNib:[UINib nibWithNibName:@"SJHomeRecommendBlogCell" bundle:nil] forCellReuseIdentifier:@"SJHomeRecommendBlogCell"];
-    [_tableView registerNib:[UINib nibWithNibName:@"SJHomeRecommendLiveCell" bundle:nil] forCellReuseIdentifier:@"SJHomeRecommendLiveCell"];
-//    [_tableView registerNib:[UINib nibWithNibName:@"SJRecommendStockCell" bundle:nil] forCellReuseIdentifier:@"SJRecommendStockCell"];
+//    [_tableView registerNib:[UINib nibWithNibName:@"SJHomeRecommendLiveCell" bundle:nil] forCellReuseIdentifier:@"SJHomeRecommendLiveCell"];
+    
     [_tableView registerNib:[UINib nibWithNibName:@"SJRecommendHotVideoOneCell" bundle:nil] forCellReuseIdentifier:@"SJRecommendHotVideoOneCell"];
     [_tableView registerNib:[UINib nibWithNibName:@"SJRecommendHotVideoTwoCell" bundle:nil] forCellReuseIdentifier:@"SJRecommendHotVideoTwoCell"];
     
@@ -251,6 +256,29 @@
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];
 }
+
+
+- (void)loadMasterTeacherData {
+    NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/ranking/teacher",HOST];
+    NSDictionary *dic = @{@"pagesize":@"8"};
+    
+    [SJhttptool GET:urlStr paramers:dic success:^(id respose) {
+        //SJLog(@"%@",respose);
+        
+        if ([respose[@"states"] isEqualToString:@"1"]) {
+            NSArray *tmpArr = respose[@"data"][@"teacher"];
+            if (tmpArr.count) {
+                self.masterArray = [SJMasterTeacherModel objectArrayWithKeyValuesArray:tmpArr];
+ //               NSIndexPath *index=[NSIndexPath indexPathForRow:0 inSection:0];//刷新
+//                [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:index,nil] withRowAnimation:UITableViewRowAnimationNone];
+            }
+        }
+        
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
 
 - (NSArray *)matcheInString:(NSString *)string regularExpressionWithPattern:(NSString *)regularExpressionWithPattern {
     NSError *error;
@@ -400,14 +428,21 @@
 //        }
 //
 //        return cell;
+
     } else if (indexPath.section == 1) {
-        SJHomeRecommendLiveCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJHomeRecommendLiveCell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        if (self.recommendLiveArray.count) {
-            cell.model = self.recommendLiveArray[indexPath.row];
+//        SJHomeRecommendLiveCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJHomeRecommendLiveCell"];
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//
+//        if (self.recommendLiveArray.count) {
+//            cell.model = self.recommendLiveArray[indexPath.row];
+//        }
+//        cell.hidden = YES;
+//        return cell;
+        SJMasterTeacherCell *cell = [SJMasterTeacherCell cellWithTableView:tableView];
+        cell.delegate = self;
+        if (!cell.array.count) {
+            cell.array = self.masterArray;
         }
-        cell.hidden = YES;
         return cell;
     } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
@@ -528,7 +563,7 @@
     if (indexPath.section == 0) {
         return 110;
     } else if (indexPath.section == 1) {
-        return 0;
+        return 75;
     } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
             return (SJScreenW - 30)/2 * 107/172 + 48;
@@ -639,6 +674,26 @@
             }];
         }
     }
+}
+
+#pragma mark - SJMasterTeacherCellDelegate
+- (void)masterTeacherCell:(SJMasterTeacherCell *)masterTeacherCell didSelectedwhichOne:(NSInteger)index {
+    SJMasterTeacherModel *model = self.masterArray[index];
+    //    if ([model.user_id isEqualToString:@"10412"]) {
+    //        SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
+    //        liveRoomVC.target_id = model.user_id;
+    //        [self.navigationController pushViewController:liveRoomVC animated:YES];
+    //    } else {
+    //        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+    //        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+    //        myLiveVC.user_id = [d valueForKey:kUserid];
+    //        myLiveVC.target_id = model.user_id;
+    //
+    //        [self.navigationController pushViewController:myLiveVC animated:YES];
+    //    }
+    SJPersonalCenterViewController *personalCenterVC = [[SJPersonalCenterViewController alloc] init];
+    personalCenterVC.target_id = model.user_id;
+    [self.navigationController pushViewController:personalCenterVC animated:YES];
 }
 
 #pragma mark - SJNoWifiViewDelegate

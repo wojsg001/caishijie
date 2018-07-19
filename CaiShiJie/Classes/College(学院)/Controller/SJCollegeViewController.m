@@ -8,6 +8,7 @@
 
 #import "SJCollegeViewController.h"
 #import "SJCollegeTableViewCell.h"
+#import "ATJWebViewController.h"
 
 @interface SJCollegeViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *collegeInfoTableView;
@@ -104,6 +105,40 @@
     return 120;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSString * url = @"";
+    switch (indexPath.row) {
+        case 0:
+            //学院简介
+            url = @"http://ztjyvip.com/ztjyxy/index_3.aspx";
+            break;
+        case 1:
+            //名师荟萃
+            url = @"http://ztjyvip.com/szzr/index_7.aspx";
+            break;
+        case 2:
+            //学员风彩
+            url = @"http://ztjyvip.com/hyln/list_14.aspx";
+            break;
+        case 3:
+            //教学环境
+            url = @"https://mp.weixin.qq.com/s/dLMUTENaXuop2WfSJYOS4Q";
+            break;
+        case 4:
+            //联系我们
+            url = @"http://u5041183.viewer.maka.im/pcviewer/8R5YDRYT";
+            break;
+        default:
+            break;
+    }
+    
+    ATJWebViewController *webVC = [[ATJWebViewController alloc] init];
+    [webVC loadWebURLSring:url];
+    [self.navigationController pushViewController:webVC animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

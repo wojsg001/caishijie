@@ -18,17 +18,23 @@ typedef enum :NSInteger {
 
 @interface SJPersonalInfoModel : NSObject
 
-@property (nonatomic, copy) NSString *user_id;
+@property (nonatomic, copy) NSString *user_id; // 登录用户id
 @property (nonatomic, copy) NSString *fans_count;
 @property (nonatomic, copy) NSString *head_img;
 @property (nonatomic, copy) NSString *nickname;
 @property (nonatomic, copy) NSString *summary;
 @property (nonatomic, copy) NSString *is_focus;
 
+
+
 @end
 
 @interface SJPersonalCenterViewController : SJBaseViewController
 
-@property (nonatomic, copy) NSString *target_id;
+@property (nonatomic, copy) NSString *target_id; // 直播用户id
 
+@property (nonatomic, strong) NSString *user_id; // 登录用户id
+
+@property (nonatomic, strong) NSString *live_id; // 直播id
+@property (nonatomic, assign) BOOL isOldLive; // 是否是历史直播
 @end
