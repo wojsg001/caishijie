@@ -115,6 +115,7 @@
         }
         
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [self.tableView headerEndRefreshing];
         [MBProgressHUD hideHUDForView:self.view];
     }];
@@ -148,6 +149,7 @@
         }
         
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [self.tableView footerEndRefreshing];
     }];
 }
@@ -170,7 +172,7 @@
             [self.tableView reloadData];
         }
     } failure:^(NSError *error) {
-        
+        SJLog(@"%@", error);
     }];
 }
 

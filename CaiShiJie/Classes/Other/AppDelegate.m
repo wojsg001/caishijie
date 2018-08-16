@@ -14,8 +14,6 @@
 #import <UMCommonLog/UMCommonLogHeaders.h>
 #import <UMAnalytics/MobClick.h>
 #import "iflyMSC/IFlyMSC.h"
-//暂时去掉BeeCloud
-//#import "BeeCloud.h"
 #import "SJNetManager.h"
 #import "SJhttptool.h"
 #import "SXAdManager.h"
@@ -24,6 +22,9 @@
 #import "MQTTSessionManager.h"
 #import "SJUserInfo.h"
 #import "SJToken.h"
+
+#import "BeeCloud.h" //支付beeCloud
+
 //#import <PLMediaStreamingKit/PLMediaStreamingKit.h>
 
 static AppDelegate *_appDelegate = nil;
@@ -153,11 +154,11 @@ static AppDelegate *_appDelegate = nil;
     if (!result) {
         
     }
-    //暂时去掉BeeCloud
-//    // 为保证从支付宝，微信返回本应用，须绑定openUrl.
-//    if (![BeeCloud handleOpenUrl:url]) {
-//
-//    }
+    
+    // 为保证从支付宝，微信返回本应用，须绑定openUrl.
+    if (![BeeCloud handleOpenUrl:url]) {
+        //handle其他类型的url
+    }
     return YES;
 }
 
@@ -377,10 +378,16 @@ static AppDelegate *_appDelegate = nil;
      如果使用BeeCloud控制台的APP Secret初始化，代表初始化生产环境；
      */
     
-    //暂时去掉BeeCloud
-//    [BeeCloud initWithAppID:@"0307998b-ecce-40d4-ba15-5eec11d2b63d" andAppSecret:@"7e210716-7cbb-4392-8bd4-ad4591c0115f"];
-//    //初始化微信
-//    [BeeCloud initWeChatPay:@"wx08a034f206b96be5"];
+    [BeeCloud initWithAppID:@"0307998b-ecce-40d4-ba15-5eec11d2b63d" andAppSecret:@"7e210716-7cbb-4392-8bd4-ad4591c0115f"];
+    
+    //查看当前模式
+    // 返回YES代表沙箱测试模式；NO代表生产模式
+    [BeeCloud getCurrentMode];
+    
+    
+    //初始化官方微信支付
+    //如果您使用了微信支付，需要用微信开放平台Appid初始化。
+    [BeeCloud initWeChatPay:@"微信开放平台appid"];
 }
 #pragma mark - NSNotification
 - (void)loginSuccess {
@@ -397,13 +404,13 @@ static AppDelegate *_appDelegate = nil;
 //    }
     _unreadMessageCount = @"0"; // 归零
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    [[[tabBarController.viewControllers objectAtIndex:3] tabBarItem] setBadgeValue:_unreadMessageCount];
+    [[[tabBarController.viewControllers objectAtIndex:4] tabBarItem] setBadgeValue:_unreadMessageCount];
 }
 
 - (void)chatMessageUnreadCountChange:(NSNotification *)n {
     _unreadMessageCount = [NSString stringWithFormat:@"%@", n.object];
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    [[[tabBarController.viewControllers objectAtIndex:3] tabBarItem] setBadgeValue:_unreadMessageCount];
+    [[[tabBarController.viewControllers objectAtIndex:4] tabBarItem] setBadgeValue:_unreadMessageCount];
 }
 #pragma mark - 开始连接MQTT
 - (void)connectMQTT {
@@ -463,7 +470,7 @@ static AppDelegate *_appDelegate = nil;
         // 如何数据不为空
         _unreadMessageCount = [NSString stringWithFormat:@"%ld", [_unreadMessageCount integerValue] + 1];
         UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-        [[[tabBarController.viewControllers objectAtIndex:3] tabBarItem] setBadgeValue:_unreadMessageCount];
+        [[[tabBarController.viewControllers objectAtIndex:4] tabBarItem] setBadgeValue:_unreadMessageCount];
         [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationMQTTHaveNewData object:dictionary];
     }
 }
@@ -476,7 +483,7 @@ static AppDelegate *_appDelegate = nil;
         if ([respose[@"status"] integerValue] && [respose[@"data"] integerValue]) {
             _unreadMessageCount = [NSString stringWithFormat:@"%@", respose[@"data"]];
             UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-            [[[tabBarController.viewControllers objectAtIndex:3] tabBarItem] setBadgeValue:_unreadMessageCount];
+            [[[tabBarController.viewControllers objectAtIndex:4] tabBarItem] setBadgeValue:_unreadMessageCount];
         }
     } failure:^(NSError *error) {
         SJLog(@"%@", error);

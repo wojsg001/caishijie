@@ -361,6 +361,7 @@
             [alert show];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];
 }

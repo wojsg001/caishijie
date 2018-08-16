@@ -352,6 +352,7 @@
             }
             
         } failure:^(NSError *error) {
+            SJLog(@"%@", error);
             [MBProgressHUD hideHUDForView:self.view];
             [self showAlertWithTitle:@"错误提示" message:error.localizedDescription];
             _addLiveInfoView.startButton.enabled = YES;
@@ -373,6 +374,7 @@
             [self startSession];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBProgressHUD hideHUDForView:self.view];
         [self showAlertWithTitle:@"错误提示" message:error.localizedDescription];
         _addLiveInfoView.startButton.enabled = YES;

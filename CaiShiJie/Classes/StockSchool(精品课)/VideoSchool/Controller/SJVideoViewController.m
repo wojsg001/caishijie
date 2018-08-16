@@ -24,6 +24,7 @@
 #import "XHPlayer.h"
 #import "SJFullViewController.h"
 #import "SJRecommendVideoModel.h"
+#import "SJVideoPayViewController.h"
 
 @interface SJVideoViewController ()<UITableViewDataSource,UITableViewDelegate,SJBookDetailFootViewDelegate,UIAlertViewDelegate>
 {
@@ -123,7 +124,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
@@ -151,8 +152,9 @@
     [self.view addSubview:self.tableView];
     
     [self.playerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(weakSelf.view);
-        make.height.mas_equalTo(SJScreenW * 9/16);
+        make.left.right.equalTo(weakSelf.view);
+        make.height.mas_equalTo(SJScreenW * 13/16);
+        make.top.mas_equalTo(kStatusBarHeight);
     }];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -164,6 +166,10 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"SJVideoSectionTwoCell" bundle:nil] forCellReuseIdentifier:@"SJVideoSectionTwoCell"];
     
     self.tableView.tableFooterView = self.tableViewFootView;
+    
+    if (self.homepage == 0) {
+        self.tableView.tableFooterView.hidden = YES;
+    }
 }
 
 #pragma mark - 加载数据
@@ -259,6 +265,7 @@
             [MBHUDHelper showWarningWithText:@"获取视频地址失败"];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];
 }
@@ -349,11 +356,23 @@
         return cell;
     }
     
-    SJVideoSectionOneCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJVideoSectionOneCell"];
+     SJVideoSectionOneCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJVideoSectionOneCell"];
     cell.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
     SJVideoInfoListModel *model = self.dataList[indexPath.row];
     cell.model = model;
     cell.sortLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row + 1];
+    
+    //0 免费 1 收费 2 已购买
+    if([model.fee integerValue] == 0){
+        cell.orFreeVideo.hidden = NO;
+    }
+    else{
+        cell.orFreeVideo.hidden = YES;
+    }
+    
+    if(self.homepage == 0){
+        cell.hidden = YES;
+    }
     
     return cell;
 }
@@ -382,8 +401,24 @@
         SJVideoInfoListModel *model = self.dataList[indexPath.row];
         if ([model.item_type isEqualToString:@"1"]) {
             // 是视频
-            self.player.mediaPath = model.url;
-            self.player.title = model.period_name;
+            //0 免费 1 收费 2 已购买
+            
+            if([model.fee integerValue] == 0 || [model.fee integerValue] == 2){
+                //1.视频免费 直接观看
+                self.player.mediaPath = model.url;
+                self.player.title = model.period_name;
+            }
+            else{
+                 //2.视频收费 未登录（游客） ，先去登陆，付费
+                if ([[SJUserInfo sharedUserInfo] isSucessLogined]) {
+                    SJVideoPayViewController *payVC = [[SJVideoPayViewController alloc] init];
+                    payVC.model = _schoolVideoModel;
+                    [self.navigationController pushViewController:payVC animated:YES];
+                } else {
+                    SJLoginViewController *loginVC = [[UIStoryboard storyboardWithName:@"SJLoginStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"SJLoginViewController"];
+                    [self.navigationController pushViewController:loginVC animated:YES];
+                }
+            }
         } else {
             // 是文章
             if (self.player) {

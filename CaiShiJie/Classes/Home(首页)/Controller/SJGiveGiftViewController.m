@@ -76,7 +76,7 @@
             self.goldCount = respose[@"data"];
         }
     } failure:^(NSError *error) {
-        //SJLog(@"%@", error);
+        SJLog(@"%@", error);
     }];
 }
 
@@ -110,7 +110,7 @@
         }
         [self.collectionView reloadData];
     } failure:^(NSError *error) {
-        
+        SJLog(@"%@", error);
     }];
 }
 

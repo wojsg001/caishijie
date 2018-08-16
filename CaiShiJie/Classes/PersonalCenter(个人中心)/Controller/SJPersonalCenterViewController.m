@@ -8,7 +8,7 @@
 
 #import "SJPersonalCenterViewController.h"
 #import "UIColor+helper.h"
-//#import "SJPersonalHomeViewController.h" //去掉主页原有功能
+#import "SJPersonalHomeViewController.h"
 #import "SJPersonalOldLiveViewController.h"
 #import "SJPersonalReferenceViewController.h"
 #import "SJPersonalSummaryViewController.h"
@@ -23,6 +23,8 @@
 #import "SRWebSocket.h"
 #import "SJNetManager.h"
 #import "SJInteractViewController.h"
+#import "SJOpinionViewController.h"
+#import "SJPersonalTeacherCourseViewController.h"
 
 #define kPassUserInfoNotification @"TeacherInfo"
 
@@ -62,6 +64,8 @@
 @property (nonatomic, assign) NSInteger snMax;// 最大sn
 @property (nonatomic, strong) NSString *replyid;// 回复item_id
 
+
+@property (nonatomic, strong) SJInteractViewController *interactVC;
 @end
 
 @implementation SJPersonalCenterViewController
@@ -91,18 +95,31 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:KNotificationLoginSuccess object:nil];
     
+    // 获取观点和互动
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getViewAndInteraction) name:KNotificatioNInteractRefresh object:nil];
+    
+    //发送群聊通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addGroupChat:) name:KNotificatioNInteractGroupChat object:nil];
 
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     // 获取直播主题
     [MBProgressHUD showMessage:@"加载中..." toView:self.view];
     [self getLiveTitle];
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+}
+
 
 #pragma mark - 获取直播主题
 - (void)getLiveTitle
@@ -166,10 +183,16 @@
         // 发送通知加载观点
         [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationLoadOpinion object:opinionDict];
         
+        
         NSArray *interactArr = dict[@"interact"];
         NSDictionary *interactDict = @{@"interact":interactArr,@"liveInfo":self.liveUserDict};
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 发送通知加载互动
         [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationLoadInteract object:interactDict];
+        });
+        
+        _interactVC.liveUserDict = self.liveUserDict;
         
         // 获取观点和互动中最大的sn
         NSDictionary *opDic = opinionArr.lastObject;
@@ -180,6 +203,41 @@
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];
 }
+
+#pragma mark - 发送群聊通知
+- (void)addGroupChat:(NSNotification *)notification{
+    
+    NSDictionary *dict = notification.object;
+    NSString *sendStr = @"";
+    
+    //字典序列化，变成json字符串
+    NSData *dictData1 = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonString = [[NSString alloc]initWithData:dictData1 encoding:NSUTF8StringEncoding];
+    sendStr = [jsonString stringByAppendingString:@"#$#"];
+    
+
+        if (_webSocket != nil) {
+            // 只有 SR_OPEN 开启状态才能调 send 方法，不然要崩
+            if (_webSocket.readyState == SR_OPEN) {
+                [_webSocket send:sendStr];    // 发送数据
+                // 发送通知加载互动
+                [self getViewAndInteraction];
+            } else if (_webSocket.readyState == SR_CONNECTING) {
+                NSLog(@"正在连接中，重连后其他方法会去自动同步数据");
+                // 每隔2秒检测一次 socket.readyState 状态，检测 10 次左右
+                // 只要有一次状态是 SR_OPEN 的就调用 [ws.socket send:data] 发送数据
+                // 如果 10 次都还是没连上的，那这个发送请求就丢失了，这种情况是服务器的问题了，小概率的
+                [self reconnect];
+                
+            } else if (_webSocket.readyState == SR_CLOSING || _webSocket.readyState == SR_CLOSED) {
+                // websocket 断开了，调用 reConnect 方法重连
+                [self reconnect];
+            }
+        } else {
+            NSLog(@"没网络，发送失败，一旦断网 socket 会被我设置 nil 的");
+        }
+}
+
 
 #pragma mark - 接收登录成功通知
 - (void)loginSuccess {
@@ -192,7 +250,10 @@
     _webSocket.delegate = nil;
     [_webSocket close];
     
-    NSString *urlStr = [NSString stringWithFormat:@"ws://%@/ws?u=%@&l=%@&sn=%d",imHost,self.user_id,self.target_id,self.snMax];
+//    NSString *urlStr = [NSString stringWithFormat:@"ws://%@/ws?u=%@&l=%@&sn=%d",imHost,self.user_id,self.target_id,self.snMax];
+//    SJLog(@"%@",urlStr);
+    
+    NSString *urlStr = [NSString stringWithFormat:@"ws://%@/",imHost];
     SJLog(@"%@",urlStr);
     
     _webSocket = [[SRWebSocket alloc] initWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
@@ -204,14 +265,61 @@
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket;
 {
     SJLog(@"Websocket Connected");
+    
+    //发送验证
+    [self sendVerificationMessage];
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error;
 {
     SJLog(@":( Websocket Failed With Error %@", error);
     
-    t = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(lunXunRequestData) userInfo:nil repeats:YES];
+//    t = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(lunXunRequestData) userInfo:nil repeats:YES];
 }
+
+#pragma mark - 发送验证消息
+- (void)sendVerificationMessage
+{
+    SJToken *instance = [SJToken sharedToken];
+    NSDictionary* dicData = @{@"token":@"", @"userId":instance.userid};
+    
+    NSMutableDictionary *dict  = [[NSMutableDictionary alloc]init];
+    [dict setValue:@"100001" forKey:@"infoType"];
+    [dict setValue:@"2" forKey:@"connectionType"];
+    [dict setValue:dicData forKey:@"data"];
+    
+    NSString *sendStr = @"";
+    //字典序列化，变成json字符串
+    NSData *dictData1 = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonString = [[NSString alloc]initWithData:dictData1 encoding:NSUTF8StringEncoding];
+    sendStr = [jsonString stringByAppendingString:@"#$#"];
+    
+    dispatch_queue_t queue =  dispatch_queue_create("websocketSend", NULL);
+    
+    dispatch_async(queue, ^{
+        if (_webSocket != nil) {
+            // 只有 SR_OPEN 开启状态才能调 send 方法，不然要崩
+            if (_webSocket.readyState == SR_OPEN) {
+                [_webSocket send:sendStr];    // 发送数据
+                
+            } else if (_webSocket.readyState == SR_CONNECTING) {
+                NSLog(@"正在连接中，重连后其他方法会去自动同步数据");
+                // 每隔2秒检测一次 socket.readyState 状态，检测 10 次左右
+                // 只要有一次状态是 SR_OPEN 的就调用 [ws.socket send:data] 发送数据
+                // 如果 10 次都还是没连上的，那这个发送请求就丢失了，这种情况是服务器的问题了，小概率的
+                [self reconnect];
+                
+            } else if (_webSocket.readyState == SR_CLOSING || _webSocket.readyState == SR_CLOSED) {
+                // websocket 断开了，调用 reConnect 方法重连
+                [self reconnect];
+            }
+        } else {
+            NSLog(@"没网络，发送失败，一旦断网 socket 会被我设置 nil 的");
+        }
+    });
+
+}
+
 #pragma mark - 轮询请求数据
 - (void)lunXunRequestData
 {
@@ -274,43 +382,81 @@
     }];
 }
 
-- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message;
-{
-    SJLog(@"Received \"%@\"", message);
-    NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-    //SJLog(@"%@",dict);
-    
-    self.snMax = [dict[@"sn"] integerValue];
-    if ([dict[@"type"] isEqual:@(21)]
-        || [dict[@"type"] isEqual:@(1)]
-        || [dict[@"type"] isEqual:@(2)]) {
-        // 观点、送礼、红包
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict[@"data"] options:NSJSONWritingPrettyPrinted error:nil];
-        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        
-        NSMutableDictionary *dictM = [dict mutableCopy];
-        [dictM removeObjectForKey:@"data"];
-        dictM[@"data"] = jsonStr;
-        //SJLog(@"%@",dictM);
-        
-        // 通知添加观点
-        [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationAddOpinion object:dictM];
-    } else if ([dict[@"type"] isEqual:@(40)]) {
+
+- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message{
+        SJLog(@"Received \"%@\"", message);
+        message = [message stringByReplacingOccurrencesOfString:@"#$#" withString:@""];
+        NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+        SJLog(@"%@",dict);
+    if ([dict[@"message"] isEqualToString:@"身份校验成功"] || [dict[@"message"] integerValue] == 100001) {
+        return;
+
+    }else if([dict[@"message"] isEqualToString:@"数据推送成功"]){
+//        // 观点、送礼、红包
+//        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict[@"data"] options:NSJSONWritingPrettyPrinted error:nil];
+//        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+//
+//        NSMutableDictionary *dictM = [dict mutableCopy];
+//        [dictM removeObjectForKey:@"data"];
+//        dictM[@"data"] = jsonStr;
+//        //SJLog(@"%@",dictM);
+//
+//        // 通知添加观点
+//        [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationAddOpinion object:dictM];
         // 互动
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict[@"data"] options:NSJSONWritingPrettyPrinted error:nil];
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
         NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
         
         NSMutableDictionary *dictM = [dict mutableCopy];
         [dictM removeObjectForKey:@"data"];
         dictM[@"data"] = jsonStr;
-        //SJLog(@"%@",dictM);
+        SJLog(@"%@",dictM);
         
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 通知添加互动
-        [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationAddInteract object:dictM];
+        [[NSNotificationCenter defaultCenter] postNotificationName:KNotificatioNInteractRefresh object:dictM];
+        });
     }
-    
 }
+
+//- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message;
+//{
+//    SJLog(@"Received \"%@\"", message);
+//    NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+//    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+//    //SJLog(@"%@",dict);
+//
+//    self.snMax = [dict[@"sn"] integerValue];
+//    if ([dict[@"type"] isEqual:@(21)]
+//        || [dict[@"type"] isEqual:@(1)]
+//        || [dict[@"type"] isEqual:@(2)]) {
+//        // 观点、送礼、红包
+//        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict[@"data"] options:NSJSONWritingPrettyPrinted error:nil];
+//        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+//
+//        NSMutableDictionary *dictM = [dict mutableCopy];
+//        [dictM removeObjectForKey:@"data"];
+//        dictM[@"data"] = jsonStr;
+//        //SJLog(@"%@",dictM);
+//
+//        // 通知添加观点
+//        [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationAddOpinion object:dictM];
+//    } else if ([dict[@"type"] isEqual:@(40)]) {
+//        // 互动
+//        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict[@"data"] options:NSJSONWritingPrettyPrinted error:nil];
+//        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+//
+//        NSMutableDictionary *dictM = [dict mutableCopy];
+//        [dictM removeObjectForKey:@"data"];
+//        dictM[@"data"] = jsonStr;
+//        //SJLog(@"%@",dictM);
+//
+//        // 通知添加互动
+//        [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationAddInteract object:dictM];
+//    }
+//
+//}
 
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean;
 {
@@ -318,7 +464,7 @@
     
     _webSocket = nil;
     
-    t = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(lunXunRequestData) userInfo:nil repeats:YES];
+//    t = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(lunXunRequestData) userInfo:nil repeats:YES];
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceivePong:(NSData *)pongPayload;
@@ -331,6 +477,7 @@
 - (void)loadPersonalData {
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/user/getteacherinfo", HOST];
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObject:self.target_id forKey:@"targetid"];
+    [MBProgressHUD hideHUDForView:self.view];
     if ([[SJUserInfo sharedUserInfo] isSucessLogined]) {
         SJToken *instance = [SJToken sharedToken];
         [params setObject:instance.token forKey:@"token"];
@@ -539,25 +686,42 @@
 }
 
 - (void)addChildViewControllers {
-//    SJPersonalHomeViewController *personalHomeVC = [[SJPersonalHomeViewController alloc] init];
-//    personalHomeVC.target_id = self.target_id;
-    SJInteractViewController *interactVC = [[SJInteractViewController alloc] init];
-    interactVC.target_id = self.target_id;
-    
-    SJPersonalOldLiveViewController *personalOldLiveVC = [[SJPersonalOldLiveViewController alloc] init];
-    personalOldLiveVC.target_id = self.target_id;
-    SJPersonalReferenceViewController *personalReferenceVC = [[SJPersonalReferenceViewController alloc] init];
-    personalReferenceVC.target_id = self.target_id;
+
+    //主页
     SJPersonalSummaryViewController *personalSummaryVC = [[SJPersonalSummaryViewController alloc] init];
     personalSummaryVC.target_id = self.target_id;
+    
+    //直播
+    _interactVC = [[SJInteractViewController alloc] init];
+    _interactVC.target_id = self.target_id;
+    
+//    //历史播放
+//    SJPersonalOldLiveViewController *personalOldLiveVC = [[SJPersonalOldLiveViewController alloc] init];
+//    personalOldLiveVC.target_id = self.target_id;
+    
+    //观点(博文)
+    SJPersonalHomeViewController *personalHomeVC = [[SJPersonalHomeViewController alloc] init];
+    personalHomeVC.target_id = self.target_id;
+    
+//    //观点
+//    SJOpinionViewController *personaOpionVC = [[SJOpinionViewController alloc] init];
+//    personaOpionVC.target_id = self.target_id;
+    
+    //问答
     SJPersonalQuestionViewController *personalQuestionVC = [[SJPersonalQuestionViewController alloc] init];
     personalQuestionVC.target_id = self.target_id;
+    
+    //课程
+    SJPersonalTeacherCourseViewController *personalPersonalTeacherClassVC = [[SJPersonalTeacherCourseViewController alloc] init];
+    personalPersonalTeacherClassVC.target_id = self.target_id;
+    
 //    [self addChildViewController:personalHomeVC];
-    [self addChildViewController:interactVC];
-    [self addChildViewController:personalOldLiveVC];
-    [self addChildViewController:personalReferenceVC];
+    
     [self addChildViewController:personalSummaryVC];
+    [self addChildViewController:_interactVC];
+    [self addChildViewController:personalHomeVC];
     [self addChildViewController:personalQuestionVC];
+    [self addChildViewController:personalPersonalTeacherClassVC];
 }
 
 - (IBAction)titleButtonClicked:(id)sender {
@@ -636,6 +800,7 @@
                 [MBHUDHelper showWarningWithText:respose[@"data"]];
             }
         } failure:^(NSError *error) {
+            SJLog(@"%@", error);
             [MBHUDHelper showWarningWithText:error.localizedDescription];
         }];
     } else {

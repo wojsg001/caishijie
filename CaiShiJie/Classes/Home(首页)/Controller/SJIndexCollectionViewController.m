@@ -393,6 +393,25 @@
 {
     UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
+    
+    NSDictionary *dic = nil;
+    switch (indexPath.row) {
+        case 0:
+            dic = @{@"code":@"399006",@"name":@"创业板指",@"type":@"sz"};
+            break;
+        case 1:
+            dic = @{@"code":@"399001",@"name":@"深证成指",@"type":@"sz"};
+            break;
+        case 2:
+            dic = @{@"code":@"000001",@"name":@"上证指数",@"type":@"sh"};
+            break;
+            
+        default:
+            break;
+    }
+    
+    // 发送通知加载大盘指数
+    [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationMarketIndex object:dic];
 }
 
     //返回每个分组的头高度

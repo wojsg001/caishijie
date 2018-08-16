@@ -21,13 +21,13 @@
 #import "SJUserInfo.h"
 #import "SJGiftModel.h"
 #import "SJLoginViewController.h"
-#import <PLPlayerKit/PLPlayerKit.h>
+//#import <PLPlayerKit/PLPlayerKit.h>
 #import "SJNewLiveVideoAboveView.h"
 #import "SJFullViewController.h"
 
 #define enableBackgroundPlay 0
 
-@interface SJNewLiveRoomViewController ()<UIScrollViewDelegate,UIAlertViewDelegate,SRWebSocketDelegate,PLPlayerDelegate>
+@interface SJNewLiveRoomViewController ()<UIScrollViewDelegate,UIAlertViewDelegate,SRWebSocketDelegate/*,PLPlayerDelegate*/>
 {
     SRWebSocket *_webSocket;
     NSTimer *t; // 轮询
@@ -48,7 +48,7 @@
 @property (nonatomic, strong) NSDictionary *liveUserDict;// 视频用户者的信息
 @property (nonatomic, copy  ) NSString *snMax;// 最大sn
 @property (nonatomic, strong) NSString *replyid;// 回复item_id
-@property (nonatomic, strong) PLPlayer *player;
+//@property (nonatomic, strong) PLPlayer *player;
 @property (nonatomic, strong) SJNewLiveVideoAboveView *liveVideoAboveView;
 @property (nonatomic, strong) SJFullViewController *fullVC;
 /**
@@ -103,21 +103,21 @@
     return _liveGiftVC;
 }
 
-- (SJNewLiveVideoListViewController *)videoListVC {
-    if (_videoListVC == nil) {
-        _videoListVC = [[SJNewLiveVideoListViewController alloc] init];
-        _videoListVC.target_id = self.target_id;
-        WS(weakSelf);
-        _videoListVC.skipToVideoCourseBlock = ^() {
-            if (weakSelf.player != nil && weakSelf.player.playing) {
-                [weakSelf.player pause];
-                [weakSelf.liveVideoAboveView setPlayButtonSelected:NO];
-            }
-        };
-        [self addChildViewController:_videoListVC];
-    }
-    return _videoListVC;
-}
+//- (SJNewLiveVideoListViewController *)videoListVC {
+//    if (_videoListVC == nil) {
+//        _videoListVC = [[SJNewLiveVideoListViewController alloc] init];
+//        _videoListVC.target_id = self.target_id;
+//        WS(weakSelf);
+//        _videoListVC.skipToVideoCourseBlock = ^() {
+//            if (weakSelf.player != nil && weakSelf.player.playing) {
+//                [weakSelf.player pause];
+//                [weakSelf.liveVideoAboveView setPlayButtonSelected:NO];
+//            }
+//        };
+//        [self addChildViewController:_videoListVC];
+//    }
+//    return _videoListVC;
+//}
 
 - (SJNewLiveVideoTeacherViewController *)videoTeacherVC {
     if (_videoTeacherVC == nil) {
@@ -412,15 +412,15 @@
                 // 播放暂停
                 if (!button.selected) {
                     // 播放
-                    button.selected = !button.selected;
-                    [weakSelf.player resume];
+//                    button.selected = !button.selected;
+//                    [weakSelf.player resume];
 
                 } else {
                     // 暂停
-                    if (weakSelf.player.playing) {
-                        button.selected = !button.selected;
-                        [weakSelf.player pause];
-                    }
+//                    if (weakSelf.player.playing) {
+//                        button.selected = !button.selected;
+//                        [weakSelf.player pause];
+//                    }
                 }
             }
                 break;
@@ -446,7 +446,7 @@
                 break;
             case 204: {
                 // 中心播放按钮
-                [weakSelf.player play];
+//                [weakSelf.player play];
             }
                 break;
                 
@@ -534,11 +534,11 @@
 }
 
 - (void)enterFullScreen {
-    [self.fullVC.view addSubview:self.player.playerView];
+//    [self.fullVC.view addSubview:self.player.playerView];
     [self.fullVC.view addSubview:self.liveVideoAboveView];
-    [self.player.playerView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
-    }];
+//    [self.player.playerView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+//    }];
     [self.liveVideoAboveView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
@@ -548,11 +548,11 @@
 }
 
 - (void)exitFullScreen {
-    [self.playerViewBackgroundView addSubview:self.player.playerView];
-    [self.playerViewBackgroundView addSubview:self.liveVideoAboveView];
-    [self.player.playerView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
-    }];
+//    [self.playerViewBackgroundView addSubview:self.player.playerView];
+//    [self.playerViewBackgroundView addSubview:self.liveVideoAboveView];
+//    [self.player.playerView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+//    }];
     [self.liveVideoAboveView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
@@ -574,40 +574,41 @@
             [MBProgressHUD showError:@"获取播放地址失败" toView:self.playerViewBackgroundView];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBProgressHUD showError:error.localizedDescription toView:self.playerViewBackgroundView];
     }];
 }
 
 - (void)setupPLPlayerWithUrlString:(NSString *)urlStr {
-    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
-    
-    PLPlayerOption *option = [PLPlayerOption defaultOption];
-    [option setOptionValue:@15 forKey:PLPlayerOptionKeyTimeoutIntervalForMediaPackets];
-    [option setOptionValue:@(YES) forKey:PLPlayerOptionKeyVideoToolbox];
-    [option setOptionValue:@2000 forKey:PLPlayerOptionKeyMaxL1BufferDuration];
-    [option setOptionValue:@1000 forKey:PLPlayerOptionKeyMaxL2BufferDuration];
-    
-    
-    self.player = [PLPlayer playerWithURL:[NSURL URLWithString:urlStr] option:option];
-    self.player.delegate = self;
-    self.player.delegateQueue = dispatch_get_main_queue();
-    self.player.backgroundPlayEnable = enableBackgroundPlay;
-#if !enableBackgroundPlay
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startPlayer) name:UIApplicationWillEnterForegroundNotification object:nil];
-#endif
-    [self setupPlayerView];
-    [self startPlayer];
+//    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+//
+//    PLPlayerOption *option = [PLPlayerOption defaultOption];
+//    [option setOptionValue:@15 forKey:PLPlayerOptionKeyTimeoutIntervalForMediaPackets];
+//    [option setOptionValue:@(YES) forKey:PLPlayerOptionKeyVideoToolbox];
+//    [option setOptionValue:@2000 forKey:PLPlayerOptionKeyMaxL1BufferDuration];
+//    [option setOptionValue:@1000 forKey:PLPlayerOptionKeyMaxL2BufferDuration];
+//
+//
+//    self.player = [PLPlayer playerWithURL:[NSURL URLWithString:urlStr] option:option];
+//    self.player.delegate = self;
+//    self.player.delegateQueue = dispatch_get_main_queue();
+//    self.player.backgroundPlayEnable = enableBackgroundPlay;
+//#if !enableBackgroundPlay
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startPlayer) name:UIApplicationWillEnterForegroundNotification object:nil];
+//#endif
+//    [self setupPlayerView];
+//    [self startPlayer];
 }
 
 - (void)setupPlayerView {
-    if (self.player.status != PLPlayerStatusError && !self.player.playerView.superview) {
-        self.player.playerView.contentMode = UIViewContentModeScaleAspectFit;
-        [self.playerViewBackgroundView addSubview:self.player.playerView];
-        [self.playerViewBackgroundView sendSubviewToBack:self.player.playerView];
-        [self.player.playerView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
-        }];
-    }
+//    if (self.player.status != PLPlayerStatusError && !self.player.playerView.superview) {
+//        self.player.playerView.contentMode = UIViewContentModeScaleAspectFit;
+//        [self.playerViewBackgroundView addSubview:self.player.playerView];
+//        [self.playerViewBackgroundView sendSubviewToBack:self.player.playerView];
+//        [self.player.playerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+//        }];
+//    }
 }
 
 - (void)startPlayer {
@@ -615,37 +616,37 @@
     [self.liveVideoAboveView showCenterButton];
     [self.liveVideoAboveView showCoverPicture];
     [self.liveVideoAboveView setCoverPictureWithUrlString:self.livePathDic[@"poster"]];
-    [self.player play];
+//    [self.player play];
 }
 
 #pragma mark - <PLPlayerDelegate>
-- (void)player:(PLPlayer *)player statusDidChange:(PLPlayerStatus)state {
-    SJLog(@"回调状态：---%ld---", state);
-    if (PLPlayerStatusCaching == state) {
-        [self.liveVideoAboveView setProgressHUDMessage:@"缓冲中..."];
-        [self.liveVideoAboveView showProgressHUD];
-        [self.liveVideoAboveView HideCenterButton];
-        [self.liveVideoAboveView addSingleGesture];
-        [self.liveVideoAboveView setPlayButtonSelected:YES];
-    } else if (PLPlayerStatusPlaying == state) {
-        [self.liveVideoAboveView hideProgressHUD];
-        [self.liveVideoAboveView HideCenterButton];
-        [self.liveVideoAboveView HideCoverPicture];
-        [self.liveVideoAboveView setPlayButtonAndFullButtonHide:NO];
-    }
-}
+//- (void)player:(PLPlayer *)player statusDidChange:(PLPlayerStatus)state {
+//    SJLog(@"回调状态：---%ld---", state);
+//    if (PLPlayerStatusCaching == state) {
+//        [self.liveVideoAboveView setProgressHUDMessage:@"缓冲中..."];
+//        [self.liveVideoAboveView showProgressHUD];
+//        [self.liveVideoAboveView HideCenterButton];
+//        [self.liveVideoAboveView addSingleGesture];
+//        [self.liveVideoAboveView setPlayButtonSelected:YES];
+//    } else if (PLPlayerStatusPlaying == state) {
+//        [self.liveVideoAboveView hideProgressHUD];
+//        [self.liveVideoAboveView HideCenterButton];
+//        [self.liveVideoAboveView HideCoverPicture];
+//        [self.liveVideoAboveView setPlayButtonAndFullButtonHide:NO];
+//    }
+//}
 
-- (void)player:(PLPlayer *)player stoppedWithError:(NSError *)error {
-    SJLog(@"回调错误状态：---%@---", error);
-    [MBProgressHUD showError:@"视频视频未开始" toView:self.playerViewBackgroundView];
-    [self.liveVideoAboveView hideProgressHUD];
-    [self.liveVideoAboveView removeSingleGesture];
-    [self.liveVideoAboveView setPlayButtonAndFullButtonHide:YES];
-    [self.liveVideoAboveView setPlayButtonSelected:NO];
-    [self.liveVideoAboveView showCenterButton];
-    [self.liveVideoAboveView showCoverPicture];
-    [self.liveVideoAboveView setCoverPictureWithUrlString:self.livePathDic[@"poster"]];
-}
+//- (void)player:(PLPlayer *)player stoppedWithError:(NSError *)error {
+//    SJLog(@"回调错误状态：---%@---", error);
+//    [MBProgressHUD showError:@"视频视频未开始" toView:self.playerViewBackgroundView];
+//    [self.liveVideoAboveView hideProgressHUD];
+//    [self.liveVideoAboveView removeSingleGesture];
+//    [self.liveVideoAboveView setPlayButtonAndFullButtonHide:YES];
+//    [self.liveVideoAboveView setPlayButtonSelected:NO];
+//    [self.liveVideoAboveView showCenterButton];
+//    [self.liveVideoAboveView showCoverPicture];
+//    [self.liveVideoAboveView setCoverPictureWithUrlString:self.livePathDic[@"poster"]];
+//}
 /*
 - (void)tryReconnect:(NSError *)error {
     if (self.reconnectCount < 1) {

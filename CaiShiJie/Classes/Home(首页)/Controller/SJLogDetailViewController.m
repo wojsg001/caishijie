@@ -50,7 +50,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"日志详情";
+    self.navigationItem.title = @"股市头条";
     // 设置表格属性
     [self setUpTableView];
     // 加载日志详情数据

@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *selectedLine;
 @property (weak, nonatomic) IBOutlet UIView *markLine;
 @property (weak, nonatomic) IBOutlet UIView *zixuanView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *zixuanViewTop;
 // 未登录界面
 @property (nonatomic, strong) SJselfSelectedDefaultController *defaultvc;
 // 自选股
@@ -94,12 +95,14 @@
 }
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-
+    
+    self.zixuanViewTop.constant = kStatusBarHeight;
+    
     _pvc = [[UIPageViewController alloc]initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    _pvc.view.frame = CGRectMake(0, kStatusBarAndNavigationBarHeight+30, self.view.width, self.view.height - kStatusBarAndNavigationBarHeight - kTabbarHeight);
-    
-    
+    _pvc.view.frame = CGRectMake(0, kStatusBarHeight + self.zixuanView.frame.size.height, self.view.width, self.view.height - kStatusBarHeight - self.zixuanView.frame.size.height - kTabbarHeight);
+
     self.pvc.dataSource = self;
     self.pvc.delegate = self;
     self.pvc.doubleSided = YES;

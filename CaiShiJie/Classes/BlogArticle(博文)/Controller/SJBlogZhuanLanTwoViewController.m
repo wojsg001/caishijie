@@ -16,7 +16,7 @@
 
 @interface SJBlogZhuanLanTwoViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
-    int i;
+    int i; //分页
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -120,6 +120,7 @@
             [MBHUDHelper showWarningWithText:@"获取失败！"];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [self.tableView footerEndRefreshing];
         [MBHUDHelper showWarningWithText:@"连接错误！"];
     }];

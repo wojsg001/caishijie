@@ -138,16 +138,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row > 0) {
-//        SJOldModel *oldLive = modelarray[indexPath.row - 1];
-//        
-//        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
-//        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
-//        myLiveVC.user_id = [d valueForKey:kUserid];
-//        myLiveVC.target_id = oldLive.user_id;
-//        myLiveVC.live_id = oldLive.live_id;
-//        myLiveVC.isOldLive = YES;
-//        
-//        [self.navigationController pushViewController:myLiveVC animated:YES];
+        SJOldModel *oldLive = modelarray[indexPath.row - 1];
+        
+        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+        myLiveVC.user_id = [d valueForKey:kUserid];
+        myLiveVC.target_id = oldLive.user_id;
+        myLiveVC.live_id = oldLive.live_id;
+        myLiveVC.isOldLive = YES;
+        
+        [self.navigationController pushViewController:myLiveVC animated:YES];
     }
 }
 

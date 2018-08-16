@@ -48,6 +48,7 @@ static SJNetManager *instance = nil;
             [alert show];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -68,6 +69,7 @@ static SJNetManager *instance = nil;
             [alert show];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -85,6 +87,7 @@ static SJNetManager *instance = nil;
     [SJhttptool POST:urlStr paramers:dict success:^(id respose) {
         successBlock(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -96,6 +99,7 @@ static SJNetManager *instance = nil;
     [SJhttptool GET:urlStr paramers:nil success:^(id respose) {
         successBlock(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -115,6 +119,7 @@ static SJNetManager *instance = nil;
     [SJhttptool GET:urlStr paramers:nil success:^(id respose) {
         successBlock(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -137,6 +142,7 @@ static SJNetManager *instance = nil;
             [alert show];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -155,6 +161,7 @@ static SJNetManager *instance = nil;
     [SJhttptool POST:urlStr paramers:dict success:^(id respose) {
         success(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -175,6 +182,7 @@ static SJNetManager *instance = nil;
     [SJhttptool POST:urlStr paramers:dict success:^(id respose) {
         success(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -197,6 +205,7 @@ static SJNetManager *instance = nil;
             [alert show];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -220,6 +229,7 @@ static SJNetManager *instance = nil;
             [alert show];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -243,6 +253,7 @@ static SJNetManager *instance = nil;
             [alert show];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -265,6 +276,7 @@ static SJNetManager *instance = nil;
             [alert show];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -287,6 +299,7 @@ static SJNetManager *instance = nil;
             [MBHUDHelper showWarningWithText:respose[@"data"]];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -309,6 +322,7 @@ static SJNetManager *instance = nil;
             [MBHUDHelper showWarningWithText:respose[@"data"]];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -330,6 +344,7 @@ static SJNetManager *instance = nil;
             [MBHUDHelper showWarningWithText:respose[@"data"]];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -351,6 +366,7 @@ static SJNetManager *instance = nil;
             [MBHUDHelper showWarningWithText:respose[@"data"]];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -372,6 +388,7 @@ static SJNetManager *instance = nil;
             [MBHUDHelper showWarningWithText:respose[@"data"]];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -389,6 +406,7 @@ static SJNetManager *instance = nil;
     [SJhttptool POST:urlStr paramers:dict success:^(id respose) {
         successBlock(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBHUDHelper showWarningWithText:error.localizedDescription];
         failBlock(error);
     }];
@@ -410,6 +428,7 @@ static SJNetManager *instance = nil;
             [MBHUDHelper showWarningWithText:respose[@"data"]];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];
 }
@@ -426,6 +445,7 @@ static SJNetManager *instance = nil;
     [SJhttptool GET:urlStr paramers:nil success:^(id respose) {
         successBlock(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -477,6 +497,7 @@ static SJNetManager *instance = nil;
             success(respose[@"data"]);
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -490,6 +511,7 @@ static SJNetManager *instance = nil;
     [SJhttptool POST:urlStr paramers:golePayParam.keyValues success:^(id respose) {
         success(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -512,6 +534,7 @@ static SJNetManager *instance = nil;
             success(respose[@"data"]);
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -530,6 +553,7 @@ static SJNetManager *instance = nil;
             [MBProgressHUD showError:@"获取失败"];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -543,6 +567,7 @@ static SJNetManager *instance = nil;
     [SJhttptool POST:urlStr paramers:buyGoldParam.keyValues success:^(id respose) {
         success (respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -560,6 +585,7 @@ static SJNetManager *instance = nil;
             [MBProgressHUD showError:@"获取失败"];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -573,6 +599,7 @@ static SJNetManager *instance = nil;
     [SJhttptool GET:urlStr paramers:nil success:^(id respose) {
         success(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -599,6 +626,7 @@ static SJNetManager *instance = nil;
             [alert show];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failBlock(error);
     }];
 }
@@ -610,6 +638,7 @@ static SJNetManager *instance = nil;
     [SJhttptool POST:urlStr paramers:MixPayParam.keyValues success:^(id respose) {
         success (respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -631,6 +660,7 @@ static SJNetManager *instance = nil;
             [MBProgressHUD showError:@"获取失败"];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -644,6 +674,7 @@ static SJNetManager *instance = nil;
     [SJhttptool POST:urlStr paramers:dict success:^(id respose) {
         success(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -657,6 +688,7 @@ static SJNetManager *instance = nil;
     [SJhttptool POST:urlStr paramers:dict success:^(id respose) {
         success(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -670,6 +702,7 @@ static SJNetManager *instance = nil;
     [SJhttptool POST:urlStr paramers:dict success:^(id respose) {
         success(respose);
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -692,6 +725,7 @@ static SJNetManager *instance = nil;
             [MBProgressHUD showError:@"获取失败"];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }
@@ -709,6 +743,7 @@ static SJNetManager *instance = nil;
             [MBProgressHUD showError:@"获取失败"];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         failure(error);
     }];
 }

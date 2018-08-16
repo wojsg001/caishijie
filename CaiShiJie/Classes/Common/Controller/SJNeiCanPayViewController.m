@@ -86,7 +86,7 @@
             }
         }
     } failure:^(NSError *error) {
-        //SJLog(@"%@", error);
+        SJLog(@"%@", error);
     }];
 }
 
@@ -200,6 +200,7 @@
             }
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBProgressHUD hideHUD];
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];
@@ -281,6 +282,7 @@
         }
         
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBProgressHUD hideHUD];
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];

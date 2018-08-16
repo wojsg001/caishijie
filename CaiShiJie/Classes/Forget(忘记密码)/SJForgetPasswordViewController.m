@@ -87,6 +87,7 @@
                 [alert show];
             }
         } failure:^(NSError *error) {
+            SJLog(@"%@", error);
             isClickNextButton = NO;
             [MBHUDHelper showWarningWithText:error.localizedDescription];
         }];

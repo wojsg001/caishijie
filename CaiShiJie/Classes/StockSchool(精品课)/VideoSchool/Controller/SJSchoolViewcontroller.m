@@ -6,7 +6,7 @@
 //  Copyright © 2018年 user. All rights reserved.
 //
 
-#import "SJschoolViewcontroller.h"
+#import "SJSchoolViewcontroller.h"
 #import "SJFirstsectionCell.h"
 #import "SJsecondsectionCell.h"
 #import "SJCollectionHeadview.h"
@@ -18,6 +18,9 @@
 #import "SJRecommendBookViewController.h"
 #import "SJSchoolVideoModel.h"
 #import "MJExtension.h"
+#import "SJVideoPayViewController.h"
+#import "SJLoginViewController.h"
+#import "SJUserInfo.h"
 
 @interface SJSchoolViewcontroller ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,SJCollectionHeadviewdelegate,SJNoWifiViewDelegate>
 
@@ -62,6 +65,7 @@
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self refreshNetwork];
+    [self loadVideoData];
 }
 
 - (void)initsubviews {
@@ -120,7 +124,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (section == 0) {
-        return 3;
+        return 2;
     } else if (section == 1) {
         return self.newVideoArray.count;
     } else {
@@ -139,8 +143,8 @@
             cell1.headimage.image = [UIImage imageNamed:@"school_nav_icon2"];
             cell1.namelable.text = @"书籍推荐";
         } else {
-            cell1.headimage.image = [UIImage imageNamed:@"school_nav_icon3"];
-            cell1.namelable.text = @"原创类";
+//            cell1.headimage.image = [UIImage imageNamed:@"school_nav_icon3"];
+//            cell1.namelable.text = @"原创类";
         }
         
         return cell1;
@@ -148,6 +152,35 @@
         SJsecondsectionCell *cell2 = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell2" forIndexPath:indexPath];
         if (self.newVideoArray.count) {
             cell2.model = self.newVideoArray[indexPath.row];
+            WS(weakSelf);
+            cell2.clickedPayButtonBlock = ^() {
+                [weakSelf payReferenceWith:self.newVideoArray[indexPath.row]];
+            };
+            
+            cell2.clickedFreeWatchButtonBlock = ^(){
+                [weakSelf clickWatchReferenceWith:indexPath];
+            };
+            
+            //显示是否已购买 0 免费 1 收费 2 已购买
+            switch ([cell2.model.pay integerValue]) {
+                case 0:
+                    [cell2.priceLabel setText:@""];
+                    cell2.freeButton.hidden = YES;
+                    cell2.buyButton.hidden = YES;
+                    break;
+                case 1:
+                    [cell2.priceLabel setText:[NSString stringWithFormat:@"%@元",@(cell2.model.course_price.floatValue)]];
+                    cell2.freeButton.hidden = NO;
+                    cell2.buyButton.hidden = NO;
+                    break;
+                case 2:
+                    [cell2.priceLabel setText:@"已购买"];
+                    cell2.freeButton.hidden = YES;
+                    cell2.buyButton.hidden = YES;
+                    break;
+                default:
+                    break;
+            }
         }
     
         return cell2;
@@ -155,19 +188,82 @@
         SJsecondsectionCell *cell3 = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell2" forIndexPath:indexPath];
         if (self.hotVideoArray.count) {
             cell3.model = self.hotVideoArray[indexPath.row];
+            WS(weakSelf);
+            cell3.clickedPayButtonBlock = ^() {
+                [weakSelf payReferenceWith:self.hotVideoArray[indexPath.row]];
+            };
+            cell3.clickedFreeWatchButtonBlock = ^(){
+                [weakSelf clickWatchReferenceWith:indexPath];
+            };
+        }
+        
+        //显示是否已购买 0 免费 1 收费 0 已购买
+        switch ([cell3.model.pay integerValue]) {
+            case 0:
+                [cell3.priceLabel setText:@""];
+                cell3.freeButton.hidden = YES;
+                cell3.buyButton.hidden = YES;
+                break;
+            case 1:
+                [cell3.priceLabel setText:[NSString stringWithFormat:@"%@元",@(cell3.model.course_price.floatValue)]];
+                cell3.freeButton.hidden = NO;
+                cell3.buyButton.hidden = NO;
+                break;
+            case 2:
+                [cell3.priceLabel setText:@"已购买"];
+                cell3.freeButton.hidden = YES;
+                cell3.buyButton.hidden = YES;
+                break;
+            default:
+                break;
         }
         
         return cell3;
     }
 }
 
+
+- (void)payReferenceWith:(SJSchoolVideoModel *)referencemodel {
+    if ([[SJUserInfo sharedUserInfo] isSucessLogined]) {
+        //        SJGiftModel *model = [[SJGiftModel alloc] init];
+        //        model.gift_id = referencemodel.reference_id;
+        //        model.gift_name = @"内参";
+        //        model.price = referencemodel.price;
+        //        [SJPayView showSJPayViewWithGiftModel:model targetid:referencemodel.user_id itemtype:@"20"];
+        SJVideoPayViewController *payVC = [[SJVideoPayViewController alloc] init];
+        payVC.model = referencemodel;
+        [self.navigationController pushViewController:payVC animated:YES];
+    } else {
+        SJLoginViewController *loginVC = [[UIStoryboard storyboardWithName:@"SJLoginStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"SJLoginViewController"];
+        [self.navigationController pushViewController:loginVC animated:YES];
+    }
+}
+
+- (void)clickWatchReferenceWith:(NSIndexPath *)indexPath{
+    SJVideoViewController *video = [[SJVideoViewController alloc] init];
+    if((indexPath.section == 1)){
+        SJSchoolVideoModel *model = self.newVideoArray[indexPath.row];
+        video.course_id = model.course_id;
+        video.schoolVideoModel = model;
+        video.homepage = 1;
+    }
+    else if(indexPath.section == 2){
+        SJSchoolVideoModel *model = self.hotVideoArray[indexPath.row];
+        video.course_id = model.course_id;
+        video.schoolVideoModel = model;
+        video.homepage = 1;
+    }
+    
+    [self.navigationController pushViewController:video animated:YES];
+}
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return CGSizeMake((SJScreenW-40)/3, 75);
+        return CGSizeMake((SJScreenW-40)/2, 75);
     } else if (indexPath.section == 1) {
-        return CGSizeMake((self.view.frame.size.width-30)/2, 145);
+        return CGSizeMake((self.view.frame.size.width-30), 145);
     } else {
-        return CGSizeMake((self.view.frame.size.width-30)/2, 145);
+        return CGSizeMake((self.view.frame.size.width-30), 145);
     }
 }
 
@@ -193,7 +289,7 @@
             //[MBHUDHelper showWarningWithText:@"此功能待开发！"];
             //[self.collectionView reloadData];
             
-            //更多最新视频
+            //更多
             MorevideoViewController *morevc = [[MorevideoViewController alloc] init];
             morevc.navigationItem.title = @"课程视频";
             [self.navigationController pushViewController:morevc animated:YES];
@@ -202,22 +298,24 @@
             [self.navigationController pushViewController:recommendBookVC animated:YES];
         } else {
             //[MBHUDHelper showWarningWithText:@"此功能待开发！"];
-            //更多最热视频
-            MorevideoViewController *morevc = [[MorevideoViewController alloc] init];
-            morevc.navigationItem.title = @"原创类";
-            [self.navigationController pushViewController:morevc animated:YES];
+            //更多收费课程
+//            MorevideoViewController *morevc = [[MorevideoViewController alloc] init];
+//            morevc.navigationItem.title = @"原创类";
+//            [self.navigationController pushViewController:morevc animated:YES];
         }
     } else if (indexPath.section == 1) {
         SJVideoViewController *video = [[SJVideoViewController alloc]init];
         SJSchoolVideoModel *model = self.newVideoArray[indexPath.row];
         video.course_id = model.course_id;
-        
+        video.schoolVideoModel = model;
+        video.homepage = 1;
         [self.navigationController pushViewController:video animated:YES];
     } else {
         SJVideoViewController *video =[[SJVideoViewController alloc]init];
         SJSchoolVideoModel *model = self.hotVideoArray[indexPath.row];
         video.course_id = model.course_id;
-        
+        video.schoolVideoModel = model;
+        video.homepage = 1;
         [self.navigationController pushViewController:video animated:YES];
     }
 }
@@ -230,15 +328,15 @@
         return CGSizeMake(0, 50);
     }
 }
-//设置没组的headview
+//设置每组的headview
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     SJCollectionHeadview *headvc =[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"head" forIndexPath:indexPath];
     headvc.delegate = self;
     if (indexPath.section == 1) {
-        headvc.lable.text = @"最新视频";
+        headvc.lable.text = @"最新课程";
         headvc.Morebtn.tag = 1234;
     } else {
-        headvc.lable.text = @"最热视频";
+        headvc.lable.text = @"最热课程";
         headvc.Morebtn.tag = 1235;
     }
     
@@ -247,14 +345,14 @@
 #pragma mark  SJCollectionHeadviewdelegate
 - (void)btnclick:(UIButton *)sender {
     if (sender.tag == 1234) {
-        //更多最新视频
+        //更多免费课程
         MorevideoViewController *morevc = [[MorevideoViewController alloc] init];
-        morevc.navigationItem.title = @"最新视频";
+        morevc.navigationItem.title = @"最新课程";
         [self.navigationController pushViewController:morevc animated:YES];
     } else {
-        //更多最热视频
+        //更多收费课程
         MorevideoViewController *morevc = [[MorevideoViewController alloc] init];
-        morevc.navigationItem.title = @"最热视频";
+        morevc.navigationItem.title = @"最热课程";
         [self.navigationController pushViewController:morevc animated:YES];
     }
 }

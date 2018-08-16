@@ -87,7 +87,7 @@
         [self.webView loadRequest:request];
         
     } failure:^(NSError *error) {
-        
+        SJLog(@"%@", error);
     }];
 }
 

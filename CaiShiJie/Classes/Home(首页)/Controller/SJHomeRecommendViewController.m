@@ -9,8 +9,8 @@
 #import "SJHomeRecommendViewController.h"
 #import "SJRecommendHeaderView.h"
 #import "SJRecommendFooterView.h"
-//#import "SJHomeRecommendBlogCell.h" 去掉热点股评
-//#import "SJHomeRecommendLiveCell.h"
+#import "SJHomeRecommendBlogCell.h"
+#import "SJHomeRecommendLiveCell.h"
 #import "SJIndexCollectionViewController.h"
 //#import "SJRecommendStockCell.h" 去掉股票列表
 #import "SJRecommendHotVideoOneCell.h"
@@ -39,9 +39,14 @@
 #import "SJHomeQuestionViewController.h"
 #import "SJNewBlogArticleViewController.h"
 #import "SJsearchController.h"
+//#import "SJHomeEliteTableViewCell.h"
+#import "SJMasterTeacherCell.h"
 #import "SJMasterTeacherCell.h"
 #import "SJMasterTeacherModel.h"
 #import "SJPersonalCenterViewController.h"
+#import "SJVodVideoViewController.h"
+#import "SJUserInfo.h"
+#import "SJLoginViewController.h"
 
 @interface SJHomeRecommendViewController ()<UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate, KINWebBrowserDelegate, SJNoWifiViewDelegate,SJMasterTeacherCellDelegate>
 {
@@ -50,13 +55,14 @@
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *sectionArray;
 @property (nonatomic, strong) NSArray *imageModelArr;
-@property (nonatomic, strong) NSArray *recommendBlogArray;
+@property (nonatomic, strong) NSMutableArray *recommendBlogArray;
 @property (nonatomic, strong) NSArray *recommendLiveArray;
 @property (nonatomic, strong) NSMutableArray *recommendStockArray;
 @property (nonatomic, strong) NSMutableArray *recommendVideoArray;
 @property (nonatomic, assign) BOOL isNetwork;
 @property (nonatomic, weak) UIView *tableHeaderView;
 @property (nonatomic, weak) SDCycleScrollView *cycleScrollView;
+@property (nonatomic, strong) SJIndexCollectionViewController *stockIndexVC;
 @property (nonatomic, weak) UIView *navigationBar;
 @property (nonatomic, weak) UIButton *searchButton;
 @property (nonatomic, strong) NSArray *masterArray;
@@ -78,6 +84,14 @@
     return _recommendVideoArray;
 }
 
+- (NSMutableArray *)recommendBlogArray
+{
+    if (_recommendBlogArray == nil) {
+        _recommendBlogArray = [NSMutableArray array];
+    }
+    return _recommendBlogArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -86,24 +100,27 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self setUpSubviews];
     [self setUpTableViewHeadView];
+    [self loadStockMarkHeadline];
     [MBProgressHUD showMessage:@"加载中..." toView:self.view];
     [self loadData];
+    [self loadMasterTeacherData];
     // 下拉刷新
     [self.tableView addHeaderWithTarget:self action:@selector(loadData)];
     self.tableView.headerRefreshingText = @"正在刷新...";
     
-    [self loadMasterTeacherData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self refreshNetwork];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotoMarketIndex:) name:KNotificationMarketIndex object:nil];
 }
 
 - (void)setUpSubviews {
-    self.sectionArray = @[/*@{@"icon":@"index_tuijian_icon1",@"title":@"推荐股评"},*/
-                          @{@"icon":@"index_mingshi_icon1",@"title":@"名师专栏"},@{@"icon":@"index_tuijian_icon2",@"title":@"热点"}, @{@"icon":@"index_tuijian_icon3",@"title":@"热门视频"}, /*@{@"icon":@"index_tuijian_icon4",@"title":@"热门股票"}*/@{@"icon":@"index_dakaquanicon4",@"title":@"大咖圈"}, ];
+    self.sectionArray = @[/*@{@"icon":@"index_tuijian_icon1",@"title":@"推荐股评"},*/ @{@"icon":@"index_tuijian_icon1",@"title":@"直播回顾"},
+                          @{@"icon":@"index_mingshi_icon2",@"title":@"名师专栏"}, @{@"icon":@"index_tuijian_icon3",@"title":@"热门视频"}, /*@{@"icon":@"index_tuijian_icon4",@"title":@"热门股票"},*/@{@"icon":@"index_dakaquanicon4",@"title":@"股市头条"}, ];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, SJScreenH - kTabbarHeight) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
@@ -113,12 +130,14 @@
     _tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tableView];
     
-//    [_tableView registerNib:[UINib nibWithNibName:@"SJHomeRecommendBlogCell" bundle:nil] forCellReuseIdentifier:@"SJHomeRecommendBlogCell"];
-//    [_tableView registerNib:[UINib nibWithNibName:@"SJHomeRecommendLiveCell" bundle:nil] forCellReuseIdentifier:@"SJHomeRecommendLiveCell"];
-    
+
+    [_tableView registerNib:[UINib nibWithNibName:@"SJHomeRecommendLiveCell" bundle:nil] forCellReuseIdentifier:@"SJHomeRecommendLiveCell"];
+//    [_tableView registerNib:[UINib nibWithNibName:@"SJRecommendStockCell" bundle:nil] forCellReuseIdentifier:@"SJRecommendStockCell"];
     [_tableView registerNib:[UINib nibWithNibName:@"SJRecommendHotVideoOneCell" bundle:nil] forCellReuseIdentifier:@"SJRecommendHotVideoOneCell"];
     [_tableView registerNib:[UINib nibWithNibName:@"SJRecommendHotVideoTwoCell" bundle:nil] forCellReuseIdentifier:@"SJRecommendHotVideoTwoCell"];
-    
+    [_tableView registerNib:[UINib nibWithNibName:@"SJHomeRecommendBlogCell" bundle:nil] forCellReuseIdentifier:@"SJHomeRecommendBlogCell"];
+//    [_tableView registerClass:[SJHomeEliteTableViewCell class] forCellReuseIdentifier:@"SJHomeEliteTableViewCell"];
+
     UIView *navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 64)];
     self.navigationBar = navigationBar;
     navigationBar.backgroundColor = [UIColor colorWithHexString:@"#f76408" withAlpha:0.0];
@@ -146,6 +165,8 @@
     searchButton.layer.cornerRadius = 5.0;
     searchButton.layer.masksToBounds = YES;
     [navigationBar addSubview:searchButton];
+    
+
 }
 
 - (void)searchButtonPressed:(UIButton *)button {
@@ -169,13 +190,13 @@
                 [imagesURLStrings addObject:urlStr];
             }
             self.cycleScrollView.imageURLStringsGroup = imagesURLStrings;
-            // 博文数据
-            self.recommendBlogArray = [SJBlogArticleModel objectArrayWithKeyValuesArray:respose[@"data"][@"ElectArticle"]];
+//            // 博文数据
+//            self.recommendBlogArray = [SJBlogArticleModel objectArrayWithKeyValuesArray:respose[@"data"][@"ElectArticle"]];
             // 视频数据
             self.recommendLiveArray = [SJLiveRoomModel objectArrayWithKeyValuesArray:respose[@"data"][@"ElectLive"]];
-            // 股票数据
-            NSArray *stockArray = respose[@"data"][@"ElectStock"];
-            [self loadSinnaStock:stockArray];
+//            // 股票数据
+//            NSArray *stockArray = respose[@"data"][@"ElectStock"];
+//            [self loadSinnaStock:stockArray];
             // 视频数据
             NSArray *videoArray = [SJRecommendVideoModel objectArrayWithKeyValuesArray:respose[@"data"][@"ElectVideo"]];
             if (videoArray.count) {
@@ -275,7 +296,7 @@
         }
         
     } failure:^(NSError *error) {
-        
+        SJLog(@"%@", error);
     }];
 }
 
@@ -304,10 +325,10 @@
     tableHeaderView.backgroundColor = RGB(245, 245, 248);
     [tableHeaderView addSubview:cycleScrollView];
     
-    SJIndexCollectionViewController *indexVC = [[SJIndexCollectionViewController alloc] init];
+    self.stockIndexVC = [[SJIndexCollectionViewController alloc] init];
 
-    [indexVC.view setFrame:CGRectMake(0, cycleScrollView.size.height, SJScreenW, tableHeaderView.size.height - cycleScrollView.size.height)];
-    [tableHeaderView addSubview:indexVC.view];
+    [self.stockIndexVC.view setFrame:CGRectMake(0, cycleScrollView.size.height, SJScreenW, tableHeaderView.size.height - cycleScrollView.size.height)];
+    [tableHeaderView addSubview:self.stockIndexVC.view];
 
 //    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon1"] tag:0 title:@"推荐"];
 //    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon2"] tag:1 title:@"问答"];
@@ -406,12 +427,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
+        return 1;
         //return self.recommendBlogArray.count;
     } else if (section == 1) {
         return self.recommendLiveArray.count;
     } else if (section == 2) {
         return self.recommendVideoArray.count;
     } else if (section == 3) {
+        return self.recommendBlogArray.count;
 //        return self.recommendStockArray.count;
     }
     
@@ -420,29 +443,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-//        SJHomeRecommendBlogCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJHomeRecommendBlogCell"];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//
-//        if (self.recommendBlogArray.count) {
-//            cell.model = self.recommendBlogArray[indexPath.row];
-//        }
-//
-//        return cell;
+        //直播回顾
+        SJHomeRecommendLiveCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJHomeRecommendLiveCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        if (self.recommendLiveArray.count) {
+            cell.model = self.recommendLiveArray[indexPath.row];
+            
+        }
+        return cell;
 
     } else if (indexPath.section == 1) {
-//        SJHomeRecommendLiveCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJHomeRecommendLiveCell"];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//
-//        if (self.recommendLiveArray.count) {
-//            cell.model = self.recommendLiveArray[indexPath.row];
-//        }
-//        cell.hidden = YES;
-//        return cell;
+        //名师专栏
         SJMasterTeacherCell *cell = [SJMasterTeacherCell cellWithTableView:tableView];
         cell.delegate = self;
         if (!cell.array.count) {
             cell.array = self.masterArray;
         }
+        
         return cell;
     } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
@@ -471,6 +489,7 @@
                     SJVideoViewController *videoVC =[[SJVideoViewController alloc]init];
                     videoVC.course_id = model.course_id
                     ;
+                    videoVC.homepage = 0; //首页课程免费
                     videoVC.recommendVideoModel = model;
                     [weakSelf.navigationController pushViewController:videoVC animated:YES];
                 };
@@ -495,8 +514,15 @@
 //        if (self.recommendStockArray.count) {
 //            cell.model = self.recommendStockArray[indexPath.row];
 //        }
-//
-//        return cell;
+        //股市头条
+        SJHomeRecommendBlogCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJHomeRecommendBlogCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        if (self.recommendBlogArray.count) {
+            cell.model = self.recommendBlogArray[indexPath.row];
+        }
+        
+        return cell;
     }
     
     return [UITableViewCell new];
@@ -507,14 +533,10 @@
     NSDictionary *dic = self.sectionArray[section];
     sectionHeader.iconView.image = [UIImage imageNamed:dic[@"icon"]];
     sectionHeader.titleLabel.text = dic[@"title"];
-    
-    if(section == 1){
-        sectionHeader.hidden = YES;
-    }
     return sectionHeader;
 }
 
-//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
 //    if (section == 3) {
 //        UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 55)];
 //        footerView.backgroundColor = [UIColor whiteColor];
@@ -530,29 +552,23 @@
 //        return footerView;
 //    }
 //
-//    SJRecommendFooterView *sectionFooter = [[NSBundle mainBundle] loadNibNamed:@"SJRecommendFooterView" owner:nil options:nil].lastObject;
-//    sectionFooter.moreBtn.tag = section + 101;
-//    [sectionFooter.moreBtn addTarget:self action:@selector(clickMoreBtnDown:) forControlEvents:UIControlEventTouchUpInside];
-//
-//    if (section == 1){
-//        sectionFooter.hidden = YES;
-//    }
-//    return sectionFooter;
-//}
+    SJRecommendFooterView *sectionFooter = [[NSBundle mainBundle] loadNibNamed:@"SJRecommendFooterView" owner:nil options:nil].lastObject;
+    sectionFooter.moreBtn.tag = section + 101;
+    [sectionFooter.moreBtn addTarget:self action:@selector(clickMoreBtnDown:) forControlEvents:UIControlEventTouchUpInside];
+
+    if (section == 1 || section == 0){
+        sectionFooter.hidden = YES;
+    }
+    
+    return sectionFooter;
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 1) {
-        return 0;
-    }
     return 45;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    if (section == 3) {
-        return 55;
-    }
-    
-    if (section == 1) {
+    if (section == 0 || section == 1 || section == 3) {
         return 0;
     }
     
@@ -561,17 +577,19 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 110;
+        return 200; //直播互动
     } else if (indexPath.section == 1) {
-        return 75;
+         return (SJScreenW - 20)/4 + 32; //名师专栏
     } else if (indexPath.section == 2) {
+        //热门视频
         if (indexPath.row == 0) {
             return (SJScreenW - 30)/2 * 107/172 + 48;
         } else {
-            return 75;
+            return 80;
         }
     } else if (indexPath.section == 3) {
-        return 55;
+        //股市头条
+        return 140;
     }
     
     return CGFLOAT_MIN;
@@ -586,18 +604,38 @@
 //        SJLogDetailViewController *logDetailVC = [[SJLogDetailViewController alloc] init];
 //        logDetailVC.article_id = model.article_id;
 //        [self.navigationController pushViewController:logDetailVC animated:YES];
+        
+//        SJLiveRoomModel *model = self.recommendLiveArray[indexPath.row];
+//        if ([model.user_id isEqualToString:@"10412"]) {
+//                        SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
+//                        liveRoomVC.target_id = model.user_id;
+//                        [self.navigationController pushViewController:liveRoomVC animated:YES];
+//        } else {
+//                        SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
+//                        myLiveVC.user_id = [SJUserDefaults valueForKey:kUserid];
+//                        myLiveVC.target_id = model.user_id;
+//                        [self.navigationController pushViewController:myLiveVC animated:YES];
+//        }
+        
+        SJVodVideoViewController *videoVC =[[SJVodVideoViewController alloc]init];
+        NSArray *tmpArr = self.recommendVideoArray[indexPath.row];
+        SJRecommendVideoModel *model = tmpArr[0];
+        videoVC.course_id = model.course_id
+        ;
+        videoVC.recommendVideoModel = model;
+        [self.navigationController pushViewController:videoVC animated:YES];
     } else if (indexPath.section == 1) {
-        SJLiveRoomModel *model = self.recommendLiveArray[indexPath.row];
-        if ([model.user_id isEqualToString:@"10412"]) {
+//        SJLiveRoomModel *model = self.recommendLiveArray[indexPath.row];
+//        if ([model.user_id isEqualToString:@"10412"]) {
 //            SJNewLiveRoomViewController *liveRoomVC = [[SJNewLiveRoomViewController alloc] init];
 //            liveRoomVC.target_id = model.user_id;
 //            [self.navigationController pushViewController:liveRoomVC animated:YES];
-        } else {
+//        } else {
 //            SJMyLiveViewController *myLiveVC = [[SJMyLiveViewController alloc] init];
 //            myLiveVC.user_id = [SJUserDefaults valueForKey:kUserid];
 //            myLiveVC.target_id = model.user_id;
 //            [self.navigationController pushViewController:myLiveVC animated:YES];
-        }
+//        }
     } else if (indexPath.section == 2) {
         if (indexPath.row != 0) {
             SJVideoViewController *videoVC =[[SJVideoViewController alloc]init];
@@ -607,12 +645,11 @@
             [self.navigationController pushViewController:videoVC animated:YES];
         }
     } else if (indexPath.section == 3) {
-        SJRecommendStockModel *model = self.recommendStockArray[indexPath.row];
-        SJStockDetailContentViewController *stockDetailVC = [[SJStockDetailContentViewController alloc] init];
-        stockDetailVC.name = model.name;
-        stockDetailVC.code = model.code;
-        stockDetailVC.type = [model.code2 substringToIndex:2];
-        [self.navigationController pushViewController:stockDetailVC animated:YES];
+        SJBlogArticleModel *model = self.recommendBlogArray[indexPath.row];
+        SJLogDetailViewController *detailVC = [[SJLogDetailViewController alloc] initWithNibName:@"SJLogDetailViewController" bundle:nil];
+        detailVC.article_id = model.article_id;
+        
+        [self.navigationController pushViewController:detailVC animated:YES];
     }
 }
 
@@ -635,7 +672,7 @@
             break;
         case 103:
         {
-            self.tabBarController.selectedViewController = [self.tabBarController.viewControllers objectAtIndex:3];
+            self.tabBarController.selectedViewController = [self.tabBarController.viewControllers objectAtIndex:1];
         }
             break;
         case 104:
@@ -691,9 +728,15 @@
     //
     //        [self.navigationController pushViewController:myLiveVC animated:YES];
     //    }
-    SJPersonalCenterViewController *personalCenterVC = [[SJPersonalCenterViewController alloc] init];
-    personalCenterVC.target_id = model.user_id;
-    [self.navigationController pushViewController:personalCenterVC animated:YES];
+    if (![[SJUserInfo sharedUserInfo] isSucessLogined]) {
+        SJLoginViewController *loginVC = [[UIStoryboard storyboardWithName:@"SJLoginStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"SJLoginViewController"];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        return;
+    }else {
+      SJPersonalCenterViewController *personalCenterVC = [[SJPersonalCenterViewController alloc] init];
+      personalCenterVC.target_id = model.user_id;
+      [self.navigationController pushViewController:personalCenterVC animated:YES];
+    }
 }
 
 #pragma mark - SJNoWifiViewDelegate
@@ -703,6 +746,59 @@
         [MBProgressHUD showMessage:@"加载中..." toView:self.view];
         [self loadData];
     }
+}
+
+- (void)loadStockMarkHeadline
+{
+    NSInteger pageIndex = 1; //分页
+    NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/article/findbytype",HOST];
+    NSDictionary *dic = @{@"pageindex":[NSString stringWithFormat:@"%li",(long)pageIndex],@"pagesize":@"10",@"type":@"1"};
+    
+    [SJhttptool GET:urlStr paramers:dic success:^(id respose) {
+        //SJLog(@"%@",respose);
+        [MBProgressHUD hideHUDForView:self.view];
+        if ([respose[@"states"] isEqualToString:@"1"]) {
+            NSArray *tmpArr = [SJBlogArticleModel objectArrayWithKeyValuesArray:respose[@"data"][@"article"]];
+            if (tmpArr.count) {
+                [self.recommendBlogArray removeAllObjects];
+                [self.recommendBlogArray addObjectsFromArray:tmpArr];
+            }
+            
+            if (!self.recommendBlogArray.count) {
+                // 如果没有数据，显示提示页
+                [SJNoDataView showNoDataViewToView:self.view];
+            } else {
+                [SJNoDataView hideNoDataViewFromView:self.view];
+            }
+        } else {
+            [MBHUDHelper showWarningWithText:@"获取失败！"];
+        }
+    } failure:^(NSError *error) {
+        SJLog(@"%@",error);
+        [self.tableView headerEndRefreshing];
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBHUDHelper showWarningWithText:@"连接错误！"];
+    }];
+}
+
+#pragma mark - 接收加载互动的通知
+- (void)gotoMarketIndex:(NSNotification *)n
+{
+    NSDictionary *dic = n.object;
+    SJStockDetailContentViewController *stockDetailVC =[[SJStockDetailContentViewController alloc] init];
+    stockDetailVC.code = dic[@"code"];
+    stockDetailVC.name = dic[@"name"];
+    stockDetailVC.type = dic[@"type"];
+    [self.navigationController pushViewController:stockDetailVC animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)dealloc {
+    SJLog(@"%s", __func__);
 }
 
 @end

@@ -64,6 +64,15 @@
 
 #define  kTabbarSafeBottomMargin        (IS_iPhoneX ? 34.f : 0.f)
 
+// status bar height.
+
+#define  kStatusBarHeight      (IS_iPhoneX ? 44.f : 20.f)
+
+// Navigation bar height.
+
+#define  kNavigationBarHeight  44.f
+
+
 // Status bar & navigation bar height.
 
 #define  kStatusBarAndNavigationBarHeight  (IS_iPhoneX ? 88.f : 64.f)

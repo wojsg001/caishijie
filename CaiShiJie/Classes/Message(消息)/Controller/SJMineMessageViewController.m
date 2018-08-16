@@ -44,8 +44,10 @@
     
     self.view.backgroundColor = RGB(245, 245, 248);
     [self setupTableView];
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"聊天" style:UIBarButtonItemStylePlain target:self action:@selector(selectedChart)];
-    self.navigationItem.rightBarButtonItem = rightButton;
+//    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"聊天" style:UIBarButtonItemStylePlain target:self action:@selector(selectedChart)];
+//    self.navigationItem.rightBarButtonItem = rightButton;
+
+    
     // 加载聊天列表
     [MBProgressHUD showMessage:@"接收中..." toView:self.view];
     [self loadListData];
@@ -326,6 +328,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    return;
+    
     SJMineMessageModel *model = self.dataArray[indexPath.row];
     self.curSelModel = model;
     if ([model.type isEqualToString:@"30"]) {

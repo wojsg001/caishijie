@@ -113,15 +113,15 @@
     switch (indexPath.row) {
         case 0:
             //学院简介
-            url = @"http://ztjyvip.com/ztjyxy/index_3.aspx";
+            url = @"http://u5041183.viewer.maka.im/pcviewer/8R5YDRYT";
             break;
         case 1:
             //名师荟萃
-            url = @"http://ztjyvip.com/szzr/index_7.aspx";
+            url = @"http://56017501.m.weimob.com/weisite/channel?pid=56017501&bid=57282826&wechatid=fromUsername&categoryid=2271745&wxref=mp.weixin.qq.com&channel=menu";
             break;
         case 2:
             //学员风彩
-            url = @"http://ztjyvip.com/hyln/list_14.aspx";
+            url = @"https://mp.weixin.qq.com/s/ovaW4lP5YRbQLr0IqWL9-g";
             break;
         case 3:
             //教学环境
@@ -129,7 +129,7 @@
             break;
         case 4:
             //联系我们
-            url = @"http://u5041183.viewer.maka.im/pcviewer/8R5YDRYT";
+            url = @"http://www.ztjyvip.com/lxwm/index_17.aspx";
             break;
         default:
             break;

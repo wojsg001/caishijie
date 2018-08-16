@@ -11,5 +11,4 @@
 @interface SJPersonalReferenceViewController : SJBaseViewController
 
 @property (nonatomic, copy) NSString *target_id;
-
 @end

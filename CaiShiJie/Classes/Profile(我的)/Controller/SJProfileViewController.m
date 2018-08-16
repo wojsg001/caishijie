@@ -146,7 +146,7 @@
 - (void)setUpUserInfoView {
     // 如果成功登陆过
     if ([[SJUserInfo sharedUserInfo] isSucessLogined]) {
-        UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 257)];
+        UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 207)];
         self.profileHeaderView.frame = tableHeaderView.bounds;
         [tableHeaderView addSubview:self.profileHeaderView];
         self.tableView.tableHeaderView = tableHeaderView;

@@ -39,7 +39,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) TLChatBoxViewController *chatBoxVC;
 @property (nonatomic, strong) NSMutableArray *interactArr;
-@property (nonatomic, strong) NSDictionary *liveUserDict;// 视频用户信息
 @property (nonatomic, copy) NSString *snMin;// 最小sn
 @property (nonatomic, strong) NSString *replyid;// 回复item_id
 @property (nonatomic, strong) NSString *noTodayLive;// 不是今日视频
@@ -102,6 +101,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    // 发送通知加载互动 进入页面后加载互动
+    [[NSNotificationCenter defaultCenter] postNotificationName:KNotificatioNInteractRefresh object:nil];
+    });
     
     isAtBottom = YES;
     self.view.backgroundColor = RGB(244, 245, 248);
@@ -271,7 +275,6 @@
     [MBProgressHUD showMessage:@"正在发送..." toView:self.view];
     // 发送互动
     [netManager sendInteractionWithToken:instance.token andUserid:instance.userid andTime:instance.time andTargetid:self.liveUserDict[@"user_id"] andContent:text andReplyid:self.replyid success:^(NSDictionary *dict) {
-        
         [MBProgressHUD hideHUDForView:self.view];
         
         if ([dict[@"states"] isEqual:@"0"]) {
@@ -513,8 +516,20 @@
     text = [text stringByReplacingOccurrencesOfString:@"\n" withString:@"<br />"];
     SJToken *instance = [SJToken sharedToken];
     [MBProgressHUD showMessage:@"正在发送..." toView:self.view];
+    
+    NSDictionary* dicData = @{ @"userId":instance.userid,@"clubId":self.liveUserDict[@"user_id"],@"messageContent":text,@"messageType":@"1"};
+    
+    NSMutableDictionary *dict  = [[NSMutableDictionary alloc]init];
+    [dict setValue:@"110002" forKey:@"infoType"];
+    [dict setValue:@"2" forKey:@"connectionType"];
+    [dict setValue:dicData forKey:@"data"];
+    
+    //发送websocket接口
+    [[NSNotificationCenter defaultCenter] postNotificationName:KNotificatioNInteractGroupChat object:dict];
+    
     // 发送互动
     [netManager sendInteractionWithToken:instance.token andUserid:instance.userid andTime:instance.time andTargetid:self.liveUserDict[@"user_id"] andContent:text andReplyid:self.replyid success:^(NSDictionary *dict) {
+        
         [MBProgressHUD hideHUDForView:self.view];
         
         if ([dict[@"states"] isEqual:@"0"]) {
@@ -524,7 +539,7 @@
             [MBProgressHUD showSuccess:@"发送成功！"];
             [self tableViewScrollToBottom];
         }
-        
+    
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUDForView:self.view];
         [MBHUDHelper showWarningWithText:error.localizedDescription];

@@ -80,6 +80,7 @@
         }
         
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBProgressHUD hideHUDForView:self.view];
         [MBHUDHelper showWarningWithText:@"连接错误！"];
     }];
@@ -100,6 +101,7 @@
         }
         
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBProgressHUD hideHUDForView:self.view];
         [MBHUDHelper showWarningWithText:@"连接错误！"];
     }];

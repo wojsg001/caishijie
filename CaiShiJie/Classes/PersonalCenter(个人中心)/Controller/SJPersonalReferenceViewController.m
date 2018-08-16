@@ -130,6 +130,7 @@
             }
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [self.tableView footerEndRefreshing];
     }];
 }

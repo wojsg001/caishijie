@@ -70,7 +70,7 @@
             [MBHUDHelper showWarningWithText:respose[@"data"]];
         }
     } failure:^(NSError *error) {
-        //SJLog(@"%@", error);
+        SJLog(@"%@", error);
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];
 }

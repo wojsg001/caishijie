@@ -12,6 +12,7 @@
 @interface SJVideoSectionOneCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *sortLabel;
+@property (weak, nonatomic) IBOutlet UILabel *orFreeVideo;
 @property (nonatomic, strong) SJVideoInfoListModel *model;
 
 @end

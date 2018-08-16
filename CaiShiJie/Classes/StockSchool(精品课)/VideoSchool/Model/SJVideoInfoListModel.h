@@ -17,5 +17,6 @@
 @property (nonatomic, copy) NSString *period_id;
 @property (nonatomic, copy) NSString *vod;
 @property (nonatomic, copy) NSString *url;
-
+@property (nonatomic, copy) NSString *course_id;
+@property (nonatomic, copy) NSString *fee;
 @end

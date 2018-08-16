@@ -131,6 +131,7 @@
         }
         
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBProgressHUD hideHUDForView:self.view];
         [MBHUDHelper showWarningWithText:error.localizedDescription];
         [SJNoWifiView showNoWifiViewToView:self.view delegate:self];
@@ -311,6 +312,7 @@
        }
      
    } failure:^(NSError *error) {
+       SJLog(@"%@", error);
        [MBHUDHelper showWarningWithText:error.localizedDescription];
    }];
     
@@ -354,6 +356,7 @@
         }
         
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];
     
@@ -402,6 +405,7 @@
             }
             
         } failure:^(NSError *error) {
+            SJLog(@"%@", error);
             [MBHUDHelper showWarningWithText:error.localizedDescription];
         }];
     }

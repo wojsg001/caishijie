@@ -91,6 +91,7 @@
         }
         
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [self.tableView headerEndRefreshing];
         [MBProgressHUD hideHUDForView:self.view];
         [MBHUDHelper showWarningWithText:@"连接错误！"];
@@ -124,6 +125,7 @@
         }
         
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [self.tableView footerEndRefreshing];
         [MBHUDHelper showWarningWithText:@"连接错误！"];
     }];

@@ -140,6 +140,7 @@
         }
             
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBProgressHUD hideHUDForView:self.view];
         [self.tableview headerEndRefreshing];
         self.isNetwork = NO;
@@ -172,6 +173,7 @@
         }
         
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [self.tableview footerEndRefreshing];
     }];
 }

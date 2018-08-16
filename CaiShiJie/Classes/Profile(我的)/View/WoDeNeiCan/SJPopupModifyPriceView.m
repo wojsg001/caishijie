@@ -118,7 +118,7 @@
             }
         }
     } failure:^(NSError *error) {
-        
+        SJLog(@"%@", error);
     }];
     
     LewPopupViewAnimationSlide *animation = [[LewPopupViewAnimationSlide alloc]init];

@@ -112,7 +112,7 @@
             [self.voucherButton setAttributedTitle:[self getAttributedStringTitleWithString:[NSString stringWithFormat:@"去充值：%@金币>>", self.goldCount]] forState:UIControlStateNormal];
         }
     } failure:^(NSError *error) {
-        //SJLog(@"%@", error);
+        SJLog(@"%@", error);
     }];
 }
 
@@ -286,7 +286,7 @@
         }
         [self.collectionView reloadData];
     } failure:^(NSError *error) {
-        
+        SJLog(@"%@", error);
     }];
 }
 

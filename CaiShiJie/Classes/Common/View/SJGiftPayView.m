@@ -156,6 +156,7 @@
             }
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBProgressHUD hideHUD];
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];

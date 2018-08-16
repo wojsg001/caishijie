@@ -21,6 +21,8 @@
 @property (nonatomic, copy) NSString *course_id;
 @property (nonatomic, copy) NSString *created_at;
 @property (nonatomic, copy) NSString *course_type;
+@property (nonatomic, copy) NSString *course_price;
+@property (nonatomic, copy) NSString *pay;
 @property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSString *nickname;
 

@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nicknameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleL;
 @property (weak, nonatomic) IBOutlet UILabel *total_countLabel;
+@property (weak, nonatomic) IBOutlet UILabel *livetimeLabel;
 
 @end
 
@@ -32,7 +33,9 @@
     
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_model.head_img]] placeholderImage:[UIImage imageNamed:@"attention_recommand_photo"]];
     self.nicknameLabel.text = _model.nickname;
+    self.nicknameLabel.hidden = YES;
     self.titleL.text = _model.title;
+    self.titleL.hidden = YES;
     self.total_countLabel.attributedText = [self changeStringColor:_model.total_count withOriginalString:[NSString stringWithFormat:@"%@人参与", _model.total_count]];
 }
 

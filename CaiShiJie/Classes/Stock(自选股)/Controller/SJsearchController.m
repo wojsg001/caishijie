@@ -166,7 +166,7 @@
         
     } failure:^(NSError *error) {
         
-        //SJLog(@"%@",error);
+        SJLog(@"%@",error);
     }];
 }
 
@@ -240,6 +240,7 @@
             
             
         } failure:^(NSError *error) {
+            SJLog(@"%@", error);
             [MBProgressHUD hideHUD];
             [MBProgressHUD showError:@"加入失败"];
         }];

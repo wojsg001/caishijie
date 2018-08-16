@@ -134,7 +134,7 @@
             }
         }
     } failure:^(NSError *error) {
-        
+        SJLog(@"%@", error);
     }];
 }
 
@@ -156,7 +156,7 @@
             [self.tableView reloadData];
         }
     } failure:^(NSError *error) {
-        
+        SJLog(@"%@", error);
     }];
 }
 

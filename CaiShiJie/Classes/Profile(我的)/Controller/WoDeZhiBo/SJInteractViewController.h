@@ -11,5 +11,5 @@
 @interface SJInteractViewController : SJBaseViewController
 
 @property (nonatomic, strong) NSString *target_id;
-
+@property (nonatomic, strong) NSDictionary *liveUserDict;// 视频用户信息
 @end

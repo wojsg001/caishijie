@@ -123,7 +123,7 @@
         make.bottom.left.right.mas_equalTo(0);
         make.height.mas_equalTo(kTabbarHeight);
     }];
-    self.chatBoxVC.view.hidden = YES;
+//    self.chatBoxVC.view.hidden = YES;
 }
 
 - (void)setUpTableView

@@ -30,11 +30,14 @@
 //    #define MQTTHost @"192.168.6.110"
 //#else      // 发布状态
     #define HOST     @"http://www.18csj.com" // 服务器地址
-    #define imHost   @"im.csjapi.com"        // web服务器地址
+    //#define imHost   @"im.csjapi.com"        // web服务器地址
+    #define imHost   @"180.169.46.148:9502"        // web服务器地址 即时通讯
     #define MQTTHost @"mqtt.18csj.com"
 //#endif
 
 #define UMENG_APPKEY @"5b1f2ca2f43e48145e0000ac" //友盟appKey
+
+#define KNotificationMarketIndex         @"MarketIndex"
 
 #define KNotificationLoadOpinion          @"loadOpinion"
 #define KNotificationLoadInteract         @"loadInteract"
@@ -42,6 +45,7 @@
 #define KNotificationAddOpinion           @"addOpinion"
 #define KNotificationAddInteract          @"addInteract"
 #define KNotificatioNInteractRefresh      @"interactRefresh"
+#define KNotificatioNInteractGroupChat    @"interactGroupChat"
 
 #define KNotificationAddLunXunOpinion     @"addLunXunOpinion"
 #define KNotificationAddLunXUnInteract    @"addLunXunInteract"

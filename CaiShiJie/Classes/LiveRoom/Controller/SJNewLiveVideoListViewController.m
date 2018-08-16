@@ -140,6 +140,7 @@
             [MBHUDHelper showWarningWithText:@"获取视频列表失败"];
         }
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [self.tableView headerEndRefreshing];
         [MBHUDHelper showWarningWithText:error.localizedDescription];
     }];

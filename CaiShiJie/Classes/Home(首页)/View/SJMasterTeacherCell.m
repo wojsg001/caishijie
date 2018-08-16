@@ -53,6 +53,7 @@
     _backScrollView.showsHorizontalScrollIndicator=NO;
     _backScrollView.showsVerticalScrollIndicator=NO;
     
+    
     [self addSubview:_backScrollView];
 }
 
@@ -64,14 +65,13 @@
     {
         SJMasterTeacherModel *model = array[i];
         
-        CGRect frame = CGRectMake((i+1)*10 + i*64, 0, 64, NewCell_H);
+        CGRect frame = CGRectMake((i+1)*10 + i*80, 8, 80, NewCell_H);
         SJMasterTeacherView *newShowView = [[SJMasterTeacherView alloc] init];
         newShowView.tag = i;
         newShowView.frame = frame;
-        
+
         [newShowView.HeadView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,model.head_img]] placeholderImage:[UIImage imageNamed:@"index_account_photo3"]];
         newShowView.nickNameLabel.text = model.nickname;
-
         [_backScrollView addSubview:newShowView];
         
         UITapGestureRecognizer *tapNewview=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapOneNewView:)];
@@ -84,7 +84,7 @@
 
 - (void)tapOneNewView:(UIGestureRecognizer*)sender
 {
-    SJLog(@"%d", sender.view.tag);
+    SJLog(@"%ld", sender.view.tag);
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(masterTeacherCell:didSelectedwhichOne:)])
     {

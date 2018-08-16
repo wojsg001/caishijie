@@ -101,7 +101,7 @@
         }
         
     } failure:^(NSError *error) {
-        
+        SJLog(@"%@", error);
     }];
 }
 

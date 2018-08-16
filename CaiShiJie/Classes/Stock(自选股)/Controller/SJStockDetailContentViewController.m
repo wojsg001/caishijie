@@ -173,6 +173,7 @@
                 [MBHUDHelper showWarningWithText:respose[@"data"]];
             }
         } failure:^(NSError *error) {
+            SJLog(@"%@", error);
             [MBProgressHUD hideHUDForView:self.view];
             [MBHUDHelper showWarningWithText:@"连接超时"];
         }];

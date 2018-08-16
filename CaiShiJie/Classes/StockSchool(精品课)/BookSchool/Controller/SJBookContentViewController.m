@@ -84,6 +84,7 @@
         }
         
     } failure:^(NSError *error) {
+        SJLog(@"%@", error);
         [MBHUDHelper showWarningWithText:@"连接错误！"];
     }];
 }

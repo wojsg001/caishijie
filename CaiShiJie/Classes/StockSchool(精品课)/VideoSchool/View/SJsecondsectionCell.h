@@ -12,5 +12,13 @@
 @interface SJsecondsectionCell : UICollectionViewCell
 
 @property (nonatomic, strong) SJSchoolVideoModel *model;
+@property (nonatomic, copy) void (^clickedPayButtonBlock)();
+@property (nonatomic, copy) void (^clickedFreeWatchButtonBlock)();
+
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UIButton *freeButton;
+@property (weak, nonatomic) IBOutlet UIButton *buyButton;
+
+
 
 @end

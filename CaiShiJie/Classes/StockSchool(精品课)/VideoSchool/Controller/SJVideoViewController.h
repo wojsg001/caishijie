@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @class SJRecommendVideoModel;
+@class SJSchoolVideoModel;
 @interface SJVideoViewController : UIViewController
 
+@property (nonatomic, assign) NSInteger homepage;
 @property (nonatomic, copy) NSString *course_id;
 @property (nonatomic, strong) SJRecommendVideoModel *recommendVideoModel;
 @property (nonatomic, copy) NSString *vod_id;
+@property (nonatomic, strong) SJSchoolVideoModel *schoolVideoModel;
 
 @end
