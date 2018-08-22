@@ -70,7 +70,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
     
     if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
-        statusBar.backgroundColor = RGB(255, 88, 0);
+        statusBar.backgroundColor = RGB(204, 0, 51);
     }
     //添加进度条
     [self.view addSubview:self.progressView];

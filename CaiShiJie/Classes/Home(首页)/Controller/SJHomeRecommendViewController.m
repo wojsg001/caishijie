@@ -140,10 +140,10 @@
 
     UIView *navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 64)];
     self.navigationBar = navigationBar;
-    navigationBar.backgroundColor = [UIColor colorWithHexString:@"#f76408" withAlpha:0.0];
+    navigationBar.backgroundColor = [UIColor colorWithHexString:@"#cc0033" withAlpha:0.0];
     _isClear = YES;
     UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
-    statusBar.backgroundColor = [UIColor colorWithHexString:@"#f76408" withAlpha:1.0];
+    statusBar.backgroundColor = [UIColor colorWithHexString:@"#cc0033" withAlpha:1.0];
     [self.view addSubview:navigationBar];
     
     UIButton *searchButton = [[UIButton alloc] initWithFrame:CGRectMake(10, kStatusBarHeight + 10, SJScreenW - 20, 28)];
@@ -330,11 +330,11 @@
     [self.stockIndexVC.view setFrame:CGRectMake(0, cycleScrollView.size.height, SJScreenW, tableHeaderView.size.height - cycleScrollView.size.height)];
     [tableHeaderView addSubview:self.stockIndexVC.view];
 
-//    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon1"] tag:0 title:@"推荐"];
-//    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon2"] tag:1 title:@"问答"];
-//    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon3"] tag:2 title:@"找老师"];
-//    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon4"] tag:3 title:@"股评"];
-//    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon5"] tag:4 title:@"排行榜"];
+    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon1"] tag:0 title:@"观点"];
+    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon2"] tag:1 title:@"问答"];
+    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon3"] tag:2 title:@"大咖圈"];
+    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon4"] tag:3 title:@"自选股"];
+    [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon5"] tag:4 title:@"公开课"];
 
     self.tableView.tableHeaderView = tableHeaderView;
 }
@@ -691,7 +691,7 @@
     if (offsetY >= 106) {
         if (_isClear) {
             [UIView animateWithDuration:0.2 animations:^{
-                self.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#f76408" withAlpha:1.0];
+                self.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#cc0033" withAlpha:1.0];
                 [_searchButton setBackgroundColor:[UIColor colorWithHexString:@"#ffffff" withAlpha:0.0]];
             } completion:^(BOOL finished) {
                 _isClear = NO;
@@ -700,12 +700,12 @@
     } else {
         if (!_isClear) {
             [UIView animateWithDuration:0.2 animations:^{
-                self.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#f76408" withAlpha:0.0];
+                self.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#cc0033" withAlpha:0.0];
                 
                 [_searchButton setBackgroundColor:[UIColor colorWithHexString:@"#ffffff" withAlpha:0.4]];
                 
                 UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
-                statusBar.backgroundColor = [UIColor colorWithHexString:@"#f76408" withAlpha:1.0];
+                statusBar.backgroundColor = [UIColor colorWithHexString:@"#cc0033" withAlpha:1.0];
             } completion:^(BOOL finished) {
                 _isClear = YES;
             }];
