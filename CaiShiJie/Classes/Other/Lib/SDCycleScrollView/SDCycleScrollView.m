@@ -79,6 +79,8 @@ NSString * const ID = @"cycleCell";
     
     self.backgroundColor = [UIColor lightGrayColor];
     
+    self.layer.cornerRadius = 10.0f;
+    self.layer.masksToBounds = YES;
 }
 
 + (instancetype)cycleScrollViewWithFrame:(CGRect)frame imagesGroup:(NSArray *)imagesGroup
@@ -114,8 +116,8 @@ NSString * const ID = @"cycleCell";
     mainView.delegate = self;
     [self addSubview:mainView];
     _mainView = mainView;
+    
 }
-
 
 #pragma mark - properties
 

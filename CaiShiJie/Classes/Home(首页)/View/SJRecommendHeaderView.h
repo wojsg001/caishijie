@@ -11,6 +11,8 @@
 @interface SJRecommendHeaderView : UIView
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic) IBOutlet UIButton *moreBtn;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 
 @end

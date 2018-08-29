@@ -13,9 +13,11 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nicknameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *titleL;
-@property (weak, nonatomic) IBOutlet UILabel *total_countLabel;
-@property (weak, nonatomic) IBOutlet UILabel *livetimeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *liveBroadcastImageView;
+@property (weak, nonatomic) IBOutlet UILabel *fieryTitleL;
+@property (weak, nonatomic) IBOutlet UILabel *fansLabel;
+@property (weak, nonatomic) IBOutlet UIButton *followBtn;
+
 
 @end
 
@@ -31,12 +33,11 @@
 - (void)setModel:(SJLiveRoomModel *)model {
     _model = model;
     
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_model.head_img]] placeholderImage:[UIImage imageNamed:@"attention_recommand_photo"]];
-    self.nicknameLabel.text = _model.nickname;
-    self.nicknameLabel.hidden = YES;
-    self.titleL.text = _model.title;
-    self.titleL.hidden = YES;
-    self.total_countLabel.attributedText = [self changeStringColor:_model.total_count withOriginalString:[NSString stringWithFormat:@"%@人参与", _model.total_count]];
+    [self.headImageView setImage:[UIImage imageNamed:@"recommand_livephoto"]];
+     //sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_model.head_img]] placeholderImage:[UIImage imageNamed:@"attention_recommand_photo"]];
+    self.nicknameLabel.text = @"黑马王陈文";//_model.nickname;
+    self.fieryTitleL.text = @"热度:500";
+    self.fansLabel.text= @"粉丝：300";
 }
 
 - (NSMutableAttributedString *)changeStringColor:(NSString *)changeStr withOriginalString:(NSString *)originalStr {

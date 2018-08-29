@@ -1,3 +1,4 @@
+
 //
 //  SJselfSelectedViewController.m
 //  CaiShiJie
@@ -102,8 +103,7 @@
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(loadData) name:@"updataselfselected" object:nil];
-    
-    
+
     UINib *nib =[UINib nibWithNibName:@"SJselfSelectedCell" bundle:nil];
     [self.tableview registerNib:nib forCellReuseIdentifier:@"cell"];
 }

@@ -11,7 +11,7 @@
 #import "SJRecommendFooterView.h"
 #import "SJHomeRecommendBlogCell.h"
 #import "SJHomeRecommendLiveCell.h"
-#import "SJIndexCollectionViewController.h"
+//#import "SJIndexCollectionViewController.h" //去掉大盘指数
 //#import "SJRecommendStockCell.h" 去掉股票列表
 #import "SJRecommendHotVideoOneCell.h"
 #import "SJRecommendHotVideoTwoCell.h"
@@ -62,14 +62,13 @@
 @property (nonatomic, assign) BOOL isNetwork;
 @property (nonatomic, weak) UIView *tableHeaderView;
 @property (nonatomic, weak) SDCycleScrollView *cycleScrollView;
-@property (nonatomic, strong) SJIndexCollectionViewController *stockIndexVC;
+//@property (nonatomic, strong) SJIndexCollectionViewController *stockIndexVC;
 @property (nonatomic, weak) UIView *navigationBar;
 @property (nonatomic, weak) UIButton *searchButton;
 @property (nonatomic, strong) NSArray *masterArray;
 @end
 
 @implementation SJHomeRecommendViewController
-
 - (NSMutableArray *)recommendStockArray {
     if (!_recommendStockArray) {
         _recommendStockArray = [NSMutableArray array];
@@ -83,7 +82,6 @@
     }
     return _recommendVideoArray;
 }
-
 - (NSMutableArray *)recommendBlogArray
 {
     if (_recommendBlogArray == nil) {
@@ -112,14 +110,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self refreshNetwork];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotoMarketIndex:) name:KNotificationMarketIndex object:nil];
 }
 
 - (void)setUpSubviews {
-    self.sectionArray = @[/*@{@"icon":@"index_tuijian_icon1",@"title":@"推荐股评"},*/ @{@"icon":@"index_tuijian_icon1",@"title":@"直播回顾"},
+    self.sectionArray = @[/*@{@"icon":@"index_tuijian_icon1",@"title":@"推荐股评"},*/ @{@"icon":@"index_tuijian_icon1",@"title":@"股市直播"},
                           @{@"icon":@"index_mingshi_icon2",@"title":@"名师专栏"}, @{@"icon":@"index_tuijian_icon3",@"title":@"热门视频"}, /*@{@"icon":@"index_tuijian_icon4",@"title":@"热门股票"},*/@{@"icon":@"index_dakaquanicon4",@"title":@"股市头条"}, ];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, SJScreenH - kTabbarHeight) style:UITableViewStyleGrouped];
@@ -138,35 +136,33 @@
     [_tableView registerNib:[UINib nibWithNibName:@"SJHomeRecommendBlogCell" bundle:nil] forCellReuseIdentifier:@"SJHomeRecommendBlogCell"];
 //    [_tableView registerClass:[SJHomeEliteTableViewCell class] forCellReuseIdentifier:@"SJHomeEliteTableViewCell"];
 
-    UIView *navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 64)];
-    self.navigationBar = navigationBar;
-    navigationBar.backgroundColor = [UIColor colorWithHexString:@"#cc0033" withAlpha:0.0];
+//    UIView *navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 64)];
+//    self.navigationBar = navigationBar;
+//    navigationBar.backgroundColor = [UIColor colorWithHexString:@"#cc0033" withAlpha:1.0];
     _isClear = YES;
-    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
-    statusBar.backgroundColor = [UIColor colorWithHexString:@"#cc0033" withAlpha:1.0];
-    [self.view addSubview:navigationBar];
+//    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+//    statusBar.backgroundColor = [UIColor colorWithHexString:@"#cc0033" withAlpha:1.0];
+//    [self.view addSubview:navigationBar];
     
-    UIButton *searchButton = [[UIButton alloc] initWithFrame:CGRectMake(10, kStatusBarHeight + 10, SJScreenW - 20, 28)];
+    UIButton *searchButton = [[UIButton alloc] initWithFrame:CGRectMake(40, 10, SJScreenW - 80, 24)];
     self.searchButton = searchButton;
     searchButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [searchButton setContentEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 0)];
     [searchButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 8, 0, 0)];
-    [searchButton setBackgroundColor:[UIColor colorWithHexString:@"#ffffff" withAlpha:0.4]];
+    [searchButton setBackgroundColor:[UIColor colorWithHexString:@"#c5001b" withAlpha:1.0]];
     [searchButton setImage:[UIImage imageNamed:@"index_account_soso"] forState:UIControlStateNormal];
     [searchButton setImage:[UIImage imageNamed:@"index_account_soso"] forState:UIControlStateHighlighted];
-    [searchButton setTitle:@"搜索股票" forState:UIControlStateNormal];
+    [searchButton setTitle:@"请输入股票名称/老师名称..." forState:UIControlStateNormal];
     [searchButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     searchButton.titleLabel.font = [UIFont systemFontOfSize:14];
     [searchButton addTarget:self action:@selector(searchButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     // 改变图片颜色（图片需设置TemplateImage）
     searchButton.imageView.tintColor = [UIColor whiteColor];
-    searchButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    searchButton.layer.borderColor = [UIColor colorWithHexString:@"#c5001b" withAlpha:1.0].CGColor;
     searchButton.layer.borderWidth = 0.5;
-    searchButton.layer.cornerRadius = 5.0;
+    searchButton.layer.cornerRadius = 10.0;
     searchButton.layer.masksToBounds = YES;
-    [navigationBar addSubview:searchButton];
-    
-
+    [self.navigationController.navigationBar addSubview:searchButton];
 }
 
 - (void)searchButtonPressed:(UIButton *)button {
@@ -192,8 +188,16 @@
             self.cycleScrollView.imageURLStringsGroup = imagesURLStrings;
 //            // 博文数据
 //            self.recommendBlogArray = [SJBlogArticleModel objectArrayWithKeyValuesArray:respose[@"data"][@"ElectArticle"]];
-            // 视频数据
+            // 直播数据
             self.recommendLiveArray = [SJLiveRoomModel objectArrayWithKeyValuesArray:respose[@"data"][@"ElectLive"]];
+            
+            // NSArray --> NSMutableArray
+            NSMutableArray *myMutableArray = [self.recommendLiveArray mutableCopy];
+            [myMutableArray addObject:self.recommendLiveArray[0]];
+            [myMutableArray addObject:self.recommendLiveArray[0]];
+            // NSMutableArray --> NSArray
+            self.recommendLiveArray = [myMutableArray copy];
+            
 //            // 股票数据
 //            NSArray *stockArray = respose[@"data"][@"ElectStock"];
 //            [self loadSinnaStock:stockArray];
@@ -310,7 +314,7 @@
 }
 
 - (void)setUpTableViewHeadView {
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SJScreenW, 170) imageURLStringsGroup:@[@"index-banner"]];
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(10, 10, SJScreenW - 20, 170) imageURLStringsGroup:@[@"index-banner"]];
     self.cycleScrollView = cycleScrollView;
     cycleScrollView.autoScrollTimeInterval = 3.0;
     cycleScrollView.infiniteLoop = YES;
@@ -320,15 +324,15 @@
     
 
     
-    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 257)];
+    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, 267)];
     self.tableHeaderView = tableHeaderView;
     tableHeaderView.backgroundColor = RGB(245, 245, 248);
     [tableHeaderView addSubview:cycleScrollView];
     
-    self.stockIndexVC = [[SJIndexCollectionViewController alloc] init];
-
-    [self.stockIndexVC.view setFrame:CGRectMake(0, cycleScrollView.size.height, SJScreenW, tableHeaderView.size.height - cycleScrollView.size.height)];
-    [tableHeaderView addSubview:self.stockIndexVC.view];
+//    self.stockIndexVC = [[SJIndexCollectionViewController alloc] init];
+//
+//    [self.stockIndexVC.view setFrame:CGRectMake(0, cycleScrollView.size.height, SJScreenW, tableHeaderView.size.height - cycleScrollView.size.height)];
+//    [tableHeaderView addSubview:self.stockIndexVC.view];
 
     [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon1"] tag:0 title:@"观点"];
     [self setupOneCustomButtonWithImage:[UIImage imageNamed:@"nav_icon2"] tag:1 title:@"问答"];
@@ -344,11 +348,11 @@
     [button setBackgroundColor:[UIColor whiteColor]];
     [button setImage:image forState:UIControlStateNormal];
     [button setTitle:title forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor colorWithHexString:@"#737373" withAlpha:1] forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont systemFontOfSize:13];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:15];
     button.tag = tag;
     [button addTarget:self action:@selector(customButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    button.frame = CGRectMake((SJScreenW/5) * tag, 170, SJScreenW/5, 87);
+    button.frame = CGRectMake((SJScreenW/5) * tag, 190, SJScreenW/5, 78);
     [self.tableHeaderView addSubview:button];
 }
 
@@ -399,7 +403,6 @@
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
     SJLog(@"---点击了第%li张图片", (long)index);
     SJScrollViewImageModel *model = self.imageModelArr[index];
-    
     if ([model.url integerValue] > 0) {
 //        SJMyLiveViewController *liveVC = [[SJMyLiveViewController alloc] init];
 //        liveVC.target_id = model.url;
@@ -427,7 +430,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 1;
+        return self.recommendLiveArray.count;
         //return self.recommendBlogArray.count;
     } else if (section == 1) {
         return self.recommendLiveArray.count;
@@ -454,59 +457,58 @@
         return cell;
 
     } else if (indexPath.section == 1) {
-        //名师专栏
-        SJMasterTeacherCell *cell = [SJMasterTeacherCell cellWithTableView:tableView];
-        cell.delegate = self;
-        if (!cell.array.count) {
-            cell.array = self.masterArray;
-        }
-        
-        return cell;
+//        //名师专栏
+//        SJMasterTeacherCell *cell = [SJMasterTeacherCell cellWithTableView:tableView];
+//        cell.delegate = self;
+//        if (!cell.array.count) {
+//            cell.array = self.masterArray;
+//        }
+//
+//        return cell;
     } else if (indexPath.section == 2) {
-        if (indexPath.row == 0) {
-            SJRecommendHotVideoOneCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJRecommendHotVideoOneCell"];
-            
-            WS(weakSelf);
-            if (self.recommendVideoArray.count) {
-                id value = self.recommendVideoArray[indexPath.row];
-                cell.array = value;
-                cell.recommendHotVideoBlock = ^(NSInteger index){
-                    
-                    NSArray *tmpArr = weakSelf.recommendVideoArray[indexPath.row];
-                    SJRecommendVideoModel *model;
-                    switch (index) {
-                        case 1001:
-                            model = tmpArr[0];
-                            break;
-                        case 1002:
-                            model = tmpArr[1];
-                            break;
-                            
-                        default:
-                            break;
-                    }
-                    
-                    SJVideoViewController *videoVC =[[SJVideoViewController alloc]init];
-                    videoVC.course_id = model.course_id
-                    ;
-                    videoVC.homepage = 0; //首页课程免费
-                    videoVC.recommendVideoModel = model;
-                    [weakSelf.navigationController pushViewController:videoVC animated:YES];
-                };
-            }
-            
-            return cell;
-        } else {
-            SJRecommendHotVideoTwoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJRecommendHotVideoTwoCell"];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            
-            if (self.recommendVideoArray.count) {
-                id value = self.recommendVideoArray[indexPath.row];
-                cell.model = value;
-            }
-            
-            return cell;
-        }
+//        if (indexPath.row == 0) {
+//            SJRecommendHotVideoOneCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJRecommendHotVideoOneCell"];
+//            WS(weakSelf);
+//            if (self.recommendVideoArray.count) {
+//                id value = self.recommendVideoArray[indexPath.row];
+//                cell.array = value;
+//                cell.recommendHotVideoBlock = ^(NSInteger index){
+//
+//                    NSArray *tmpArr = weakSelf.recommendVideoArray[indexPath.row];
+//                    SJRecommendVideoModel *model;
+//                    switch (index) {
+//                        case 1001:
+//                            model = tmpArr[0];
+//                            break;
+//                        case 1002:
+//                            model = tmpArr[1];
+//                            break;
+//
+//                        default:
+//                            break;
+//                    }
+//
+//                    SJVideoViewController *videoVC =[[SJVideoViewController alloc]init];
+//                    videoVC.course_id = model.course_id
+//                    ;
+//                    videoVC.homepage = 0; //首页课程免费
+//                    videoVC.recommendVideoModel = model;
+//                    [weakSelf.navigationController pushViewController:videoVC animated:YES];
+//                };
+//            }
+//
+//            return cell;
+//        } else {
+//            SJRecommendHotVideoTwoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJRecommendHotVideoTwoCell"];
+//            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//
+//            if (self.recommendVideoArray.count) {
+//                id value = self.recommendVideoArray[indexPath.row];
+//                cell.model = value;
+//            }
+//
+//            return cell;
+//        }
     } else if (indexPath.section == 3) {
 //        SJRecommendStockCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SJRecommendStockCell"];
 //        cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -533,6 +535,16 @@
     NSDictionary *dic = self.sectionArray[section];
     sectionHeader.iconView.image = [UIImage imageNamed:dic[@"icon"]];
     sectionHeader.titleLabel.text = dic[@"title"];
+    switch (section) {
+        case 0:
+            [sectionHeader.moreBtn setTitle: @"更多人气直播 >" forState: UIControlStateNormal];
+            break;
+        case 3:
+            [sectionHeader.moreBtn setTitle: @"更多精彩观点 >" forState: UIControlStateNormal];
+
+        default:
+            break;
+    }
     return sectionHeader;
 }
 
@@ -564,11 +576,14 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 45;
+    if (section == 1 || section == 2) {
+        return 0;
+    }
+    return 70;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    if (section == 0 || section == 1 || section == 3) {
+    if (section == 0 || section == 1 || section == 2 || section == 3) {
         return 0;
     }
     
@@ -577,19 +592,21 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 200; //直播互动
+        return 148; //直播互动
     } else if (indexPath.section == 1) {
-         return (SJScreenW - 20)/4 + 32; //名师专栏
+        //return (SJScreenW - 20)/4 + 32; //名师专栏
+        return 0;
     } else if (indexPath.section == 2) {
-        //热门视频
-        if (indexPath.row == 0) {
-            return (SJScreenW - 30)/2 * 107/172 + 48;
-        } else {
-            return 80;
-        }
+//        //热门视频
+//        if (indexPath.row == 0) {
+//            return (SJScreenW - 30)/2 * 107/172 + 48;
+//        } else {
+//            return 80;
+//        }
+        return 0;
     } else if (indexPath.section == 3) {
         //股市头条
-        return 140;
+        return 180;
     }
     
     return CGFLOAT_MIN;
@@ -638,7 +655,7 @@
 //        }
     } else if (indexPath.section == 2) {
         if (indexPath.row != 0) {
-            SJVideoViewController *videoVC =[[SJVideoViewController alloc]init];
+            SJVideoViewController *videoVC = [[SJVideoViewController alloc]init];
             SJRecommendVideoModel *model = self.recommendVideoArray[indexPath.row];
             videoVC.course_id = model.course_id;
             videoVC.recommendVideoModel = model;

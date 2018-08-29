@@ -22,16 +22,18 @@
 }
 
 - (void)layoutSubviews {
+    
     [super layoutSubviews];
     
     CGFloat imageX = 0;
-    CGFloat imageY = 10;
-    CGFloat imageW = self.bounds.size.width;
-    CGFloat imageH = self.imageView.frame.size.height;
+    CGFloat imageY = 5;
+    CGFloat imageW = self.bounds.size.width+5;
+    CGFloat imageH = self.imageView.frame.size.height+10;
     self.imageView.frame = CGRectMake(imageX, imageY, imageW, imageH);
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     CGFloat titleX = 0;
-    CGFloat titleY = CGRectGetMaxY(self.imageView.frame) + 8;
+    CGFloat titleY = CGRectGetMaxY(self.imageView.frame) + 5;
     CGFloat titleW = self.bounds.size.width;
     CGFloat titleH = self.titleLabel.frame.size.height;
     self.titleLabel.frame = CGRectMake(titleX, titleY, titleW, titleH);

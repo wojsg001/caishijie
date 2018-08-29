@@ -25,7 +25,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    self.headImgView.layer.cornerRadius = 4.0f;
+    self.headImgView.layer.cornerRadius = 22.0f;
     self.headImgView.layer.masksToBounds = YES;
 }
 

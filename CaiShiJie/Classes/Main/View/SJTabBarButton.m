@@ -35,7 +35,7 @@
     if (self = [super initWithFrame:frame]) {
         // 设置字体颜色
         [self setTitleColor:[UIColor colorWithHexString:@"#8c8c8c" withAlpha:1] forState:UIControlStateNormal];
-        [self setTitleColor:[UIColor colorWithHexString:@"#f76408" withAlpha:1] forState:UIControlStateSelected];
+        [self setTitleColor:[UIColor colorWithHexString:@"#cc0033" withAlpha:1] forState:UIControlStateSelected];
         // 图片居中
         self.imageView.contentMode = UIViewContentModeCenter;
         // 文字居中
