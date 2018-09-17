@@ -54,7 +54,7 @@
 
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.title = @"精品课";
+    self.navigationItem.title = @"公开课";
     self.isNetwork = YES;
     [self initsubviews];
     

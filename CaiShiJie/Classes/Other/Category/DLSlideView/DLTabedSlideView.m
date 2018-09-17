@@ -11,7 +11,7 @@
 #import "DLSlideView.h"
 #import "DLLRUCache.h"
 
-#define kDefaultTabbarHeight 34
+#define kDefaultTabbarHeight 54
 #define kDefaultTabbarBottomSpacing 0
 #define kDefaultCacheCount 4
 
@@ -36,7 +36,22 @@
     DLSlideView *slideView_;
     DLFixedTabbarView *tabbar_;
     DLLRUCache *ctrlCache_;
+    DLTabedSlideViewType tabedSlideViewType_;
 }
+
+-(void)initWithDLTabedSlideViewType:(DLTabedSlideViewType)tabedSlideViewType{
+    tabedSlideViewType_ = tabedSlideViewType;
+    switch (tabedSlideViewType_) {
+        case DLTabedSlideViewCommon:
+             [self commonInit];
+            break;
+        case DLTabedSlideViewCourseVideo:
+            [self commonInitCourseVideo];
+        default:
+            break;
+    }
+}
+
 
 - (void)commonInit{
     self.tabbarHeight = kDefaultTabbarHeight;
@@ -54,15 +69,31 @@
     ctrlCache_ = [[DLLRUCache alloc] initWithCount:4];
 }
 
+- (void)commonInitCourseVideo{
+    self.tabbarHeight = kDefaultTabbarHeight;
+    self.tabbarBottomSpacing = kDefaultTabbarBottomSpacing;
+    
+    tabbar_ = [[DLFixedTabbarView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.tabbarHeight)];
+    tabbar_.delegate = self;
+    [self addSubview:tabbar_];
+    
+    slideView_ = [[DLSlideView alloc] initWithFrame:CGRectMake(0, self.tabbarHeight+self.tabbarBottomSpacing + 170, self.bounds.size.width, self.bounds.size.height-self.tabbarHeight-self.tabbarBottomSpacing - 64)];
+    slideView_.delegate = self;
+    slideView_.dataSource = self;
+    [self addSubview:slideView_];
+    
+    ctrlCache_ = [[DLLRUCache alloc] initWithCount:4];
+}
+
+
 - (id)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super initWithCoder:aDecoder]) {
-        [self commonInit];
     }
     return self;
 }
+
 - (id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        [self commonInit];
     }
     return self;
 }
@@ -76,8 +107,17 @@
 - (void)layoutBarAndSlide{
     UIView *barView = (UIView *)tabbar_;
     barView.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), self.tabbarHeight);
-    slideView_.frame = CGRectMake(0, self.tabbarHeight+self.tabbarBottomSpacing, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)-self.tabbarHeight-self.tabbarBottomSpacing - 64);
 
+    
+    switch (tabedSlideViewType_) {
+        case DLTabedSlideViewCommon:
+            slideView_.frame = CGRectMake(0, self.tabbarHeight+self.tabbarBottomSpacing, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)-self.tabbarHeight-self.tabbarBottomSpacing - 64);
+            break;
+        case DLTabedSlideViewCourseVideo:
+            slideView_.frame = CGRectMake(0, self.tabbarHeight+self.tabbarBottomSpacing + 170, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)-self.tabbarHeight-self.tabbarBottomSpacing - 64);
+        default:
+            break;
+    }
 }
 //- (void)setViewControllers:(NSArray *)viewControllers{
 //    //assert(self.tabarView == nil || viewControllers.count == [self.tabarView tabbarCount]);

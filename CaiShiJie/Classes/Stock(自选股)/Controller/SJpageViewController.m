@@ -98,6 +98,9 @@
     
     [super viewDidLoad];
     
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    statusBar.backgroundColor = [UIColor colorWithHexString:@"#cc0033" withAlpha:1.0];
+    
     self.zixuanViewTop.constant = kStatusBarHeight;
     
     _pvc = [[UIPageViewController alloc]initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];

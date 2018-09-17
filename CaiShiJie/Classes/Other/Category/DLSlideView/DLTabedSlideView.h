@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "DLSlideTabbarProtocol.h"
 
+typedef NS_ENUM (NSInteger, DLTabedSlideViewType) {
+    DLTabedSlideViewCommon = 0,
+    DLTabedSlideViewCourseVideo = 1 << 1
+};
+
+
 @interface DLTabedbarItem : NSObject
 @property (nonatomic, strong) NSString *title;
 @property(nonatomic, strong) UIImage *image;
@@ -31,7 +37,6 @@
 @property(nonatomic, weak) UIViewController *baseViewController;
 @property(nonatomic, assign) NSInteger selectedIndex;
 
-
 //set tabbar properties.
 @property (nonatomic, strong) UIColor *tabItemNormalColor;
 @property (nonatomic, strong) UIColor *tabItemSelectedColor;
@@ -44,6 +49,7 @@
 // cache properties
 @property(nonatomic, assign) NSInteger cacheCount;
 
+-(void)initWithDLTabedSlideViewType:(DLTabedSlideViewType)tabedSlideViewType;
 - (void)buildTabbar;
 
 //@property(nonatomic, strong) IBOutlet id<DLSlideTabbarProtocol> tabarView;

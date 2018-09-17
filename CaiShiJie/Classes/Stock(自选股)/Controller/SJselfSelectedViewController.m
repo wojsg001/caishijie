@@ -149,6 +149,7 @@
 }
 
 - (void)loadMoreData{
+    
     page = page + 1;
     
     NSString *url = [NSString stringWithFormat:@"%@/mobile/stock/getbyuserid", HOST];

@@ -57,13 +57,13 @@
     
     self.nickNameLabel.text = _dict[@"nickname"];
     [self.head_img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kHead_imgURL,_dict[@"head_img"]]] placeholderImage:[UIImage imageNamed:@"mine_photo"]];
-    self.fansLabel.text = [NSString stringWithFormat:@"粉丝：%@",_dict[@"fans"]];
-    self.attentionLabel.text = [NSString stringWithFormat:@"关注：%@",_dict[@"attention"]];
+    self.fansLabel.text = [NSString stringWithFormat:@"粉丝 %@",_dict[@"fans"]];
+    self.attentionLabel.text = [NSString stringWithFormat:@"关注 %@",_dict[@"attention"]];
 }
 
 - (NSMutableAttributedString *)getMutableAttributedStringWithString:(NSString *)string {
     //NSString *str =[NSString stringWithFormat:@"余额：%@币", string];
-    NSString *str =[NSString stringWithFormat:@"提醒：%@条", string];
+    NSString *str =[NSString stringWithFormat:@"提醒 %@", string];
     NSMutableAttributedString *hintStr = [[NSMutableAttributedString alloc] initWithString:str];
     NSRange range = [[hintStr string] rangeOfString:string];
     [hintStr addAttribute:NSForegroundColorAttributeName value:RGB(255, 193, 8) range:range];

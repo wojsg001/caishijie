@@ -95,7 +95,7 @@
     self.confirmButton.layer.cornerRadius = 5;
     self.confirmButton.layer.masksToBounds = YES;
     
-    self.courseName.text = [NSString stringWithFormat:@"精品课：%@",_model.course_name];
+    self.courseName.text = [NSString stringWithFormat:@"公开课：%@",_model.course_name];
     self.courseIndroduce.text = [NSString stringWithFormat:@"简介：%@",_model.introduce];
     self.courseTeacher.text = [NSString stringWithFormat:@"老师：%@",_model.nickname];
     //self.titleLabel.text = _model.course_name;
@@ -167,7 +167,7 @@
     paramers.userid = instance.userid;
     paramers.time = instance.time;
     paramers.targetid = _model.user_id;
-    paramers.itemtype = @"4"; //精品课
+    paramers.itemtype = @"4"; //公开课
     paramers.itemname = self.model.course_name;
     paramers.itemid = _model.course_id;
     

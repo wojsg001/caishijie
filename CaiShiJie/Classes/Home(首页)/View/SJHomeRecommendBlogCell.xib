@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018-05-06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wo-J9-cAY">
-                                <rect key="frame" x="73" y="48" width="100" height="14"/>
+                                <rect key="frame" x="73" y="44" width="100" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="9BL-SB-UWo"/>
                                     <constraint firstAttribute="width" constant="100" id="x10-Ru-1CD"/>
@@ -126,7 +126,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4Wo-J9-cAY" firstAttribute="top" secondItem="9GJ-s2-KeV" secondAttribute="bottom" constant="11" id="0VJ-sR-DX3"/>
+                            <constraint firstItem="4Wo-J9-cAY" firstAttribute="top" secondItem="9GJ-s2-KeV" secondAttribute="bottom" constant="7" id="0VJ-sR-DX3"/>
                             <constraint firstItem="LDz-vh-yXd" firstAttribute="top" secondItem="pH1-Dr-ztz" secondAttribute="top" id="3DF-8Y-NJ5"/>
                             <constraint firstItem="TXx-5t-fAw" firstAttribute="leading" secondItem="oNs-Jd-jbC" secondAttribute="trailing" constant="8" id="5JD-qh-CTG"/>
                             <constraint firstItem="pH1-Dr-ztz" firstAttribute="leading" secondItem="hBI-2f-Qf9" secondAttribute="leading" constant="30" id="5bn-9w-pll"/>

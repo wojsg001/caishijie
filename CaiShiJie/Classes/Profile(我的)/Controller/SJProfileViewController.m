@@ -102,30 +102,52 @@
         && ![[[NSUserDefaults standardUserDefaults] valueForKey:kUserName] isEqualToString:@"散户哨兵"]
         && ![[[NSUserDefaults standardUserDefaults] valueForKey:kUserName] isEqualToString:@"hanxiao"]) {
         _firstTeacherArray = @[/*@{@"image":@"mine_icon1.png",@"title":@"我的金币"},*/
-                               @{@"image":@"mine_icon2.png",@"title":@"我的消息"},
-                               @{@"image":@"mine_icon3.png",@"title":@"我的问股"},
-                               @{@"image":@"mine_icon4.png",@"title":@"我的博文"},
-                               @{@"image":@"mine_icon5.png",@"title":@"我的视频"}];
+                               @{@"image":@"mine_icon9.png",@"title":@"我的课程"},
+                               /*@@{@"image":@"mine_icon2.png",@"title":@"我的消息"},*/
+                               @{@"image":@"mine_icon10.png",@"title":@"我的问答"},
+                               @{@"image":@"mine_icon11.png",@"title":@"我的收藏"},
+                               @{@"image":@"mine_icon12.png",@"title":@"交易记录"},
+                               @{@"image":@"mine_icon13.png",@"title":@"申请入驻"},
+                               @{@"image":@"mine_icon14.png",@"title":@"关于我们"},
+                               @{@"image":@"mine_icon15.png",@"title":@"分享有礼"}
+                               ];
         _firstuserArray = @[/*@{@"image":@"mine_icon1.png",@"title":@"我的金币"},*/
-                            @{@"image":@"mine_icon2.png",@"title":@"我的消息"},
-                            @{@"image":@"mine_icon3.png",@"title":@"我的问股"},
-                            @{@"image":@"mine_icon4.png",@"title":@"我的博文"}];
+                            @{@"image":@"mine_icon9.png",@"title":@"我的课程"},
+                            @{@"image":@"mine_icon10.png",@"title":@"我的问答"},
+                            @{@"image":@"mine_icon11.png",@"title":@"我的收藏"},
+                            @{@"image":@"mine_icon12.png",@"title":@"交易记录"},
+                            @{@"image":@"mine_icon13.png",@"title":@"申请入驻"},
+                            @{@"image":@"mine_icon14.png",@"title":@"关于我们"},
+                            @{@"image":@"mine_icon15.png",@"title":@"分享有礼"}];
         
         _secondTeacherArray = @[/*@{@"image":@"mine_icon8.png",@"title":@"我的收入"},*/
                                 /*@{@"image":@"mine_icon6.png",@"title":@"消费记录"},*/
-                                @{@"image":@"mine_icon7.png",@"title":@"设置"}];
+                                /*@{@"image":@"mine_icon7.png",@"title":@"设置"}*/];
         _seconduserArray = @[/*@{@"image":@"mine_icon6.png",@"title":@"消费记录"},*/
-                             @{@"image":@"mine_icon7.png",@"title":@"设置"}];
+                             /*@{@"image":@"mine_icon7.png",@"title":@"设置"}*/];
     } else {
-        _firstTeacherArray = @[@{@"image":@"mine_icon2.png",@"title":@"我的消息"},
-                               @{@"image":@"mine_icon3.png",@"title":@"我的问股"},
-                               @{@"image":@"mine_icon4.png",@"title":@"我的博文"},
-                               @{@"image":@"mine_icon5.png",@"title":@"我的视频"}];
-        _firstuserArray = @[@{@"image":@"mine_icon2.png",@"title":@"我的消息"},
+        _firstTeacherArray = @[/*@{@"image":@"mine_icon2.png",@"title":@"我的消息"},*/
+                               @{@"image":@"mine_icon9.png",@"title":@"我的课程"},
+                               @{@"image":@"mine_icon10.png",@"title":@"我的问答"},
+                               @{@"image":@"mine_icon11.png",@"title":@"我的收藏"},
+                               @{@"image":@"mine_icon12.png",@"title":@"交易记录"},
+                               @{@"image":@"mine_icon13.png",@"title":@"申请入驻"},
+                               /*@{@"image":@"mine_icon14.png",@"title":@"我的博文"},*/
+                               @{@"image":@"mine_icon14.png",@"title":@"关于我们"},
+                               @{@"image":@"mine_icon15.png",@"title":@"分享有礼"}
+                               /*@{@"image":@"mine_icon5.png",@"title":@"我的视频"}*/];
+        _firstuserArray = @[@{@"image":@"mine_icon9.png",@"title":@"我的课程"},
+                            @{@"image":@"mine_icon10.png",@"title":@"我的问答"},
+                            @{@"image":@"mine_icon11.png",@"title":@"我的收藏"},
+                            @{@"image":@"mine_icon12.png",@"title":@"交易记录"},
+                            @{@"image":@"mine_icon13.png",@"title":@"申请入驻"},
+                            @{@"image":@"mine_icon14.png",@"title":@"关于我们"},
+                            @{@"image":@"mine_icon15.png",@"title":@"分享有礼"},
+                            /*@{@"image":@"mine_icon2.png",@"title":@"我的消息"},
                             @{@"image":@"mine_icon3.png",@"title":@"我的问股"},
-                            @{@"image":@"mine_icon4.png",@"title":@"我的博文"}];
-        _secondTeacherArray = @[@{@"image":@"mine_icon7.png",@"title":@"设置"}];
-        _seconduserArray = @[@{@"image":@"mine_icon7.png",@"title":@"设置"}];
+                            @{@"image":@"mine_icon4.png",@"title":@"我的博文"}*/];
+        _secondTeacherArray = @[/*@{@"image":@"mine_icon7.png",@"title":@"设置"}*/];
+        _seconduserArray = @[/*@{@"image":@"mine_icon7.png",@"title":@"设置"}*/];
     }
     
     self.firstSectionArray = _firstTeacherArray;
@@ -228,6 +250,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     SJProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     cell.separatorInset = UIEdgeInsetsMake(0, 45, 0, 0);
     
@@ -252,7 +275,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 42;
+    return 55;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

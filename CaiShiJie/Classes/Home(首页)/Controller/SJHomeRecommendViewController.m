@@ -117,7 +117,7 @@
 }
 
 - (void)setUpSubviews {
-    self.sectionArray = @[/*@{@"icon":@"index_tuijian_icon1",@"title":@"推荐股评"},*/ @{@"icon":@"index_tuijian_icon1",@"title":@"股市直播"},
+    self.sectionArray = @[/*@{@"icon":@"index_tuijian_icon1",@"title":@"推荐股评"},*/ @{@"icon":@"index_tuijian_icon1",@"title":@"股市回看"},
                           @{@"icon":@"index_mingshi_icon2",@"title":@"名师专栏"}, @{@"icon":@"index_tuijian_icon3",@"title":@"热门视频"}, /*@{@"icon":@"index_tuijian_icon4",@"title":@"热门股票"},*/@{@"icon":@"index_dakaquanicon4",@"title":@"股市头条"}, ];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, SJScreenH - kTabbarHeight) style:UITableViewStyleGrouped];
@@ -363,6 +363,7 @@
             SJHomeLiveViewController *liveVC = [[SJHomeLiveViewController alloc] init];
             liveVC.navigationItem.title = @"股市视频";
             [self.navigationController pushViewController:liveVC animated:YES];
+            
         }
             break;
         case 1: {
@@ -373,24 +374,34 @@
         }
             break;
         case 2: {
-            // 找老师
-            SJFindTeacherViewController *findTeacherVC = [[SJFindTeacherViewController alloc] init];
-            findTeacherVC.navigationItem.title = @"找老师";
-            [self.navigationController pushViewController:findTeacherVC animated:YES];
-        }
-            break;
-        case 3: {
-            // 股评
-            SJNewBlogArticleViewController *blogArticleVC = [[SJNewBlogArticleViewController alloc] init];
-            blogArticleVC.navigationItem.title = @"股评";
-            [self.navigationController pushViewController:blogArticleVC animated:YES];
-        }
-            break;
-        case 4: {
-            // 排行榜
+//            // 找老师
+//            SJFindTeacherViewController *findTeacherVC = [[SJFindTeacherViewController alloc] init];
+//            findTeacherVC.navigationItem.title = @"找老师";
+//            [self.navigationController pushViewController:findTeacherVC animated:YES];
+            
+            //大咖圈
             SJRankingsViewController *rankVC = [[SJRankingsViewController alloc] init];
             rankVC.navigationItem.title = @"排行榜";
             [self.navigationController pushViewController:rankVC animated:YES];
+        }
+            break;
+        case 3: {
+//            // 股评
+//            SJNewBlogArticleViewController *blogArticleVC = [[SJNewBlogArticleViewController alloc] init];
+//            blogArticleVC.navigationItem.title = @"股评";
+//            [self.navigationController pushViewController:blogArticleVC animated:YES];
+            
+            //自选股
+            self.tabBarController.selectedViewController = [self.tabBarController.viewControllers objectAtIndex:1];
+        }
+            break;
+        case 4: {
+//            // 排行榜
+//            SJRankingsViewController *rankVC = [[SJRankingsViewController alloc] init];
+//            rankVC.navigationItem.title = @"排行榜";
+//            [self.navigationController pushViewController:rankVC animated:YES];
+            //公开课
+            self.tabBarController.selectedViewController = [self.tabBarController.viewControllers objectAtIndex:2];
         }
             break;
             
@@ -537,7 +548,7 @@
     sectionHeader.titleLabel.text = dic[@"title"];
     switch (section) {
         case 0:
-            [sectionHeader.moreBtn setTitle: @"更多人气直播 >" forState: UIControlStateNormal];
+            [sectionHeader.moreBtn setTitle: @"更多人气回看 >" forState: UIControlStateNormal];
             break;
         case 3:
             [sectionHeader.moreBtn setTitle: @"更多精彩观点 >" forState: UIControlStateNormal];
@@ -662,11 +673,15 @@
             [self.navigationController pushViewController:videoVC animated:YES];
         }
     } else if (indexPath.section == 3) {
+//        SJBlogArticleModel *model = self.recommendBlogArray[indexPath.row];
+//        SJLogDetailViewController *detailVC = [[SJLogDetailViewController alloc] initWithNibName:@"SJLogDetailViewController" bundle:nil];
+//        detailVC.article_id = model.article_id;
+//        
+//        [self.navigationController pushViewController:detailVC animated:YES];
         SJBlogArticleModel *model = self.recommendBlogArray[indexPath.row];
-        SJLogDetailViewController *detailVC = [[SJLogDetailViewController alloc] initWithNibName:@"SJLogDetailViewController" bundle:nil];
-        detailVC.article_id = model.article_id;
-        
-        [self.navigationController pushViewController:detailVC animated:YES];
+        SJPersonalCenterViewController *personalCenterVC = [[SJPersonalCenterViewController alloc] init];
+        personalCenterVC.target_id = model.user_id;
+        [self.navigationController pushViewController:personalCenterVC animated:YES];
     }
 }
 

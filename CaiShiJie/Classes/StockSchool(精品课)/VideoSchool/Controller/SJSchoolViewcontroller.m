@@ -52,7 +52,7 @@
 
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.title = @"精品课";
+    self.navigationItem.title = @"公开课";
     self.isNetwork = YES;
     [self initsubviews];
     
@@ -69,6 +69,7 @@
 }
 
 - (void)initsubviews {
+    
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SJScreenW, SJScreenH - kTabbarHeight - kStatusBarHeight - kStatusBarHeight) collectionViewLayout:layout];
     _collectionView.delegate = self;
@@ -86,6 +87,7 @@
 
 #pragma mark - 加载数据
 - (void)loadVideoData {
+    
     NSString *urlStr = [NSString stringWithFormat:@"%@/mobile/home/video", HOST];
     [SJhttptool GET:urlStr paramers:nil success:^(id respose) {
         //SJLog(@"%@", respose);

@@ -24,9 +24,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-
-    self.headImgView.layer.cornerRadius = 22.0f;
-    self.headImgView.layer.masksToBounds = YES;
 }
 
 - (void)setModel:(SJBlogArticleModel *)model {

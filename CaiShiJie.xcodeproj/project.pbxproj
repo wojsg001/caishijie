@@ -39,6 +39,7 @@
 		0448667D20F8477400B48D0E /* SJVideoSectionOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0448667820F8477300B48D0E /* SJVideoSectionOneCell.xib */; };
 		0448668620F84DDE00B48D0E /* SJCollegeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448668420F84DDE00B48D0E /* SJCollegeViewController.m */; };
 		0448668720F84DDE00B48D0E /* SJCollegeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0448668520F84DDE00B48D0E /* SJCollegeViewController.xib */; };
+		0466A4672147B3990077DF54 /* SJCourseViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0466A4662147B3990077DF54 /* SJCourseViewcontroller.m */; };
 		047B516821070F8E0009CABD /* BCPayReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B50CC21070F8E0009CABD /* BCPayReq.m */; };
 		047B516921070F8E0009CABD /* BCPayResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B50CD21070F8E0009CABD /* BCPayResp.m */; };
 		047B516A21070F8E0009CABD /* BCSubscriptionQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B50D121070F8E0009CABD /* BCSubscriptionQuery.m */; };
@@ -93,8 +94,19 @@
 		04B5DD2B21183B3800207010 /* SJVodVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5DD2A21183B3800207010 /* SJVodVideoViewController.m */; };
 		04B5DD2F21193CA800207010 /* SJVodVideoSectionOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5DD2C21193CA700207010 /* SJVodVideoSectionOneCell.m */; };
 		04B5DD3021193CA800207010 /* SJVodVideoSectionOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B5DD2E21193CA800207010 /* SJVodVideoSectionOneCell.xib */; };
+		04C0F7372148ECA20025EC37 /* SJCourseViewSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C0F7352148ECA10025EC37 /* SJCourseViewSectionCell.xib */; };
+		04C0F7382148ECA20025EC37 /* SJCourseViewSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0F7362148ECA20025EC37 /* SJCourseViewSectionCell.m */; };
 		04CB557D20FC758E002D9427 /* SJCollegeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB557B20FC758E002D9427 /* SJCollegeTableViewCell.m */; };
 		04CB557E20FC758E002D9427 /* SJCollegeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CB557C20FC758E002D9427 /* SJCollegeTableViewCell.xib */; };
+		04D550E621421FB2006F3D12 /* SJChatRoomPopularityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D550DE21421FB2006F3D12 /* SJChatRoomPopularityListViewController.xib */; };
+		04D550E721421FB2006F3D12 /* SJChatRoomPopularityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D550DF21421FB2006F3D12 /* SJChatRoomPopularityListViewController.m */; };
+		04D550E821421FB2006F3D12 /* SJChatRoomFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D550E021421FB2006F3D12 /* SJChatRoomFollowViewController.m */; };
+		04D550E921421FB2006F3D12 /* SJChatRoomFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D550E121421FB2006F3D12 /* SJChatRoomFollowViewController.xib */; };
+		04D550EA21421FB2006F3D12 /* SJChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D550E421421FB2006F3D12 /* SJChatRoomViewController.m */; };
+		04D550EE21425DF7006F3D12 /* SJChatRoomFollowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D550EC21425DF7006F3D12 /* SJChatRoomFollowCell.xib */; };
+		04D550EF21425DF7006F3D12 /* SJChatRoomFollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D550ED21425DF7006F3D12 /* SJChatRoomFollowCell.m */; };
+		04D550F321425EB3006F3D12 /* SJChatRoomFollowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D550F221425EB3006F3D12 /* SJChatRoomFollowModel.m */; };
+		04D550F621427B87006F3D12 /* SJCollegeCourseVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D550F521427B87006F3D12 /* SJCollegeCourseVideoViewController.m */; };
 		04E5CF2A2101799F00ED7CED /* SJHomeEliteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E5CF292101799F00ED7CED /* SJHomeEliteTableViewCell.m */; };
 		04ECA86F20CF5F6C00E76C27 /* UMSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04ECA85C20CF5F6C00E76C27 /* UMSocialSDKResources.bundle */; };
 		04ECA87020CF5F6C00E76C27 /* UShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECA85D20CF5F6C00E76C27 /* UShareUI.framework */; };
@@ -107,6 +119,9 @@
 		04ECA87720CF5F6C00E76C27 /* UMAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECA86E20CF5F6C00E76C27 /* UMAnalytics.framework */; };
 		04ECA87C20CF69E500E76C27 /* UMCommonLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECA87A20CF69E400E76C27 /* UMCommonLog.framework */; };
 		04ECA87D20CF69E500E76C27 /* UMCommonLog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04ECA87B20CF69E400E76C27 /* UMCommonLog.bundle */; };
+		04F9D5CA2140CF7A00F966B2 /* SJChatRoomPopularityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D5C82140CF7900F966B2 /* SJChatRoomPopularityCell.m */; };
+		04F9D5CB2140CF7A00F966B2 /* SJChatRoomPopularityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F9D5C92140CF7A00F966B2 /* SJChatRoomPopularityCell.xib */; };
+		04F9D5CE2140FC5600F966B2 /* SJChatRoomPopularityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9D5CD2140FC5500F966B2 /* SJChatRoomPopularityModel.m */; };
 		04FEB17E211DC3C300B1038A /* SJPersonalTeacherCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FEB17D211DC3C200B1038A /* SJPersonalTeacherCourseViewController.m */; };
 		CE017F041C9B8D4000FAB205 /* MBHUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE017F031C9B8D4000FAB205 /* MBHUDHelper.m */; };
 		CE017F2C1C9B8DE500FAB205 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE017F2B1C9B8DE500FAB205 /* libbz2.tbd */; };
@@ -1034,6 +1049,8 @@
 		0448668320F84DDE00B48D0E /* SJCollegeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJCollegeViewController.h; sourceTree = "<group>"; };
 		0448668420F84DDE00B48D0E /* SJCollegeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJCollegeViewController.m; sourceTree = "<group>"; };
 		0448668520F84DDE00B48D0E /* SJCollegeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SJCollegeViewController.xib; sourceTree = "<group>"; };
+		0466A4652147B3980077DF54 /* SJCourseViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCourseViewcontroller.h; sourceTree = "<group>"; };
+		0466A4662147B3990077DF54 /* SJCourseViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCourseViewcontroller.m; sourceTree = "<group>"; };
 		047B50CB21070F8E0009CABD /* BCPayResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayResp.h; sourceTree = "<group>"; };
 		047B50CC21070F8E0009CABD /* BCPayReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayReq.m; sourceTree = "<group>"; };
 		047B50CD21070F8E0009CABD /* BCPayResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayResp.m; sourceTree = "<group>"; };
@@ -1143,9 +1160,27 @@
 		04B5DD2C21193CA700207010 /* SJVodVideoSectionOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJVodVideoSectionOneCell.m; sourceTree = "<group>"; };
 		04B5DD2D21193CA800207010 /* SJVodVideoSectionOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJVodVideoSectionOneCell.h; sourceTree = "<group>"; };
 		04B5DD2E21193CA800207010 /* SJVodVideoSectionOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJVodVideoSectionOneCell.xib; sourceTree = "<group>"; };
+		04C0F7262148ECA10025EC37 /* SJCourseViewSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCourseViewSectionCell.h; sourceTree = "<group>"; };
+		04C0F7352148ECA10025EC37 /* SJCourseViewSectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJCourseViewSectionCell.xib; sourceTree = "<group>"; };
+		04C0F7362148ECA20025EC37 /* SJCourseViewSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCourseViewSectionCell.m; sourceTree = "<group>"; };
 		04CB557A20FC758E002D9427 /* SJCollegeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJCollegeTableViewCell.h; sourceTree = "<group>"; };
 		04CB557B20FC758E002D9427 /* SJCollegeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJCollegeTableViewCell.m; sourceTree = "<group>"; };
 		04CB557C20FC758E002D9427 /* SJCollegeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SJCollegeTableViewCell.xib; sourceTree = "<group>"; };
+		04D550DD21421FB2006F3D12 /* SJChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJChatRoomViewController.h; sourceTree = "<group>"; };
+		04D550DE21421FB2006F3D12 /* SJChatRoomPopularityListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJChatRoomPopularityListViewController.xib; sourceTree = "<group>"; };
+		04D550DF21421FB2006F3D12 /* SJChatRoomPopularityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJChatRoomPopularityListViewController.m; sourceTree = "<group>"; };
+		04D550E021421FB2006F3D12 /* SJChatRoomFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJChatRoomFollowViewController.m; sourceTree = "<group>"; };
+		04D550E121421FB2006F3D12 /* SJChatRoomFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJChatRoomFollowViewController.xib; sourceTree = "<group>"; };
+		04D550E221421FB2006F3D12 /* SJChatRoomFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJChatRoomFollowViewController.h; sourceTree = "<group>"; };
+		04D550E321421FB2006F3D12 /* SJChatRoomPopularityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJChatRoomPopularityListViewController.h; sourceTree = "<group>"; };
+		04D550E421421FB2006F3D12 /* SJChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJChatRoomViewController.m; sourceTree = "<group>"; };
+		04D550EC21425DF7006F3D12 /* SJChatRoomFollowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJChatRoomFollowCell.xib; sourceTree = "<group>"; };
+		04D550ED21425DF7006F3D12 /* SJChatRoomFollowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJChatRoomFollowCell.m; sourceTree = "<group>"; };
+		04D550F021425E17006F3D12 /* SJChatRoomFollowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJChatRoomFollowCell.h; sourceTree = "<group>"; };
+		04D550F121425EB2006F3D12 /* SJChatRoomFollowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJChatRoomFollowModel.h; sourceTree = "<group>"; };
+		04D550F221425EB3006F3D12 /* SJChatRoomFollowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJChatRoomFollowModel.m; sourceTree = "<group>"; };
+		04D550F421427B86006F3D12 /* SJCollegeCourseVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCollegeCourseVideoViewController.h; sourceTree = "<group>"; };
+		04D550F521427B87006F3D12 /* SJCollegeCourseVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCollegeCourseVideoViewController.m; sourceTree = "<group>"; };
 		04E5CF282101799E00ED7CED /* SJHomeEliteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJHomeEliteTableViewCell.h; sourceTree = "<group>"; };
 		04E5CF292101799F00ED7CED /* SJHomeEliteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJHomeEliteTableViewCell.m; sourceTree = "<group>"; };
 		04ECA85C20CF5F6C00E76C27 /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResources.bundle; sourceTree = "<group>"; };
@@ -1162,6 +1197,11 @@
 		04ECA86E20CF5F6C00E76C27 /* UMAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMAnalytics.framework; sourceTree = "<group>"; };
 		04ECA87A20CF69E400E76C27 /* UMCommonLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommonLog.framework; sourceTree = "<group>"; };
 		04ECA87B20CF69E400E76C27 /* UMCommonLog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMCommonLog.bundle; sourceTree = "<group>"; };
+		04F9D5C72140CF7900F966B2 /* SJChatRoomPopularityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJChatRoomPopularityCell.h; path = "CaiShiJie/Classes/ChatRoom(文字直播聊天室)/View/SJChatRoomPopularityCell.h"; sourceTree = SOURCE_ROOT; };
+		04F9D5C82140CF7900F966B2 /* SJChatRoomPopularityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJChatRoomPopularityCell.m; path = "CaiShiJie/Classes/ChatRoom(文字直播聊天室)/View/SJChatRoomPopularityCell.m"; sourceTree = SOURCE_ROOT; };
+		04F9D5C92140CF7A00F966B2 /* SJChatRoomPopularityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SJChatRoomPopularityCell.xib; path = "CaiShiJie/Classes/ChatRoom(文字直播聊天室)/View/SJChatRoomPopularityCell.xib"; sourceTree = SOURCE_ROOT; };
+		04F9D5CC2140FC5500F966B2 /* SJChatRoomPopularityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SJChatRoomPopularityModel.h; path = "CaiShiJie/Classes/ChatRoom(文字直播聊天室)/Model/SJChatRoomPopularityModel.h"; sourceTree = SOURCE_ROOT; };
+		04F9D5CD2140FC5500F966B2 /* SJChatRoomPopularityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SJChatRoomPopularityModel.m; path = "CaiShiJie/Classes/ChatRoom(文字直播聊天室)/Model/SJChatRoomPopularityModel.m"; sourceTree = SOURCE_ROOT; };
 		04FEB17C211DC3C200B1038A /* SJPersonalTeacherCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJPersonalTeacherCourseViewController.h; sourceTree = "<group>"; };
 		04FEB17D211DC3C200B1038A /* SJPersonalTeacherCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJPersonalTeacherCourseViewController.m; sourceTree = "<group>"; };
 		6F809CE27A03AB0D5AEE100A /* libPods-CaiShiJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CaiShiJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2654,6 +2694,13 @@
 				0448668320F84DDE00B48D0E /* SJCollegeViewController.h */,
 				0448668420F84DDE00B48D0E /* SJCollegeViewController.m */,
 				0448668520F84DDE00B48D0E /* SJCollegeViewController.xib */,
+				04D550F421427B86006F3D12 /* SJCollegeCourseVideoViewController.h */,
+				04D550F521427B87006F3D12 /* SJCollegeCourseVideoViewController.m */,
+				0466A4652147B3980077DF54 /* SJCourseViewcontroller.h */,
+				0466A4662147B3990077DF54 /* SJCourseViewcontroller.m */,
+				04C0F7262148ECA10025EC37 /* SJCourseViewSectionCell.h */,
+				04C0F7362148ECA20025EC37 /* SJCourseViewSectionCell.m */,
+				04C0F7352148ECA10025EC37 /* SJCourseViewSectionCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2978,6 +3025,55 @@
 				047B513F21070F8E0009CABD /* AliPayAdapter.m */,
 			);
 			path = AliPayAdapter;
+			sourceTree = "<group>";
+		};
+		04D550D721421F23006F3D12 /* ChatRoom(文字直播聊天室) */ = {
+			isa = PBXGroup;
+			children = (
+				04D550DC21421FB2006F3D12 /* Controller */,
+				04D550E521421FB2006F3D12 /* Model */,
+				04D550DB21421FB2006F3D12 /* View */,
+			);
+			path = "ChatRoom(文字直播聊天室)";
+			sourceTree = "<group>";
+		};
+		04D550DB21421FB2006F3D12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04F9D5C72140CF7900F966B2 /* SJChatRoomPopularityCell.h */,
+				04F9D5C82140CF7900F966B2 /* SJChatRoomPopularityCell.m */,
+				04F9D5C92140CF7A00F966B2 /* SJChatRoomPopularityCell.xib */,
+				04D550F021425E17006F3D12 /* SJChatRoomFollowCell.h */,
+				04D550ED21425DF7006F3D12 /* SJChatRoomFollowCell.m */,
+				04D550EC21425DF7006F3D12 /* SJChatRoomFollowCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04D550DC21421FB2006F3D12 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04D550E321421FB2006F3D12 /* SJChatRoomPopularityListViewController.h */,
+				04D550DF21421FB2006F3D12 /* SJChatRoomPopularityListViewController.m */,
+				04D550DE21421FB2006F3D12 /* SJChatRoomPopularityListViewController.xib */,
+				04D550DD21421FB2006F3D12 /* SJChatRoomViewController.h */,
+				04D550E421421FB2006F3D12 /* SJChatRoomViewController.m */,
+				04D550E221421FB2006F3D12 /* SJChatRoomFollowViewController.h */,
+				04D550E021421FB2006F3D12 /* SJChatRoomFollowViewController.m */,
+				04D550E121421FB2006F3D12 /* SJChatRoomFollowViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04D550E521421FB2006F3D12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04F9D5CC2140FC5500F966B2 /* SJChatRoomPopularityModel.h */,
+				04F9D5CD2140FC5500F966B2 /* SJChatRoomPopularityModel.m */,
+				04D550F121425EB2006F3D12 /* SJChatRoomFollowModel.h */,
+				04D550F221425EB3006F3D12 /* SJChatRoomFollowModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		04ECA85A20CF5F6C00E76C27 /* UMSocial */ = {
@@ -5278,6 +5374,7 @@
 				CEFFE9421C2A71FE0096F9DD /* Tool(业务逻辑类) */,
 				CE40E9701CD997320054A770 /* Home(首页) */,
 				CE5C1E391D3CCD480089C190 /* Stock(自选股) */,
+				04D550D721421F23006F3D12 /* ChatRoom(文字直播聊天室) */,
 				CE666F591CDCACB200C24BF6 /* BlogArticle(博文) */,
 				CE40EA091CD9977A0054A770 /* StockSchool(精品课) */,
 				0448667F20F84DC800B48D0E /* College(学院) */,
@@ -5995,6 +6092,7 @@
 				CEFD0A191DFAAD3F006917AE /* SJRecommendHeaderView.xib in Resources */,
 				CEE1E8811DB9F00F006A82C5 /* MLEmoji_Expression.bundle in Resources */,
 				CEE1E8AE1DB9FF14006A82C5 /* SJInputVoiceView.xib in Resources */,
+				04D550EE21425DF7006F3D12 /* SJChatRoomFollowCell.xib in Resources */,
 				CE666F811CDCACB200C24BF6 /* SJBlogArticleWonderfulViewCell.xib in Resources */,
 				CEFD0A1B1DFAAD3F006917AE /* SJRecommendHotVideoOneCell.xib in Resources */,
 				CE7CE75D1CBB91C300AC3E72 /* SJCityGroupSection.xib in Resources */,
@@ -6019,6 +6117,7 @@
 				CE409F651C47C4D600C21DE9 /* SJQuestionDetailController.xib in Resources */,
 				CEFD0A6B1DFAADDC006917AE /* SJPhoneVideoStoryboard.storyboard in Resources */,
 				0448667D20F8477400B48D0E /* SJVideoSectionOneCell.xib in Resources */,
+				04F9D5CB2140CF7A00F966B2 /* SJChatRoomPopularityCell.xib in Resources */,
 				CE40EA851CD9977B0054A770 /* SJBookSectionCell.xib in Resources */,
 				CEFD0A0C1DFAAD3F006917AE /* SJLogInfoBottomCell.xib in Resources */,
 				CE10D60A1D9BABE70000120D /* SJPersonalCenterViewController.xib in Resources */,
@@ -6043,6 +6142,7 @@
 				CE2E5B701DD5CC4500A050FA /* SJNeiCanPayViewController.xib in Resources */,
 				040E7A6E20FDC49D003CE4DF /* back@2x.png in Resources */,
 				CE3F41331CB7582D008BCDBE /* SJHisReferenceViewController.xib in Resources */,
+				04D550E621421FB2006F3D12 /* SJChatRoomPopularityListViewController.xib in Resources */,
 				CE7CE7481CBB799400AC3E72 /* SJCitySelectionViewController.xib in Resources */,
 				CE6414CA1C842D350013C584 /* Info.plist in Resources */,
 				CE43F5AC1CAE0C8400A8BC9D /* SJProfileBlogArticleViewController.xib in Resources */,
@@ -6102,6 +6202,7 @@
 				CE133E1A1DD43D1100576BCE /* SJGivePresentCell.xib in Resources */,
 				CEFD0A1D1DFAAD3F006917AE /* SJRecommendHotVideoTwoCell.xib in Resources */,
 				CEE068B31C84375600CD49AF /* SJTitleView.xib in Resources */,
+				04D550E921421FB2006F3D12 /* SJChatRoomFollowViewController.xib in Resources */,
 				CE4D86B71C31126B00F9A77F /* SJRegisterDetailViewController.xib in Resources */,
 				CEFD09DF1DFAAD3F006917AE /* SJLogRankViewController.xib in Resources */,
 				CE812D1A1CA91CD9007527EC /* SJUserReferenceDetailCell.xib in Resources */,
@@ -6118,6 +6219,7 @@
 				CE666F831CDCACB200C24BF6 /* SJRecommendBlogArticleCell.xib in Resources */,
 				CEFD0A7E1DFAADDC006917AE /* SJPhoneLiveUI.xib in Resources */,
 				CEFD09E11DFAAD3F006917AE /* SJMostInteractionViewController.xib in Resources */,
+				04C0F7372148ECA20025EC37 /* SJCourseViewSectionCell.xib in Resources */,
 				CE108AA51DD9978C0003197C /* SJPayView.xib in Resources */,
 				CEB54DCD1CF8568E00069C14 /* SJZhuanLanTwoCell.xib in Resources */,
 				CE259B9E1CAAA89F00D49995 /* MHSelectPickerView.xib in Resources */,
@@ -6395,11 +6497,13 @@
 				CE21F5721D6C364900FED35F /* BarrageWalkTextSprite.m in Sources */,
 				CE0DAA361DAB82B800A65C59 /* SJChatMessageViewController.m in Sources */,
 				04FEB17E211DC3C300B1038A /* SJPersonalTeacherCourseViewController.m in Sources */,
+				04D550EF21425DF7006F3D12 /* SJChatRoomFollowCell.m in Sources */,
 				CEFD0AA81DFAB17A006917AE /* SJSchoolViewcontroller.m in Sources */,
 				CE3F410E1CB75675008BCDBE /* SJReplaceSuccessViewController.m in Sources */,
 				04359DD52113361200D27B62 /* SJNewLiveVideoAboveView.m in Sources */,
 				CE4FB13B1C546E1B00CDE0C5 /* SJUserQuestionDetail.m in Sources */,
 				CE3677211C8D1628001539C9 /* SJPresentCell.m in Sources */,
+				04C0F7382148ECA20025EC37 /* SJCourseViewSectionCell.m in Sources */,
 				CEF786401DC059A700ECEBA9 /* SJNoWifiView.m in Sources */,
 				CE337BEE1C7D4F76002D30AC /* D3RecordButton.m in Sources */,
 				CE40EA751CD9977B0054A770 /* SJRecommendBookViewController.m in Sources */,
@@ -6408,6 +6512,7 @@
 				CEE1E8BA1DB9FF14006A82C5 /* UIImage+TL.m in Sources */,
 				CEFD0AA61DFAB17A006917AE /* SJArticleviewcontroller.m in Sources */,
 				CE0F84481DB76405003D4314 /* TYTextContainer.m in Sources */,
+				04D550EA21421FB2006F3D12 /* SJChatRoomViewController.m in Sources */,
 				CE3B20EC1C7BF3FD00BBBF74 /* ZZCameraFlashState.m in Sources */,
 				CEE1E8B41DB9FF14006A82C5 /* TLChatBoxFaceView.m in Sources */,
 				CE812D211CA91E00007527EC /* SJUserReferenceDetailViewController.m in Sources */,
@@ -6508,6 +6613,7 @@
 				CE259B9C1CAAA89F00D49995 /* MHDatePicker.m in Sources */,
 				CE666F7A1CDCACB200C24BF6 /* SJBlogArticleHeaderView.m in Sources */,
 				040E7A7020FDC49D003CE4DF /* UIDevice+TFDevice.m in Sources */,
+				0466A4672147B3990077DF54 /* SJCourseViewcontroller.m in Sources */,
 				CEFD09D61DFAAD3F006917AE /* SJHomeLiveViewController.m in Sources */,
 				CE6395931CA543CB0084AC59 /* SJUserReferenceViewController.m in Sources */,
 				CEC7A2111C560DCE0081CA68 /* SJAnswerdetailModel.m in Sources */,
@@ -6524,6 +6630,7 @@
 				CE40EA841CD9977B0054A770 /* SJBookSectionCell.m in Sources */,
 				CE40EA7F1CD9977B0054A770 /* SJBookDetailFootView.m in Sources */,
 				CE133E1D1DD4475100576BCE /* SJLiveGiftViewController.m in Sources */,
+				04F9D5CA2140CF7A00F966B2 /* SJChatRoomPopularityCell.m in Sources */,
 				CEFD0A061DFAAD3F006917AE /* SJHomeRecommendLiveCell.m in Sources */,
 				CE43F5AB1CAE0C8400A8BC9D /* SJProfileBlogArticleViewController.m in Sources */,
 				CE132CE01D9CE1E100C93DC8 /* SJHistoryTopCell.m in Sources */,
@@ -6594,6 +6701,7 @@
 				CE1DF4A51D5DA287007C71B9 /* SJParser.m in Sources */,
 				CE132CDE1D9CE1E100C93DC8 /* SJHistoryDownCell.m in Sources */,
 				CE34F3E81C4F19CC0089292A /* MJFoundation.m in Sources */,
+				04D550E721421FB2006F3D12 /* SJChatRoomPopularityListViewController.m in Sources */,
 				CE40EA811CD9977B0054A770 /* SJBookDetailHeadCell.m in Sources */,
 				CEF45E771C4880440061AEA8 /* SJUserAnswerFrame.m in Sources */,
 				CEFD0AA91DFAB17A006917AE /* SJVideoViewController.m in Sources */,
@@ -6658,6 +6766,7 @@
 				CE5AF3B51C8EC8FC00D923A3 /* SJGiveGiftFrame.m in Sources */,
 				CEFD09E01DFAAD3F006917AE /* SJMostInteractionViewController.m in Sources */,
 				CE6414CB1C842D350013C584 /* MASCompositeConstraint.m in Sources */,
+				04D550F321425EB3006F3D12 /* SJChatRoomFollowModel.m in Sources */,
 				CEFD09F31DFAAD3F006917AE /* SJLiveRoomModel.m in Sources */,
 				CE3F410C1CB75675008BCDBE /* SJReplacePasswordViewController.m in Sources */,
 				CE259B931CAA80A200D49995 /* LewPopupViewAnimationSlide.m in Sources */,
@@ -6789,6 +6898,7 @@
 				CE409F181C474A9000C21DE9 /* SJAnsweredCell.m in Sources */,
 				CE52C44B1D3F17EA00AABC3E /* SJBombBox.m in Sources */,
 				040E7A7420FDC49D003CE4DF /* ATJWebViewController.m in Sources */,
+				04F9D5CE2140FC5600F966B2 /* SJChatRoomPopularityModel.m in Sources */,
 				CEC4E7631D991AF500A63390 /* SJStockMonthLineViewController.m in Sources */,
 				CE4FB1411C548EC900CDE0C5 /* SJMyTeacher.m in Sources */,
 				047B516B21070F8E0009CABD /* BCSubscription.m in Sources */,
@@ -6873,6 +6983,7 @@
 				CE3B29DC1C91118100EE2D13 /* SJSettingViewController.m in Sources */,
 				CE49A0EB1CB6283100B474B5 /* SJOpinionViewController.m in Sources */,
 				CE6414CC1C842D350013C584 /* MASConstraint.m in Sources */,
+				04D550E821421FB2006F3D12 /* SJChatRoomFollowViewController.m in Sources */,
 				CEA2AB701DAA077E0079CE95 /* SJPersonalQuestionModel.m in Sources */,
 				CEF3F0F81C4E5D5C008E9E5B /* NSDate+MJ.m in Sources */,
 				CE7CE7581CBB914200AC3E72 /* SJCityModel.m in Sources */,
@@ -6923,6 +7034,7 @@
 				047B519521070F8E0009CABD /* AliPayAdapter.m in Sources */,
 				CEFD0AC71DFAB253006917AE /* SJRoseController.m in Sources */,
 				CEFD09F61DFAAD3F006917AE /* SJQuestionRankModel.m in Sources */,
+				04D550F621427B87006F3D12 /* SJCollegeCourseVideoViewController.m in Sources */,
 				CEFD09F11DFAAD3F006917AE /* SJCustom.m in Sources */,
 				CE40EA6F1CD9977B0054A770 /* SJBookContentViewController.m in Sources */,
 				CEA2AB731DAA079E0079CE95 /* SJPersonalQuestionFrame.m in Sources */,

@@ -47,6 +47,7 @@
 - (NSInteger)selectedIndex{
     return oldIndex_;
 }
+
 - (void)setSelectedIndex:(NSInteger)selectedIndex{
     if (selectedIndex != oldIndex_) {
         [self switchTo:selectedIndex];

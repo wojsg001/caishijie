@@ -37,6 +37,7 @@
 
 - (void)setUpSlideView {
     self.tabedSlideView = [[DLTabedSlideView alloc] initWithFrame:self.view.bounds];
+    [self.tabedSlideView initWithDLTabedSlideViewType:DLTabedSlideViewCommon];
     self.tabedSlideView.delegate = self;
     [self.view addSubview:self.tabedSlideView];
     self.tabedSlideView.baseViewController = self;

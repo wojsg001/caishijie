@@ -15,6 +15,8 @@
 #import "SJSchoolViewcontroller.h"
 #import "SJPhoneVideoListViewController.h"
 #import "SJCollegeViewController.h"
+#import "SJChatRoomViewController.h"
+#import "SJCollegeCourseVideoViewController.h"
 
 @interface SJTabBarController ()<SJTabBarDelegate>
 
@@ -98,21 +100,30 @@
     SJHomeRecommendViewController *home = [[SJHomeRecommendViewController alloc] init];
     [self setUpOneChildViewController:home image:[UIImage imageNamed:@"table_bar_icon_live_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_live_h"] title:@"首页"];
     
-    //精品课
-    SJSchoolViewcontroller *share = [[SJSchoolViewcontroller alloc] init];
-    [self setUpOneChildViewController:share image:[UIImage imageNamed:@"table_bar_icon_share_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_share_h"] title:@"精品课"];
-    
     //自选股
     SJpageViewController *attention = [[SJpageViewController alloc] init];
     [self setUpOneChildViewController:attention image:[UIImage imageNamed:@"table_bar_icon_index_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_index_h"] title:@"自选股"];
+    
+    //公开课
+//    SJSchoolViewcontroller *share = [[SJSchoolViewcontroller alloc] init];
+//    [self setUpOneChildViewController:share image:[UIImage imageNamed:@"table_bar_icon_share_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_share_h"] title:@"公开课"];
+    
+    //回播
+    SJChatRoomViewController *share = [[SJChatRoomViewController alloc] init];
+    [self setUpOneChildViewController:share image:[UIImage imageNamed:@"table_bar_icon_share_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_share_h"] title:@"回播"];
+    
 
 //    //视频
 //    SJPhoneVideoListViewController *videoListVC = [[SJPhoneVideoListViewController alloc] init];
 //    [self setUpOneChildViewController:videoListVC image:[UIImage imageNamed:@"nav_icon_n"] selectedImage:[UIImage imageWithOriginalName:@"nav_icon_h"] title:@"视频"];
 //    _videoListVC = videoListVC;
 
+//    //学院
+//    SJCollegeViewController *collegeVC = [[SJCollegeViewController alloc] init];
+//    [self setUpOneChildViewController:collegeVC image:[UIImage imageNamed:@"table_bar_icon_index_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_index_h"] title:@"学院"];
+    
     //学院
-    SJCollegeViewController *collegeVC = [[SJCollegeViewController alloc] init];
+    SJCollegeCourseVideoViewController *collegeVC = [[SJCollegeCourseVideoViewController alloc] init];
     [self setUpOneChildViewController:collegeVC image:[UIImage imageNamed:@"table_bar_icon_index_n"] selectedImage:[UIImage imageWithOriginalName:@"table_bar_icon_index_h"] title:@"学院"];
 
     //我的
